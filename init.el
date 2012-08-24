@@ -120,6 +120,20 @@
 	(set-cursor-color "Gray")
 	)
       )
+     ((>= (x-display-pixel-width) 1680)
+      (progn
+	(setq default-frame-alist
+	      (append
+	       '((top . 30) 
+		 (left . 60)
+		 (width . 150)
+		 (height . 50) ) default-frame-alist))
+	(setq initial-frame-alist default-frame-alist)
+	(set-background-color "Black")
+	(set-foreground-color "White")
+	(set-cursor-color "Gray")
+	)
+      )
      (t 
       (progn
 	(setq default-frame-alist
