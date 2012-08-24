@@ -97,18 +97,58 @@
  '(ido-max-work-directory-list 0)
  '(ido-max-work-file-list 0))
 
-
 ;; ウィンドウフレームの設定
 ;; ウィンドウ設定
-(if window-system (progn
-		    (setq initial-frame-alist
-			  '((top . 20) 
-			    (left . 60)
-			    (width . 165) (height . 60) ))
-		    (set-background-color "Black")
-		    (set-foreground-color "White")
-		    (set-cursor-color "Gray")
-		    ))
+;;(if (>= (x-display-pixel-width) 800) (setq width-gain 0.45) (setq width-gain 0.8))
+;;(if (>= (x-display-pixel-height) 1000) (setq height-gain 0.7) (setq height-gain 0.87))
+;(print (/ (display-pixel-width) (frame-char-width)))
+;(print "testtest" t)
+;(message "%s" (/ (x-display-pixel-width) (frame-char-width)))
+(if window-system 
+    (cond
+     ((>= (x-display-pixel-width) 1920)
+      (progn
+	(setq default-frame-alist
+	      (append
+	       '((top . 30) 
+		 (left . 60)
+		 (width . 165)
+		 (height . 60) ) default-frame-alist))
+	(setq initial-frame-alist default-frame-alist)
+	(set-background-color "Black")
+	(set-foreground-color "White")
+	(set-cursor-color "Gray")
+	)
+      )
+     (t 
+      (progn
+	(setq default-frame-alist
+	      (append
+	       '((top . 20) 
+		 (left . 60)
+		 (width . 100)
+		 (height . 45) ) default-frame-alist))
+	(setq initial-frame-alist default-frame-alist)
+	(set-background-color "Black")
+	(set-foreground-color "White")
+	(set-cursor-color "Gray")
+	)))
+  )
+;(message "%s" (frame-width))
+
+;(when (window-system)
+;  (set-frame-size
+;   (selected-frame)
+;   200
+;   60 ))
+;(message "%s" (frame-width))
+
+
+;(when (window-system)
+;  (set-frame-size
+;   (selected-frame)
+;   (floor (* (/ (x-display-pixel-width) (frame-char-width)) 0.22))
+;   (floor (* (/ (x-display-pixel-height) (frame-char-height)) 0.8))))
 
 ;; メニューバーを消す
 (menu-bar-mode -1)
