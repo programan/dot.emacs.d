@@ -105,49 +105,36 @@
 ;(print "testtest" t)
 ;(message "%s" (/ (x-display-pixel-width) (frame-char-width)))
 (if window-system 
-    (cond
-     ((>= (x-display-pixel-width) 1920)
-      (progn
+    (progn
+      (cond
+       ((>= (x-display-pixel-width) 1920)
 	(setq default-frame-alist
 	      (append
 	       '((top . 30) 
-		 (left . 60)
-		 (width . 165)
-		 (height . 60) ) default-frame-alist))
-	(setq initial-frame-alist default-frame-alist)
-	(set-background-color "Black")
-	(set-foreground-color "White")
-	(set-cursor-color "Gray")
+		 (left . 20)
+		 (width . 165) 
+		 (height . 60)) default-frame-alist))
 	)
-      )
-     ((>= (x-display-pixel-width) 1680)
-      (progn
+       ((>= (x-display-pixel-width) 1680)
 	(setq default-frame-alist
 	      (append
 	       '((top . 30) 
-		 (left . 60)
-		 (width . 150)
-		 (height . 50) ) default-frame-alist))
-	(setq initial-frame-alist default-frame-alist)
-	(set-background-color "Black")
-	(set-foreground-color "White")
-	(set-cursor-color "Gray")
+		 (left . 20)
+		 (width . 150) 
+		 (height . 50)) default-frame-alist))
 	)
-      )
-     (t 
-      (progn
+       (t
 	(setq default-frame-alist
 	      (append
-	       '((top . 20) 
-		 (left . 60)
-		 (width . 100)
-		 (height . 45) ) default-frame-alist))
-	(setq initial-frame-alist default-frame-alist)
-	(set-background-color "Black")
-	(set-foreground-color "White")
-	(set-cursor-color "Gray")
-	)))
-  )
+	       '((top . 30) 
+		 (left . 20)
+		 (width . 120) 
+		 (height . 40)) default-frame-alist))
+	)
+       (set-background-color "Black")
+       (set-foreground-color "White")
+       (set-cursor-color "Gray")
+       )))
 ;(message "%s" (frame-width))
 
 ;(when (window-system)
