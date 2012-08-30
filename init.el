@@ -123,6 +123,14 @@
 		 (width . 150) 
 		 (height . 50)) default-frame-alist))
 	)
+       ((>= (x-display-pixel-width) 1440)
+	(setq default-frame-alist
+	      (append
+	       '((top . 30) 
+		 (left . 20)
+		 (width . 165) 
+		 (height . 60)) default-frame-alist))
+	)
        (t
 	(setq default-frame-alist
 	      (append
