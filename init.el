@@ -136,8 +136,8 @@
 	      (append
 	       '((top . 30) 
 		 (left . 20)
-		 (width . 120) 
-		 (height . 40)) default-frame-alist))
+		 (width . 165) 
+		 (height . 45)) default-frame-alist))
 	)
        )
       (set-background-color "Black")
