@@ -107,4 +107,4 @@
 
 ;; ツールバーの非表示
 (if window-system (progn
-		    (tool-bar-mode nil)))
+		    (tool-bar-mode 0)))
