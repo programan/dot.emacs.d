@@ -31,7 +31,9 @@
 
 ;; シフト + 矢印で範囲選択
 (setq pc-select-selection-keys-only t)
-(pc-selection-mode 1)
+(when (< emacs-major-version 24)
+  (pc-selection-mode 1)
+)
 
 
 ;; フォント設定

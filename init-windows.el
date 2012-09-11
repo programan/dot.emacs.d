@@ -25,7 +25,9 @@
 
 ;; シフト + 矢印で範囲選択
 (setq pc-select-selection-keys-only t)
-(pc-selection-mode 1)
+(when (<= emacs-major-version 23)
+  (pc-selection-mode 1)
+)
 
 ;; NTEmacs (emacs 22.x) =>
 ;;  日本語文字: モトヤシーダまたはモトヤアポロを用意してください.
