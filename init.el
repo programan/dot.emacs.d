@@ -181,7 +181,7 @@
 ;(set-face-background 'modeline "black")
 
 ;; モードラインにバッテリ残量表示
-(display-battery-mode t)
+;(display-battery-mode t)
 
 ;; タイトルバー設定
 ;; タイトルバーにファイル名を表示
