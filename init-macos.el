@@ -69,7 +69,7 @@
 
 ;; 半透明化
 ;; 透明度の設定
-(add-to-list 'default-frame-alist '(alpha . 80))
+(add-to-list 'default-frame-alist '(alpha . 90))
 
 ;; ツールバーの非表示
 (if window-system (progn
