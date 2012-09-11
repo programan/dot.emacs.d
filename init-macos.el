@@ -71,3 +71,6 @@
 ;; 透明度の設定
 (add-to-list 'default-frame-alist '(alpha . 80))
 
+;; ツールバーの非表示
+(if window-system (progn
+		    (tool-bar-mode 0)))
