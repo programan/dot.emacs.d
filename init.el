@@ -128,8 +128,8 @@
 	      (append
 	       '((top . 30) 
 		 (left . 20)
-		 (width . 165) 
-		 (height . 60)) default-frame-alist))
+		 (width . 170) 
+		 (height . 55)) default-frame-alist))
 	)
        (t
 	(setq default-frame-alist
