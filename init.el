@@ -128,7 +128,7 @@
 	      (append
 	       '((top . 30) 
 		 (left . 20)
-		 (width . 170) 
+		 (width . 100) 
 		 (height . 55)) default-frame-alist))
 	)
        (t
