@@ -136,7 +136,7 @@
 	      (append
 	       '((top . 30) 
 		 (left . 20)
-		 (width . 165) 
+		 (width . 100) 
 		 (height . 45)) default-frame-alist))
 	)
        )
