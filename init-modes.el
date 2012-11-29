@@ -53,8 +53,8 @@
 	     (setq tab-width 4)
 	     (setq c-basic-offset 4)
 	     (c-set-offset 'case-label' 4)
-	     (setq indent-tabs-mode nil)
-;;	     (setq indent-tabs-mode t)
+;;	     (setq indent-tabs-mode nil)
+	     (setq indent-tabs-mode t)
 	     ;; M-TAB が有効にならないので以下の設定を追加
 ;	     (define-key php-mode-map "\C-\M-i" 'php-complete-function)
 	     ;; その他
