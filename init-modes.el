@@ -82,8 +82,8 @@
 	     (setq indent-level 4)
 	     (setq python-indent 4)
 	     (setq py-indent-offset 4)
-	     (setq indent-tabs-mode nil)
-;;	     (setq indent-tabs-mode t)
+;;	     (setq indent-tabs-mode nil)
+	     (setq indent-tabs-mode t)
 ;        複数行コメント
 	     (setq comment-start "# ")
 	     (setq comment-end "")
