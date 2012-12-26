@@ -34,8 +34,8 @@
   (set btn (cons (cons "" nil)
                  (cons "" nil))))
 
-;; タブの長さ
-(setq tabbar-separator '(1.0))
+;; タブの間の長さ
+(setq tabbar-separator '(0.7))
 
 ;; 外観変更
 (set-face-attribute
