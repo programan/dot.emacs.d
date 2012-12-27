@@ -72,11 +72,11 @@
   (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
 
 ;; growl messages at file saved
-(defun growlnotify-after-save-hook ()
-  (shell-command
-   (format "growlnotify -t \"Emacs\" -m \"saved : %s \""
-		   (buffer-name (current-buffer)))))
-(add-hook 'after-save-hook 'growlnotify-after-save-hook)
+;(defun growlnotify-after-save-hook ()
+;  (shell-command
+;   (format "growlnotify -t \"Emacs\" -m \"saved : %s \""
+;                  (buffer-name (current-buffer)))))
+;(add-hook 'after-save-hook 'growlnotify-after-save-hook)
 
 ;; 半透明化
 ;; 透明度の設定
