@@ -85,3 +85,6 @@
 ;; ツールバーの非表示
 (if window-system (progn
 		    (tool-bar-mode 0)))
+
+; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する 
+(define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
