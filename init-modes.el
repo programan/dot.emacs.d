@@ -122,14 +122,41 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-hook 'js2-mode-hook
-          #'(lambda ()
-              (require 'espresso)
-              (setq espresso-indent-level 2
-                    espresso-expr-indent-offset 2
-                    indent-tabs-mode nil)
-	      (setq comment-start "// ")
-	      (setq comment-end "")
-              (set (make-local-variable 'indent-line-function) 'espresso-indent-line)))
+          '(lambda ()
+             (setq indent-tabs-mode nil)
+             (setq js2-basic-offset 2)
+             (setq js2-enter-indents-newline t)
+             (setq comment-start "// ")
+             (setq comment-end "")
+;            (set (make-local-variable 'indent-line-function) 'js2-indent-line)
+             ))
+
+; js2mode(fork)でadd-hook時にパラメータを変えても反映されないものをここで変更
+(when (load "js2-mode" t)
+  (setq js2-cleanup-whitespace nil
+        js2-mirror-mode t)
+  )
+
+;(add-hook 'js2-mode-hook
+;          #'(lambda ()
+;              (require 'js)
+;              (setq js-indent-level 2
+;                    js-expr-indent-offset 2
+;                    indent-tabs-mode nil
+;                    )
+;              (setq comment-start "// ")
+;              (setq comment-end "")
+;              (set (make-local-variable 'indent-line-function) 'js-indent-line)))
+
+;(add-hook 'js2-mode-hook
+;          #'(lambda ()
+;              (require 'espresso)
+;              (setq espresso-indent-level 2
+;                    espresso-expr-indent-offset 2
+;                    indent-tabs-mode nil)
+;              (setq comment-start "// ")
+;              (setq comment-end "")
+;              (set (make-local-variable 'indent-line-function) 'espresso-indent-line)))
 
 
 ;(add-hook 'js2-mode-hook
