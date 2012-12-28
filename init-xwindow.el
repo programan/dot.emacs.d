@@ -139,3 +139,7 @@
 		    (set-cursor-color "Gray")
 		    (set-frame-parameter nil 'alpha 85)
 		    ))
+
+;; anything
+(require 'anything-startup)
+(global-set-key (kbd "C-;") 'anything-filelist+)
