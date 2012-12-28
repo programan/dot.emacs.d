@@ -74,6 +74,7 @@
 			     'text-mode
 			     'markdown-mode
 			     'espresso-mode
+                             'jade-mode
                              )))
 
 
