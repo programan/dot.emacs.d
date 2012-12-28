@@ -1,6 +1,6 @@
 ;; 共通ロードパスの追加
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
-(add-to-list 'load-path "~/.emacs.d/auto-install")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-install")
 ;;(add-to-list 'load-path (expand-file-name "~/elisp"))
 ;; Ruby
 (add-to-list 'load-path "~/.emacs.d/site-lisp/ruby/misc")

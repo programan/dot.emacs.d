@@ -88,3 +88,17 @@
 
 ; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する 
 (define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
+
+;; auto-install
+;; wgetが必要
+(require 'auto-install)
+(setq auto-install-directory "~/.emacs.d/site-lisp/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
+;(auto-install-update-emacswiki-package-name t)
+;(auto-install-compatibility-setup) ;install-elisp.elとコマンド名を同期
+;(setq auto-install-use-wget t)
+
+;; anything
+(require 'anything-startup)
+(global-set-key (kbd "C-;") 'anything-filelist+)
+(setq anything-c-filelist-file-name "/tmp/all.filelist")
+
