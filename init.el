@@ -23,14 +23,6 @@
  ((eq window-system 'x)
   (load "~/.emacs.d/init-xwindow")))
 
-;; auto-install
-;; wgetが必要
-;(require 'auto-install)
-;(setq auto-install-directory "~/.emacs.d/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
-;(auto-install-update-emacswiki-package-name t)
-;(auto-install-compatibility-setup) ;install-elisp.elとコマンド名を同期
-;(setq auto-install-use-wget t)
-
 ;; オートコンプリート設定の読み込み
 (load "~/.emacs.d/init-auto-complete")
 

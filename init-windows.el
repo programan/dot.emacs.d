@@ -108,3 +108,7 @@
 ;; ツールバーの非表示
 (if window-system (progn
 		    (tool-bar-mode 0)))
+
+;; anything
+(require 'anything-startup)
+(global-set-key (kbd "C-;") 'anything-filelist+)
