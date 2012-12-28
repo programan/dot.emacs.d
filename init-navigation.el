@@ -10,6 +10,10 @@
  ((eq window-system 'x)
   (setq nav-width 15)))
 
-(setq nav-split-window-direction 'vertical) ;; 分割したフレームを垂直に並べる
+(nav-disable-overeager-window-splitting)
+;; Optional: set up a quick key to toggle nav
+(global-set-key [f8] 'nav-toggle)
+
+;;(setq nav-split-window-direction 'vertical) ;; 分割したフレームを垂直に並べる
 ;;(global-set-key "\C-x\C-d" 'nav-toggle)     ;; C-x C-d で nav をトグル 
-;;(global-set-key "\C-x\C-o" 'nav-toggle)
+;;(global-set-key "\C-x\C-q" 'nav-toggle)
