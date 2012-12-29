@@ -8,4 +8,3 @@
 (add-to-list 'ac-modes 'php-mode)  ;; PHP用：php-modeになったら、auto-completeをスタートさせる
 (add-to-list 'ac-modes 'ruby-mode)  ;; Ruby用：ruby-modeになったら、auto-completeをスタートさせる
 (add-to-list 'ac-modes 'js2-mode)  ;; Ruby用：ruby-modeになったら、auto-completeをスタートさせる
-

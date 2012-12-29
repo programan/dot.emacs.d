@@ -39,13 +39,13 @@
 ;;  ~/.Xresources にて日本語フォントを設定してください.
 (set-default-font "Consolas 10")
 (set-fontset-font (frame-parameter nil 'font)
-				  'japanese-jisx0208
-				  '("ＭＳ ゴシック" . "unicode-bmp")
-				  )
+                                  'japanese-jisx0208
+                                  '("ＭＳ ゴシック" . "unicode-bmp")
+                                  )
 (set-fontset-font (frame-parameter nil 'font)
-	    'katakana-jisx0201
-	    '("ＭＳ ゴシック" . "unicode-bmp")
-	    )
+            'katakana-jisx0201
+            '("ＭＳ ゴシック" . "unicode-bmp")
+            )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -75,8 +75,8 @@
 
 
 ;(set-face-attribute 'default nil
-;		    :family "Ricty"
-;		    :height 160)
+;                   :family "Ricty"
+;                   :height 160)
 ;(set-fontset-font
 ; nil 'japanese-jisx0208
 ; (font-spec :family "Ricty"))
@@ -107,7 +107,7 @@
 
 ;; ツールバーの非表示
 (if window-system (progn
-		    (tool-bar-mode 0)))
+                    (tool-bar-mode 0)))
 
 ;; anything
 (require 'anything-startup)
