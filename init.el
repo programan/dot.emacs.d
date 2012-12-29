@@ -63,6 +63,9 @@
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
 
+;; minimapの読み込み
+(load "~/.emacs.d/init-minimap")
+
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
 ;; ファイルやバッファのオープン、切り替えをサポート
