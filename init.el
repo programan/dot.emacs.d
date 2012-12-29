@@ -28,8 +28,8 @@
 
 ;; タブバー設定の読み込み
 (if window-system (progn
-		    (load "~/.emacs.d/init-tabbar")
-		    ))
+                    (load "~/.emacs.d/init-tabbar")
+                    ))
 
 ;; snippet設定の読み込み
 (load "~/.emacs.d/init-snippet")
@@ -57,8 +57,8 @@
 
 ;; 編集行のハイライト設定の読み込み
 (if window-system (progn
-		    (load "~/.emacs.d/init-hilight-line")
-		    ))
+                    (load "~/.emacs.d/init-hilight-line")
+                    ))
 
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
@@ -100,45 +100,45 @@
     (progn
       (cond
        ((>= (x-display-pixel-width) 1920)
-	(setq default-frame-alist
-	      (append
-	       '((top . 30) 
-		 (left . 20)
-		 (width . 165) 
-		 (height . 60)) default-frame-alist))
-	)
+        (setq default-frame-alist
+              (append
+               '((top . 30) 
+                 (left . 20)
+                 (width . 165) 
+                 (height . 60)) default-frame-alist))
+        )
        ((>= (x-display-pixel-width) 1680)
-	(setq default-frame-alist
-	      (append
-	       '((top . 30) 
-		 (left . 20)
-		 (width . 150) 
-		 (height . 50)) default-frame-alist))
-	)
+        (setq default-frame-alist
+              (append
+               '((top . 30) 
+                 (left . 20)
+                 (width . 150) 
+                 (height . 50)) default-frame-alist))
+        )
        ((>= (x-display-pixel-width) 1440)
-	(setq default-frame-alist
-	      (append
-	       '((top . 30) 
-		 (left . 20)
-		 (width . 100) 
-		 (height . 55)) default-frame-alist))
-	)
+        (setq default-frame-alist
+              (append
+               '((top . 30) 
+                 (left . 20)
+                 (width . 100) 
+                 (height . 55)) default-frame-alist))
+        )
        ((>= (x-display-pixel-width) 1366)
-	(setq default-frame-alist
-	      (append
-	       '((top . 30) 
-		 (left . 20)
-		 (width . 90) 
-		 (height . 45)) default-frame-alist))
-	)
+        (setq default-frame-alist
+              (append
+               '((top . 30) 
+                 (left . 20)
+                 (width . 90) 
+                 (height . 45)) default-frame-alist))
+        )
        (t
-	(setq default-frame-alist
-	      (append
-	       '((top . 30) 
-		 (left . 20)
-		 (width . 110) 
-		 (height . 45)) default-frame-alist))
-	)
+        (setq default-frame-alist
+              (append
+               '((top . 30) 
+                 (left . 20)
+                 (width . 110) 
+                 (height . 45)) default-frame-alist))
+        )
        )
       (set-background-color "Black")
       (set-foreground-color "White")
