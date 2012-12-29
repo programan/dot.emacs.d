@@ -76,19 +76,25 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;(autoload 'python-mode "python-mode" "Major mode for editing python code." t)
 ;(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-(add-hook 'python-mode-hook
-	  '(lambda()
-	     (setq tab-width 4)
-	     (setq indent-level 4)
-	     (setq python-indent 4)
-	     (setq py-indent-offset 4)
-	     (setq indent-tabs-mode nil)
-;;	     (setq indent-tabs-mode t)
-;        複数行コメント
-	     (setq comment-start "# ")
-	     (setq comment-end "")
-	     )
-	  )
+(defun my-python-mode-hook ()
+  (setq py-indent-offset 4)
+  (setq python-indent 4)
+  (setq indent-tabs-mode nil)
+  )
+(add-hook 'python-mode-hook 'my-python-mode-hook)
+;(add-hook 'python-mode-hook
+;          '(lambda()
+;             (setq tab-width 4)
+;             (setq indent-level 4)
+;             (setq python-indent 4)
+;             (setq py-indent-offset 4)
+;             (setq indent-tabs-mode nil)
+;;;           (setq indent-tabs-mode t)
+;;        複数行コメント
+;             (setq comment-start "# ")
+;             (setq comment-end "")
+;             )
+;          )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; C# support
