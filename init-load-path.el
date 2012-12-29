@@ -12,4 +12,3 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")
 ;; emacs-nav 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-nav")
-
