@@ -75,6 +75,7 @@
 			     'markdown-mode
 			     'espresso-mode
                              'jade-mode
+                             'coffee-mode
                              )))
 
 
