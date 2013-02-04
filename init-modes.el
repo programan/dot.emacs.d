@@ -303,3 +303,11 @@ and source-file directory for your debugger." t)
 
 (add-hook 'coffee-mode-hook
 	  '(lambda() (coffee-custom)))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; yaml-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;(add-to-list 'load-path "~/.emacs.d/elisp/yaml-mode")
+(when (require 'yaml-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
