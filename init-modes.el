@@ -31,13 +31,17 @@
 ;             (c-set-offset 'arglist-close 0) ; 関数の引数リストの閉じ括弧はインデントしない
 ;             ))
 
-(setq auto-mode-alist
+(add-to-list 'auto-mode-alist '("\\.c$" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.h$" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.cpp$" . c++-mode))
+
+;(setq auto-mode-alist
       ;;; 拡張子とモードの対応
-      (append
-       '(("\\.c$" . c-mode))
-       '(("\\.h$" . c-mode))
-       '(("\\.cpp$" . c++-mode))
-       auto-mode-alist))
+;      (append
+;       '(("\\.c$" . c-mode))
+;       '(("\\.h$" . c-mode))
+;       '(("\\.cpp$" . c++-mode))
+;       auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; php
@@ -67,8 +71,16 @@
 ;            複数行コメント
 	     (setq comment-start "// ")
 	     (setq comment-end "")
+;	     (yas-minor-mode 1)
 	     )
 	  )
+
+;(add-to-list 'yas-extra-mode
+;             'php-mode-hook)
+
+;(add-hook 'php-mode-hook
+;	  '(lambda ()
+;	     (yas-minor-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

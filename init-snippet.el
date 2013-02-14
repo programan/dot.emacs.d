@@ -3,6 +3,7 @@
 ;; Emacsのメニューを表示している場合項目が追加されている
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas-global-mode 1)
+;(yas-reload-all)
 
 (setq yas/snippet-dirs 
       '("~/.emacs.d/site-lisp/yasnippet/snippets" "~/.emacs.d/site-lisp/yasnippet/extras/imported")
