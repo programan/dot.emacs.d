@@ -54,6 +54,7 @@
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-hook 'php-mode-hook
 	  '(lambda ()
+	     (c-set-style "stroustrup")
 	     (setq tab-width 4)
 	     (setq c-basic-offset 4)
 	     (c-set-offset 'case-label' 4)
@@ -71,6 +72,25 @@
 ;            複数行コメント
 	     (setq comment-start "// ")
 	     (setq comment-end "")
+	     ;; 勝手に改行モード (必要なければコメントアウトする)
+;	     (c-toggle-auto-hungry-state t)
+;	     (setq c-hanging-braces-alist
+;		   '(
+;		     (class-open nil)
+;		     (class-close nil)
+;		     (defun-open before after)
+;		     (defun-close nil)
+;		     (inline-open nil)
+;		     (inline-close nil)
+;		     (brace-list-open nil)
+;		     (brace-list-close nil)
+;		     (block-open nil)
+;		     (block-close nil)
+;		     (substatement-open before after)
+;		     (statement-case-open before after)
+;		     (extern-lang-open nil)
+;		     (extern-lang-close nil)
+;		     ))
 ;	     (yas-minor-mode 1)
 	     )
 	  )
