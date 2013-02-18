@@ -72,10 +72,14 @@
 ;            複数行コメント
 	     (setq comment-start "// ")
 	     (setq comment-end "")
+	     ;; RET キーで自動改行+インデント
+	     (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+	     ;; カッコ強調表示
+	     (show-paren-mode t)
 	     ;; 勝手に改行モード (必要なければコメントアウトする)
-;	     (c-toggle-auto-hungry-state t)
-;	     (setq c-hanging-braces-alist
-;		   '(
+	     (c-toggle-auto-hungry-state t)
+	     (setq c-hanging-braces-alist
+		   '(
 ;		     (class-open nil)
 ;		     (class-close nil)
 ;		     (defun-open before after)
@@ -87,11 +91,16 @@
 ;		     (block-open nil)
 ;		     (block-close nil)
 ;		     (substatement-open before after)
+		     (substatement-open after)
+		     (substatement-close before)
 ;		     (statement-case-open before after)
 ;		     (extern-lang-open nil)
 ;		     (extern-lang-close nil)
-;		     ))
+		     ))
 ;	     (yas-minor-mode 1)
+	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	     ;; auto-revert-modeを有効にする
+	     (auto-revert-mode)
 	     )
 	  )
 
