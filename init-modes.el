@@ -82,8 +82,8 @@
 		   '(
 ;		     (class-open nil)
 ;		     (class-close nil)
-;		     (defun-open before after)
-;		     (defun-close nil)
+		     (defun-open after)
+		     (defun-close before)
 ;		     (inline-open nil)
 ;		     (inline-close nil)
 ;		     (brace-list-open nil)
