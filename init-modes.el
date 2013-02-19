@@ -100,7 +100,7 @@
 ;	     (yas-minor-mode 1)
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode)
+	     (auto-revert-mode t)
 	     )
 	  )
 
