@@ -104,3 +104,10 @@
 (anything-read-string-mode 0)
 ;(setq anything-c-filelist-file-name "/tmp/all.filelist")
 
+;(setq anything-sources
+;      '(anything-c-source-buffers
+;	anything-c-source-imenu
+;	anything-c-source-etags-select
+;	anything-c-source-gtags-select
+;	)) 
+;;(global-set-key "\M-." 'anything-c-source-etags-select)
