@@ -240,3 +240,6 @@
 ;; ちなみにgitはmagitというlispがある。でもWindowsでは動かないかも
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 ;;(eval-after-load "vc" '(remove-hook 'find-file-hooks 'vc-find-file-hook))
+
+;; proofreading
+(require 'yspel)
