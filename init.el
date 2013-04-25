@@ -1,6 +1,17 @@
 ;; 共通ロードパスの追加
 (load "~/.emacs.d/init-load-path")
 
+;; Emacs24から標準搭載されたパッケージマネージャの設定
+;; package.elの設定
+(when (require 'package nil t)
+  ;;パッケージリポジトリにMarmaladeと開発運営のELPAを追加
+  (add-to-list 'package-archives
+	       '("marmalade" . "http://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives
+	       '("ELPA" . "http://tromey.com/elpa/"))
+  ;;インストールしたパッケージにロードパスを通して読み込む
+  (package-initialize))
+
 ;; 全体的な環境設定
 ;; Unicodeをメインにする場合の設定
 ;使用する言語環境
@@ -84,6 +95,7 @@
 ;(setq undo-no-redo t)
 ;(setq undo-limit 60000)
 ;(setq undo-strong-limit 600000)
+
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
 ;; ファイルやバッファのオープン、切り替えをサポート
