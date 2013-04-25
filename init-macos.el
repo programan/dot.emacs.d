@@ -91,11 +91,13 @@
 
 ;; auto-install
 ;; wgetが必要
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/site-lisp/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
-;(auto-install-update-emacswiki-package-name t)
-;(auto-install-compatibility-setup) ;install-elisp.elとコマンド名を同期
-;(setq auto-install-use-wget t)
+(when (require 'auto-install nil t)
+  (setq auto-install-directory "~/.emacs.d/site-lisp/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
+  ;; EmacsWikiに登録されているelispの名前を取得する
+  (auto-install-update-emacswiki-package-name t)
+  ;(setq auto-install-use-wget t)
+  ;; install-elispの関数を利用可能にする
+  (auto-install-compatibility-setup))
 
 ;; anything
 ;(require 'anything-startup)
