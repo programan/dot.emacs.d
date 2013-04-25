@@ -74,6 +74,16 @@
 ;; minimapの読み込み
 (load "~/.emacs.d/init-minimap")
 
+;; redo+の読み込み
+;(when (require 'redo+ nil t)
+;  ;;C-,にRedoを割当
+;  (global-set-key (kbd "C-,") `redo))
+
+;(require 'redo+)
+;(global-set-key (kbd "C-M-/") 'redo)
+;(setq undo-no-redo t)
+;(setq undo-limit 60000)
+;(setq undo-strong-limit 600000)
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
 ;; ファイルやバッファのオープン、切り替えをサポート
