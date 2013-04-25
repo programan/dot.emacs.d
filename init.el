@@ -96,7 +96,6 @@
 ;(setq undo-limit 60000)
 ;(setq undo-strong-limit 600000)
 
-
 ;; Interactively Do Things (highly recommended, but not strictly required)
 ;; ファイルやバッファのオープン、切り替えをサポート
 ;; C-sで次のファイルを選択、C-rで前のファイルを選択
