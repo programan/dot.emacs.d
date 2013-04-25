@@ -115,7 +115,8 @@
 ;;(global-set-key "\M-." 'anything-c-source-etags-select)
 
 ;; ctags.elの設定
-(require 'ctags nil t)
-(setq tags-revert-without-query t)
-(setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
-(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+;(require 'ctags-update nil t)
+;(setq tags-revert-without-query t)
+;(setq ctags-command "ctags -R -e --fields=\"+afikKlmnsSzt\" ")
+;(setq ctags-command "ctags -R -e")
+(global-set-key (kbd "<f5>") 'ctags-update)

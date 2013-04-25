@@ -115,3 +115,10 @@
 ;Be sure Anything does not fight with ido-mode.
 ;(anything-read-string-mode 0)
 ;(global-set-key (kbd "M-.") 'anything-c-etags-select)
+
+;; ctags.elの設定
+;(require 'ctags-update nil t)
+;(setq tags-revert-without-query t)
+;(setq ctags-command "ctags -R -e --fields=\"+afikKlmnsSzt\" ")
+;(setq ctags-command "ctags -R -e")
+(global-set-key (kbd "<f5>") 'ctags-update)
