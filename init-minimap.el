@@ -2,7 +2,9 @@
 ;; http://www.emacswiki.org/emacs/MiniMap
 (require 'minimap)
 (setq minimap-window-location 'right)
-(setq minimap-width-fraction 0.1)
+(setq minimap-width-fraction 0.15)
+(setq minimap-hide-fringes nil)
+(setq minimap-dedicated-window t)
 (defun minimap-toggle ()
   "Toggle minimap for current buffer."
   (interactive)
