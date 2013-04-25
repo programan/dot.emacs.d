@@ -1,3 +1,5 @@
+backups/*
+!backups/.gitkeep
 *~
 ac-comphist.dat
 tramp
