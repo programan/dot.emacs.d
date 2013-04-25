@@ -136,7 +136,7 @@
               (append
                '((top . 30) 
                  (left . 20)
-                 (width . 165) 
+                 (width . 180) 
                  (height . 60)) default-frame-alist))
         )
        ((>= (x-display-pixel-width) 1680)
