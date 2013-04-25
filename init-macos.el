@@ -115,6 +115,7 @@
 ;;(global-set-key "\M-." 'anything-c-source-etags-select)
 
 ;; ctags.elの設定
+(setq ctags-update-command (expand-file-name  "/usr/local/bin/ctags"))
 ;(require 'ctags-update nil t)
 ;(setq tags-revert-without-query t)
 ;(setq ctags-command "ctags -R -e --fields=\"+afikKlmnsSzt\" ")
