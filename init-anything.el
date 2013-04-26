@@ -5,3 +5,7 @@
 (anything-read-string-mode 0)
 ;; ctagsによる関数ジャンプ
 (global-set-key (kbd "M-.") 'anything-c-etags-select)
+
+(require 'anything-config nil t)
+(when (not (eq window-system 'w32))
+  (setq anything-su-or-sudo "sudo"))
