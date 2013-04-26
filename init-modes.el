@@ -111,6 +111,36 @@
 ;	  '(lambda ()
 ;	     (yas-minor-mode)))
 
+;; CakePHP1.x
+(when (require 'cake nil t)
+  ;;emacs-cakeの標準キーバインドを利用
+  (cake-set-default-keymap)
+  ;;標準でemacs-cakeをオン
+  (global-cake t))
+
+;; CakePHP2.x
+(when (require 'cake2 nil t)
+  ;;emacs-cakeの標準キーバインドを利用
+  (cake2-set-default-keymap)
+  ;;標準でemacs-cake2をオフ
+  (global-cake2 -1))
+
+;; emacs-cakeを切り替えるコマンドを定義
+(defun toggle-emacs-cake ()
+  "emacs-cakeとemacs-cake2を切り替える"
+  (interactive)
+  (cond ((eq cake2 t) ; cake2がオンなら
+	 (cake2 -1)
+	 (cake t))
+	((eq cake t) ; cakeがオンなら
+	 (cake -1)
+	 (cake2 t))
+	(t nil))) ; それ以外なら何もしない
+
+;; C-c tに割り当て
+(define-key cake-key-map (kbd "C-c t") 'toggle-emacs-cake)
+(define-key cake2-key-map (kbd "C-c t") 'toggle-emacs-cake)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python
