@@ -273,8 +273,8 @@ and source-file directory for your debugger." t)
 ;; rhtml-mode
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/rhtml")
 (require 'rhtml-mode)
-(add-hook 'rhtml-mode-hook
-	  (lambda () (rinari-launch)))
+;(add-hook 'rhtml-mode-hook
+;	  (lambda () (rinari-launch)))
 
 ;; haml-mode
 (require 'haml-mode)
@@ -297,8 +297,8 @@ and source-file directory for your debugger." t)
 ;; C-c ; f v (view を開く)
 ;; http://cocomonrails.blogspot.com/2009/07/emacs-rinari-yasnippet.html
 ;; Rinari
-(require 'rinari)
-(add-hook 'haml-mode-hook 'rinari-minor-mode)
+;(require 'rinari)
+;(add-hook 'haml-mode-hook 'rinari-minor-mode)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
