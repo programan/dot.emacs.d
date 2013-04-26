@@ -19,5 +19,3 @@
   (make-variable-buffer-local 'ac-sources)
   (add-to-list 'ac-sources 'ac-source-cake)
   (add-to-list 'ac-sources 'ac-source-cake2))
-;; CakePHPのauto-complete設定
-(add-hook 'php-mode-hook 'ac-cake-hook)

@@ -101,6 +101,8 @@
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
+	     ;; CakePHPのauto-complete設定
+	     (add-hook 'php-mode-hook 'ac-cake-hook)
 	     )
 	  )
 
