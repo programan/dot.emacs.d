@@ -56,6 +56,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;(require 'flymake-php)
 ;(add-hook 'php-mode-hook 'flymake-php-load)
+(defvar my-local-php-path nil)
+;(setq my-local-php-path nil)
+(if (eq window-system 'w32)
+    (if (executable-find "c:/cygwin/bin/ruby.exe")
+	(setq my-local-php-path "c:/cygwin/bin/php.exe")
+      (if (executable-find "c:/xampp/php/php.exe")
+	  (setq my-local-php-path "c:/xampp/php/php.exe")
+	(setq my-local-php-path nil)))
+  (when (executable-find "php")
+    (setq my-local-php-path "php")))
 
 (defun flymake-php-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -64,11 +74,7 @@
 		      temp-file
 		      (file-name-directory buffer-file-name))))
 ;    (list "c:/xampp/php/php.exe" (list "-f" local-file "-l"))))
-    (if (eq window-system 'w32) (progn
-				  (list "c:/xampp/php/php.exe" (list "-f" local-file "-l"))
-				  )
-      (progn
-	(list "php" (list "-f" local-file "-l"))))))
+    (list my-local-php-path (list "-f" local-file "-l"))))
 
 (push '(".+\\.php$" flymake-php-init) flymake-allowed-file-name-masks)
 (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
