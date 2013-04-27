@@ -125,3 +125,15 @@
 ;(setq ctags-command "ctags -R -e --fields=\"+afikKlmnsSzt\" ")
 ;(setq ctags-command "ctags -R -e")
 (global-set-key (kbd "<f5>") 'ctags-update)
+
+
+;; SKK
+;;; NTEmacs の設定例:
+(setq SKK_DATADIR "c:/emacs/etc/skk")
+(setq SKK_INFODIR "c:/emacs/info")
+(setq SKK_LISPDIR "c:/emacs/site-lisp/skk")
+(setq SKK_SET_JISYO t)
+;; skk用のstickyキー設定
+(setq skk-sticky-key ";")
+;; インライン候補縦表示
+(setq skk-show-inline 'vertical)
