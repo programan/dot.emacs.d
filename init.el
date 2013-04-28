@@ -122,7 +122,7 @@
         (setq default-frame-alist
               (append
                '((top . 30) 
-                 (left . 20)
+                 (left . 150)
                  (width . 180) 
                  (height . 60)) default-frame-alist))
         )
