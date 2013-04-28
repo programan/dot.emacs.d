@@ -121,3 +121,26 @@
 ;(setq ctags-command "ctags -R -e --fields=\"+afikKlmnsSzt\" ")
 ;(setq ctags-command "ctags -R -e")
 (global-set-key (kbd "<f5>") 'ctags-update)
+
+
+;; DDSKK
+;(let ((default-directory (expand-file-name "~/DDSKK/lisp")))
+;  (add-to-list 'load-path default-directory)
+;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+;      (normal-top-level-add-subdirs-to-load-path)))
+(add-to-list 'load-path "~/DDSKK/lisp/skk")
+;(require 'skk)
+;(require 'info)
+;(add-to-list 'Info-additional-directory-list "~/DDSKK/info")
+;(setq skk-user-directory "~/DDSKK/")
+(when (require 'skk-autoloads nil t)
+  (define-key global-map (kbd "\C-xj") 'skk-mode)
+  (setq skk-byte-compile-init-file t))
+;; dired-x with skk
+;(add-hook 'dired-load-hook
+;          (lambda ()
+;            (load "dired-x")
+;            (global-set-key "\C-x\C-j" 'skk-mode)
+;            ))
+(global-set-key "\C-xj" 'skk-mode)
+
