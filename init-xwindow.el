@@ -176,3 +176,9 @@
 ;            (global-set-key "\C-x\C-j" 'skk-mode)
 ;            ))
 (global-set-key "\C-xj" 'skk-mode)
+
+(setq SKK_SET_JISYO t)
+;; skk用のstickyキー設定
+(setq skk-sticky-key ";")
+;; インライン候補縦表示
+(setq skk-show-inline 'vertical)
