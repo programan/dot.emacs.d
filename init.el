@@ -155,7 +155,7 @@
               (append
                '((top . 30) 
                  (left . 20)
-                 (width . 110) 
+                 (width . 120) 
                  (height . 45)) default-frame-alist))
         )
        )
