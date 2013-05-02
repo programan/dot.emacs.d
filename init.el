@@ -24,7 +24,8 @@
  ((eq window-system 'mac)
   (load "~/.emacs.d/init-macos"))
  ((eq window-system 'x)
-  (load "~/.emacs.d/init-xwindow")))
+  (load "~/.emacs.d/init-xwindow"))
+ (t (load "~/.emacs.d/init-console")))
 
 ;; anything
 (load "~/.emacs.d/init-anything")
