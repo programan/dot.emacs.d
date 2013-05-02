@@ -68,13 +68,20 @@
 (defvar my-local-php-path nil)
 ;(setq my-local-php-path nil)
 (if (eq window-system 'w32)
-    (if (executable-find "c:/cygwin/bin/ruby.exe")
-	(setq my-local-php-path "c:/cygwin/bin/php.exe")
-      (if (executable-find "c:/xampp/php/php.exe")
-	  (setq my-local-php-path "c:/xampp/php/php.exe")
-	(setq my-local-php-path nil)))
-  (when (executable-find "php")
-    (setq my-local-php-path "php")))
+    (progn
+      (cond
+       ((executable-find "c:/cygwin/bin/php.exe")
+	(setq my-local-php-path "c:/cygwin/bin/php.exe"))
+       ((executable-find "c:/xampp/php/php.exe")
+	(setq my-local-php-path "c:/xampp/php/php.exe"))
+       ((executable-find "php")
+	(setq my-local-php-path "php"))
+       (t (setq my-local-php-path nil))))
+  (progn
+    (cond
+     ((executable-find "php")
+      (setq my-local-php-path "php"))
+     (t (setq my-local-php-path nil)))))
 
 (defun flymake-php-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
