@@ -26,16 +26,25 @@
 ;; Invoke ruby with '-c' to get syntax checking
 (defvar my-local-ruby-path nil)
 (if (eq window-system 'w32)
-    (when (executable-find "c:/cygwin/bin/ruby.exe")
-      (setq my-local-ruby-path "c:/cygwin/bin/ruby.exe"))
-  (when (executable-find "ruby")
-    (setq my-local-ruby-path "ruby")))
+    (progn
+      (cond
+       ((executable-find "c:/cygwin/bin/ruby.exe")
+	(setq my-local-ruby-path "c:/cygwin/bin/ruby.exe"))
+       ((executable-find "ruby")
+	(setq my-local-ruby-path "ruby"))
+       (t (setq my-local-ruby-path nil))))
+  (progn
+    (cond
+     ((executable-find "ruby")
+      (setq my-local-ruby-path "ruby"))
+     (t (setq my-local-ruby-path nil)))))
 ;(print my-local-ruby-path)
+;(print "aaaaaa")
 
 (defun flymake-ruby-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
 		     'flymake-create-temp-inplace))
-         (local-file (file-relative-name
+	 (local-file (file-relative-name
 		      temp-file
 		      (file-name-directory buffer-file-name))))
     (list my-local-ruby-path (list "-c" local-file))))
