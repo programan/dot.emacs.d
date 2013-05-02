@@ -149,3 +149,9 @@
 (setq skk-sticky-key ";")
 ;; インライン候補縦表示
 (setq skk-show-inline 'vertical)
+
+
+;; EGG(git)
+(when (executable-find "git")
+  (require 'egg nil t))
+
