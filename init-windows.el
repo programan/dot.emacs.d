@@ -137,3 +137,10 @@
 (setq skk-sticky-key ";")
 ;; インライン候補縦表示
 (setq skk-show-inline 'vertical)
+
+
+;; EGG(git)
+;(when (executable-find "c:/msysgit/msysgit/bin/git.exe")
+;  (require 'egg nil t)
+;  (setq egg-git-command "c:/msysgit/msysgit/bin/git.exe")
+;  (setq egg-patch-command "c:/msysgit/msysgit/bin/patch.exe"))
