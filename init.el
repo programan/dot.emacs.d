@@ -27,15 +27,18 @@
   (load "~/.emacs.d/init-xwindow"))
  (t (load "~/.emacs.d/init-console")))
 
+;; window-sysytemが有効の時のみ初期化
+(when (window-system)
+  ;; タブバー設定の読み込み
+  (load "~/.emacs.d/init-tabbar")
+  ;; 編集行のハイライト設定の読み込み
+  (load "~/.emacs.d/init-hilight-line"))
+
 ;; anything
 (load "~/.emacs.d/init-anything")
 
 ;; オートコンプリート設定の読み込み
 (load "~/.emacs.d/init-auto-complete")
-
-;; タブバー設定の読み込み
-(when (window-system)
-  (load "~/.emacs.d/init-tabbar"))
 
 ;; snippet設定の読み込み
 (load "~/.emacs.d/init-snippet")
@@ -60,11 +63,6 @@
 
 ;; アウトラインモード設定の読み込み
 (load "~/.emacs.d/init-outline-tree")
-
-;; 編集行のハイライト設定の読み込み
-(if window-system (progn
-                    (load "~/.emacs.d/init-hilight-line")
-                    ))
 
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
