@@ -138,6 +138,18 @@
 ;; インライン候補縦表示
 (setq skk-show-inline 'vertical)
 
+;; lisp-interaction-mode
+(add-hook 'lisp-interaction-mode-hook
+          '(lambda()
+               (eval-expression (skk-mode) nil)
+               ))
+
+;; find-file(C-xC-f)
+(add-hook 'find-file-hooks
+          '(lambda()
+              (eval-expression (skk-mode) nil)
+	      ))
+
 
 ;; EGG(git)
 ;(when (executable-find "c:/msysgit/msysgit/bin/git.exe")
