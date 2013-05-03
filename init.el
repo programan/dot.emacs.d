@@ -34,9 +34,8 @@
 (load "~/.emacs.d/init-auto-complete")
 
 ;; タブバー設定の読み込み
-(if window-system (progn
-                    (load "~/.emacs.d/init-tabbar")
-                    ))
+(when (window-system)
+  (load "~/.emacs.d/init-tabbar"))
 
 ;; snippet設定の読み込み
 (load "~/.emacs.d/init-snippet")
