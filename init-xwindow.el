@@ -194,3 +194,8 @@
           '(lambda()
               (eval-expression (skk-mode) nil)
 	      ))
+
+;; multi-termの設定
+(when (require 'multi-term nil t)
+  ;; 使用するシェルの指定
+  (setq multi-term-program "/bin/bash"))
