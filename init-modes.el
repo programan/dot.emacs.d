@@ -101,8 +101,6 @@
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
-	     ;; CakePHPのauto-complete設定
-	     (add-hook 'php-mode-hook 'ac-cake-hook)
 	     )
 	  )
 
@@ -112,6 +110,31 @@
 ;(add-hook 'php-mode-hook
 ;	  '(lambda ()
 ;	     (yas-minor-mode)))
+
+;; php-modeの補完を強化する
+(defun php-completion-hook ()
+  (when (require 'php-completion nil t)
+    (php-completion t)
+    (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)
+
+    (when (require 'auto-complete nil t)
+      (make-variable-buffer-local 'ac-sources)
+      (add-to-list 'ac-sources 'ac-sources-php-completion)
+      (auto-complete-mode t))))
+(add-hook 'php-mode-hook 'php-complection-hook)
+
+;; CakePHP
+(when (and (require 'auto-complete nil t)
+	   (require 'ac-cake nil t)
+	   (require 'ac-cake2 nil t))
+  ;; ac-cake用の関数定義
+  (defun ac-cake-hook ()
+    (make-variable-buffer-local 'ac-sources)
+    (add-to-list 'ac-sources 'ac-source-cake)
+    (add-to-list 'ac-sources 'ac-source-cake2))
+  ;;php-mode-hookにac-cake用の関数を追加
+  (add-hook 'php-mode-hook 'ac-cake-hook))
+
 
 ;; CakePHP1.x
 (when (require 'cake nil t)
