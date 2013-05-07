@@ -52,77 +52,15 @@
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
-(add-hook 'php-mode-hook
-	  '(lambda ()
-	     (c-set-style "stroustrup")
-	     (setq tab-width 4)
-	     (setq c-basic-offset 4)
-	     (c-set-offset 'case-label' 4)
-;;	     (setq indent-tabs-mode nil)
-	     (setq indent-tabs-mode t)
-	     ;; M-TAB が有効にならないので以下の設定を追加
-;	     (define-key php-mode-map "\C-\M-i" 'php-complete-function)
-	     ;; その他
-;	     (define-key php-mode-map "\C-\M-a" 'php-beginning-of-defun)
-;	     (define-key php-mode-map "\C-\M-e" 'php-end-of-defun)
-;	     (setq php-manual-path "~/.emacs.d/manual/php") 
-	     ;;C-cC-fで関数helpにジャンプ
-	     (setq php-search-url "http://www.phppro.jp/")
-	     (setq php-manual-url "http://www.phppro.jp/phpmanual")
-;            複数行コメント
-	     (setq comment-start "// ")
-	     (setq comment-end "")
-	     ;; RET キーで自動改行+インデント
-	     (define-key c-mode-base-map "\C-m" 'newline-and-indent)
-	     ;; カッコ強調表示
-	     (show-paren-mode t)
-	     ;; 勝手に改行モード (必要なければコメントアウトする)
-	     (c-toggle-auto-hungry-state t)
-	     (setq c-hanging-braces-alist
-		   '(
-;		     (class-open nil)
-;		     (class-close nil)
-		     (defun-open after)
-		     (defun-close before)
-;		     (inline-open nil)
-;		     (inline-close nil)
-;		     (brace-list-open nil)
-;		     (brace-list-close nil)
-;		     (block-open nil)
-;		     (block-close nil)
-;		     (substatement-open before after)
-		     (substatement-open after)
-		     (substatement-close before)
-;		     (statement-case-open before after)
-;		     (extern-lang-open nil)
-;		     (extern-lang-close nil)
-		     ))
-;	     (yas-minor-mode 1)
-	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)
-	     )
-	  )
-
-;(add-to-list 'yas-extra-mode
-;             'php-mode-hook)
-
-;(add-hook 'php-mode-hook
-;	  '(lambda ()
-;	     (yas-minor-mode)))
-
 ;; php-modeの補完を強化する
 (defun php-completion-hook ()
   (when (require 'php-completion nil t)
     (php-completion t)
     (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)
-
     (when (require 'auto-complete nil t)
       (make-variable-buffer-local 'ac-sources)
       (add-to-list 'ac-sources 'ac-sources-php-completion)
       (auto-complete-mode t))))
-(add-hook 'php-mode-hook 'php-complection-hook)
-
 ;; CakePHP
 (when (and (require 'auto-complete nil t)
 	   (require 'ac-cake nil t)
@@ -134,7 +72,6 @@
     (add-to-list 'ac-sources 'ac-source-cake2))
   ;;php-mode-hookにac-cake用の関数を追加
   (add-hook 'php-mode-hook 'ac-cake-hook))
-
 
 ;; CakePHP1.x
 (when (require 'cake nil t)
@@ -162,10 +99,50 @@
 	 (cake2 t))
 	(t nil))) ; それ以外なら何もしない
 
-;; C-c tに割り当て
-(define-key cake-key-map (kbd "C-c t") 'toggle-emacs-cake)
-(define-key cake2-key-map (kbd "C-c t") 'toggle-emacs-cake)
-
+(add-hook 'php-mode-hook
+	  '(lambda ()
+	     (c-set-style "stroustrup")
+	     (setq tab-width 4)
+	     (setq c-basic-offset 4)
+	     (c-set-offset 'case-label' 4)
+;;	     (setq indent-tabs-mode nil)
+	     (setq indent-tabs-mode t)
+	     ;;C-cC-fで関数helpにジャンプ
+	     (setq php-search-url "http://www.phppro.jp/")
+	     (setq php-manual-url "http://www.phppro.jp/phpmanual")
+             ;;複数行コメント
+	     (setq comment-start "// ")
+	     (setq comment-end "")
+	     ;; RET キーで自動改行+インデント
+	     (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+	     ;; カッコ強調表示
+	     (show-paren-mode t)
+	     ;; auto-complete
+	     ('php-complection-hook)
+	     ;; 勝手に改行モード (必要なければコメントアウトする)
+	     (c-toggle-auto-hungry-state t)
+	     (setq c-hanging-braces-alist
+		   '(
+;		     (class-open nil)
+;		     (class-close nil)
+		     (defun-open after)
+		     (defun-close before)
+;		     (inline-open nil)
+;		     (inline-close nil)
+;		     (brace-list-open nil)
+;		     (brace-list-close nil)
+;		     (block-open nil)
+;		     (block-close nil)
+;		     (substatement-open before after)
+		     (substatement-open after)
+		     (substatement-close before)
+;		     (statement-case-open before after)
+;		     (extern-lang-open nil)
+;		     (extern-lang-close nil)
+		     ))
+	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	     ;; auto-revert-modeを有効にする
+	     (auto-revert-mode t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python
