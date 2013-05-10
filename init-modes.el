@@ -108,8 +108,8 @@
 ;;	     (setq indent-tabs-mode nil)
 	     (setq indent-tabs-mode t)
 	     ;;C-cC-fで関数helpにジャンプ
-	     (setq php-search-url "http://www.phppro.jp/")
-	     (setq php-manual-url "http://www.phppro.jp/phpmanual")
+	     (setq php-search-url "http://www.php.net/ja/")
+	     (setq php-manual-url "http://www.php.net/manual/ja/")
              ;;複数行コメント
 	     (setq comment-start "// ")
 	     (setq comment-end "")
