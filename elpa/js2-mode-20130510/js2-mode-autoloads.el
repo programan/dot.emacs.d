@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (js2-mode js2-minor-mode) "js2-mode" "js2-mode.el"
-;;;;;;  (20857 27039 0 0))
+;;;;;;  (20881 45826 661444 305000))
 ;;; Generated autoloads from js2-mode.el
 
 (autoload 'js2-minor-mode "js2-mode" "\
@@ -22,8 +22,8 @@ Major mode for editing JavaScript code.
 
 ;;;***
 
-;;;### (autoloads nil nil ("js2-mode-pkg.el") (20857 27039 996736
-;;;;;;  0))
+;;;### (autoloads nil nil ("js2-mode-pkg.el") (20881 45826 725452
+;;;;;;  986000))
 
 ;;;***
 
