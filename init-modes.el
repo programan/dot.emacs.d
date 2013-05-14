@@ -1,5 +1,23 @@
 ;; モード設定
 
+;; Emacs24から標準になったelectric系の機能を有効にする
+(when (>= emacs-major-version 24)
+  ;; 自動で閉じカッコを入れる
+  (electric-pair-mode t)
+  ;; 改行時にインデント
+  (electric-indent-mode t)
+  ;; 自動で改行
+;  (electric-layout-mode t)
+  )
+
+;; electricをemacs全体で有効にしたくない場合は
+;; add-hookで個別に設定する
+(defun electric-pair ()
+  "If at end of line, insert character pair without surrounding spaces.
+    Otherwise, just insert the typed character."
+  (interactive)
+  (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; C/C++
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -207,14 +225,22 @@
              (setq js2-enter-indents-newline t)
              (setq comment-start "// ")
              (setq comment-end "")
-;            (set (make-local-variable 'indent-line-function) 'js2-indent-line)
+	     ;; (electric-pair-mode t)
+	     ;; (electric-indent-mode t)
+	     ;; (electric-layout-mode t)
+	     ;; (define-key js2-mode-map "\"" 'electric-pair)
+	     ;; (define-key js2-mode-map "\'" 'electric-pair)
+	     ;; (define-key js2-mode-map "(" 'electric-pair)
+	     ;; (define-key js2-mode-map "[" 'electric-pair)
+	     ;; (define-key js2-mode-map "{" 'electric-pair)
+	     ;; (set (make-local-variable 'indent-line-function) 'js2-indent-line)
              ))
 
 ; js2mode(fork)でadd-hook時にパラメータを変えても反映されないものをここで変更
-(when (load "js2-mode" t)
-  (setq js2-cleanup-whitespace nil
-        js2-mirror-mode t)
-  )
+;; (when (load "js2-mode" t)
+;;   (setq js2-cleanup-whitespace nil
+;;         js2-mirror-mode t)
+;;   )
 
 ;(add-hook 'js2-mode-hook
 ;          #'(lambda ()
@@ -280,11 +306,21 @@ and source-file directory for your debugger." t)
 
 ;; ruby-electric.el --- electric editing commands for ruby files
 ;; if に対するendとか入れてくれる
+;; emacs24標準のelectricとバッティングするので、ruby-mode時は
+;; electric系はオフにする
 (require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+(add-hook 'ruby-mode-hook
+	  '(lambda ()
+	     (ruby-electric-mode t)
+	     (when (>= emacs-major-version 24)
+	       (set (make-local-variable 'electric-pair-mode) nil)
+	       (set (make-local-variable 'electric-indent-mode) nil)
+	       (set (make-local-variable 'electric-layout-mode) nil))))
+
 (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
   (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
 (setq ruby-electric-expand-delimiters-list nil)
+
 
 ;; ruby-modeのインデント
 (setq ruby-indent-level 2)
