@@ -13,12 +13,13 @@
 ;クリップボードの文字コード
 ;; MS Windows clipboard
 ;;(set-clipboard-coding-system 'utf-16le-dos)
-(set-clipboard-coding-system 'utf-8)
-(unless (<= 23 emacs-major-version) 
-  (set-selection-coding-system 'compound-text-unix))
+;;(set-clipboard-coding-system 'utf-8)
+;;(unless (<= 23 emacs-major-version) 
+;;  (set-selection-coding-system 'compound-text-unix))
 
 ;; コピーした内容を PRIMARY,CLIPBOARD セクションにもコピーする
-(set-clipboard-coding-system 'compound-text)
+;;(set-clipboard-coding-system 'compound-text)
+(set-clipboard-coding-system 'utf-8)
 (cond (window-system (setq x-select-enable-clipboard t) ))
 
 ;; C-y で CLIPBOARD の内容をペースト(ヤンク)する
