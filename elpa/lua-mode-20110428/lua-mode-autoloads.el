@@ -25,6 +25,9 @@ The following keys are bound:
 
 ;;;***
 
+
+(setq lua-indent-level 2)
+
 (provide 'lua-mode-autoloads)
 ;; Local Variables:
 ;; version-control: never
