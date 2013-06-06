@@ -76,6 +76,7 @@
 			     'espresso-mode
                              'jade-mode
                              'coffee-mode
+			     'lua-mode
                              )))
 
 
