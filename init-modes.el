@@ -120,7 +120,19 @@
 
 (add-hook 'php-mode-hook
 	  '(lambda ()
+	     ;; 配列の整形
+	     (defun ywb-php-lineup-arglist-intro (langelem)
+	       (save-excursion
+		 (goto-char (cdr langelem))
+		 (vector (+ (current-column) c-basic-offset))))
+	     (defun ywb-php-lineup-arglist-close (langelem)
+	       (save-excursion
+		 (goto-char (cdr langelem))
+		 (vector (current-column))))
 	     (c-set-style "stroustrup")
+	     (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
+	     (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)
+	     (c-set-offset 'arglist-cont-nonempty' 4)
 	     (setq tab-width 4)
 	     (setq c-basic-offset 4)
 	     (c-set-offset 'case-label' 4)
@@ -161,7 +173,9 @@
 		     ))
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)))
+	     (auto-revert-mode t)
+	     ;; (setq php-mode-force-pear t)
+	     ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python
