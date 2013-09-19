@@ -27,6 +27,11 @@
   (load "~/.emacs.d/init-xwindow"))
  (t (load "~/.emacs.d/init-console")))
 
+
+;; DDSKK
+(load "~/.emacs.d/init-skk")
+
+
 ;; window-sysytemが有効の時のみ初期化
 (when (window-system)
   ;; タブバー設定の読み込み

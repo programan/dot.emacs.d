@@ -127,30 +127,6 @@
 (global-set-key (kbd "<f5>") 'ctags-update)
 
 
-;; SKK
-;;; NTEmacs の設定例:
-(setq SKK_DATADIR "c:/emacs/etc/skk")
-(setq SKK_INFODIR "c:/emacs/info")
-(setq SKK_LISPDIR "c:/emacs/site-lisp/skk")
-(setq SKK_SET_JISYO t)
-;; skk用のstickyキー設定
-(setq skk-sticky-key ";")
-;; インライン候補縦表示
-(setq skk-show-inline 'vertical)
-
-;; lisp-interaction-mode
-(add-hook 'lisp-interaction-mode-hook
-          '(lambda()
-               (eval-expression (skk-mode) nil)
-               ))
-
-;; find-file(C-xC-f)
-(add-hook 'find-file-hooks
-          '(lambda()
-              (eval-expression (skk-mode) nil)
-	      ))
-
-
 ;; EGG(git)
 ;(when (executable-find "c:/msysgit/msysgit/bin/git.exe")
 ;  (require 'egg nil t)

@@ -122,47 +122,6 @@
 ;(setq ctags-command "ctags -R -e")
 (global-set-key (kbd "<f5>") 'ctags-update)
 
-
-;; DDSKK
-;(let ((default-directory (expand-file-name "~/DDSKK/lisp")))
-;  (add-to-list 'load-path default-directory)
-;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-;      (normal-top-level-add-subdirs-to-load-path)))
-(add-to-list 'load-path "~/DDSKK/lisp/skk")
-;(require 'skk)
-;(require 'info)
-;(add-to-list 'Info-additional-directory-list "~/DDSKK/info")
-;(setq skk-user-directory "~/DDSKK/")
-(when (require 'skk-autoloads nil t)
-  (define-key global-map (kbd "\C-xj") 'skk-mode)
-  (setq skk-byte-compile-init-file t))
-;; dired-x with skk
-;(add-hook 'dired-load-hook
-;          (lambda ()
-;            (load "dired-x")
-;            (global-set-key "\C-x\C-j" 'skk-mode)
-;            ))
-(global-set-key "\C-xj" 'skk-mode)
-
-(setq SKK_SET_JISYO t)
-;; skk用のstickyキー設定
-(setq skk-sticky-key ";")
-;; インライン候補縦表示
-(setq skk-show-inline 'vertical)
-
-;; lisp-interaction-mode
-(add-hook 'lisp-interaction-mode-hook
-          '(lambda()
-               (eval-expression (skk-mode) nil)
-               ))
-
-;; find-file(C-xC-f)
-(add-hook 'find-file-hooks
-          '(lambda()
-              (eval-expression (skk-mode) nil)
-	      ))
-
-
 ;; EGG(git)
 (when (executable-find "git")
   (require 'egg nil t))
