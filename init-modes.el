@@ -120,6 +120,9 @@
 
 (add-hook 'php-mode-hook
 	  '(lambda ()
+	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	     ;; auto-revert-modeを有効にする
+	     (auto-revert-mode t)
 	     ;; 配列の整形
 	     (defun ywb-php-lineup-arglist-intro (langelem)
 	       (save-excursion
@@ -171,9 +174,6 @@
 ;		     (extern-lang-open nil)
 ;		     (extern-lang-close nil)
 		     ))
-	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)
 	     ;; (setq php-mode-force-pear t)
 	     ))
 
