@@ -75,6 +75,28 @@
 ;; minimapの読み込み
 (load "~/.emacs.d/init-minimap")
 
+;; (require 'mmm-mode)
+;; (setq mmm-global-mode 'maybe)
+;; (mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
+;; (mmm-add-mode-ext-class 'html-mode "\\.ctp\\'" 'html-php)
+
+;; mmm-mode
+;; (require 'mmm-mode)
+;; (setq mmm-global-mode 'maybe)
+;; (mmm-add-mode-ext-class nil "\\.php?\\'" 'html-php)
+;; (mmm-add-mode-ext-class nil "\\.ctp?\\'" 'html-php)
+;; (set-face-background 'mmm-default-submode-face nil)
+;; (mmm-add-classes
+;;  '((html-php
+;;     :submode php-mode
+;;     :front "<\\?\\(php\\)?"
+;;     :back "\\?>")))
+;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . yahtml-mode))
+;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . html-helper-mode))
+;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . xml-mode))
+;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . html-mode))
+
+
 ;; redo+の読み込み
 ;(when (require 'redo+ nil t)
 ;  ;;C-,にRedoを割当
