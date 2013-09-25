@@ -1,6 +1,7 @@
 ;; Anything
 (when (require 'anything-startup nil t)
   (global-set-key (kbd "C-;") 'anything-filelist+)
+  (global-set-key (kbd "C-c C-;") 'anything-filelist+)
   ;; Be sure Anything does not fight with ido-mode.
   (anything-read-string-mode 0)
   ;; ctagsによる関数ジャンプ
