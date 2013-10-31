@@ -75,6 +75,9 @@
 ;; minimapの読み込み
 (load "~/.emacs.d/init-minimap")
 
+;; tailの読み込み
+(load "~/.emacs.d/init-tail")
+
 ;; (require 'mmm-mode)
 ;; (setq mmm-global-mode 'maybe)
 ;; (mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
@@ -269,3 +272,4 @@
 
 ;; proofreading
 (require 'yspel)
+
