@@ -73,7 +73,11 @@
 (load "~/.emacs.d/init-truncate-lines")
 
 ;; minimapの読み込み
-(load "~/.emacs.d/init-minimap")
+;;(load "~/.emacs.d/init-minimap")
+
+;; sublimityの読み込み
+(load "~/.emacs.d/init-sublimity")
+
 
 ;; tailの読み込み
 (load "~/.emacs.d/init-tail")
