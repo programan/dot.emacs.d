@@ -235,6 +235,9 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-hook 'js2-mode-hook
           '(lambda ()
+	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	     ;; auto-revert-modeを有効にする
+	     (auto-revert-mode t)
              (setq indent-tabs-mode nil)
              (setq js2-basic-offset 2)
              (setq js2-enter-indents-newline t)
@@ -326,6 +329,9 @@ and source-file directory for your debugger." t)
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook
 	  '(lambda ()
+	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	     ;; auto-revert-modeを有効にする
+	     (auto-revert-mode t)
 	     (ruby-electric-mode t)
 	     (when (>= emacs-major-version 24)
 	       (set (make-local-variable 'electric-pair-mode) nil)
@@ -359,14 +365,21 @@ and source-file directory for your debugger." t)
 ;; rhtml-mode
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/rhtml")
 (require 'rhtml-mode)
-;(add-hook 'rhtml-mode-hook
-;	  (lambda () (rinari-launch)))
+(add-hook 'rhtml-mode-hook
+	  (lambda ()
+	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	    ;; auto-revert-modeを有効にする
+	    (auto-revert-mode t)
+	    (rinari-launch)))
 
 ;; haml-mode
 (require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-hook 'haml-mode-hook
 	  (lambda ()
+	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	    ;; auto-revert-modeを有効にする
+	    (auto-revert-mode t)
 	    (setq indent-tabs-mode nil)
 	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
