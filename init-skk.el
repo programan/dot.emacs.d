@@ -43,3 +43,15 @@
           '(lambda()
 	     (eval-expression (skk-mode) nil)
 	     ))
+
+(add-hook 'isearch-mode-hook
+          '(lambda ()
+	     (when (and (boundp 'skk-mode)
+			skk-mode
+			skk-isearch-mode-enable)
+	       (skk-isearch-mode-setup))))
+(add-hook 'isearch-mode-end-hook
+          '(lambda ()
+	     (when (and (featurep 'skk-isearch)
+			skk-isearch-mode-enable)
+	       (skk-isearch-mode-cleanup))))
