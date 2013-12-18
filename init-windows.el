@@ -132,3 +132,21 @@
 ;  (require 'egg nil t)
 ;  (setq egg-git-command "c:/msysgit/msysgit/bin/git.exe")
 ;  (setq egg-patch-command "c:/msysgit/msysgit/bin/patch.exe"))
+
+
+;; MySQL
+;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
+(setq sql-mysql-program "c:/xampp/mysql/bin/mysql.exe")
+(setq sql-mysql-options '("-C" "-t" "-f" "-n"))
+;;(setq sql-mysql-options '("-C" "-t" "-f" "-n" "--port=22222"))
+;; truncate lines for long tables
+;;(add-hook 'sql-interactive-mode-hook
+;;	  (function (lambda ()
+;;		      (setq truncate-lines t))))
+;; (setq auto-mode-alist
+;;       (append
+;;        (list
+;; 	;; insert entries for other modes here if needed.
+;; 	(cons "\.sq$" 'sql-mode))
+;;        auto-mode-alist))
+;; (add-hook 'sql-mode-hook 'font-lock-mode)
