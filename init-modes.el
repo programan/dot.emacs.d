@@ -459,7 +459,7 @@ and source-file directory for your debugger." t)
 (require 'web-mode)
 (setq auto-mode-alist
       (append '(
-                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|ctp\\)\\'" . web-mode)
+                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|ctp\\|ejs\\)\\'" . web-mode)
                 ("\\.php\\'" . php-mode)
                 )
               auto-mode-alist))
