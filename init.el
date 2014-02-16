@@ -190,9 +190,9 @@
 (column-number-mode 1)
 
 ;; モードラインの色
-;;(set-face-foreground 'mode-line "light blue")
-;;(set-face-background 'mode-line "grey19")
-;(set-face-background 'modeline "black")
+(set-face-foreground 'mode-line "light blue")
+(set-face-background 'mode-line "grey19")
+;;(set-face-background 'modeline "black")
 
 ;; モードラインにバッテリ残量表示
 ;(display-battery-mode t)
