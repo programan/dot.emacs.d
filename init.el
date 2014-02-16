@@ -36,8 +36,18 @@
 (when (window-system)
   ;; タブバー設定の読み込み
   (load "~/.emacs.d/init-tabbar")
+  
   ;; 編集行のハイライト設定の読み込み
-  (load "~/.emacs.d/init-hilight-line"))
+  ;;(load "~/.emacs.d/init-hilight-line")
+
+  ;; color-theme
+  ;;(load-theme 'deeper-blue t)
+  ;;(load-theme 'manoj-dark t)
+  ;;(load-theme 'misterioso t)
+  (load-theme 'tango-dark t)
+  ;;(load-theme 'wheatgrass t)
+  ;;(load-theme 'wombat t)
+)
 
 ;; anything
 (load "~/.emacs.d/init-anything")
@@ -78,42 +88,8 @@
 ;; sublimityの読み込み
 (load "~/.emacs.d/init-sublimity")
 
-
 ;; tailの読み込み
 (load "~/.emacs.d/init-tail")
-
-;; (require 'mmm-mode)
-;; (setq mmm-global-mode 'maybe)
-;; (mmm-add-mode-ext-class 'html-mode "\\.php\\'" 'html-php)
-;; (mmm-add-mode-ext-class 'html-mode "\\.ctp\\'" 'html-php)
-
-;; mmm-mode
-;; (require 'mmm-mode)
-;; (setq mmm-global-mode 'maybe)
-;; (mmm-add-mode-ext-class nil "\\.php?\\'" 'html-php)
-;; (mmm-add-mode-ext-class nil "\\.ctp?\\'" 'html-php)
-;; (set-face-background 'mmm-default-submode-face nil)
-;; (mmm-add-classes
-;;  '((html-php
-;;     :submode php-mode
-;;     :front "<\\?\\(php\\)?"
-;;     :back "\\?>")))
-;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . yahtml-mode))
-;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . html-helper-mode))
-;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . xml-mode))
-;; (add-to-list 'auto-mode-alist '("\\.ctp?\\'" . html-mode))
-
-
-;; redo+の読み込み
-;(when (require 'redo+ nil t)
-;  ;;C-,にRedoを割当
-;  (global-set-key (kbd "C-,") `redo))
-
-;(require 'redo+)
-;(global-set-key (kbd "C-M-/") 'redo)
-;(setq undo-no-redo t)
-;(setq undo-limit 60000)
-;(setq undo-strong-limit 600000)
 
 ;; idoの読み込み
 (load "~/.emacs.d/init-ido")
@@ -214,8 +190,8 @@
 (column-number-mode 1)
 
 ;; モードラインの色
-(set-face-foreground 'mode-line "light blue")
-(set-face-background 'mode-line "grey19")
+;;(set-face-foreground 'mode-line "light blue")
+;;(set-face-background 'mode-line "grey19")
 ;(set-face-background 'modeline "black")
 
 ;; モードラインにバッテリ残量表示
