@@ -65,7 +65,7 @@
 (load "~/.emacs.d/init-flymake")
 
 ;; タブキー設定の読み込み
-(load "~/.emacs.d/init-tabkey")
+;;(load "~/.emacs.d/init-tabkey")
 
 ;; 全角空白、タブ、改行表示モード設定の読み込み
 (load "~/.emacs.d/init-jaspace")
@@ -77,7 +77,7 @@
 (load "~/.emacs.d/init-window-toggle-division")
 
 ;; アウトラインモード設定の読み込み
-(load "~/.emacs.d/init-outline-tree")
+;;(load "~/.emacs.d/init-outline-tree")
 
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
