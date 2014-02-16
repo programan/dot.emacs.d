@@ -25,15 +25,15 @@
 
 
 (when (>= emacs-major-version 23)
-(define-key global-map [ns-drag-file] 'ns-find-file)
-(setq ns-pop-up-frames nil)
-)
+  (define-key global-map [ns-drag-file] 'ns-find-file)
+  (setq ns-pop-up-frames nil)
+  )
 
 ;; シフト + 矢印で範囲選択
 (setq pc-select-selection-keys-only t)
 (when (< emacs-major-version 24)
   (pc-selection-mode 1)
-)
+  )
 
 
 ;; フォント設定
