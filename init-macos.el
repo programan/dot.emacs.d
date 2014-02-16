@@ -123,8 +123,8 @@
 (global-set-key (kbd "<f5>") 'ctags-update)
 
 ;; EGG(git)
-(when (executable-find "git")
-  (require 'egg nil t))
+;; (when (executable-find "git")
+;;   (require 'egg nil t))
 
 ;; multi-termの設定
 (when (require 'multi-term nil t)
