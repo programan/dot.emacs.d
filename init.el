@@ -41,7 +41,7 @@
   (load "~/.emacs.d/init-tabbar")
   
   ;; 編集行のハイライト設定の読み込み
-  ;;(load "~/.emacs.d/init-hilight-line")
+  (load "~/.emacs.d/init-hilight-line")
 
   ;; color-theme
   ;;(load-theme 'deeper-blue t)
