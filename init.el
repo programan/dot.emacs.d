@@ -31,6 +31,9 @@
 ;; DDSKK
 (load "~/.emacs.d/init-skk")
 
+;; undo-tree
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))
 
 ;; window-sysytemが有効の時のみ初期化
 (when (window-system)
