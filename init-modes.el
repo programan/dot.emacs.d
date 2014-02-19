@@ -516,6 +516,8 @@ and source-file directory for your debugger." t)
   ;;  )
   ;;(setq web-mode-enable-heredoc-fontification t)
   )
+(define-key web-mode-map  (kbd "C-;") nil)
+(define-key web-mode-map  (kbd "C-c C-;") 'web-mode-comment-or-uncomment)
 (add-hook 'web-mode-hook  'web-mode-hook)
 ;; 色の設定
 ;; (custom-set-faces
