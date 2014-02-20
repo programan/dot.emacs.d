@@ -9,4 +9,5 @@
   (add-to-list 'ac-modes 'js2-mode)	;; javascript用：js2-modeになったら、auto-completeをスタートさせる
   (add-to-list 'ac-modes 'jade-mode)	;; jade用：jade-modeになったら、auto-completeをスタートさせる
   (add-to-list 'ac-modes 'coffee-mode)  ;; coffescript用：coffee-modeになったら、auto-completeをスタートさせる
-  (add-to-list 'ac-modes 'lua-mode))	;; Lua用：lua-modeになったら、auto-completeをスタートさせる
+  (add-to-list 'ac-modes 'lua-mode)	;; Lua用：lua-modeになったら、auto-completeをスタートさせる
+  (add-to-list 'ac-modes 'web-mode))	;; WEB用：web-modeになったら、auto-completeをスタートさせる
