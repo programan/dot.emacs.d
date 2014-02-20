@@ -77,6 +77,7 @@
                              'jade-mode
                              'coffee-mode
 			     'lua-mode
+			     'web-mode
                              )))
 
 
