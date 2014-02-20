@@ -14,4 +14,8 @@
 
   ;; rails-snippets
   ;; rails用のコード補完
-  (yas/load-directory "~/.emacs.d/site-lisp/yasnippets-rails/rails-snippets"))
+  (yas/load-directory "~/.emacs.d/site-lisp/yasnippets-rails/rails-snippets")
+
+
+  )
+(require 'angular-snippets)
