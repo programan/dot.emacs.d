@@ -12,8 +12,10 @@
      ;; (:background "dark slate gray"))
      ;; (:background "gray10"
      ;;              :underline "gray24"))
+     ;; (:background nil
+     ;;              :underline "RoyalBlue1"))
      (:background nil
-                  :underline "RoyalBlue1"))
+                  :underline "dark slate blue"))
 
     (((class color)
       (background light))
