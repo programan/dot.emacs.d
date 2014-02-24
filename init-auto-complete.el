@@ -2,6 +2,11 @@
 (when (require 'auto-complete-config nil t)
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/ac-dict")
   (ac-config-default)
+  ;;  (setq ac-auto-show-menu nil)
+
+  ;; 3文字目からauto-complete開始
+  (setq ac-auto-start 3)
+  
   ;; (require 'ac-python)               ;; python用の補完
   ;; (add-to-list 'ac-modes 'python-2-mode)
   (add-to-list 'ac-modes 'php-mode)	;; PHP用：php-modeになったら、auto-completeをスタートさせる
