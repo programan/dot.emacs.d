@@ -38,51 +38,30 @@
 ;;  英文字: consolas
 ;; GNU Emacs 23.x on unix =>
 ;;  ~/.Xresources にて日本語フォントを設定してください.
-(set-default-font "Consolas 10")
-(set-fontset-font (frame-parameter nil 'font)
-                                  'japanese-jisx0208
-                                  '("ＭＳ ゴシック" . "unicode-bmp")
-                                  )
-(set-fontset-font (frame-parameter nil 'font)
-            'katakana-jisx0201
-            '("ＭＳ ゴシック" . "unicode-bmp")
-            )
+;; (set-default-font "Consolas 10")
+;; (set-fontset-font (frame-parameter nil 'font)
+;;                                   'japanese-jisx0208
+;;                                   '("ＭＳ ゴシック" . "unicode-bmp")
+;;                                   )
+;; (set-fontset-font (frame-parameter nil 'font)
+;;             'katakana-jisx0201
+;;             '("ＭＳ ゴシック" . "unicode-bmp")
+;;             )
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; フォントの設定
-;;01234567890123456789
-;;あいうえおかきくけこ
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(cond (window-system
-;       (set-face-attribute 'default nil
-;                           :family "さざなみゴシック"
-;                           :height 80)
-;       (set-fontset-font (frame-parameter nil 'font)
-;                         'japanese-jisx0208
-;                         '("Takaoゴシック" . "unicode-bmp")
-;                         )
-;       (set-fontset-font (frame-parameter nil 'font)
-;                         'katakana-jisx0201
-;                         '("Takaoゴシック" . "unicode-bmp")
-;                         )
-;       (setq face-font-rescale-alist
-;             '(
-;               (".*さざなみゴシック.*" . 1.0)
-;               (".*Takaoゴシック.*"    . 1.1)
-;               ))
-;       ))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+(let* ((size 12)
+       (asciifont "Ricty") ; ASCII fonts
+       (jpfont "Ricty") ; Japanese fonts
+       (h (* size 10))
+       (fontspec (font-spec :family asciifont))
+       (jp-fontspec (font-spec :family jpfont)))
+  (set-face-attribute 'default nil :family asciifont :height h)
+  (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
+  (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
+  (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
+  (set-fontset-font nil '(#x0080 . #x024F) fontspec) 
+  (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
 
-
-;(set-face-attribute 'default nil
-;                   :family "Ricty"
-;                   :height 160)
-;(set-fontset-font
-; nil 'japanese-jisx0208
-; (font-spec :family "Ricty"))
-;;(add-to-list 'default-frame-alist '(font . "ricty-13.5"))
-;(add-to-list 'default-frame-alist '(font . "ricty-12"))
 
 
 ; 機種依存文字
