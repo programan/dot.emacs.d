@@ -49,7 +49,7 @@
 ;;             )
 
 
-(let* ((size 12)
+(let* ((size 11)
        (asciifont "Ricty") ; ASCII fonts
        (jpfont "Ricty") ; Japanese fonts
        (h (* size 10))
