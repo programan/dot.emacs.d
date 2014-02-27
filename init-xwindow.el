@@ -150,12 +150,6 @@
   ;; install-elispの関数を利用可能にする
   (auto-install-compatibility-setup))
 
-;; anything
-;(require 'anything-startup)
-;(global-set-key (kbd "C-;") 'anything-filelist+)
-;Be sure Anything does not fight with ido-mode.
-;(anything-read-string-mode 0)
-
 ;; ctags.elの設定
 (setq ctags-update-command (expand-file-name  "/usr/bin/ctags-exuberant"))
 
