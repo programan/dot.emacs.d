@@ -53,7 +53,11 @@
 )
 
 ;; anything
-(load "~/.emacs.d/init-anything")
+;;(load "~/.emacs.d/init-anything")
+
+;; helm
+(load "~/.emacs.d/init-helm")
+
 
 ;; オートコンプリート設定の読み込み
 (load "~/.emacs.d/init-auto-complete")

@@ -87,42 +87,42 @@
       (add-to-list 'ac-sources 'ac-sources-php-completion)
       (auto-complete-mode t))))
 ;; CakePHP
-(when (and (require 'auto-complete nil t)
-	   (require 'ac-cake nil t)
-	   (require 'ac-cake2 nil t))
-  ;; ac-cake用の関数定義
-  (defun ac-cake-hook ()
-    (make-variable-buffer-local 'ac-sources)
-    (add-to-list 'ac-sources 'ac-source-cake)
-    (add-to-list 'ac-sources 'ac-source-cake2))
-  ;;php-mode-hookにac-cake用の関数を追加
-  (add-hook 'php-mode-hook 'ac-cake-hook))
+;; (when (and (require 'auto-complete nil t)
+;; 	   (require 'ac-cake nil t)
+;; 	   (require 'ac-cake2 nil t))
+;;   ;; ac-cake用の関数定義
+;;   (defun ac-cake-hook ()
+;;     (make-variable-buffer-local 'ac-sources)
+;;     (add-to-list 'ac-sources 'ac-source-cake)
+;;     (add-to-list 'ac-sources 'ac-source-cake2))
+;;   ;;php-mode-hookにac-cake用の関数を追加
+;;   (add-hook 'php-mode-hook 'ac-cake-hook))
 
 ;; CakePHP1.x
-(when (require 'cake nil t)
-  ;;emacs-cakeの標準キーバインドを利用
-  (cake-set-default-keymap)
-  ;;標準でemacs-cakeをオン
-  (global-cake t))
+;; (when (require 'cake nil t)
+;;   ;;emacs-cakeの標準キーバインドを利用
+;;   (cake-set-default-keymap)
+;;   ;;標準でemacs-cakeをオン
+;;   (global-cake t))
 
 ;; CakePHP2.x
-(when (require 'cake2 nil t)
-  ;;emacs-cakeの標準キーバインドを利用
-  (cake2-set-default-keymap)
-  ;;標準でemacs-cake2をオフ
-  (global-cake2 -1))
+;; (when (require 'cake2 nil t)
+;;   ;;emacs-cakeの標準キーバインドを利用
+;;   (cake2-set-default-keymap)
+;;   ;;標準でemacs-cake2をオフ
+;;   (global-cake2 -1))
 
 ;; emacs-cakeを切り替えるコマンドを定義
-(defun toggle-emacs-cake ()
-  "emacs-cakeとemacs-cake2を切り替える"
-  (interactive)
-  (cond ((eq cake2 t) ; cake2がオンなら
-	 (cake2 -1)
-	 (cake t))
-	((eq cake t) ; cakeがオンなら
-	 (cake -1)
-	 (cake2 t))
-	(t nil))) ; それ以外なら何もしない
+;; (defun toggle-emacs-cake ()
+;;   "emacs-cakeとemacs-cake2を切り替える"
+;;   (interactive)
+;;   (cond ((eq cake2 t) ; cake2がオンなら
+;; 	 (cake2 -1)
+;; 	 (cake t))
+;; 	((eq cake t) ; cakeがオンなら
+;; 	 (cake -1)
+;; 	 (cake2 t))
+;; 	(t nil))) ; それ以外なら何もしない
 
 (add-hook 'php-mode-hook
 	  '(lambda ()
