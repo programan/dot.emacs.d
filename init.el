@@ -101,6 +101,9 @@
 ;; idoの読み込み
 (load "~/.emacs.d/init-ido")
 
+;; main-lineの読み込み
+;; (load "~/.emacs.d/init-mainline")
+
 ;; ediff
 ;; コントロール用のバッファを同一フレーム内に表示
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)

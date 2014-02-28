@@ -19,6 +19,17 @@
   (setq helm-idle-delay             0.3
 	helm-input-idle-delay       0.3
 	helm-candidate-number-limit 200)
+
+
+  ;; locateを使わないようにする
+  (setq helm-for-files-preferred-list
+	'(helm-source-buffers-list
+	  helm-source-recentf
+	  helm-source-bookmarks
+	  helm-source-file-cache
+	  helm-source-files-in-current-dir
+	  ;; helm-source-locate
+	  ))
   )
 
 ;; helm-descbinds
