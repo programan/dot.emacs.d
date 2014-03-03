@@ -110,6 +110,9 @@
 ;; diffのバッファを上下ではなく左右に並べる
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; 同名ファイルのバッファ名の識別文字列を変更
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;; ウィンドウフレームの設定
 ;; ウィンドウ設定
