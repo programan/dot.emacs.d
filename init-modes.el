@@ -394,6 +394,11 @@ and source-file directory for your debugger." t)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 
+;;slim-mode
+(require 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
+
+
 ;; Ruby on Railsの開発サポート
 ;; C-c ; f c (controller を開く)
 ;; C-c ; f h (helper を開く)
