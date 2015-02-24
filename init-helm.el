@@ -14,7 +14,14 @@
   ;; C-x c M-g s がデフォルトコマンド
   ;; ディレクトリも再起的に検索するには、C-uを最初に打つ
   (global-set-key (kbd "C-c g") 'helm-do-grep)
-  
+
+  ;; helm-occurの起動
+  (global-set-key (kbd "C-M-o") 'helm-occur)
+  ;; isearchからhelm-occurを起動
+  (define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch)
+  ;; helm-occurからall-extに受け渡し
+  (define-key helm-map (kbd "C-c C-a") 'all-from-helm-occur)
+
   
   (setq helm-idle-delay             0.3
 	helm-input-idle-delay       0.3
