@@ -40,9 +40,9 @@
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 (add-hook 'find-file-hooks '(lambda ()
-                  (if font-lock-mode
-                  nil
-                (font-lock-mode t))))
+			      (if font-lock-mode
+				  nil
+				(font-lock-mode t))))
 
 
 ;====================================
