@@ -78,7 +78,7 @@
 (load "~/.emacs.d/init-jaspace")
 
 ;; ファイルナビゲーション設定の読み込み
-(load "~/.emacs.d/init-navigation")
+;(load "~/.emacs.d/init-navigation")
 
 ;; バッファ2分割時の縦横トグル設定の読み込み
 (load "~/.emacs.d/init-window-toggle-division")
@@ -272,3 +272,11 @@
 ;; proofreading
 (require 'yspel)
 
+;; M-x dirtree
+(require 'dirtree)
+
+;; M-x ep-dirtree
+(require 'eproject)
+(defun ep-dirtree ()
+  (interactive)
+  (dirtree eproject-root t))
