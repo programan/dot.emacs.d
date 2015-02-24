@@ -15,6 +15,10 @@
   ;; ディレクトリも再起的に検索するには、C-uを最初に打つ
   (global-set-key (kbd "C-c g") 'helm-do-grep)
 
+  ;; M-x
+  (define-key global-map (kbd "M-x") 'helm-M-x)
+
+  
   ;; helm-occurの起動
   (global-set-key (kbd "C-M-o") 'helm-occur)
   ;; isearchからhelm-occurを起動
