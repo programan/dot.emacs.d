@@ -38,7 +38,7 @@
 ;; window-sysytemが有効の時のみ初期化
 (when (window-system)
   ;; タブバー設定の読み込み
-  (load "~/.emacs.d/init-tabbar")
+  ;; (load "~/.emacs.d/init-tabbar")
   
   ;; 編集行のハイライト設定の読み込み
   (load "~/.emacs.d/init-hilight-line")
@@ -57,7 +57,6 @@
 
 ;; helm
 (load "~/.emacs.d/init-helm")
-
 
 ;; オートコンプリート設定の読み込み
 (load "~/.emacs.d/init-auto-complete")
@@ -93,7 +92,7 @@
 ;;(load "~/.emacs.d/init-minimap")
 
 ;; sublimityの読み込み
-(load "~/.emacs.d/init-sublimity")
+;;(load "~/.emacs.d/init-sublimity")
 
 ;; tailの読み込み
 (load "~/.emacs.d/init-tail")
