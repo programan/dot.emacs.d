@@ -17,6 +17,8 @@
 
   ;; M-x
   (define-key global-map (kbd "M-x") 'helm-M-x)
+  ;; C-x C-f
+  (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 
   
   ;; helm-occurの起動
