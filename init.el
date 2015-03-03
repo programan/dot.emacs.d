@@ -279,3 +279,10 @@
 (defun ep-dirtree ()
   (interactive)
   (dirtree eproject-root t))
+
+;; eww(emacs web wowser)
+;;デフォルトの検索エンジンはduckduckgoのままだが地域を日本として検索するように設定
+;;(setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&q=")
+;;広告なし
+(setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&k1=-1&q=")
+
