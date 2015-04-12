@@ -120,62 +120,62 @@
 ;(print (/ (display-pixel-width) (frame-char-width)))
 ;(print "testtest" t)
 ;(message "%s" (/ (x-display-pixel-width) (frame-char-width)))
-(if window-system 
-    (progn
-      (cond
-       ((>= (x-display-pixel-width) 1920)
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 150)
-                 (width . 180) 
-                 (height . 60)) default-frame-alist))
-        )
-       ((>= (x-display-pixel-width) 1680)
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 20)
-                 (width . 150) 
-                 (height . 50)) default-frame-alist))
-        )
-       ((>= (x-display-pixel-width) 1440)
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 20)
-                 (width . 160) 
-                 (height . 55)) default-frame-alist))
-        )
-       ((>= (x-display-pixel-width) 1366)
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 20)
-                 (width . 160) 
-                 (height . 45)) default-frame-alist))
-        )
-       ((>= (x-display-pixel-width) 1280)
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 20)
-                 (width . 140) 
-                 (height . 45)) default-frame-alist))
-	)
-       (t
-        (setq default-frame-alist
-              (append
-               '((top . 30) 
-                 (left . 20)
-                 (width . 120) 
-                 (height . 45)) default-frame-alist))
-        )
-       )
-      (set-background-color "Black")
-      (set-foreground-color "White")
-      (set-cursor-color "Gray")
-      ))
+;; (if window-system 
+;;     (progn
+;;       (cond
+;;        ((>= (x-display-pixel-width) 1920)
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 150)
+;;                  (width . 180) 
+;;                  (height . 60)) default-frame-alist))
+;;         )
+;;        ((>= (x-display-pixel-width) 1680)
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 20)
+;;                  (width . 150) 
+;;                  (height . 50)) default-frame-alist))
+;;         )
+;;        ((>= (x-display-pixel-width) 1440)
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 20)
+;;                  (width . 160) 
+;;                  (height . 55)) default-frame-alist))
+;;         )
+;;        ((>= (x-display-pixel-width) 1366)
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 20)
+;;                  (width . 160) 
+;;                  (height . 45)) default-frame-alist))
+;;         )
+;;        ((>= (x-display-pixel-width) 1280)
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 20)
+;;                  (width . 140) 
+;;                  (height . 45)) default-frame-alist))
+;; 	)
+;;        (t
+;;         (setq default-frame-alist
+;;               (append
+;;                '((top . 30) 
+;;                  (left . 20)
+;;                  (width . 120) 
+;;                  (height . 45)) default-frame-alist))
+;;         )
+;;        )
+;;       (set-background-color "Black")
+;;       (set-foreground-color "White")
+;;       (set-cursor-color "Gray")
+;;       ))
 ;(message "%s" (frame-width))
 
 ;(when (window-system)
@@ -191,6 +191,35 @@
 ;   (selected-frame)
 ;   (floor (* (/ (x-display-pixel-width) (frame-char-width)) 0.22))
 ;   (floor (* (/ (x-display-pixel-height) (frame-char-height)) 0.8))))
+
+
+;; (when window-system
+;;   (set-frame-size
+;;    (selected-frame)
+;;    90 ;横サイズ
+;;    (- (/ (- (x-display-pixel-height) 40) (frame-char-height)) 1)))
+
+;; 画面の縦横ピッタシに合わせる
+;; (when window-system
+;;   (set-frame-size
+;;    (selected-frame)
+;; ;   (- (x-display-pixel-width) 40) ;横サイズ
+;;    (- (/ (- (x-display-pixel-width) 40) (frame-char-width)) 1)
+;;    (- (/ (- (x-display-pixel-height) 40) (frame-char-height)) 1)))
+;; (setq initial-frame-alist default-frame-alist)
+
+(when window-system
+  (set-frame-size
+   (selected-frame)
+;   (- (x-display-pixel-width) 40) ;横サイズ
+   (- (/ (- (x-display-pixel-width) 280) (frame-char-width)) 1)
+   (- (/ (- (x-display-pixel-height) 180) (frame-char-height)) 1)))
+(setq initial-frame-alist default-frame-alist)
+(set-background-color "Black")
+(set-foreground-color "White")
+(set-cursor-color "Gray")
+
+
 
 ;; メニューバーを消す
 (menu-bar-mode -1)
