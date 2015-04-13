@@ -209,11 +209,18 @@
 ;; (setq initial-frame-alist default-frame-alist)
 
 (when window-system
-  (set-frame-size
+  (progn
+    (set-frame-size
+     (selected-frame)
+     (- (/ (round (* (/ (x-display-pixel-width) 2) 1.4)) (frame-char-width)) 1)
+     (- (/ (- (x-display-pixel-height) 180) (frame-char-height)) 1))
+    )
+  (set-frame-position
    (selected-frame)
-;   (- (x-display-pixel-width) 40) ;横サイズ
-   (- (/ (- (x-display-pixel-width) 280) (frame-char-width)) 1)
-   (- (/ (- (x-display-pixel-height) 180) (frame-char-height)) 1)))
+   20
+   30
+   )
+  )
 (setq initial-frame-alist default-frame-alist)
 (set-background-color "Black")
 (set-foreground-color "White")
