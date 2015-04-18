@@ -115,3 +115,8 @@
 ;(when (require 'multi-term nil t)
 ;  ;; 使用するシェルの指定
 ;  (setq multi-term-program "/bin/sh"))
+
+;; load environment value
+(load-file (expand-file-name "~/.emacs.d/shellenv.el"))
+(dolist (path (reverse (split-string (getenv "PATH") ":")))
+  (add-to-list 'exec-path path))
