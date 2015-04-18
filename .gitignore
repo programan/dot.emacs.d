@@ -5,3 +5,5 @@ ac-comphist.dat
 tramp
 elpa/archives/*
 url/*
+shellenv.el
+eshell/
