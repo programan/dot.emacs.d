@@ -186,12 +186,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(autoload 'python-mode "python-mode" "Major mode for editing python code." t)
-;(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(autoload 'python-mode "python-mode" "Major mode for editing python code." t)
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (defun my-python-mode-hook ()
-  (setq py-indent-offset 4)
+  ;; (setq py-indent-offset 4)
+  ;; (setq python-indent 4)
+  (setq indent-level 4)
   (setq python-indent 4)
+  (setq tab-width 4)
   (setq indent-tabs-mode nil)
+  (setq interpreter-mode-alist (cons '("python" . python-mode)
+				     interpreter-mode-alist))
   )
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 ;(add-hook 'python-mode-hook
