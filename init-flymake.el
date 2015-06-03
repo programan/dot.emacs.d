@@ -123,3 +123,19 @@
           )
         )
       (setq count (1- count)))))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; python
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; pyflake - flake8 - pep8
+;;(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+;; (setq flymake-python-pyflakes-executable "/usr/local/bin/flake8")
+(setq flymake-python-pyflakes-executable "/Users/naruse/.pyenv/shims/flake8")
+(custom-set-variables
+ '(flymake-python-pyflakes-extra-arguments (quote ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128"))))
+
+
+
+

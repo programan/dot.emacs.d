@@ -208,6 +208,7 @@
   
   )
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 
 ;(add-hook 'python-mode-hook
 ;          '(lambda()
