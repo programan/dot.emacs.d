@@ -197,8 +197,18 @@
   (setq indent-tabs-mode nil)
   (setq interpreter-mode-alist (cons '("python" . python-mode)
 				     interpreter-mode-alist))
+
+  ;; jedi
+  (jedi:setup)
+  (setq jedi:complete-on-dot t)                 ; optional
+  ;; (setq jedi:environment-root "jedi")  ; or any other name you like
+  ;; (setq jedi:environment-virtualenv
+  ;; 	(append python-environment-virtualenv
+  ;; 		'("--python" "~/.pyenv/python")))
+  
   )
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+
 ;(add-hook 'python-mode-hook
 ;          '(lambda()
 ;             (setq tab-width 4)
@@ -212,6 +222,10 @@
 ;             (setq comment-end "")
 ;             )
 ;          )
+;; (require 'jedi)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)                 ; optional
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; C# support
