@@ -322,3 +322,8 @@
 ;;広告なし
 (setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&k1=-1&q=")
 
+
+;; 環境変数を見えるようにする
+;; pyenvでインストールしたpythonとかがちゃんと見える
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
