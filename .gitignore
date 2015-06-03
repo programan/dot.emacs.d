@@ -7,3 +7,5 @@ elpa/archives/*
 url/*
 shellenv.el
 eshell/
+.python-environments/
+
