@@ -578,3 +578,21 @@ and source-file directory for your debugger." t)
 (add-hook 'sass-mode-hook 'rainbow-mode)
 ;; (add-hook 'html-mode-hook 'rainbow-mode)
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; go-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'go-mode)
+(add-hook 'go-mode-hook
+          '(lambda()
+             ;;; インデントには tab を使う
+             (setq indent-tabs-mode t)
+             ;;; インデント幅
+             (setq c-basic-offset 4)
+	     (setq tab-width 4)
+            ;; (local-set-key (kbd "M-.") 'godef-jump)
+            ;; (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
+            ;; (local-set-key (kbd "C-c i") 'go-goto-imports)
+            ;; (local-set-key (kbd "C-c d") 'godoc)
+	    ))
