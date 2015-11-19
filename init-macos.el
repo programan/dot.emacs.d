@@ -123,3 +123,10 @@
 
 ;; 環境変数を見えるようにする
 (exec-path-from-shell-initialize)
+
+
+;; MySQL
+;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
+(setq sql-mysql-program "/Applications/MAMP/Library/bin/mysql")
+;;(setq sql-mysql-options '("-C" "-t" "-f" "-n"))
+(setq sql-mysql-options '("-C" "-t" "-f" "-n" "-P 8889"))
