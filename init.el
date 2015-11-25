@@ -79,8 +79,6 @@
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
 
-;; sublimityの読み込み
-;;(load "~/.emacs.d/init-sublimity")
 
 ;; tailの読み込み
 (load "~/.emacs.d/init-tail")
