@@ -124,6 +124,9 @@
 ;; 環境変数を見えるようにする
 (exec-path-from-shell-initialize)
 
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 
 ;; MySQL
 ;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
