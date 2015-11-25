@@ -37,9 +37,6 @@
 
 ;; window-sysytemが有効の時のみ初期化
 (when (window-system)
-  ;; タブバー設定の読み込み
-  ;; (load "~/.emacs.d/init-tabbar")
-  
   ;; 編集行のハイライト設定の読み込み
   (load "~/.emacs.d/init-hilight-line")
 
@@ -70,14 +67,8 @@
 ;; flymake設定の読み込み
 (load "~/.emacs.d/init-flymake")
 
-;; タブキー設定の読み込み
-;;(load "~/.emacs.d/init-tabkey")
-
 ;; 全角空白、タブ、改行表示モード設定の読み込み
 (load "~/.emacs.d/init-jaspace")
-
-;; ファイルナビゲーション設定の読み込み
-;(load "~/.emacs.d/init-navigation")
 
 ;; バッファ2分割時の縦横トグル設定の読み込み
 (load "~/.emacs.d/init-window-toggle-division")
