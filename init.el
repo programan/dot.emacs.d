@@ -37,9 +37,6 @@
 
 ;; window-sysytemが有効の時のみ初期化
 (when (window-system)
-  ;; タブバー設定の読み込み
-  ;; (load "~/.emacs.d/init-tabbar")
-  
   ;; 編集行のハイライト設定の読み込み
   (load "~/.emacs.d/init-hilight-line")
 
