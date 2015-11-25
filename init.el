@@ -67,9 +67,6 @@
 ;; flymake設定の読み込み
 (load "~/.emacs.d/init-flymake")
 
-;; タブキー設定の読み込み
-;;(load "~/.emacs.d/init-tabkey")
-
 ;; 全角空白、タブ、改行表示モード設定の読み込み
 (load "~/.emacs.d/init-jaspace")
 
