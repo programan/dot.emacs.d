@@ -79,12 +79,8 @@
 ;; 行の折り返しON/OFF設定の読み込み
 (load "~/.emacs.d/init-truncate-lines")
 
-
 ;; tailの読み込み
 (load "~/.emacs.d/init-tail")
-
-;; idoの読み込み
-;(load "~/.emacs.d/init-ido")
 
 ;; main-lineの読み込み
 ;; (load "~/.emacs.d/init-mainline")
