@@ -50,8 +50,8 @@
 
 
 (let* ((size 11)
-       (asciifont "Ricty Diminished") ; ASCII fonts
-       (jpfont "Ricty Diminished") ; Japanese fonts
+       (asciifont "Myrica M") ; ASCII fonts
+       (jpfont "Myrica M") ; Japanese fonts
        (h (* size 10))
        (fontspec (font-spec :family asciifont))
        (jp-fontspec (font-spec :family jpfont)))
