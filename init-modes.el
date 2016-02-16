@@ -269,6 +269,7 @@
              (setq js2-enter-indents-newline t)
              (setq comment-start "// ")
              (setq comment-end "")
+	     (define-key js2-mode-map (kbd "M-.") 'helm-etags-select)
 	     ;; (electric-pair-mode t)
 	     ;; (electric-indent-mode t)
 	     ;; (electric-layout-mode t)
