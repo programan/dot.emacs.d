@@ -3,7 +3,7 @@
 ;; Emacs24から標準になったelectric系の機能を有効にする
 (when (>= emacs-major-version 24)
   ;; 自動で閉じカッコを入れる
-  (electric-pair-mode t)
+  ;;(electric-pair-mode t)
   ;; 改行時にインデント
   (electric-indent-mode t)
   ;; 自動で改行
@@ -18,6 +18,12 @@
   (interactive)
   (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
 
+;; コメント内または文字列内の場合はelectricを無効
+(defadvice electric-pair-post-self-insert-function
+  (around electric-pair-post-self-insert-function-around activate)
+  "Don't insert the closing pair in comments or strings"
+  (unless (nth 8 (save-excursion (syntax-ppss (1- (point)))))
+    ad-do-it))
 
 ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 ;; auto-revert-modeを有効にする
@@ -181,6 +187,7 @@
 ;		     (extern-lang-close nil)
 		     ))
 	     ;; (setq php-mode-force-pear t)
+	     (electric-pair-mode t)
 	     ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -209,6 +216,10 @@
   )
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(add-hook 'python-mode-hook
+	  '(lambda()
+	     (electric-pair-mode t)
+	     ))
 
 ;(add-hook 'python-mode-hook
 ;          '(lambda()
@@ -270,6 +281,7 @@
              (setq comment-start "// ")
              (setq comment-end "")
 	     (define-key js2-mode-map (kbd "M-.") 'helm-etags-select)
+	     (electric-pair-mode t)
 	     ;; (electric-pair-mode t)
 	     ;; (electric-indent-mode t)
 	     ;; (electric-layout-mode t)
