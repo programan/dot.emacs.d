@@ -189,6 +189,9 @@
 	     ;; (setq php-mode-force-pear t)
 	     (electric-pair-mode t)
 	     ))
+(add-hook 'php-mode-hook #'rainbow-delimiters-mode)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python
@@ -333,6 +336,7 @@
 ;	     (setq comment-end "")
 ;	     )
 ;	  )
+(add-hook 'js2-mode-hook #'rainbow-delimiters-mode)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
