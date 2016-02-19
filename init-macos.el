@@ -91,13 +91,13 @@
 
 ;; auto-install
 ;; wgetが必要
-(when (require 'auto-install nil t)
-  (setq auto-install-directory "~/.emacs.d/site-lisp/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
-  ;; EmacsWikiに登録されているelispの名前を取得する
-  (auto-install-update-emacswiki-package-name t)
-  ;(setq auto-install-use-wget t)
-  ;; install-elispの関数を利用可能にする
-  (auto-install-compatibility-setup))
+;; (when (require 'auto-install nil t)
+;;   (setq auto-install-directory "~/.emacs.d/site-lisp/auto-install/") ;Emacs Lispをインストールするディレクトリの指定
+;;   ;; EmacsWikiに登録されているelispの名前を取得する
+;;   (auto-install-update-emacswiki-package-name t)
+;;   ;(setq auto-install-use-wget t)
+;;   ;; install-elispの関数を利用可能にする
+;;   (auto-install-compatibility-setup))
 
 ;; ctags.elの設定
 (setq ctags-update-command (expand-file-name  "/usr/local/bin/ctags"))
