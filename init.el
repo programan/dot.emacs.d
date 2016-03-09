@@ -49,6 +49,8 @@
   ;;(load-theme 'wombat t)
 )
 
+(require 'all-ext)
+
 ;; anything
 ;;(load "~/.emacs.d/init-anything")
 

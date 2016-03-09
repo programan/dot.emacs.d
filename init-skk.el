@@ -57,4 +57,4 @@
 			skk-isearch-mode-enable)
 	       (skk-isearch-mode-cleanup))))
 
-(setq default-input-method "japanese-skk")
+;;(setq default-input-method "japanese-skk")
