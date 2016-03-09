@@ -8,6 +8,7 @@
 ;;(add-to-list 'load-path "~/DDSKK/lisp/skk")
 (add-to-list 'load-path "~/.emacs.d/lisp/skk")
 (setq skk-tut-file "~/.emacs.d/share/skk/SKK.tut")
+(setq skk-large-jisyo "~/.emacs.d/share/skk/SKK-JISYO.L")
 
 ;;(require 'skk)
 ;;(require 'info)
@@ -55,3 +56,5 @@
 	     (when (and (featurep 'skk-isearch)
 			skk-isearch-mode-enable)
 	       (skk-isearch-mode-cleanup))))
+
+(setq default-input-method "japanese-skk")
