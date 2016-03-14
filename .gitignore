@@ -9,3 +9,5 @@ shellenv.el
 eshell/
 .python-environments/
 games/
+places
+recentf
