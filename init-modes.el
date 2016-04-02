@@ -505,12 +505,23 @@ and source-file directory for your debugger." t)
 ;; web-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'web-mode)
-(setq auto-mode-alist
-      (append '(
-                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|ctp\\|ejs\\)\\'" . web-mode)
-                ("\\.php\\'" . php-mode)
-                )
-              auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.xhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.shtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tag\\.js\\'" . web-mode))
+;(setq auto-mode-alist
+;      (append '(
+;                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|ctp\\|ejs\\)\\'" . web-mode)
+;                ("\\.php\\'" . php-mode)
+;                )
+;              auto-mode-alist))
 ;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
