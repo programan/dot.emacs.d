@@ -541,9 +541,9 @@ and source-file directory for your debugger." t)
   (setq time-stamp-start "Last modified:")
   (setq time-stamp-end "$")
   ;; web-modeの設定
-  (setq web-mode-markup-indent-offset 2) ;; html indent
-  (setq web-mode-css-indent-offset 2)    ;; css indent
-  (setq web-mode-code-indent-offset 2)   ;; script indent(js,php,etc..)
+  (setq web-mode-markup-indent-offset 4) ;; html indent
+  (setq web-mode-css-indent-offset 4)    ;; css indent
+  (setq web-mode-code-indent-offset 4)   ;; script indent(js,php,etc..)
   ;; htmlの内容をインデント
   ;; TEXTAREA等の中身をインデントすると副作用が起こったりするので
   ;; デフォルトではインデントしない
