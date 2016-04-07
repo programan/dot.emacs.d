@@ -464,7 +464,8 @@ and source-file directory for your debugger." t)
 ;; C-c C-c e で変換して保存。basename.mdwn だったら basename.html として保存
 ;; Windowsの場合Markdown.plを実行できるように以下の設定を追記
 (if (eq window-system 'w32) (progn
-			      (setq markdown-command "c:/cygwin/bin/perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
+;			      (setq markdown-command "c:/cygwin/bin/perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
+			      (setq markdown-command "perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
 			      )
   (progn
     (setq markdown-command "perl ~/.emacs.d/site-lisp/Markdown.pl"))
