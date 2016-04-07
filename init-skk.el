@@ -57,4 +57,15 @@
 			skk-isearch-mode-enable)
 	       (skk-isearch-mode-cleanup))))
 
+;; ミニバッファ上でも skk-mode にする
+;; skk-latin-mode でアルファベット入力にしておく
+(add-hook 'minibuffer-setup-hook
+          '(lambda()
+             (progn
+               (eval-expression (skk-mode) nil)
+               (skk-latin-mode (point))
+               ;; ミニバッファ上に「nil」と表示させないために, 空文字をミニバッファに表示
+               (minibuffer-message "")
+               )))
+
 ;;(setq default-input-method "japanese-skk")
