@@ -18,9 +18,12 @@
    (set-buffer-process-coding-system 'sjis 'sjis)))
 
 ;; Cygwin入ってる場合に設定しておくとfind grep使える
-(setq find-dired-find-program "c:\\cygwin\\bin\\find.exe")
-(setq find-program "c:\\cygwin\\bin\\find.exe")
-(setenv "PATH" (format "c:\\cygwin\\bin;%s" (getenv "PATH")))
+;; (setq find-dired-find-program "c:\\cygwin\\bin\\find.exe")
+;; (setq find-program "c:\\cygwin\\bin\\find.exe")
+;; (setenv "PATH" (format "c:\\cygwin\\bin;%s" (getenv "PATH")))
+(setq find-dired-find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
+(setq find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
+(setenv "PATH" (format "c:\\MinGW\\msys\\1.0\\bin;%s" (getenv "PATH")))
 ;(setq exec-path (append exec-path '(getenv "PATH")))
 ;(setq exec-path (append exec-path '(format "c:/cygwin/bin;%s" (getenv "PATH"))))
 
