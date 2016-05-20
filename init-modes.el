@@ -625,3 +625,15 @@ and source-file directory for your debugger." t)
             ;; (local-set-key (kbd "C-c i") 'go-goto-imports)
             ;; (local-set-key (kbd "C-c d") 'godoc)
 	    ))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; lua-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'lua-mode)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+(add-hook 'lua-mode-hook
+	  '(lambda()
+	     (setq lua-indent-level 2)
+	     ))
