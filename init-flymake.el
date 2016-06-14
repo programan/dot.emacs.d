@@ -1,6 +1,7 @@
 ;; 自動文法チェック
 (require 'flymake)
 
+
 ;;rubyとかphpとかの本体が無いとだめなのかも
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -136,6 +137,21 @@
 (custom-set-variables
  '(flymake-python-pyflakes-extra-arguments (quote ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128"))))
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Swift
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;(add-hook 'after-init-hook #'global-flycheck-mode)
+;; (add-hook 'swift-mode-hook
+;; 	  '(lambda()
+;; 	     (add-to-list 'flycheck-checkers 'swift)
+;; 	     (setq flycheck-swift-sdk-path
+;; 		   (replace-regexp-in-string
+;; 		    "\n+$" "" (shell-command-to-string
+;; 			       "xcrun --show-sdk-path --sdk macosx")))
+;; 	     )
+;; 	  )
 
 
 
