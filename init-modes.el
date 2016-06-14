@@ -637,3 +637,18 @@ and source-file directory for your debugger." t)
 	  '(lambda()
 	     (setq lua-indent-level 2)
 	     ))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; swift-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'swift-mode)
+(add-to-list 'auto-mode-alist '("\\.swift" . swift-mode))
+(add-hook 'swift-mode-hook
+	  '(lambda()
+	     (setq swift-indent-offset 4)
+	     (setq swift-indent-switch-case-offset 0)
+	     (setq swift-indent-multiline-statement-offset 2)
+	     (local-set-key "\C-c\C-c" 'quickrun)
+	     (local-set-key "\C-c\C-a" 'quickrun-with-arg)
+	     ))
