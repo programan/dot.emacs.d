@@ -7,7 +7,7 @@
 ;; rhtml
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/rhtml")
 ;; yasnippet(コード補完)
-(add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")
 ;; emacs-nav 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-nav")
 ;; cake-php
