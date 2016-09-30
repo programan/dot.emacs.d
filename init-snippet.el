@@ -6,16 +6,22 @@
   ;; (yas-reload-all)
 
   (setq yas/snippet-dirs 
-	'("~/.emacs.d/site-lisp/yasnippet/snippets" "~/.emacs.d/site-lisp/yasnippet/extras/imported")
+;;	'("~/.emacs.d/site-lisp/yasnippets" "~/.emacs.d/site-lisp/myyasnippets")
+	'("~/.emacs.d/site-lisp/yasnippets")
 	)
 
   ;; (yas/initialize)
-  (yas/load-directory "~/.emacs.d/site-lisp/yasnippet/snippets")
+  ;; (yas/load-directory "~/.emacs.d/site-lisp/yasnippet/snippets")
 
   ;; rails-snippets
   ;; rails用のコード補完
   (yas/load-directory "~/.emacs.d/site-lisp/yasnippets-rails/rails-snippets")
 
-
+  ;; 既存スニペットを挿入する
+  (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+  ;; 新規スニペットを作成するバッファを用意する
+  (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+  ;; 既存スニペットを閲覧・編集する
+  (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
   )
 (require 'angular-snippets)
