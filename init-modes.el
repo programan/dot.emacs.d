@@ -359,6 +359,18 @@
 ;(autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 ;(add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
 
+;; rspec-mode
+;; C-c , v RSpec実行
+;; C-c , s カ-ソルが当たっているサンプルを実行
+;; C-c , t Specとソースを切り替える 
+(require 'rspec-mode)
+(eval-after-load 'rspec-mode
+  '(rspec-install-snippets))
+;; Railsプロジェクト以外でrspec-modeを使うとエラーが出るので対処
+;; http://d.hatena.ne.jp/nbahide/20100721/1279676604
+(custom-set-variables '(rspec-use-rake-flag nil))
+(custom-set-faces )
+
 ;; rubydb
 ;; (autoload 'ruby "rubydb2x"
 ;;   "run rubydb on program file in buffer *gud-file*.
