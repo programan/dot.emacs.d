@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/Projects/suj/team/team_id/")
