@@ -3,7 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-install")
 ;;(add-to-list 'load-path (expand-file-name "~/elisp"))
 ;; Ruby
-(add-to-list 'load-path "~/.emacs.d/site-lisp/ruby/misc")
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp/ruby/misc")
 ;; rhtml
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/rhtml")
 ;; yasnippet(コード補完)
