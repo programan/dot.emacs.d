@@ -424,8 +424,8 @@
 	  (lambda ()
 	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	    ;; auto-revert-modeを有効にする
-	    (auto-revert-mode t)
-	    (rinari-launch)))
+	    (auto-revert-mode t)))
+;;	    (rinari-launch)))
 
 ;; haml-mode
 (require 'haml-mode)
@@ -458,6 +458,52 @@
 ;; Rinari
 ;(require 'rinari)
 ;(add-hook 'haml-mode-hook 'rinari-minor-mode)
+
+;; projectile-rails
+;; C-c r m                 : app/models 配下のファイルを選択して開く
+;; C-c r M                 : 対応する model を開く
+;; C-c r c                 : app/controllers 配下のファイルを選択して開く
+;; C-c r C                 : 対応する controller を開く
+;; C-c r v                 : app/views 配下のファイルを選択して開く
+;; C-c r V                 : 対応する view を開く
+;; C-c r h                 : app/helpers 配下のファイルを選択して開く
+;; C-c r H                 : 対応する helper を開く
+;; C-c r l                 : lib 配下のファイルを選択して開く
+;; C-c r f                 : features 配下のファイルを選択して開く
+;; C-c r p                 : spec 配下のファイルを選択して開く
+;; C-c r P                 : 対応する spec を開く
+;; C-c r t                 : tests 配下のファイルを選択して開く
+;; C-c r T                 : 対応する test を開く
+;; C-c r n                 : db/migrate 配下のファイルを選択して開く
+;; C-c r N                 : 対応する migrate ファイルを開く
+;; C-c r u                 : spec/fixture ファイルを選択して開く
+;; C-c r U                 : 対応する fixture ファイルを開く
+;; C-c r j                 : app/assets/javascripts 配下のファイルを選択して開く
+;; C-c r s                 : app/assets/styles 配下のファイルを選択して開く
+;; C-c r o                 : log 配下のファイルを選択して開き、 auto-revert-tail-mode を起動する
+;; C-c r i                 : config/initializers 配下のファイルを選択して開く
+;; C-c r e                 : config/environments 配下のファイルを選択して開く
+;; C-c r a                 : config/locales 配下のファイルを選択して開く
+;; C-c r @                 : app/mailers 配下のファイルを選択して開く
+;; C-c r !                 : validator ファイルを選択して開く
+;; C-c r y                 : app/views/layouts 配下のファイルを選択して開く
+;; C-c r k                 : lib/tasks 配下のファイルを選択して開く
+;; C-c r b                 : app/jobs 配下のファイルを選択して開く
+;; C-c r ! c, C-c r r      : inf-ruby buffer の中で `rails console' を実行する
+;; C-c r ! s, C-c r R      : rails server を実行する
+;; C-c r ! r               : rake task を選択して実行する
+;; C-c r ! g               : rails generate を実行する
+;; C-c r x                 : 選択した範囲を partial として切り出す
+;; C-c r RET, C-c r g f    : カーソル位置の対応する constant、template、partial、 gem ファイルに移動する
+;; C-c r g g               : Gemfile を開く
+;; C-c r g r               : config/routes.rb を開く
+;; C-c r g d               : db/schema.rb を開く
+;; C-c r g s               : db/seeds.rb を開く
+;; C-c r g h               : spec/spec_helper.rb を開く
+(require 'projectile)
+(projectile-global-mode)
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
