@@ -177,6 +177,13 @@
 (global-set-key (kbd "C-M-@") 'er/contract-region) ;; リージョンを狭める
 
 
+;; multiple-cursors
+;; C-> で次の行にカーソルを追加していく
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-M->") 'mc/skip-to-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 ;; *.~ とかのバックアップファイルを作らない
 ;;(setq make-backup-files nil)
 ;; .#* とかのバックアップファイルを作らない
