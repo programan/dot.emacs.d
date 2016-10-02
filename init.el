@@ -172,6 +172,11 @@
 ;; リージョンに色を付ける
 (setq transient-mark-mode t)
 
+;; regionを拡張
+(global-set-key (kbd "C-@") 'er/expand-region)
+(global-set-key (kbd "C-M-@") 'er/contract-region) ;; リージョンを狭める
+
+
 ;; *.~ とかのバックアップファイルを作らない
 ;;(setq make-backup-files nil)
 ;; .#* とかのバックアップファイルを作らない
