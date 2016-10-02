@@ -108,6 +108,8 @@
 ;  (setq egg-git-command "c:/msysgit/msysgit/bin/git.exe")
 ;  (setq egg-patch-command "c:/msysgit/msysgit/bin/patch.exe"))
 
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; MySQL
 ;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
