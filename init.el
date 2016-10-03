@@ -164,7 +164,12 @@
 ;; ファイル編集回り設定
 ;; 前回編集していた場所を記憶
 (load "saveplace")
-(setq-default save-place t)
+(when (>= emacs-major-version 25)
+  (save-place-mode 1)
+)
+(when (<= emacs-major-version 24)
+  (setq-default save-place t)
+)
 
 ;; 対応する括弧を光らせる。
 (show-paren-mode 1)
