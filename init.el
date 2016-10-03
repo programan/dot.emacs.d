@@ -207,6 +207,17 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
 
+;; anzu
+;; anzu-query-replace
+;; anzu-query-replace-regexp
+(require 'anzu)
+(global-anzu-mode +1)
+;; (global-set-key (kbd "C-c r") 'anzu-query-replace)
+;; (global-set-key (kbd "C-c R") 'anzu-query-replace-regexp)
+(custom-set-variables
+ '(anzu-mode-lighter "")
+ '(anzu-deactivate-region t)
+ '(anzu-search-threshold 1000))
 
 ;; ファイルを訪問時のフックからvc-find-file-hookを削除
 ;; こいつが有効だと、gitとかcvsとかのディレクトリがある場合に
@@ -267,7 +278,7 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rinari rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails php-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jedi jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext ac-python)))
+    (anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rinari rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails php-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jedi jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext ac-python)))
  '(rspec-use-rake-when-possible nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
