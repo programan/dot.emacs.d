@@ -215,9 +215,20 @@
 ;; (global-set-key (kbd "C-c r") 'anzu-query-replace)
 ;; (global-set-key (kbd "C-c R") 'anzu-query-replace-regexp)
 (custom-set-variables
- '(anzu-mode-lighter "")
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(anzu-deactivate-region t)
- '(anzu-search-threshold 1000))
+ '(anzu-mode-lighter "")
+ '(anzu-search-threshold 1000)
+ '(flymake-python-pyflakes-extra-arguments
+   (quote
+    ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
+ '(package-selected-packages
+   (quote
+    (php-mode anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rinari rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jedi jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext ac-python)))
+ '(rspec-use-rake-when-possible nil))
 
 ;; ファイルを訪問時のフックからvc-find-file-hookを削除
 ;; こいつが有効だと、gitとかcvsとかのディレクトリがある場合に
@@ -268,18 +279,7 @@
 
 ;; --------
 ;; 新設された変数 package-selected-packages にインストールしたパッケージ名を保持するようになった影響でinit.elにEmacsが記述するらしい
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flymake-python-pyflakes-extra-arguments
-   (quote
-    ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
- '(package-selected-packages
-   (quote
-    (anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rinari rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails php-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jedi jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext ac-python)))
- '(rspec-use-rake-when-possible nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
