@@ -4,7 +4,7 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20161005.1609
+;; Package-Version: 20161005.2209
 ;; Keywords: project, convenience
 ;; Version: 0.15.0-cvs
 ;; Package-Requires: ((pkg-info "0.4"))
@@ -318,6 +318,7 @@ The topmost match has precedence."
     ".git"        ; Git VCS root dir
     ".hg"         ; Mercurial VCS root dir
     ".fslckout"   ; Fossil VCS root dir
+    "_FOSSIL_"    ; Fossil VCS root DB on Windows
     ".bzr"        ; Bazaar VCS root dir
     "_darcs"      ; Darcs VCS root dir
     )
@@ -372,6 +373,7 @@ containing a root file."
     ".git"
     ".hg"
     ".fslckout"
+    "_FOSSIL_"
     ".bzr"
     "_darcs"
     ".tox"
@@ -960,7 +962,11 @@ Files are returned as relative paths to the project root."
   :group 'projectile
   :type 'string)
 
-(defcustom projectile-fossil-command "fossil ls | tr '\\n' '\\0'"
+(defcustom projectile-fossil-command (concat "fossil ls | "
+                                             (when (string-equal system-type
+                                                                 "windows-nt")
+                                               "dos2unix | ")
+                                             "tr '\\n' '\\0'")
   "Command used by projectile to get the files in a fossil project."
   :group 'projectile
   :type 'string)
@@ -2872,6 +2878,10 @@ with a prefix ARG."
          (test-cmd (projectile-maybe-read-command arg default-cmd "Test command: "))
          (default-directory project-root))
     (puthash project-root test-cmd projectile-test-cmd-map)
+    (save-some-buffers (not compilation-ask-about-save)
+                       (lambda ()
+                         (projectile-project-buffer-p (current-buffer)
+                                                      project-root)))
     (projectile-run-compilation test-cmd)))
 
 ;;;###autoload
