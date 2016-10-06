@@ -66,7 +66,7 @@
 
 ;; オートコンプリート設定の読み込み
 ;; 今現在はautoload無効
-(load "~/.emacs.d/init-auto-complete")
+;; (load "~/.emacs.d/init-auto-complete")
 ;; auto-completeの変わりにcompanyを使う
 (load "~/.emacs.d/init-company")
 
@@ -230,7 +230,7 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (company dirtree eproject jedi ac-python php-mode anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (company dirtree eproject php-mode anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode projectile-rails multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit geben flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(rspec-use-rake-when-possible nil))
 
 ;; ファイルを訪問時のフックからvc-find-file-hookを削除
