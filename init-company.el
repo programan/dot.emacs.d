@@ -12,6 +12,18 @@
 
 
 ;; (add-hook 'python-mode-hook 'company-mode)
+;; (add-hook 'python-mode-hook 'company-mode)
+;; (add-hook 'php-mode-hook 'company-mode)
+;; (add-hook 'ruby-mode-hook 'company-mode)
+;; (add-hook 'web-mode-hook 'company-mode)
+;; (add-hook 'c-mode-hook 'company-mode)
+;; (add-hook 'c++-mode-hook 'company-mode)
+;; (add-hook 'swift-mode-hook 'company-mode)
+;; (add-hook 'js2-mode-hook 'company-mode)
+;; (add-hook 'jade-mode-hook 'company-mode)
+;; (add-hook 'lua-mode-hook 'company-mode)
+;; (add-hook 'markdown-mode-hook 'company-mode)
+
 
 (setq company-idle-delay 0.5) ; デフォルトは0.5
 (setq company-minimum-prefix-length 3) ; デフォルトは4
