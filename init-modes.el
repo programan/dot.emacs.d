@@ -500,9 +500,10 @@
 ;; C-c r g d               : db/schema.rb を開く
 ;; C-c r g s               : db/seeds.rb を開く
 ;; C-c r g h               : spec/spec_helper.rb を開く
-(require 'projectile)
-(projectile-global-mode)
-(require 'projectile-rails)
+;; (require 'projectile)
+;; (projectile-global-mode)
+(add-hook 'ruby-mode-hook 'projectile-mode)
+;; (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 
