@@ -60,5 +60,4 @@
 
 ;; (setq helm-projectile-fuzzy-match nil)
 (when (require 'helm-projectile nil t)
-  (helm-projectile-on)
-  )
+  (helm-projectile-on))
