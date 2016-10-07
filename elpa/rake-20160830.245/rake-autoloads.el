@@ -1,9 +1,9 @@
 ;;; rake-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rake" "rake.el" (22509 62990 0 0))
+;;;### (autoloads nil "rake" "rake.el" (22519 6385 0 0))
 ;;; Generated autoloads from rake.el
 
 (autoload 'rake-rerun "rake" "\
