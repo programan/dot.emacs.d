@@ -57,3 +57,8 @@
   ;; (global-set-key (kbd "C-c b") 'helm-descbinds)
   (global-set-key (kbd "C-c b") 'helm-descbinds)
   )
+
+;; (setq helm-projectile-fuzzy-match nil)
+(when (require 'helm-projectile nil t)
+  (helm-projectile-on)
+  )
