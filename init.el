@@ -289,5 +289,5 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (projectile-rails projectile helm-ag fuzzy company dirtree eproject php-mode anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (helm-projectile projectile-rails projectile helm-ag fuzzy company dirtree eproject php-mode anzu magit yasnippet yaml-mode web-mode undo-tree swift-mode slim-mode sass-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(rspec-use-rake-when-possible nil))
