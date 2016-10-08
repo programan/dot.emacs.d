@@ -5,7 +5,8 @@
   ;; ファイル関係(履歴やバッファなどのファイルリスト)
   (global-set-key (kbd "C-;") 'helm-for-files)
   ;; ctagsによる関数ジャンプ
-  (global-set-key (kbd "M-.") 'helm-c-etags-select)
+  ;; (global-set-key (kbd "M-.") 'helm-c-etags-select)
+  (global-set-key (kbd "M-.") 'helm-etags-select)
   ;; 過去にコピーした履歴から選んで貼り付け
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
   ;; バッファ内の関数を絞り込む
