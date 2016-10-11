@@ -388,6 +388,8 @@
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
 	     (ruby-electric-mode t)
+	     ;; RET キーで自動改行+インデント
+	     (define-key ruby-mode-map [return] 'reindent-then-newline-and-indent)
 	     (when (>= emacs-major-version 24)
 	       (set (make-local-variable 'electric-pair-mode) nil)
 	       (set (make-local-variable 'electric-indent-mode) nil)
@@ -401,6 +403,7 @@
 ;; ruby-modeのインデント
 (setq ruby-indent-level 2)
 (setq ruby-indent-tabs-mode nil)
+
 
 ;; end に対応する行をハイライト
 (require 'ruby-block)
