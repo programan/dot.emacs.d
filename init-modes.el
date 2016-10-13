@@ -350,40 +350,71 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ruby-mode
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
-;(setq auto-mode-alist (cons '("\\.rb$" . ruby-mode) auto-mode-alist))
-;(setq interpreter-mode-alist (append '(("ruby" . ruby-mode)) interpreter-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+;; #!/usr/bin/env ruby といった行で始まる、拡張子のないコマンドファイルを適切なモードで開く
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 ;; irb
 ;(autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 ;(autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 ;(add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
 
-;; rspec-mode
-;; C-c , v RSpec実行
-;; C-c , s カ-ソルが当たっているサンプルを実行
-;; C-c , t Specとソースを切り替える 
-(require 'rspec-mode)
-(eval-after-load 'rspec-mode
-  '(rspec-install-snippets))
-;; Railsプロジェクト以外でrspec-modeを使うとエラーが出るので対処
-;; http://d.hatena.ne.jp/nbahide/20100721/1279676604
-(custom-set-variables '(rspec-use-rake-flag nil))
-(custom-set-faces )
-
-;; rubydb
-;; (autoload 'ruby "rubydb2x"
-;;   "run rubydb on program file in buffer *gud-file*.
-;; the directory containing file becomes the initial working directory
-;; and source-file directory for your debugger." t)
-
-;; ruby-electric.el --- electric editing commands for ruby files
-;; if に対するendとか入れてくれる
-;; emacs24標準のelectricとバッティングするので、ruby-mode時は
-;; electric系はオフにする
-(require 'ruby-electric)
 (add-hook 'ruby-mode-hook
 	  '(lambda ()
+	     (when (require 'rspec-mode nil t)
+	       ;; C-c , v RSpec実行
+	       ;; C-c , s カ-ソルが当たっているサンプルを実行
+	       ;; C-c , t Specとソースを切り替える 
+	       (eval-after-load 'rspec-mode
+		 '(rspec-install-snippets))
+	       ;; Railsプロジェクト以外でrspec-modeを使うとエラーが出るので対処
+	       ;; http://d.hatena.ne.jp/nbahide/20100721/1279676604
+	       (custom-set-variables '(rspec-use-rake-flag nil))
+	       (custom-set-faces )
+	       )
+	     (when (require 'ruby-electric nil t)
+	       ;; ruby-electric.el --- electric editing commands for ruby files
+	       ;; if に対するendとか入れてくれる
+	       ;; emacs24標準のelectricとバッティングするので、ruby-mode時は
+	       ;; electric系はオフにする
+	       (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
+		 (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
+	       (setq ruby-electric-expand-delimiters-list nil)
+	       )
+	     (when (require 'ruby-block nil t)
+	       ;; end に対応する行をハイライト
+	       (defun ruby-mode-hook-ruby-block()
+		 (ruby-block-mode t))
+	       (add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
+	       ;; ミニバッファに表示し, かつ, オーバレイする.
+	       (setq ruby-block-highlight-toggle t)
+	       ;; 何もしない
+	       ;;(setq ruby-block-highlight-toggle 'noghing)
+	       ;; ミニバッファに表示
+	       ;;(setq ruby-block-highlight-toggle 'minibuffer)
+	       ;; オーバレイする
+	       ;;(setq ruby-block-highlight-toggle 'overlay)
+	       )
+	     (when (require 'rhtml-mode nil t)
+	       (add-hook 'rhtml-mode-hook
+			 (lambda ()
+			   ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+			   ;; auto-revert-modeを有効にする
+			   (auto-revert-mode t)))
+	       )
+	     ;; (when (require 'projectile-rails nil t)
+	     ;;   (add-hook 'projectile-mode-hook 'projectile-rails-on)
+	     ;;   (add-hook 'ruby-mode-hook 'projectile-mode)
+	     ;;   (add-hook 'rhtml-mode-hook 'projectile-mode)
+	     ;;   (add-hook 'haml-mode-hook 'projectile-mode)
+	     ;;   (add-hook 'slim-mode-hook 'projectile-mode)
+	     ;;   (add-hook 'sass-mode-hook 'projectile-mode)
+	     ;;   )
+	     ;; (when (require 'robe-mode nil t)
+	     ;;   (robe-mode 1)
+	     ;;   )
+	     ;; ruby-modeのインデント
+	     (setq ruby-indent-level 2)
+	     (setq ruby-indent-tabs-mode nil)
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
@@ -393,74 +424,10 @@
 	     (when (>= emacs-major-version 24)
 	       (set (make-local-variable 'electric-pair-mode) nil)
 	       (set (make-local-variable 'electric-indent-mode) nil)
-	       (set (make-local-variable 'electric-layout-mode) nil))))
-
-(let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
-  (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
-(setq ruby-electric-expand-delimiters-list nil)
+	       (set (make-local-variable 'electric-layout-mode) nil)))
+	  )
 
 
-;; ruby-modeのインデント
-(setq ruby-indent-level 2)
-(setq ruby-indent-tabs-mode nil)
-
-
-;; end に対応する行をハイライト
-(require 'ruby-block)
-(defun ruby-mode-hook-ruby-block()
-  (ruby-block-mode t))
-(add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
-;; ミニバッファに表示し, かつ, オーバレイする.
-(setq ruby-block-highlight-toggle t)
-;; 何もしない
-;(setq ruby-block-highlight-toggle 'noghing)
-;; ミニバッファに表示
-;(setq ruby-block-highlight-toggle 'minibuffer)
-;; オーバレイする
-;(setq ruby-block-highlight-toggle 'overlay)
-
-
-;; rhtml-mode
-;;(add-to-list 'load-path "~/.emacs.d/site-lisp/rhtml")
-(require 'rhtml-mode)
-(add-hook 'rhtml-mode-hook
-	  (lambda ()
-	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	    ;; auto-revert-modeを有効にする
-	    (auto-revert-mode t)))
-;;	    (rinari-launch)))
-
-;; haml-mode
-(require 'haml-mode)
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-(add-hook 'haml-mode-hook
-	  (lambda ()
-	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	    ;; auto-revert-modeを有効にする
-	    (auto-revert-mode t)
-	    (setq indent-tabs-mode nil)
-	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
-
-;;sass-mode
-(require 'sass-mode)
-(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
-(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
-
-;;slim-mode
-(require 'slim-mode)
-(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
-
-
-;; Ruby on Railsの開発サポート
-;; C-c ; f c (controller を開く)
-;; C-c ; f h (helper を開く)
-;; C-c ; f i (migration を開く)
-;; C-c ; f m (model を開く)
-;; C-c ; f v (view を開く)
-;; http://cocomonrails.blogspot.com/2009/07/emacs-rinari-yasnippet.html
-;; Rinari
-;(require 'rinari)
-;(add-hook 'haml-mode-hook 'rinari-minor-mode)
 
 ;; projectile-rails
 ;; C-c r m                 : app/models 配下のファイルを選択して開く
@@ -503,15 +470,14 @@
 ;; C-c r g d               : db/schema.rb を開く
 ;; C-c r g s               : db/seeds.rb を開く
 ;; C-c r g h               : spec/spec_helper.rb を開く
-;; (require 'projectile)
-;; (projectile-global-mode)
 (add-hook 'ruby-mode-hook 'projectile-mode)
 (add-hook 'rhtml-mode-hook 'projectile-mode)
 (add-hook 'haml-mode-hook 'projectile-mode)
 (add-hook 'slim-mode-hook 'projectile-mode)
 (add-hook 'sass-mode-hook 'projectile-mode)
-;; (require 'projectile-rails)
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
+(when (require 'projectile-rails nil t)
+  (add-hook 'projectile-mode-hook 'projectile-rails-on)
+  )
 
 ;; --------------------------------------------------
 ;; robe
@@ -531,6 +497,37 @@
 ;; helm-robe
 (custom-set-variables
  '(robe-completing-read-func 'helm-robe-completing-read))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; slim-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(autoload 'slim-mode "slim-mode" "slim-mode" t nil)
+;;(require 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.slim$" . slim-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;sass-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(autoload 'sass-mode "sass-mode" "sass-mode" t nil)
+;;(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;haml-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(autoload 'haml-mode "haml-mode" "haml-mode" t nil)
+;;(require 'haml-mode)
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+(add-hook 'haml-mode-hook
+	  (lambda ()
+	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+	    ;; auto-revert-modeを有効にする
+	    (auto-revert-mode t)
+	    (setq indent-tabs-mode nil)
+	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MarkDown

@@ -58,8 +58,18 @@
 
 (require 'all-ext)
 
+
 ;; helm
 (load "~/.emacs.d/init-helm")
+
+
+;; projectile
+(when (require 'projectile nil t)
+  (projectile-global-mode)
+  (setq projectile-completion-system 'helm)
+  (helm-projectile-on)
+  )
+
 
 ;; オートコンプリート設定の読み込み
 ;; 今現在はautoload無効
