@@ -513,6 +513,15 @@
 ;; (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
+;; --------------------------------------------------
+;; robe
+;; http://codeout.hatenablog.com/entry/2014/02/04/210237
+;; --------------------------------------------------
+;; (add-hook 'ruby-mode-hook 'robe-mode)
+;; (autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
+;; (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
+;;   (rvm-activate-corresponding-ruby))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MarkDown
