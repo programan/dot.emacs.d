@@ -5,6 +5,7 @@
 (global-company-mode +1)
 ;; (global-company-mode) 
 
+;; companyでrobeの補完を表示
 (push 'company-robe company-backends)
 
 ;; 自動補完を offにしたい場合は, company-idle-delayを nilに設定する

@@ -517,11 +517,20 @@
 ;; robe
 ;; http://codeout.hatenablog.com/entry/2014/02/04/210237
 ;; --------------------------------------------------
-;; (add-hook 'ruby-mode-hook 'robe-mode)
-;; (autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-;; (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
-;;   (rvm-activate-corresponding-ruby))
-
+;; robeを有効にする
+;; project directoryにGemfileがあり、pryとpry-docが入っていること
+;; M-x robe-startで開始
+;; Gemfileが無い場合はM-x inf-rubyの後にM-x robe-start
+;; companyでrobeの補完を表示するようにしてある
+;; C-c C-dでリファレンスを表示
+(add-hook 'ruby-mode-hook 'robe-mode)
+(autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
+;; rvmを利用してrubyのバージョンを管理している場合はこの設定で.rvmrcなどで選択されているrubyを使う
+(defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
+  (rvm-activate-corresponding-ruby))
+;; helm-robe
+(custom-set-variables
+ '(robe-completing-read-func 'helm-robe-completing-read))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MarkDown
