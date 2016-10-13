@@ -5,6 +5,8 @@
 (global-company-mode +1)
 ;; (global-company-mode) 
 
+(push 'company-robe company-backends)
+
 ;; 自動補完を offにしたい場合は, company-idle-delayを nilに設定する
 ;; auto-completeでいうところの ac-auto-start にあたる.
 ;; (custom-set-variables
