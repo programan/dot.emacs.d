@@ -506,6 +506,10 @@
 ;; (require 'projectile)
 ;; (projectile-global-mode)
 (add-hook 'ruby-mode-hook 'projectile-mode)
+(add-hook 'rhtml-mode-hook 'projectile-mode)
+(add-hook 'haml-mode-hook 'projectile-mode)
+(add-hook 'slim-mode-hook 'projectile-mode)
+(add-hook 'sass-mode-hook 'projectile-mode)
 ;; (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
