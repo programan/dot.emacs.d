@@ -58,9 +58,6 @@
 
 (require 'all-ext)
 
-;; anything
-;;(load "~/.emacs.d/init-anything")
-
 ;; helm
 (load "~/.emacs.d/init-helm")
 
