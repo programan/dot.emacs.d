@@ -536,9 +536,10 @@
   "Major mode for editing Markdown files" t)
 ;(setq auto-mode-alist
 ;      (cons '("\\.md" . markdown-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.mkd$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.mdwn$" . markdown-mode))
+;; (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.mkd$" . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.mdwn$" . gfm-mode))
 
 ;; C-c C-c m でカレントバッファを HTML に変換し新しいバッファに表示
 ;; C-c C-c p でカレントバッファを変換しブラウザで開く
@@ -549,7 +550,9 @@
 			      (setq markdown-command "perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
 			      )
   (progn
-    (setq markdown-command "perl ~/.emacs.d/site-lisp/Markdown.pl"))
+    ;; (setq markdown-command "perl ~/.emacs.d/site-lisp/Markdown.pl"))
+    ;; nodeのpackageでgithub flavoredに対応したパーザであるmarkedをインストールしてある前提
+    (setq markdown-command "marked"))
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
