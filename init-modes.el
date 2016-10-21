@@ -179,8 +179,15 @@
 				     interpreter-mode-alist))
 
   ;; jedi
-  (jedi:setup)
-  (setq jedi:complete-on-dot t)                 ; optional
+  (when (require 'jedi-core nil t)
+    ;; 初回実行時のみ、M-x jedi:install-server RET を実行
+    ;; jediサーバがインストールされる場所はjedi:environment-rootで指定できる
+    (setq jedi:complete-on-dot t)
+    (setq jedi:use-shortcuts t)
+    (add-hook 'python-mode-hook 'jedi:setup)
+    (add-to-list 'company-backends 'company-jedi)
+    )
+
   ;; (setq jedi:environment-root "jedi")  ; or any other name you like
   ;; (setq jedi:environment-virtualenv
   ;; 	(append python-environment-virtualenv
