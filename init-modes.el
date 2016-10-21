@@ -77,64 +77,33 @@
 ;; php
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;php-mode
-;(load-library "php-mode")
-;(require 'php-mode)
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.ctp$" . php-mode))
 ;; php-modeの補完を強化する
-(defun php-completion-hook ()
-  (when (require 'php-completion nil t)
-    (php-completion t)
-    (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)
-    (when (require 'auto-complete nil t)
-      (make-variable-buffer-local 'ac-sources)
-      (add-to-list 'ac-sources 'ac-sources-php-completion)
-      (auto-complete-mode t))))
-;; CakePHP
-;; (when (and (require 'auto-complete nil t)
-;; 	   (require 'ac-cake nil t)
-;; 	   (require 'ac-cake2 nil t))
-;;   ;; ac-cake用の関数定義
-;;   (defun ac-cake-hook ()
-;;     (make-variable-buffer-local 'ac-sources)
-;;     (add-to-list 'ac-sources 'ac-source-cake)
-;;     (add-to-list 'ac-sources 'ac-source-cake2))
-;;   ;;php-mode-hookにac-cake用の関数を追加
-;;   (add-hook 'php-mode-hook 'ac-cake-hook))
-
-;; CakePHP1.x
-;; (when (require 'cake nil t)
-;;   ;;emacs-cakeの標準キーバインドを利用
-;;   (cake-set-default-keymap)
-;;   ;;標準でemacs-cakeをオン
-;;   (global-cake t))
-
-;; CakePHP2.x
-;; (when (require 'cake2 nil t)
-;;   ;;emacs-cakeの標準キーバインドを利用
-;;   (cake2-set-default-keymap)
-;;   ;;標準でemacs-cake2をオフ
-;;   (global-cake2 -1))
-
-;; emacs-cakeを切り替えるコマンドを定義
-;; (defun toggle-emacs-cake ()
-;;   "emacs-cakeとemacs-cake2を切り替える"
-;;   (interactive)
-;;   (cond ((eq cake2 t) ; cake2がオンなら
-;; 	 (cake2 -1)
-;; 	 (cake t))
-;; 	((eq cake t) ; cakeがオンなら
-;; 	 (cake -1)
-;; 	 (cake2 t))
-;; 	(t nil))) ; それ以外なら何もしない
+;; (defun php-completion-hook ()
+;;   (when (require 'php-completion nil t)
+;;     (php-completion t)
+;;     (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)
+;;     (when (require 'auto-complete nil t)
+;;       (make-variable-buffer-local 'ac-sources)
+;;       (add-to-list 'ac-sources 'ac-sources-php-completion)
+;;       (auto-complete-mode t))))
 
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
+	     ;; 補完
+	     (when (require 'company-php nil t)
+	       (company-mode t)
+	       (add-to-list 'company-backends 'company-ac-php-backend )
+	       (yas-global-mode 1)
+	       (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
+	       (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
+	       )
 	     ;; 配列の整形
 	     (defun ywb-php-lineup-arglist-intro (langelem)
 	       (save-excursion
@@ -164,7 +133,7 @@
 	     ;; カッコ強調表示
 	     (show-paren-mode t)
 	     ;; auto-complete
-	     ('php-complection-hook)
+	     ;; ('php-completion-hook)
 	     ;; 勝手に改行モード (必要なければコメントアウトする)
 	     (c-toggle-auto-hungry-state t)
 	     (setq c-hanging-braces-alist
