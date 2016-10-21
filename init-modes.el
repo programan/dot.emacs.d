@@ -97,6 +97,7 @@
 	     ;; auto-revert-modeを有効にする
 	     (auto-revert-mode t)
 	     ;; 補完
+	     ;; php-cliとcscopeが必要
 	     (when (require 'company-php nil t)
 	       (company-mode t)
 	       (add-to-list 'company-backends 'company-ac-php-backend )

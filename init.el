@@ -100,7 +100,10 @@
 (load "~/.emacs.d/init-modes")
 
 ;; flymake設定の読み込み
-(load "~/.emacs.d/init-flymake")
+;; (load "~/.emacs.d/init-flymake")
+
+;; flymake設定の読み込み
+(load "~/.emacs.d/init-flycheck")
 
 ;; 全角空白、タブ、改行表示モード設定の読み込み
 (load "~/.emacs.d/init-jaspace")
