@@ -65,7 +65,7 @@
 
 
 ;; companyでrobeの補完を表示
-(push 'company-robe company-backends)
+;; (push 'company-robe company-backends)
 
 
 

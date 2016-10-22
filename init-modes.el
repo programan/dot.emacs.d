@@ -474,6 +474,8 @@
 ;; helm-robe
 (custom-set-variables
  '(robe-completing-read-func 'helm-robe-completing-read))
+;; companyでrobeの補完を表示
+(push 'company-robe company-backends)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
