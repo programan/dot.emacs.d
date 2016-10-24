@@ -705,13 +705,25 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; swift-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'swift-mode)
-(add-to-list 'auto-mode-alist '("\\.swift" . swift-mode))
-(add-hook 'swift-mode-hook
-	  '(lambda()
-	     (setq swift-indent-offset 4)
-	     (setq swift-indent-switch-case-offset 0)
-	     (setq swift-indent-multiline-statement-offset 2)
-	     (local-set-key "\C-c\C-c" 'quickrun)
-	     (local-set-key "\C-c\C-a" 'quickrun-with-arg)
-	     ))
+;; (require 'swift-mode)
+;; (add-to-list 'auto-mode-alist '("\\.swift" . swift-mode))
+;; (add-hook 'swift-mode-hook
+;; 	  '(lambda()
+;; 	     (setq swift-indent-offset 4)
+;; 	     (setq swift-indent-switch-case-offset 0)
+;; 	     (setq swift-indent-multiline-statement-offset 2)
+;; 	     (local-set-key "\C-c\C-c" 'quickrun)
+;; 	     (local-set-key "\C-c\C-a" 'quickrun-with-arg)
+;; 	     ))
+
+(when (require 'swift3-mode)
+  (add-to-list 'auto-mode-alist '("\\.swift" . swift3-mode))
+  (add-hook 'swift3-mode-hook
+	    '(lambda()
+	       (setq swift3-indent-offset 4)
+	       (setq swift3-indent-switch-case-offset 0)
+	       (setq swift3-indent-multiline-statement-offset 2)
+	       (local-set-key "\C-c\C-c" 'quickrun)
+	       (local-set-key "\C-c\C-a" 'quickrun-with-arg)
+	       ))
+  )
