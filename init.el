@@ -20,7 +20,8 @@
 ;デフォルトで使用する文字コード
 (set-default-coding-systems 'utf-8)
 ;新しいファイルを作成するときの文字コード
-(setq default-buffer-file-coding-system 'utf-8)
+;; (setq default-buffer-file-coding-system 'utf-8)
+(setq buffer-file-coding-system 'utf-8)
 
 ;; Windows依存とMac依存の設定ファイルを別ファイルからそれぞれ読む
 (cond
@@ -82,7 +83,8 @@
 ;; projectile
 (when (require 'projectile nil t)
   (projectile-global-mode)
-  (setq projectile-completion-system 'helm)
+  ;; (setq projectile-completion-system 'helm)
+  (defvar projectile-completion-system 'helm)
   (helm-projectile-on)
   )
 
