@@ -511,7 +511,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MarkDown
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(autoload 'markdown-mode "markdown-mode.el"
+;; (autoload 'markdown-mode "markdown-mode.el"
+;;   "Major mode for editing Markdown files" t)
+(autoload 'gfm-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 ;(setq auto-mode-alist
 ;      (cons '("\\.md" . markdown-mode) auto-mode-alist))
