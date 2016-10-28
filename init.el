@@ -83,8 +83,8 @@
 ;; projectile
 (when (require 'projectile nil t)
   (projectile-global-mode)
-  ;; (setq projectile-completion-system 'helm)
-  (defvar projectile-completion-system 'helm)
+  (setq projectile-completion-system 'helm)
+  ;; (defvar projectile-completion-system 'helm)
   (helm-projectile-on)
   )
 
