@@ -250,8 +250,8 @@
 ;(autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.tag$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.tag\\.js$" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tag$" . js2-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tag\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook
           '(lambda ()
 	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
@@ -582,8 +582,8 @@
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-;;(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
-;;(add-to-list 'auto-mode-alist '("\\.tag\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tag\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tag\\.js\\'" . web-mode))
 ;(setq auto-mode-alist
 ;      (append '(
 ;                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|ctp\\|ejs\\)\\'" . web-mode)
