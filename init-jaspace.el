@@ -78,6 +78,7 @@
                              'coffee-mode
 			     'lua-mode
 			     'web-mode
+			     'fundamental-mode
                              )))
 
 
