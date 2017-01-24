@@ -114,15 +114,16 @@
 	       (save-excursion
 		 (goto-char (cdr langelem))
 		 (vector (current-column))))
-	     (c-set-style "stroustrup")
+;;	     (c-set-style "stroustrup")
+	     (c-set-style "symfony2")
 	     (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
 	     (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)
 	     (c-set-offset 'arglist-cont-nonempty' 4)
+	     (c-set-offset 'case-label' 4)
 	     (setq tab-width 4)
 	     (setq c-basic-offset 4)
-	     (c-set-offset 'case-label' 4)
 ;;	     (setq indent-tabs-mode nil)
-	     (setq indent-tabs-mode t)
+;;	     (setq indent-tabs-mode t)
 	     ;;C-cC-fで関数helpにジャンプ
 	     (setq php-search-url "http://www.php.net/ja/")
 	     (setq php-manual-url "http://www.php.net/manual/ja/")
@@ -159,7 +160,7 @@
 	     ;; (setq php-mode-force-pear t)
 	     (electric-pair-mode t)
 	     ))
-(add-hook 'php-mode-hook #'rainbow-delimiters-mode)
+;; (add-hook 'php-mode-hook #'rainbow-delimiters-mode)
 
 
 
@@ -577,7 +578,7 @@
 (add-to-list 'auto-mode-alist '("\\.xhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.shtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
@@ -670,7 +671,7 @@
 (require 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'scss-mode-hook 'rainbow-mode)
-(add-hook 'php-mode-hook 'rainbow-mode)
+;;(add-hook 'php-mode-hook 'rainbow-mode)
 (add-hook 'sass-mode-hook 'rainbow-mode)
 ;; (add-hook 'html-mode-hook 'rainbow-mode)
 
