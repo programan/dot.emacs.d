@@ -49,27 +49,24 @@
 ;;							  (setq default-frame-alist (append '((font . "fontset-hiraginomaru12"))))
 ;))
 
-;(set-face-attribute 'default nil
-;		    :family "Ricty"
-;		    :height 140)
-;(set-fontset-font
-; nil 'japanese-jisx0208
-; (font-spec :family "Ricty"))
-;(add-to-list 'default-frame-alist '(font . "ricty-13"))
-;;(add-to-list 'default-frame-alist '(font . "ricty-11"))
+;; Ricty
+;; (let* ((size 13)
+;;        (asciifont "Ricty") ; ASCII fonts
+;;        (jpfont "Ricty") ; Japanese fonts
+;;        (h (* size 10))
+;;        (fontspec (font-spec :family asciifont))
+;;        (jp-fontspec (font-spec :family jpfont)))
+;;   (set-face-attribute 'default nil :family asciifont :height h)
+;;   (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
+;;   (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
+;;   (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
+;;   (set-fontset-font nil '(#x0080 . #x024F) fontspec) 
+;;   (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
 
-(let* ((size 13)
-       (asciifont "Ricty") ; ASCII fonts
-       (jpfont "Ricty") ; Japanese fonts
-       (h (* size 10))
-       (fontspec (font-spec :family asciifont))
-       (jp-fontspec (font-spec :family jpfont)))
-  (set-face-attribute 'default nil :family asciifont :height h)
-  (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
-  (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
-  (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
-  (set-fontset-font nil '(#x0080 . #x024F) fontspec) 
-  (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
+
+(add-to-list 'default-frame-alist '(font . "ricty-13.5"))
+
+
 
 ;; growl messages at file saved
 ;(defun growlnotify-after-save-hook ()
