@@ -318,6 +318,22 @@
 ;	  )
 (add-hook 'js2-mode-hook #'rainbow-delimiters-mode)
 
+;; nodeのnpmでternをグローバルにインストールしておく
+;; M-. 定義ジャンプ
+;; M-, 定義ジャンプから戻る
+;; C-c C-r 変数名のリネーム
+;; C-c C-c 型の取得
+;; C-c C-d docsの表示
+(setq company-tern-property-marker "")
+(defun company-tern-depth (candidate)
+  "Return depth attribute for CANDIDATE. 'nil' entries are treated as 0."
+  (let ((depth (get-text-property 0 'depth candidate)))
+    (if (eq depth nil) 0 depth)))
+(add-hook 'js2-mode-hook 'tern-mode) ; 自分が使っているjs用メジャーモードに変える
+(add-to-list 'company-backends 'company-tern) ; backendに追加
+
+(add-to-list 'company-backends '(company-tern :with company-dabbrev-code))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; json
