@@ -1,19 +1,24 @@
+# Backup directory
 backups/*
 !backups/.gitkeep
 *~
-ac-comphist.dat
-tramp
+
+# Data directories
 elpa/archives/*
-url/*
-shellenv.el
-eshell/
 .python-environments/
 games/
+geben/
+url/*
+eshell/
+server/
+
+# Data files
+ac-comphist.dat
+tramp
+shellenv.el
 places
 recentf
-geben/
 projectile-bookmarks.eld
-server/
 projectile.cache
 network-security.data
 
