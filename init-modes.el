@@ -500,6 +500,13 @@
 ;; companyでrobeの補完を表示
 (push 'company-robe company-backends)
 
+;; robe-jumpとrobe-popのkey-bindを無効にする
+;; tagジャンプはhelm-etag-selectを使う
+(eval-after-load "robe"
+  '(progn
+     (define-key robe-mode-map (kbd "M-.") nil)
+     (define-key robe-mode-map (kbd "M-,") nil)
+     ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; slim-mode
