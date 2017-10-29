@@ -81,12 +81,12 @@
 
 
 ;; projectile
-(when (require 'projectile nil t)
-  (projectile-global-mode)
-  (setq projectile-completion-system 'helm)
-  ;; (defvar projectile-completion-system 'helm)
-  (helm-projectile-on)
-  )
+;; (when (require 'projectile nil t)
+;;   (projectile-global-mode)
+;;   (setq projectile-completion-system 'helm)
+;;   ;; (defvar projectile-completion-system 'helm)
+;;   (helm-projectile-on)
+;;   )
 
 
 ;; オートコンプリート設定の読み込み
