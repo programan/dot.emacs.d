@@ -234,6 +234,9 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+;; C-h でbackspace
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
+
 ;; *.~ とかのバックアップファイルを作らない
 ;;(setq make-backup-files nil)
 ;; .#* とかのバックアップファイルを作らない
