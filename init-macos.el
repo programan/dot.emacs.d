@@ -83,8 +83,16 @@
 (if window-system (progn
 		    (tool-bar-mode 0)))
 
-; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する 
-(define-key global-map [?¥] [?\\])  ;; ¥の代わりにバックスラッシュを入力する
+; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する
+;; ¥の代わりにバックスラッシュを入力する
+;; (define-key global-map [?¥] [?\\])
+;; mini bufferでも
+;; (define-key key-translation-map (kbd "¥") (kbd "\\"))
+;; C-x C-e 文字コードチェック
+;; UTF8で¥は165, \は92
+(define-key key-translation-map [165] [92])
+
+
 
 ;; auto-install
 ;; wgetが必要
