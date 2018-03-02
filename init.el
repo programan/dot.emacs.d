@@ -333,6 +333,26 @@
 (editorconfig-mode 1)
 
 
+;; all-the-icons
+;; Install fonts file after install package.
+;; M-x all-the-icons-install-fonts
+(require 'all-the-icons)
+;;(insert (all-the-icons-icon-for-file "foo.js"))
+;; Inserts a javascript icon
+;; #("js-icon" 0 1 (display (raise -0.24) face (:family "alltheicon" :height 1.08 :foreground "#FFD446")))
+
+(when (require 'neotree nil t)
+  ;; Press '?' for neotree help.
+  ;; 隠しファイルをデフォルトで表示
+  (setq neo-show-hidden-files t)
+;; キーバインドをシンプルにする
+  (setq neo-keymap-style 'concise)
+  ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
+  (setq neo-smart-open t)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+;; (global-set-key "\C-q" 'neotree-toggle)
+  (global-set-key [f8] 'neotree-toggle))
+
 
 
 ;; --------
@@ -359,6 +379,6 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (telephone-line company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php ubuntu-theme tronesque-theme paganini-theme metalheart-theme kooten-theme heroku-theme gotham-theme cyberpunk-theme clues-theme bubbleberry-theme bliss-theme badwolf-theme ample-theme material-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (neotree all-the-icons telephone-line company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php ubuntu-theme tronesque-theme paganini-theme metalheart-theme kooten-theme heroku-theme gotham-theme cyberpunk-theme clues-theme bubbleberry-theme bliss-theme badwolf-theme ample-theme material-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(robe-completing-read-func (quote helm-robe-completing-read))
  '(rspec-use-rake-when-possible nil))
