@@ -349,6 +349,9 @@
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 ;; #!/usr/bin/env ruby といった行で始まる、拡張子のないコマンドファイルを適切なモードで開く
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
+;; マジックコメントを自動挿入しない
+;; # -*- coding: utf-8 -*-
+(setq ruby-insert-encoding-magic-comment nil)
 ;; irb
 ;(autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 ;(autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
