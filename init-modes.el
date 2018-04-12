@@ -505,11 +505,11 @@
 
 ;; robe-jumpとrobe-popのkey-bindを無効にする
 ;; tagジャンプはhelm-etag-selectを使う
-(eval-after-load "robe"
-  '(progn
-     (define-key robe-mode-map (kbd "M-.") nil)
-     (define-key robe-mode-map (kbd "M-,") nil)
-     ))
+;; (eval-after-load "robe"
+;;   '(progn
+;;      (define-key robe-mode-map (kbd "M-.") nil)
+;;      (define-key robe-mode-map (kbd "M-,") nil)
+;;      ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; slim-mode
