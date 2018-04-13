@@ -62,3 +62,6 @@
 ;; (setq helm-projectile-fuzzy-match nil)
 (when (require 'helm-projectile nil t)
   (helm-projectile-on))
+
+(when (require 'migemo nil t)
+  (helm-migemo-mode 1))

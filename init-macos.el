@@ -138,3 +138,8 @@
 (setq sql-mysql-program "/Applications/MAMP/Library/bin/mysql")
 ;;(setq sql-mysql-options '("-C" "-t" "-f" "-n"))
 (setq sql-mysql-options '("-C" "-t" "-f" "-n" "-P 8889"))
+
+
+;; migmo
+(load "~/.emacs.d/init-migemo")
+
