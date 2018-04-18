@@ -195,6 +195,9 @@
   ;; 		'("--python" "~/.pyenv/python")))
   
   )
+(require 'virtualenvwrapper)
+(require 'auto-virtualenvwrapper)
+(add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate)
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (add-hook 'python-mode-hook
