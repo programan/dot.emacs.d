@@ -127,3 +127,17 @@
 ;; 	(cons "\.sq$" 'sql-mode))
 ;;        auto-mode-alist))
 ;; (add-hook 'sql-mode-hook 'font-lock-mode)
+
+
+;; migemo
+
+
+(require 'migemo)
+(setq migemo-dictionary "c:/cmigemo/dict/cp932/migemo-dict")
+;;;(setq migemo-dictionary "c:/cmigemo/dict/utf-8/migemo-dict")
+(setq migemo-command "cmigemo")
+(setq migemo-options '("-q" "--emacs" "-i" "\a")) (setq migemo-user-dictionary nil) (setq migemo-regex-dictionary nil)
+;;;(setq migemo-coding-system 'utf-8-unix)
+(setq migemo-coding-system 'cp932-unix)
+(load-library "migemo")
+(migemo-init)
