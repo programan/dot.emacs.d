@@ -2,13 +2,14 @@
 ;; snippet(部品)を内部に持っていてコード補完をしてくれる
 ;; Emacsのメニューを表示している場合項目が追加されている
 (when (require 'yasnippet nil t) ;; not yasnippet-bundle
-  (yas-global-mode 1)
-  ;; (yas-reload-all)
 
   (setq yas/snippet-dirs 
-;;	'("~/.emacs.d/site-lisp/yasnippets" "~/.emacs.d/site-lisp/myyasnippets")
-	'("~/.emacs.d/site-lisp/yasnippets")
-	)
+;;      '("~/.emacs.d/site-lisp/yasnippets" "~/.emacs.d/site-lisp/myyasnippets")
+        '("~/.emacs.d/site-lisp/yasnippets")
+        )
+
+  (yas-global-mode 1)
+  ;; (yas-reload-all)
 
   ;; (yas/initialize)
   ;; (yas/load-directory "~/.emacs.d/site-lisp/yasnippet/snippets")
