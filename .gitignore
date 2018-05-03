@@ -11,6 +11,7 @@ geben/
 url/*
 eshell/
 server/
+image-dired/
 
 # Data files
 ac-comphist.dat
