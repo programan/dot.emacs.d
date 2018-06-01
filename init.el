@@ -353,6 +353,7 @@
   ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
   (setq neo-smart-open t)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq neo-window-fixed-size nil)
 ;; (global-set-key "\C-q" 'neotree-toggle)
   (global-set-key [f8] 'neotree-toggle))
 
