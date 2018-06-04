@@ -232,20 +232,42 @@
 ;	     (flymake-mode t)))
 
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
-(setq auto-mode-alist (cons '("\\.cs$" . csharp-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons '("\\.cs$" . csharp-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
+
+(add-hook 'csharp-mode-hook
+          '(lambda()
+             (setq comment-column 40)
+             ;;; インデントには tab を使う
+             ;; (setq indent-tabs-mode t)
+             (setq c-basic-offset 4
+                   tab-width 4
+                   indent-tabs-mode t)
+             ;; (setq c-basic-offset 4)
+             (font-lock-add-magic-number)
+             (c-set-offset 'substatement-open 0)
+             (c-set-offset 'case-label '+)
+             (c-set-offset 'arglist-intro '+)
+             (c-set-offset 'arglist-close 0)
+             ;; (hl-line-mode)
+             ;; (auto-complete-mode)
+             ;; (flymake-mode)
+             )
+          )
+
 ;; Patterns for finding Microsoft C# compiler error messages:
-(require 'compile)
-(push '("^\\(.*\\)(\\([0-9]+\\),\\([0-9]+\\)): error" 1 2 3 2) compilation-error-regexp-alist)
-(push '("^\\(.*\\)(\\([0-9]+\\),\\([0-9]+\\)): warning" 1 2 3 1) compilation-error-regexp-alist)
+;; (require 'compile)
+;; (push '("^\\(.*\\)(\\([0-9]+\\),\\([0-9]+\\)): error" 1 2 3 2) compilation-error-regexp-alist)
+;; (push '("^\\(.*\\)(\\([0-9]+\\),\\([0-9]+\\)): warning" 1 2 3 1) compilation-error-regexp-alist)
 
 ;; Patterns for defining blocks to hide/show:
-(push '(csharp-mode
-        "\\(^\\s *#\\s *region\\b\\)\\|{"
-        "\\(^\\s *#\\s *endregion\\b\\)\\|}"
-        "/[*/]"
-        nil
-        hs-c-like-adjust-block-beginning)
-      hs-special-modes-alist)
+;; (push '(csharp-mode
+;;         "\\(^\\s *#\\s *region\\b\\)\\|{"
+;;         "\\(^\\s *#\\s *endregion\\b\\)\\|}"
+;;         "/[*/]"
+;;         nil
+;;         hs-c-like-adjust-block-beginning)
+;;       hs-special-modes-alist)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
