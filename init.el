@@ -216,6 +216,13 @@
   (setq-default save-place t)
 )
 
+;; 行番号表示
+(when (>= emacs-major-version 26)
+  ;;(display-line-numbers-mode 1)
+  (global-display-line-numbers-mode 1)
+  )
+
+
 ;; 対応する括弧を光らせる。
 (show-paren-mode 1)
 
