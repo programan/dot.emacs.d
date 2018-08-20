@@ -59,9 +59,12 @@
   (global-set-key (kbd "C-c b") 'helm-descbinds)
   )
 
-;; (setq helm-projectile-fuzzy-match nil)
-(when (require 'helm-projectile nil t)
-  (helm-projectile-on))
+; (setq helm-projectile-fuzzy-match nil)
+ (when (require 'helm-projectile nil t)
+   (setq projectile-completion-system 'helm)
+   (helm-projectile-on)
+;;   (global-set-key (kbd "s-x p f") 'helm-projectile-find-file)
+   )
 
 (when (require 'migemo nil t)
   (helm-migemo-mode 1))

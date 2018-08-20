@@ -76,17 +76,15 @@
 (require 'all-ext)
 
 
-;; helm
-(load "~/.emacs.d/init-helm")
-
-
 ;; projectile
 (when (require 'projectile nil t)
-  (projectile-global-mode)
-  (setq projectile-completion-system 'helm)
-  ;; (defvar projectile-completion-system 'helm)
-  (helm-projectile-on)
+  (projectile-mode +1)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   )
+
+;; helm
+(load "~/.emacs.d/init-helm")
 
 
 ;; オートコンプリート設定の読み込み
