@@ -759,16 +759,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; indent-guid
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'indent-guide)
-;; (setq indent-guide-delay 0.1)
-(setq indent-guide-recursive t)
-;; (set-face-foreground 'indent-guide-face "#3C6")
-(set-face-foreground 'indent-guide-face "gray34")
-;; (set-face-background 'indent-guide-face "dimgray")
-;; (setq indent-guide-char ":")
-(setq indent-guide-char "|")
-;; (indent-guide-global-mode)
-(add-hook 'prog-mode-hook 'indent-guide-mode)
+(when (require 'indent-guide nil t)
+  (when (eq system-type 'darwin)
+    ;; (setq indent-guide-delay 0.1)
+    (setq indent-guide-recursive t)
+    ;; (set-face-foreground 'indent-guide-face "#3C6")
+    (set-face-foreground 'indent-guide-face "gray34")
+    ;; (set-face-background 'indent-guide-face "dimgray")
+    ;; (setq indent-guide-char ":")
+    (setq indent-guide-char "|")
+    ;; (indent-guide-global-mode)
+    (add-hook 'prog-mode-hook 'indent-guide-mode)
+    )
+  )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
