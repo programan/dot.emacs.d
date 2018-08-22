@@ -53,7 +53,13 @@
 ;; 全角空白を表示させる。
 (setq jaspace-alternate-jaspace-string "□")
 ;; 改行記号を表示させる。
-(setq jaspace-alternate-eol-string "↓\n")
+;; (add-hook 'fundamental-mode-hook '(lambda ()
+;;                                      (setq jaspace-alternate-eol-string "↓\n")
+;;                                      ))
+;; (add-hook 'text-mode-hook '(lambda ()
+;;                                      (setq jaspace-alternate-eol-string "↓\n")
+;;                                      ))
+;; (setq jaspace-alternate-eol-string "↓\n")
 ;; タブ記号を表示。
 ;(setq jaspace-highlight-tabs t)  ; highlight tabs
 
