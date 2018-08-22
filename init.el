@@ -110,7 +110,10 @@
 (load "~/.emacs.d/init-flycheck")
 
 ;; 全角空白、タブ、改行表示モード設定の読み込み
-(load "~/.emacs.d/init-jaspace")
+;; (load "~/.emacs.d/init-jaspace")
+
+;; whitespace-modeを使用した全角空白、タブ、改行の表示
+(load "~/.emacs.d/init-whitespace")
 
 ;; バッファ2分割時の縦横トグル設定の読み込み
 (load "~/.emacs.d/init-window-toggle-division")
