@@ -219,7 +219,8 @@
 )
 
 ;; 行番号表示
-(when (>= emacs-major-version 26)
+;; (when (>= emacs-major-version 26)
+(when (version<= "26.0.50" emacs-version )
   ;;(display-line-numbers-mode 1)
   (global-display-line-numbers-mode 1)
   )
