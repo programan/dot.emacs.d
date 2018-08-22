@@ -70,7 +70,11 @@
   ;; (load-theme 'paganini t)
   (load-theme 'tronesque t)
   ;; (load-theme 'ubuntu t)
-  )
+
+  ;; comment line
+  (set-face-foreground 'font-lock-comment-face "DodgerBlue")
+  (set-face-foreground 'font-lock-comment-delimiter-face "DodgerBlue")
+ )
   ;; (enable-theme 'ample)
 
 (require 'all-ext)
