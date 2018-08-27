@@ -770,6 +770,7 @@
     (setq indent-guide-char "|")
     ;; (indent-guide-global-mode)
     (add-hook 'prog-mode-hook 'indent-guide-mode)
+    (add-hook 'yaml-mode-hook 'indent-guide-mode)
     )
   )
 
