@@ -21,9 +21,11 @@
 ;; (setq find-dired-find-program "c:\\cygwin\\bin\\find.exe")
 ;; (setq find-program "c:\\cygwin\\bin\\find.exe")
 ;; (setenv "PATH" (format "c:\\cygwin\\bin;%s" (getenv "PATH")))
-(setq find-dired-find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
-(setq find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
-(setenv "PATH" (format "c:\\MinGW\\msys\\1.0\\bin;%s" (getenv "PATH")))
+
+;; (setq find-dired-find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
+;; (setq find-program "c:\\MinGW\\msys\\1.0\\bin\\find.exe")
+;; (setenv "PATH" (format "c:\\MinGW\\msys\\1.0\\bin;%s" (getenv "PATH")))
+
 ;(setq exec-path (append exec-path '(getenv "PATH")))
 ;(setq exec-path (append exec-path '(format "c:/cygwin/bin;%s" (getenv "PATH"))))
 
@@ -93,7 +95,7 @@
                     (tool-bar-mode 0)))
 
 ;; ctags.elの設定
-(setq ctags-update-command (expand-file-name  "c:/ctags/ctags.exe"))
+;; (setq ctags-update-command (expand-file-name  "c:/ctags/ctags.exe"))
 
 ;(require 'ctags-update nil t)
 ;(setq tags-revert-without-query t)
@@ -113,8 +115,9 @@
 
 ;; MySQL
 ;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
-(setq sql-mysql-program "c:/xampp/mysql/bin/mysql.exe")
-(setq sql-mysql-options '("-C" "-t" "-f" "-n"))
+;; (setq sql-mysql-program "c:/xampp/mysql/bin/mysql.exe")
+;; (setq sql-mysql-options '("-C" "-t" "-f" "-n"))
+
 ;;(setq sql-mysql-options '("-C" "-t" "-f" "-n" "--port=22222"))
 ;; truncate lines for long tables
 ;;(add-hook 'sql-interactive-mode-hook
