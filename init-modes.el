@@ -760,7 +760,8 @@
 ;; indent-guid
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (when (require 'indent-guide nil t)
-  (when (eq system-type 'darwin)
+  ;; (when (eq system-type 'darwin)
+  (unless (eq system-type 'win32)
     ;; (setq indent-guide-delay 0.1)
     (setq indent-guide-recursive t)
     ;; (set-face-foreground 'indent-guide-face "#3C6")
