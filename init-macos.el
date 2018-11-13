@@ -1,39 +1,37 @@
+;;; init-macos.el --- emacs settings for macos.
+
 ;; キーボードから入力される文字コード
 (set-keyboard-coding-system 'sjis-mac)
 
 ;; ターミナルの文字コード
 (set-terminal-coding-system 'utf-8)
 
-;; ファイル名の文字コード
-(when (>= emacs-major-version 23)
-  (set-file-name-coding-system 'utf-8)
-)
-(when (<= emacs-major-version 22)
-  (require 'utf-8m)
-  (set-file-name-coding-system 'utf-8m)
-)
-
 ;; クリップボードの文字コード
 (set-clipboard-coding-system 'utf-8)
 
-;;;キーバインド設定
-;; Macのキーバインドを使う。optionをメタキーにする。
 (when (<= emacs-major-version 22)
-  (mac-key-mode 1)
-)
-(setq mac-option-modifier 'meta)
-
+  ;;日本語の濁点、半濁点対応
+  (require 'utf-8m)
+  (set-file-name-coding-system 'utf-8m)
+  ;;キーバインド設定
+  ;; Macのキーバインドを使う。optionをメタキーにする。
+  (mac-key-mode 1))
 
 (when (>= emacs-major-version 23)
+  ;; ファイル名の文字コード
+  (set-file-name-coding-system 'utf-8)
+  ;; ドラッグされたファイルは新規バッファで開く
   (define-key global-map [ns-drag-file] 'ns-find-file)
-  (setq ns-pop-up-frames nil)
-  )
+  (setq ns-pop-up-frames nil))
+
+
+;; 左のオプションキーをメタキーにする
+(setq mac-option-modifier 'meta)
 
 ;; シフト + 矢印で範囲選択
 (setq pc-select-selection-keys-only t)
 (when (< emacs-major-version 24)
-  (pc-selection-mode 1)
-  )
+  (pc-selection-mode 1))
 
 
 ;; フォント設定
@@ -134,12 +132,10 @@
 
 
 ;; MySQL
-;; (setq sql-mysql-program "d:/mysoft/mysql5/bin/mysql")
-(setq sql-mysql-program "/Applications/MAMP/Library/bin/mysql")
+;; (setq sql-mysql-program "/Applications/MAMP/Library/bin/mysql")
 ;;(setq sql-mysql-options '("-C" "-t" "-f" "-n"))
-(setq sql-mysql-options '("-C" "-t" "-f" "-n" "-P 8889"))
+;; (setq sql-mysql-options '("-C" "-t" "-f" "-n" "-P 8889"))
 
 
 ;; migmo
 (load "~/.emacs.d/init-migemo")
-
