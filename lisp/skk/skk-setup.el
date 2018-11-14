@@ -1,13 +1,11 @@
 ;;; skk-setup.el --- initial setup for SKK  -*- emacs-lisp -*-
-;; This file was generated automatically by SKK-MK at Thu Sep 17 13:32:46 2015
+;; This file was generated automatically by SKK-MK at Wed Nov 14 18:57:14 2018
 
 ;; Copyright (C) 2000 NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
 
 ;; Author: NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: skk-setup.el.in,v 1.36 2011/12/14 22:32:48 skk-cvs Exp $
 ;; Keywords: japanese, mule, input method
-;; Last Modified: $Date: 2011/12/14 22:32:48 $
 
 ;; This file is part of Daredevil SKK.
 
@@ -40,9 +38,9 @@
 (global-set-key "\C-xt" 'skk-tutorial)
 
 ;;; Dictionaries.
-;;(defvar skk-large-jisyo "@DIC@")
-;;(defvar skk-aux-large-jisyo "@AUXDIC@")
-(defvar skk-tut-file "c:/emacs/share/emacs/24.5/etc/skk/SKK.tut")
+(defvar skk-large-jisyo "/Users/naruse/.emacs.d/share/skk/SKK-JISYO.L")
+(defvar skk-aux-large-jisyo "/Users/naruse/.emacs.d/share/skk/SKK-JISYO.L")
+(defvar skk-tut-file "/Users/naruse/.emacs.d/share/skk/SKK.tut")
 
 ;;; Isearch setting.
 (defun skk-isearch-setup-maybe ()
