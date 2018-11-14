@@ -1,7 +1,7 @@
 Info file: skk.info,    -*- mode: text; coding: iso-2022-7bit -*-
-produced by `texinfo-format-buffer'
-from file `skk.texi'
-using `texinfmt.el' version 2.42 of  7 Jul 2006.
+produced by $B!F(Btexinfo-format-buffer$B!G(B
+from file $B!F(Bskk.texi$B!G(B
+using $B!F(Btexinfmt.el$B!G(B version 2.42 of  7 Jul 2006.
 
 INFO-DIR-SECTION Emacs
 INFO-DIR-SECTION GNU Emacs Lisp
@@ -31,7 +31,7 @@ File: skk.info, Node: Top, Next: $B$O$8$a$K(B, Prev: (dir), Up: (dir)
 SKK
 ***
 
- $B$3$N(B `SKK $B%^%K%e%"%k(B' $B$O(B SKK $B$N%P!<%8%g%s(B 15.2 $B$KBP1~$7$F$$$^$9!#(B
+ $B$3$N(B `SKK $B%^%K%e%"%k(B' $B$O(B SKK $B$N%P!<%8%g%s(B 16.2 $B$KBP1~$7$F$$$^$9!#(B
 
 * Menu:
 
@@ -58,7 +58,6 @@ SKK
 
 $B%$%s%9%H!<%k(B
 
-* APEL $B$N%$%s%9%H!<%k(B::
 * DDSKK $B$N%$%s%9%H!<%k(B::
 * $B<-=q$K$D$$$F(B::
 * $B<-=q$NF~<j(B::
@@ -108,7 +107,6 @@ SKK
 * I-search$B4XO"(B::                $B%$%s%/%j%a%s%?%k!&%5!<%A$K$^$D$o$k5!G=!#(B
 * VIP/VIPER$B$H$NJ;MQ(B::
 * picture-mode$B$H$NJ;MQ(B::        picture-mode $B$H$NJ;MQ$N:]$NLdBjE@!#(B
-* Org-mode$B$H$NJ;MQ(B::            Org-mode $B$H$NJ;MQ$N:]$NLdBjE@!#(B
 
 $B%m!<%^;zF~NO0J30$NF~NOJ}<0(B
 
@@ -161,12 +159,12 @@ File: skk.info, Node: $B$3$N%P!<%8%g%s$N(BSKK$B$K$D$$$F(B, Next: SKK$B$H$O$
 $BF0:n$,Aa$/$F8zN(E*$JF|K\8lF~NO4D6-$rDs6!$9$k%=%U%H%&%'%"$G$9!#(B
 
  GNU General Public License $B$K4p$E$$$FG[I[$5$l$F$$$k%U%j!<!&%=%U%H%&%'%"(B
-$B$G$9!#(BDDSKK 15.2 $B$,F0:n$9$k$H;W$o$l$k(B Emacsen $B$N%P!<%8%g%s$O!"<!$N$H$*$j(B
+$B$G$9!#(BDDSKK 16.2 $B$,F0:n$9$k$H;W$o$l$k(B Emacsen $B$N%P!<%8%g%s$O!"<!$N$H$*$j(B
 $B$G$9!#(B
 
-   * GNU Emacs 22.1 $B0J9_(B ($B?d>)(B)
    * GNU Emacs 23.1 $B0J9_(B ($B?d>)(B)
    * GNU Emacs 24.1 $B0J9_(B ($B?d>)(B)
+   * GNU Emacs 25.1 $B0J9_(B ($B?d>)(B)
    * Mule $B5!G=IU$-$G%3%s%Q%$%k$5$l$?(B XEmacs 21.4 $B$N:G?7HG(B
    * Mule $B5!G=IU$-$G%3%s%Q%$%k$5$l$?(B XEmacs 21.5 $B$N:G?7HG(B
 
@@ -175,7 +173,7 @@ File: skk.info, Node: $B$3$N%P!<%8%g%s$N(BSKK$B$K$D$$$F(B, Next: SKK$B$H$O$
 $B$($F!"(Bfsf-compat $B%Q%C%1!<%8$,I,?\$G$9!#(B
 
  $BAmO@$H$7$F!"8=:_$O(B XEmacs $B$h$j$b(B GNU Emacs $B$G$NF0:n$,$h$/%F%9%H$5$l$F$*(B
-$B$j!":G6a$G$O(B XEmacs $B$G$N%F%9%H$O=<J,9T$o$l$F$$$^$;$s!#(BGNU Emacs 22 $B0J>e(B
+$B$j!":G6a$G$O(B XEmacs $B$G$N%F%9%H$O=<J,9T$o$l$F$$$^$;$s!#(BGNU Emacs 23 $B0J>e(B
 $B$G$NMxMQ$,:G$b?d>)$5$l$^$9!#(B
 
  $B8=;~E@$G(B Emacs $B$N%P!<%8%g%s$4$H$K>/$J$/$H$b0J2<$N@)8B$,$"$j$^$9!#(B
@@ -183,36 +181,44 @@ File: skk.info, Node: $B$3$N%P!<%8%g%s$N(BSKK$B$K$D$$$F(B, Next: SKK$B$H$O$
 GNU Emacs 20.x
 
      DDSKK 14.2 $B0J9_$O(B GNU Emacs 20 $B$O%5%]!<%HBP>]30$G$9!#(BGNU Emacs 20
-     $B$N%f!<%6!<$O(B DDSKK 14.1 $B$r$*;H$$$/$@$5$$!#(B
+     $B$N%f!<%6$O(B DDSKK 14.1 $B$r$*;H$$$/$@$5$$!#(B
 
 GNU Emacs 21.4
 
      DDSKK 15.1 $B0J9_$O(B GNU Emacs 21 $B$O%5%]!<%HBP>]30$G$9!#(BGNU Emacs 21
-     $B$N%f!<%6!<$O(B DDSKK 14.4 $B$r$*;H$$$/$@$5$$!#(B
+     $B$N%f!<%6$O(B DDSKK 14.4 $B$r$*;H$$$/$@$5$$!#(B
 
 GNU Emacs 22.3
 
-        * JIS X 0213 $BBP1~$K$O(B Mule-UCS $B$NF3F~$,I,MW$G$9!#(B
-        * X Window System $B>e$G$N%a%K%e!<%P!<$NF|K\8lI=<($O(B GTK $BBP1~HG$N$_$G$9!#(B
+     DDSKK 16.2 $B0J9_$O(B GNU Emacs 22 $B$O%5%]!<%HBP>]30$G$9!#(BGNU Emacs 22
+     $B$N%f!<%6$O(B DDSKK 16.1 $B$r$*;H$$$/$@$5$$!#(B
 
 GNU Emacs 23.3
 
         * X Window System $B>e$G$N%a%K%e!<%P!<$NF|K\8lI=<($O(B GTK $BBP1~HG$N$_$G$9!#(B
+        * MELPA $B$rMxMQ$7$F%$%s%9%H!<%k$9$k$K$O!"@h$K(B `package.el' $B$r%$%s%9%H!<%k$9$kI,MW$,$"$j$^$9!#(B
 
 GNU Emacs 24.3
 
      GNU Emacs 24.3 $B$H(B DDSKK 14 $B$NAH$_9g$o$;$G(B isearch $B;HMQ;~$NIT6q9g$,(B
-     $BH/8+$5$l$F$$$^$9!#(BGNU Emacs 24.3 $B$N%f!<%6!<$O(B DDSKK 15 $B$r$*;H$$$/$@(B
-     $B$5$$!#(B
+     $BH/8+$5$l$F$$$^$9!#(BGNU Emacs 24.3 $B$N%f!<%6$O(B DDSKK 15 $B0J>e$r$*;H$$$/(B
+     $B$@$5$$!#(B
 
      `http://mail.ring.gr.jp/skk/201211/msg00000.html'
 
      `http://mail.ring.gr.jp/skk/201212/msg00000.html'
 
+     $B<-=q$N%@%&%s%m!<%I5!G=$G$"$k(B `M-x skk-get' $B$H(B `make get' $B$K$D$$$F!"(B
+     tar $BE83+$OHsBP1~$G$9!#(B
+
 GNU Emacs 24.4
 
         * coding tag $B$rL@<($7$F$$$J$$%U%!%$%k$O(B utf-8 $B$H<h$j07$o$l$^$9(B (1) $B!#(BDDSKK 15.2 $B$GBP:v:Q$_$G$9!#(B
         * NTEmacs $B$O(B 24.3 $B$HHf$Y$F%G%#%l%/%H%j9=@.$,0[$J$j$^$9(B (2) $B!#(BDDSKK 15.2 $B$GBP:v:Q$_$G$9!#(B
+
+GNU Emacs 25.1
+
+     DDSKK 15.2 $B0J9_$r$*;H$$$/$@$5$$!J(BDDSKK 16 $B$r?d>)$7$^$9!K!#(B
 
 XEmacs 21.4
 
@@ -222,6 +228,7 @@ XEmacs 21.4
         * $B%D!<%k%F%#%C%WI=<($,5!G=$7$^$;$s!#(B
         * $BF|K\8l%a%K%e!<I=<($O(B X $B%j%=!<%9$K$h$kJ}K!$N$_%F%9%H$5$l$F$$$^$9!#(B
         * GNU Emacs $BI8=`E:IU<-=q(B ja-dic $B$OMxMQ$G$-$^$;$s!#(B
+        * skk-search-web $B$OMxMQ$G$-$^$;$s!#(B
 
 XEmacs 21.5 (beta)
 
@@ -230,6 +237,7 @@ XEmacs 21.5 (beta)
         * $BF0E*Jd40$K$*$1$kJ#?t8uJdI=<($O5!G=$7$^$;$s!#(B
         * $BF|K\8l%a%K%e!<I=<($O(B X $B%j%=!<%9$K$h$kJ}K!$N$_%F%9%H$5$l$F$$$^$9!#(B
         * GNU Emacs $BI8=`E:IU<-=q(B ja-dic $B$OMxMQ$G$-$^$;$s!#(B
+        * skk-search-web $B$OMxMQ$G$-$^$;$s!#(B
 
 
 --------- Footnotes ---------
@@ -266,6 +274,7 @@ program $B$K$A$J$s$GL>IU$1$i$l!"$=$NL>$O(B Combinatory Logic $B$G$NM-L>$JEy<0
    * DDSKK $BK\BN(B (Emacs Lisp) $B$H<-=q%U%!%$%k$N$_$GF0:n2DG=!#$D$^$j!"<-=q%5!<%P$OI,?\$G$O$J$/!"<-=q%5!<%P$,%@%&%s$7$F$$$F$b;HMQ$G$-$k!#(B
    * $B<-=q%5!<%P$r;H$&$3$H$G!";HMQ%a%b%j$N:o8:$,2DG=!#(B
    * $B%G%#%9%/MFNL$K1~$8$FA*$Y$k<-=q%U%!%$%k!#(B
+   * $B<-=q%U%!%$%k$N0l3g%@%&%s%m!<%I5!G=!#(B
    * Emacs $B$N%*%j%8%J%kA`:n$HF1MM$K9T$($kF|K\8l%$%s%/%j%a%s%?%k!&%5!<%A!#(B
    * Emacs Lisp $B$G=q$+$l$?%W%m%0%i%`$,JV$9CM$rJQ498uJd$K5s$2$k$3$H$,$G$-$k!#(B
    * $BF~NO%b!<%I$N<+F0@Z$jBX$((B `context-skk.el'
@@ -289,7 +298,6 @@ File: skk.info, Node: $B%$%s%9%H!<%k(B, Next: $B$O$8$a$N@_Dj(B, Prev: $B$O$
 
 * Menu:
 
-* APEL $B$N%$%s%9%H!<%k(B::
 * DDSKK $B$N%$%s%9%H!<%k(B::
 * $B<-=q$K$D$$$F(B::
 * $B<-=q$NF~<j(B::
@@ -298,24 +306,7 @@ File: skk.info, Node: $B%$%s%9%H!<%k(B, Next: $B$O$8$a$N@_Dj(B, Prev: $B$O$
 
 
 
-File: skk.info, Node: APEL $B$N%$%s%9%H!<%k(B, Next: DDSKK $B$N%$%s%9%H!<%k(B, Prev: $B%$%s%9%H!<%k(B, Up: $B%$%s%9%H!<%k(B
-
-APEL $B$N%$%s%9%H!<%k(B
-===================
-
- DDSKK 14.2 $B$+$i$O!"(BGNU Emacs 22 $B0J>e$rMxMQ$9$k>l9g$K$*$$$F$O(B APEL $B$rJL(B
-$BES%$%s%9%H!<%k$9$kI,MW$,$J$/$J$j$^$7$?!#(BAPEL $B$K0MB8$7$F$$$kB>$N(B elisp $B%W(B
-$B%m%0%i%`$r;HMQ$7$F$$$J$1$l$P!"%$%s%9%H!<%k:Q$N(B APEL $B$O:o=|$9$k$3$H$,2DG=(B
-$B$G$9!#(B
-
- XEmacs $B$r$*;H$$$N>l9g$O!"(B DDSKK $B$r%$%s%9%H!<%k$9$kA0$K(BAPEL (APEL 10.8
-$B0J>e$r?d>)(B) $B$r%$%s%9%H!<%k$7$F2<$5$$!#(BAPEL $B$O<!$N%5%$%H$+$iF~<j$G$-$^$9!#(B
-
-APEL (http://git.chise.org/elisp/apel/)
-
-
-
-File: skk.info, Node: DDSKK $B$N%$%s%9%H!<%k(B, Next: $B<-=q$K$D$$$F(B, Prev: APEL $B$N%$%s%9%H!<%k(B, Up: $B%$%s%9%H!<%k(B
+File: skk.info, Node: DDSKK $B$N%$%s%9%H!<%k(B, Next: $B<-=q$K$D$$$F(B, Prev: $B%$%s%9%H!<%k(B, Up: $B%$%s%9%H!<%k(B
 
 DDSKK $B$N%$%s%9%H!<%k(B
 ====================
@@ -325,28 +316,29 @@ DDSKK $B$N%$%s%9%H!<%k(B
  $B$^$:!"(BDDSKK $B$N%"!<%+%$%V(B `ddskk-VERSION.tar.gz' $B$r(B `tar' $B%3%^%s%I$H(B
 `gzip' $B%3%^%s%I$r;HMQ$7$FE83+$7$^$9!#(B
 
-     % gzip -cd ddskk-15.2.tar.gz | tar xvf -
+     % gzip -cd ddskk-16.2.tar.gz | tar xvf -
 
  $B<!$K!"(BDDSKK $B$N%H%C%W%G%#%l%/%H%j(B (2) $B$r%+%l%s%H%G%#%l%/%H%j$K$7$^$9!#(B
 
-     % cd ddskk-15.2
+     % cd ddskk-16.2
 
 * Menu:
 
 * GNU Emacs $B$X$N%$%s%9%H!<%k(B::
 * XEmacs $B$X$N%$%s%9%H!<%k(B::
 * $BBPOCE*$J%$%s%9%H!<%k(B::
+* MELPA $B$K$h$k%$%s%9%H!<%k(B::
 
 --------- Footnotes ---------
 
  (1) Microsoft Windows $B4D6-$G$O!"(B`makeit.bat' $B$r;HMQ$9$k$3$H$GF1MM$NA`:n(B
 $B$G%$%s%9%H!<%k$G$-$^$9!#(B
-`http://openlab.jp/skk/skk/main/READMEs/README.w32.ja'
+`https://github.com/skk-dev/ddskk/blob/master/READMEs/README.w32.ja.org'
 
  cygwin $B4D6-$r%$%s%9%H!<%k$5$l$F$$$kJ}$O(B `make' $B%3%^%s%I$,;HMQ$G$-$k$N$G!"(B
 $BK\J8$N2r@b$,$=$N$^$^Ev$F$O$^$j$^$9!#(B
 
-Apple OS X $B4D6-$NJ}$O(B `http://openlab.jp/skk/skk/main/READMEs/README.MacOSX.ja' $B$r;2>H$7$F$/$@$5$$!#(B
+Apple OS X $B4D6-$NJ}$O(B `https://github.com/skk-dev/ddskk/blob/master/READMEs/README.MacOSX.ja' $B$r;2>H$7$F$/$@$5$$!#(B
 
 
 (2) `ChangeLog' $B$d(B `Makefile' $B$,CV$+$l$F$$$k%G%#%l%/%H%j$G$9!#(B
@@ -363,22 +355,22 @@ GNU Emacs $B$X$N%$%s%9%H!<%k(B
 
      % make what-where
      -|emacs -batch -q -no-site-file -l SKK-MK -f SKK-MK-what-where
-     -|Loading /home/USER/temp/ddskk-15.2/SKK-CFG...
+     -|Loading /home/USER/temp/ddskk-16.2/SKK-CFG...
 
      -|Running in:
-     -|  GNU Emacs 24.3.50.4 (i686-pc-linux-gnu, GTK+ Version 2.20.1) ...
+     -|  GNU Emacs 25.0.50.10 (x86_64-unknown-linux-gnu, GTK+ Version 3.10.9) ...
 
      -|SKK modules:
      -|  skk-cursor, skk-viper, ...
-     -|  -> /usr/local/share/emacs/24.3.50/site-lisp/skk
+     -|  -> /path/to/emacs/site-lisp/skk
 
      -|SKK infos:
      -|  skk.info
-     -|  -> /usr/local/share/info
+     -|  -> /path/to/share/info
 
      -|SKK tutorials:
      -|  SKK.tut, SKK.tut.E, NICOLA-SKK.tut, skk.xpm
-     -|  -> /usr/local/share/skk
+     -|  -> /path/to/share/skk
 
  emacs $B$N<BBN%U%!%$%k$rFCDj$9$k$3$H$b$G$-$^$9!#(B
 
@@ -415,14 +407,19 @@ File: skk.info, Node: XEmacs $B$X$N%$%s%9%H!<%k(B, Next: $BBPOCE*$J%$%s%9%H!<
 XEmacs $B$X$N%$%s%9%H!<%k(B
 -----------------------
 
+ XEmacs $B$r$*;H$$$N>l9g$O!"(B DDSKK $B$r%$%s%9%H!<%k$9$kA0$K(B APEL (APEL 10.8
+$B0J>e$r?d>)(B) $B$r%$%s%9%H!<%k$7$F2<$5$$!#(BAPEL $B$O<!$N%5%$%H$+$iF~<j$G$-$^$9!#(B
+
+APEL (http://git.chise.org/elisp/apel/)
+
  XEmacs $B$G%Q%C%1!<%8$H$7$F%$%s%9%H!<%k$9$k>l9g$O!"$^$:!"(B
 `what-where-package' $B$r0z?t$K(B `make' $B%3%^%s%I$r<B9T$7$F%Q%C%1!<%8$N%$%s(B
 $B%9%H!<%k@h$r3NG'$7$^$7$g$&!#(B
 
-     % make what-where-package EMACS=/usr/bin/xemacs
+     % make what-where-package XEMACS=/usr/bin/xemacs
      -|xemacs -batch -q -no-site-file -l SKK-MK -f SKK-MK-what-where-package
 
-     -|  Loading /home/user/temp/ddskk-15.2/SKK-CFG...
+     -|  Loading /home/user/temp/ddskk-16.2/SKK-CFG...
 
      -|Running in:
      -|  XEmacs 21.5  (beta29) garbanzo [Lucid] (i386-redhat-linux, Mule) of ...
@@ -442,14 +439,14 @@ XEmacs $B$X$N%$%s%9%H!<%k(B
  $B$D$.$K!"%9!<%Q!<%f!<%6$K$J$C$F(B `install-package' $B$r0z?t$K(B `make' $B$r<B9T(B
 $B$9$k$H!"<B:]$K%$%s%9%H!<%k$5$l$^$9!#(B
 
-     % make install-package EMACS=/usr/bin/xemacs
+     % make install-package XEMACS=/usr/bin/xemacs
      -|xemacs -batch -q -no-site-file -l SKK-MK -f SKK-MK-install-package
-     -|  Loading /home/user/temp/ddskk-15.2/SKK-CFG...
+     -|  Loading /home/user/temp/ddskk-16.2/SKK-CFG...
      ...
 
 
 
-File: skk.info, Node: $BBPOCE*$J%$%s%9%H!<%k(B, Prev: XEmacs $B$X$N%$%s%9%H!<%k(B, Up: DDSKK $B$N%$%s%9%H!<%k(B
+File: skk.info, Node: $BBPOCE*$J%$%s%9%H!<%k(B, Next: MELPA $B$K$h$k%$%s%9%H!<%k(B, Prev: XEmacs $B$X$N%$%s%9%H!<%k(B, Up: DDSKK $B$N%$%s%9%H!<%k(B
 
 $BBPOCE*$J%$%s%9%H!<%k(B
 --------------------
@@ -460,20 +457,47 @@ File: skk.info, Node: $BBPOCE*$J%$%s%9%H!<%k(B, Prev: XEmacs $B$X$N%$%s%9%H!<
 $B%l%/%H%j$rLd$o$l$^$9$N$G!"@h$K=R$Y$?!V(BDDSKK $B$N%"!<%+%$%V$rE83+$7$?%G%#%l(B
 $B%/%H%j!W$r;XDj$7$F$/$@$5$$!#(B
 
-     Dired (directory): ~/temp/ddskk-15.2 RET
+     ------ Minibuffer -------
+     Dired (directory): ~/temp/ddskk-16.2 RET
+     ------ Minibuffer -------
 
  $B<!$K!"I=<($5$l$?%G%#%l%/%H%j0lMw$N(B `SKK-MK' $B$K%+!<%=%k$r$"$o$;$F(B `L'
 $B!J(BSHIFT $B$r2!$7$J$,$i%"%k%U%!%Y%C%H$N%(%k!K$r%?%$%W$7$F$/$@$5$$!#(B
 
+     ------ Dired -------
      -rw-r--r-- 1 user user  99999 2011-00-00 00:00 SKK-CFG
      -rw-r--r-- 1 user user  99999 2011-00-00 00:00-!-SKK-MK    L
      drwxr-xr-x 1 user user  99999 2011-00-00 00:00 bayesian
+     ------ Dired -------
 
  $B%W%m%s%W%H(B `Load SKK-MK?' $B$K$O(B `y' $B$r%?%$%W$7$F$/$@$5$$!#(B
 
  $B0J9_!"%$%s%9%H!<%i$,I=<($9$k<ALd$KEz$($J$,$i(B DDSKK $B$N%$%s%9%H!<%k$r?J$a(B
 $B$F$/$@$5$$!#$J$*!"%Q!<%_%C%7%g%s$O0l@Z9MN8$7$F$$$^$;$s$N$G!"%$%s%9%H!<%k(B
 $B@h$O=q$-9~$_8"8B$rM-$9$k%G%#%l%/%H%j$r;XDj$7$F$/$@$5$$!#(B
+
+
+
+File: skk.info, Node: MELPA $B$K$h$k%$%s%9%H!<%k(B, Prev: $BBPOCE*$J%$%s%9%H!<%k(B, Up: DDSKK $B$N%$%s%9%H!<%k(B
+
+MELPA $B$K$h$k%$%s%9%H!<%k(B
+------------------------
+
+2014$BG/(B12$B7n!"(BMELPA (1)
+$B$K(B DDSKK $B$,EPO?$5$l$?$3$H$K$h$j(B GNU Emacs $B$G$b(B `package.el' (2)
+$B$K$h$k%$%s%9%H!<%k$,2DG=$H$J$j$^$7$?!#(B
+
+ $B>\:Y$K$D$$$F$O!"<!$N%I%-%e%a%s%H$r;2>H$7$F$/$@$5$$!#(B
+
+`https://github.com/skk-dev/ddskk/blob/master/READMEs/INSTALL.MELPA.md'
+
+--------- Footnotes ---------
+
+(1)  Milkypostman's Emacs Lisp Package Archive (https://melpa.org/)
+
+(2) GNU Emacs 24 $B0J9_$GI8=`$GEk:\$5$l$F$$$^$9!#(BGNU Emacs 23 $B0JA0$G$O<jF0(B
+$B$G%$%s%9%H!<%kI,MW$,$"$j$^$9!#(B
+`http://wikemacs.org/wiki/Package.el'
 
 
 
@@ -540,6 +564,12 @@ SKK $B3F<-=q$N2r@b$H%@%&%s%m!<%I(B
 `SKK-JISYO.edict'
      edict $B<-=q(B($B1QOB<-=q(B)
 
+`SKK-JISYO.lisp'
+     $B8uJd$K(B Emacs Lisp $B4X?t$r4^$`%(%s%H%j!<$r=8$a$?<-=q!#8+=P$78l$rJQ49(B
+     $B$9$k2aDx$G(B Emacs Lisp $B4X?t$rI>2A$7!"$=$NCM$r8uJd$H$7$FI=<($7$^$9!#(B
+
+     *Note $B%W%m%0%i%`<B9TJQ49(B::.
+
 `SKK-JISYO.wrong'
      $B4V0c$$<-=q!J(BS, M, L $B<-=q$K4{$KEPO?$5$l$F$$$?$,!"4V0c$$$G$"$C$?$N$G(B
      $B:o=|$5$l$?C18l$r<}O?!K(B
@@ -548,6 +578,23 @@ SKK $B3F<-=q$N2r@b$H%@%&%s%m!<%I(B
 $B$O!"<!$N;qNA$r;2>H$7$F2<$5$$!#(B
 
 `http://openlab.jp/skk/skk/dic/READMEs/committers.txt'
+
+ -- Function: $B%3%^%s%I(B SKK-GET
+
+     Emacs $B$N;HMQCf$K(B `M-x skk-get' $B$H<B9T$9$k$H!"<-=q%U%!%$%k$r0l3g%@%&(B
+     $B%s%m!<%I$9$k$3$H$,$G$-$^$9!#(B
+
+     $B$J$*!"(BGNU Emacs 24.3 $B0J2<$G$O(B tar $BE83+$KBP1~$7$F$$$J$$$?$a(B
+     `SKK-JISYO.edict.tar.gz' $B$H(B `zipcode.tar.gz' $B$O=hM}$5$l$^$;$s!#(B
+
+
+ -- Function: skk-get &optional DIRECTORY
+
+     `skk-get' $B$r4X?t$H$7$F;HMQ$9$k$3$H$G!"%f!<%6%W%m%0%i%`$NCf$+$i$G$b(B
+     $B<-=q%U%!%$%k$r0l3g%@%&%s%m!<%I$9$k$3$H$,$G$-$^$9(B
+
+          (skk-get "~/jisyofiles")
+
 
 
 
@@ -559,9 +606,24 @@ File: skk.info, Node: $B<-=q$r(B DDSKK $B$HF1;~$K%$%s%9%H!<%k$9$k(B, Next: 
  DDSKK $B$N%=!<%9$rE83+$9$k$H!"Cf$K(B `dic' $B$H$$$&%G%#%l%/%H%j$,B8:_$7$^$9!#(B
 `SKK-JISYO.L' $B$J$I$r$3$N%G%#%l%/%H%j$K%3%T!<$7$F$+$i(B `make install' $B$r<B(B
 $B9T$9$k$H!"<-=q%U%!%$%k$,%A%e!<%H%j%"%k(B (`SKK.tut') $B$HF1$8%G%#%l%/%H%j(B
-(`/usr/share/skk' $B$d(B `c:/emacs-24.2/etc/skk' $B$J$I(B) $B$K%$%s%9%H!<%k$5$l$^(B
+(`/usr/share/skk' $B$d(B `c:/emacs-24.5/etc/skk' $B$J$I(B) $B$K%$%s%9%H!<%k$5$l$^(B
 $B$9!#(B
 
+ `dic' $B%G%#%l%/%H%j$K<-=q%U%!%$%k$rCV$/$?$a$K$O(B `make get' $B$H<B9T$9$k$N(B
+$B$,4JC1$G$9(B (1) $B!#(B
+
+ `dic' $B%G%#%l%/%H%j$K<-=q%U%!%$%k$,CV$+$l$F$$$k>l9g!"(B`make what-where'
+$B<B9T;~$K<-=q%U%!%$%k$N%$%s%9%H!<%k@h$bI=<($7$^$9!#(B
+
+     -|SKK dictionaries:
+     -|  SKK-JISYO.lisp, SKK-JISYO.zipcode, SKK-JISYO.office.zipcode, ...
+     -|  -> c:/emacs-24.5/share/emacs/24.5/etc/skk
+
+
+--------- Footnotes ---------
+
+(1)  Microsoft Windows $B4D6-$G$O(B `makeit.bat get' $B$H(B
+$B<B9T$7$^$9!#(B
 
 
 
@@ -623,8 +685,8 @@ File: skk.info, Node: $B:G$b4pK\E*$J@_Dj(B, Next: $B%$%s%/%j%a%s%H8!:w$N@_Dj
 $B:G$b4pK\E*$J@_Dj(B
 ================
 
- $B<+F0@_Dj$K$h$i$:<jF0$G@_Dj$9$k>l9g$O!"<!$NFbMF$r(B `~/.emacs' $B$K=q$-$^$9(B
-(1) $B!#(B
+ $B<+F0@_Dj$K$h$i$:<jF0$G@_Dj$9$k>l9g$O!"<!$NFbMF$r(B `~/.emacs.d/init.el'
+$B$K=q$-$^$9(B (1) $B!#(B
 
      (require 'skk-autoloads) ; XEmacs $B$G%Q%C%1!<%8$H$7$F%$%s%9%H!<%k$7$?>l9g$OITMW(B
      (global-set-key "\C-x\C-j" 'skk-mode)
@@ -693,8 +755,9 @@ File: skk.info, Node: $B%$%s%/%j%a%s%H8!:w$N@_Dj(B, Next: $B<-=q%5!<%P$r;H$$$
 `skk-isearch-{setup|cleanup}-maybe' $B$H$b(B `skk-setup.el' $B$GDj5A$5$l$F$*$j!"(B
 $B<BBV$O!"4X?t(B `skk-isearch-mode-{setup|cleanup}' $B$G$9!#(B
 
-(2) $BJQ?t(B `skk-isearch-mode-enable' $B$O(B `~/.emacs' $B$+(B
-`M-x customize-variable' $B$G@_Dj$7$F$/$@$5$$!#(B
+(2) $BJQ?t(B `skk-isearch-mode-enable' $B$O(B
+`~/.emacs.d/init.el' $B$+(B `M-x customize-variable' $B$G@_Dj$7(B
+$B$F$/$@$5$$!#(B
 
 
 
@@ -791,7 +854,8 @@ DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B
 
  -- $B%f!<%6JQ?t(B: default-input-method
 
-     Emacs $B5/F0;~$N(B input method $B$r(B DDSKK $B$H$9$k$K$O!"(B`~/.emacs' $B$K(B
+     Emacs $B5/F0;~$N(B input method $B$r(B DDSKK $B$H$9$k$K$O!"(B
+     `~/.emacs.d/init.el' $B$K(B
 
           (setq default-input-method "japanese-skk")
 
@@ -858,8 +922,8 @@ SKK $B%b!<%I$KF~$k$K$O(B `C-x C-j'$B!"$b$7$/$O(B `C-x j' $B$H%?%$%W$7$^$9!#
 
  -- $B%f!<%6JQ?t(B: skk-preload
 
-     `~/.emacs' $B$K$FJQ?t(B `skk-preload' $B$r(B `non-nil' $B$H@_Dj$9$k$3$H$K$h$j!"(B
-     DDSKK $B$N=i2s5/F0$rB.$/$9$k$3$H$,$G$-$^$9!#(B
+     `~/.emacs.d/init.el' $B$K$FJQ?t(B `skk-preload' $B$r(B `non-nil' $B$H@_Dj$9$k(B
+     $B$3$H$K$h$j!"(BDDSKK $B$N=i2s5/F0$rB.$/$9$k$3$H$,$G$-$^$9!#(B
 
           (setq skk-preload t)
 
@@ -872,7 +936,7 @@ SKK $B%b!<%I$KF~$k$K$O(B `C-x C-j'$B!"$b$7$/$O(B `C-x j' $B$H%?%$%W$7$^$9!#
  -- Function: $B%3%^%s%I(B SKK-RESTART
 
      `M-x skk-restart' $B$H<B9T$9$k$H(B SKK $B$r:F5/F0$7$^$9!#(B
-     `~/.skk' $B$O:F%m!<%I$7$^$9$,!"(B`~/.emacs' $B$O:F%m!<%I$7$^$;$s!#(B
+     `~/.skk' $B$O:F%m!<%I$7$^$9$,!"(B`~/.emacs.d/init.el' $B$O:F%m!<%I$7$^$;$s!#(B
 
 
 
@@ -882,7 +946,7 @@ SKK $B%b!<%I$KF~$k$K$O(B `C-x C-j'$B!"$b$7$/$O(B `C-x j' $B$H%?%$%W$7$^$9!#
      *Note $B%(%i!<$J$I$NF|K\8lI=<((B::
 
           -------------------- Echo Area --------------------
-          Daredevil SKK/15.2 (Oshamambe)
+          Daredevil SKK/16.2 (CODENAME)
           -------------------- Echo Area --------------------
 
 
@@ -1334,18 +1398,20 @@ File: skk.info, Node: $B<!8uJd!&A08uJd(B, Next: $BAw$j2>L>$,M-$k>l9g(B, Prev
      $B"'44;v(B-!-
      ------ Buffer: foo ------
 
- $B8uJd$,#5$D0J>e$"$k$H$-$O!"#5HVL\0J9_$N8uJd$O#7$D$:$D$^$H$a$F%(%3!<%(%j(B
-$B%"$KI=<($5$l$^$9!#Nc$($P!"<-=q$,(B
+ $B8uJd$,#5$D0J>e$"$k$H$-$O!"#5HVL\0J9_$N8uJd$O#7$D$:$D$^$H$a$F(B (1) $B%(%3!<(B
+$B%(%j%"$KI=<($5$l$^$9!#Nc$($P!"<-=q$,(B
 
      $B$-$g(B /$B5w(B/$B5p(B/$B5o(B/$B?~(B/$B13(B/$B5q(B/$B5r(B/$B5u(B/$B5s(B/$B5v(B/$B5t(B/$B?x(B/$B5n(B/
 
-$B$H$$$&%(%s%H%j$r4^$`$H$-$K(B `K y o' $B$N8e$K(B SPC $B$r#52sB3$1$F%?%$%W$9$l$P(B
+$B$H$$$&%(%s%H%j$r4^$`$H$-$K(B `K y o' $B$N8e$K(B SPC $B$r#52s(B (2) $BB3$1$F%?%$%W$9(B
+$B$l$P(B
+
 
      -------------------- Echo Area --------------------
      A:$B13(B  S:$B5q(B  D:$B5r(B  F:$B5u(B  J:$B5s(B  K:$B5v(B  L:$B5t(B  [$B;D$j(B 2]
      -------------------- Echo Area --------------------
 
-$B$,%(%3!<%(%j%"(B (1) $B$KI=<($5$l$^$9!#$3$3$G2>$K(B `$B5v(B' $B$rA*Br$7$?$1$l$P(B `k'
+$B$,%(%3!<%(%j%"(B (3) $B$KI=<($5$l$^$9!#$3$3$G2>$K(B `$B5v(B' $B$rA*Br$7$?$1$l$P(B `k'
 $B$rF~NO$7$^$9!#(B
 
 `A', `S', `D', `F', `J', `K', `L' $B$N(B
@@ -1355,7 +1421,7 @@ File: skk.info, Node: $B<!8uJd!&A08uJd(B, Next: $BAw$j2>L>$,M-$k>l9g(B, Prev
 $B$D$$$F$O!"(B*Note $B8uJd$NA*Br$KMQ$$$k%-!<(B:: $B$r;2>H$7$F$/$@$5$$!#(B
 
 SPC $B$rO"BG$7$F$7$^$$5a$a$k8uJd$r8m$C$FDL2a$7$F$7$^$C$?$H$-$O(B
-`x' $B$r%?%$%W$9$l$PA08uJd!?A08uJd72$KLa$k$3$H$,$G$-$^$9(B (2) $B!#(B
+`x' $B$r%?%$%W$9$l$PA08uJd!?A08uJd72$KLa$k$3$H$,$G$-$^$9(B (4) $B!#(B
 
 $B8uJd$r<!!9$HC5$7$F$b5a$a$k8l$,$J$1$l$P!"<+F0E*$K<-=qEPO?%b!<%I$K$J$j$^$9(B
 ($B<-=qEPO?%b!<%I$O"'%b!<%I$N%5%V%b!<%I$G$9(B) $B!#(B
@@ -1371,13 +1437,24 @@ SPC $B$rO"BG$7$F$7$^$$5a$a$k8uJd$r8m$C$FDL2a$7$F$7$^$C$?$H$-$O(B
  -- $B%f!<%6JQ?t(B: skk-search-excluding-word-pattern-function
      $B>\$7$/$O(B docstring $B$r;2>H$N$3$H!#(B
 
+ -- $B%f!<%6JQ?t(B: skk-show-candidates-nth-henkan-char
+     $B8uJd0lMw$rI=<($9$k4X?t(B `skk-henkan-show-candidates' $B$r8F$S=P$9$^$G(B
+     $B$N(B `skk-start-henkan-char' $B$rBG80$9$k2s?t!#(B2 $B0J>e$N@0?t$G$"$kI,MW!#(B
+
+ -- $B%f!<%6JQ?t(B: skk-henkan-number-to-display-candidates
+     $B$$$A$I$KI=<($9$k8uJd$N?t!#(B
+
 --------- Footnotes ---------
 
-(1)  $B%(%3!<%(%j%"$H%_%K%P%C%U%!$O;k3PE*$K$OF10l$N>l=j$K$"$j$^$9$,!"(B
-$B%(%3!<%(%j%"$,C1$K%f!<%6$X$N%a%C%;!<%8$rI=<($9$k$N$_$G$"$k$N$KBP$7!"%_(B
-$B%K%P%C%U%!$OFHN)$7$?%P%C%U%!$H$7$F5!G=$9$kE@$,0[$J$j$^$9!#(B
+(1)  `skk-henkan-number-to-display-candidates'
 
-(2) `x' $B$O>.J8;z$GF~NO$9$kI,MW$,$"$j$^$9(B
+(2) skk-show-candidates-nth-henkan-char
+
+(3) $B%(%3!<%(%j%"$H%_%K%P%C%U%!$O;k3PE*$K$OF10l$N>l=j$K$"$j$^$9$,!"%(%3!<(B
+$B%(%j%"$,C1$K%f!<%6$X$N%a%C%;!<%8$rI=<($9$k$N$_$G$"$k$N$KBP$7!"%_%K%P%C%U%!(B
+$B$OFHN)$7$?%P%C%U%!$H$7$F5!G=$9$kE@$,0[$J$j$^$9!#(B
+
+(4) `x' $B$O>.J8;z$GF~NO$9$kI,MW$,$"$j$^$9(B
 
 
 
@@ -1772,7 +1849,7 @@ DDSKK $B$K$O!"4pK\E*$JA`:nJ}K!$r3X=,$G$-$k%A%e!<%H%j%"%k$,ImB0$7$F$$$^$9!#(B
  -- $B%f!<%6JQ?t(B: skk-tut-file
 
      $B%A%e!<%H%j%"%k%U%!%$%k$,I8=`$N>l=j$KCV$+$l$F$$$J$$>l9g$O!"(B
-     `~/.emacs' $B$G(B
+     `~/.emacs.d/init.el' $B$G(B
 
           (setq skk-tut-file "/usr/local/share/skk/SKK.tut")
 
@@ -1827,7 +1904,6 @@ File: skk.info, Node: $BJXMx$J1~MQ5!G=(B, Next: $B%m!<%^;zF~NO0J30$NF~NOJ}<0
 * I-search$B4XO"(B::                $B%$%s%/%j%a%s%?%k!&%5!<%A$K$^$D$o$k5!G=!#(B
 * VIP/VIPER$B$H$NJ;MQ(B::
 * picture-mode$B$H$NJ;MQ(B::        picture-mode $B$H$NJ;MQ$N:]$NLdBjE@!#(B
-* Org-mode$B$H$NJ;MQ(B::            Org-mode $B$H$NJ;MQ$N:]$NLdBjE@!#(B
 
 
 
@@ -1844,12 +1920,19 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
  $B$^$?!"(BDDSKK $B$NJQ?t$O(B `skk-vars.el' $B$K=8Ls$5$l$F$$$^$9$N$G!"%+%9%?%^%$%:(B
 $B$7$?$$>l9g$J$I$K$O!"$3$N%U%!%$%k$r8+$k$H;29M$K$J$k$+$b$7$l$^$;$s!#(B
 
+
+`ccc.el'
+
+`cdb.el'
+
 `context-skk.el'
 
      $BJT=8$NJ8L.$K1~$8$F<+F0E*$K(B skk $B$N%b!<%I$r@Z$jBX$($?$j!"(BSKK $B$N3F<o@_(B
      $BDj$rJQ99$9$k5!G=$rDs6!$7$^$9!#(B
 
      *Note $BJ8L.$K1~$8$?<+F0%b!<%I@Z$jBX$((B::.
+
+`ddskk-pkg.el'
 
 `skk-abbrev.el'
 
@@ -1879,8 +1962,8 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
 
 `skk-autoloads.el'
 
-     $B%*!<%H%m!<%I$N@_Dj$r5-=R$7$?%U%!%$%k!#(B`register-input-method' $B$b9T(B
-     $B$&!#(B
+     make $B;~$K<+F0@8@.$5$l$k%U%!%$%k!#%*!<%H%m!<%I$N@_Dj$N$[$+!"(B
+     `register-input-method' $B$b9T$&!#(B
 
      *Note $B$O$8$a$N@_Dj(B::.
 
@@ -1898,7 +1981,7 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
      SKK $B$N3X=,5!G=$N$R$H$D$G!"%f!<%6$N2a5n$NF~NO$+$iJQ498uJd$rM=B,$7$^(B
      $B$9!#(B
 
-     `http://openlab.jp/skk/skk/main/bayesian/README.ja'
+     *Note $B%Y%$%:E}7W$rMQ$$$?3X=,(B::.
 
 `skk-cdb.el'
 
@@ -1931,7 +2014,13 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
 
 `skk-develop.el'
 
-     $B%P%0%l%]!<%H$N%a!<%k%P%C%U%!$rMQ0U$9$k%W%m%0%i%`%U%!%$%k!#(B
+     $B$*$b$K3+H/<T8~$1$N%W%m%0%i%`$r=8$a$?%U%!%$%k!#(B
+
+     `M-x skk-submit-bug-report' $B%P%0%l%]!<%H$N%a!<%k%P%C%U%!$rMQ0U$9$k(B
+
+     `M-x skk-get' $B<-=q%U%!%$%k$r0l3g%@%&%s%m!<%I$9$k(B
+
+     font-lock $B4X78(B
 
 `skk-emacs.el'
 
@@ -1970,10 +2059,7 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
 
 `skk-jisx0213.el'
 
-     JIS X 0213 $BJ8;z=89g$r07$&%W%m%0%i%`$G$9!#$3$N5!G=$O(B Emacs 23 $B$G$OI8(B
-     $B=`$GMxMQ$G$-$^$9!#$=$lL$K~$N%P!<%8%g%s$N(B Emacs $B$K$*$$$F$O!"(BMule-UCS
-     $B$rF3F~$9$k$J$I$NBP:v$,I,MW$G$9!#(BMule-UCS $B$K$D$$$F$O(B Mule-UCS
-     Unofficial Site (http://tats.haun.org/mule-ucs/) $B$r;2>H$7$F$/$@$5$$!#(B
+     JIS X 0213 $BJ8;z=89g$r07$&%W%m%0%i%`$G$9!#(B
 
 `skk-jisyo-edit-mode.el'
 
@@ -2028,6 +2114,14 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
      $B?tCMJQ49$r9T$&%W%m%0%i%`$r=8$a$?%U%!%$%k!#(B
 
      *Note $B?tCMJQ49(B::.
+
+`skk-search-web.el'
+
+     Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49!#(B
+
+     $B<-=qEPO?%b!<%I$K(B Google $B%5%8%'%9%H(B $B$r=i4|I=<($9$k!#(B
+
+     *Note Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B::.
 
 `skk-server-completion.el'
 
@@ -2084,6 +2178,8 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
 
      *Note TUT-code::.
 
+`skk-vars.el'
+
 `skk-version.el'
 
      DDSKK $B$N%P!<%8%g%s>pJs$rDs6!$9$k%W%m%0%i%`%U%!%$%k!#(B
@@ -2099,7 +2195,8 @@ File: skk.info, Node: $B%U%!%$%k9=@.(B, Next: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
      XEmacs $B$N3HD%5!G=$rMxMQ$9$k%W%m%0%i%`$r=8$a$?%U%!%$%k!#%$%s%8%1!<%?(B
      $B$N%+%i!<2=$d2hA|I=<(!"%D!<%k%F%#%C%WMxMQ$J$I!#(B
 
- $B$J$*!"(BElib $B$h$j(B `queue-m.el' $B%U%!%$%k$r<}O?$7$F$$$^$9!#(B
+`tar-util.el'
+
 
 --------- Footnotes ---------
 
@@ -2113,9 +2210,9 @@ File: skk.info, Node: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B, Next: $B%+%?%+%J!"1Q;zF
 $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
 ==========================
 
- DDSKK $B$N%+%9%?%^%$%:$O!"(B`~/.emacs' $B$"$k$$$O(B `~/.skk' $B$K5-=R$7$^$9!#$^$?!"(B
-$B3F%U%!%$%k$NDs6!$9$k%U%C%/$bMxMQ$7$^$9!#>e5-$N%U%!%$%k$d%U%C%/$rMxMQ$7$?(B
-$B@_Dj$,$$$DM-8z$K$J$k$N$+!"$H$$$&E@$K$D$$$F$3$3$G@bL@$7$^$9(B (1) $B!#(B
+ DDSKK $B$N%+%9%?%^%$%:$O!"(B`~/.emacs.d/init.el' $B$"$k$$$O(B `~/.skk' $B$K5-=R$7(B
+$B$^$9!#$^$?!"3F%U%!%$%k$NDs6!$9$k%U%C%/$bMxMQ$7$^$9!#>e5-$N%U%!%$%k$d%U%C(B
+$B%/$rMxMQ$7$?@_Dj$,$$$DM-8z$K$J$k$N$+!"$H$$$&E@$K$D$$$F$3$3$G@bL@$7$^$9!#(B
 
 * Menu:
 
@@ -2124,14 +2221,6 @@ File: skk.info, Node: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B, Next: $B%+%?%+%J!"1Q;zF
 * Customize $B$K$h$k@_DjJQ99(B::  $B$3$N%^%K%e%"%k$G2r@b$5$l$F$$$J$$JQ?t$b@_Dj$G$-$^$9!#(B
 * skk-customize $B$K$h$k@_DjJQ99(B::
 
---------- Footnotes ---------
-
-(1)  $B0JA0$N%P!<%8%g%s$G$O!"$I$N$h$&$J%+%9%?%^%$%:$,9T$o$l$F$$$k>l9g(B
-$B$G$b%A%e!<%H%j%"%k;HMQ;~$KI8=`@_Dj$KLa$9L\E*$G!"JQ?t$N@k8@$K(B
-`defconst' $B$r;HMQ$7$F$$$?$N$G!"A4$F$N%+%9%?%^%$%:$O(B `~/.skk'
-$B$G9T$&I,MW$,$"$j$^$7$?$,!"(BDDSKK 11 $B0J9_$G$O!"(B`defcustom' $B$r;HMQ$7$?(B
-$B@k8@$r9T$C$F$$$k$N$G!"$3$N@)8B$O$J$/$J$j$^$7$?!#(B
-
 
 
 File: skk.info, Node: $B@_Dj%U%!%$%k(B, Next: $B%U%C%/(B, Prev: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B, Up: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B
@@ -2139,14 +2228,13 @@ File: skk.info, Node: $B@_Dj%U%!%$%k(B, Next: $B%U%C%/(B, Prev: $B%f!<%6%*%
 $B@_Dj%U%!%$%k(B
 ------------
 
-`~/.emacs'
 `~/.emacs.d/init.el'
 `~/.xemacs/init.el'
 
      Emacs $B$r5/F0$7$?$H$-$K0lEY$@$1FI$_9~$^$l$^$9!#$3$N%^%K%e%"%k$O(B
-     `~/.emacs' $B$H$$$&5-=R$GE}0l$7$F$$$^$9!#(B
+     `~/.emacs.d/init.el' $B$H$$$&5-=R$GE}0l$7$F$$$^$9!#(B
 
-     *Note .emacs: (emacs)Init File.
+     *Note Emacs Initialization File: (emacs)Init File.
 
 `~/.skk'
 
@@ -2163,9 +2251,9 @@ File: skk.info, Node: $B@_Dj%U%!%$%k(B, Next: $B%U%C%/(B, Prev: $B%f!<%6%*%
      $B$^$9!#$3$l$i$N%U%!%$%k$r$R$H$D$N%G%#%l%/%H%j$K$^$H$a$FCV$-$?$$>l9g(B
      $B$O!"JQ?t(B `skk-user-directory' $B$K$=$N%G%#%l%/%H%jL>$r@_Dj$7$^$9!#(B
 
-     $B$3$NJQ?t$N%G%U%)%k%H$O(B `nil' $B$G$9!#$3$NJQ?t$O(B `~/.emacs' $B$G@_Dj$7$F(B
-     $B$/$@$5$$!#(BDDSKK $B5/F0;~$K(B `skk-user-directory' $B$,;X$9%G%#%l%/%H%j$,(B
-     $BB8:_$7$J$$>l9g$O!"<+F0E*$K:n$i$l$^$9!#(B
+     $B$3$NJQ?t$N%G%U%)%k%H$O(B `nil' $B$G$9!#$3$NJQ?t$O(B `~/.emacs.d/init.el'
+     $B$G@_Dj$7$F$/$@$5$$!#(BDDSKK $B5/F0;~$K(B `skk-user-directory' $B$,;X$9%G%#(B
+     $B%l%/%H%j$,B8:_$7$J$$>l9g$O!"<+F0E*$K:n$i$l$^$9!#(B
 
           (setq skk-user-directory "~/.ddskk")
 
@@ -2181,6 +2269,7 @@ File: skk.info, Node: $B@_Dj%U%!%$%k(B, Next: $B%U%C%/(B, Prev: $B%f!<%6%*%
           skk-study-file            ~/.skk-study      ~/.ddskk/study
           skk-study-backup-file     ~/.skk-study.BAK  ~/.ddskk/study.bak
           skk-bayesian-history-file ~/.skk-bayesian   ~/.ddskk/bayesian
+          skk-bayesian-corpus-file  ~/.skk-corpus     ~/.ddskk/corpus
 
      $B$J$*!"(B`skk-user-directory' $B$r@_Dj$7$?>l9g$G$b!"3FJQ?t$r8DJL$K@_Dj$7(B
      $B$F$$$k>l9g$O$=$N8DJL$N@_Dj$,M%@h$5$l$^$9!#(B
@@ -2218,7 +2307,7 @@ skk-init-file$B$N<+F0%3%s%Q%$%k(B
 
           `elc' $B$h$j$b(B `el' $B$,?7$7$$$H$-$O!"(B`elc' $B$r>C5n$7$^$9!#(B
 
-     $B0J>e$N5!G=$rM-8z$K$7$?$$>l9g$O!"(B`~/.emacs' $B$K(B
+     $B0J>e$N5!G=$rM-8z$K$7$?$$>l9g$O!"(B`~/.emacs.d/init.el' $B$K(B
 
           (setq skk-byte-compile-init-file t)
 
@@ -2280,7 +2369,7 @@ Customize $B$K$h$k@_DjJQ99(B
 ------------------------
 
 Emacs $BI8=`$N(B Customize $B5!G=$r;H$C$F(B SKK $B$r@_Dj$9$k$3$H$b$G$-$^$9!#(B
-$B$?$@$7!"(B Customize $B$G$N@_Dj$O(B `~/.emacs' $B$G$N@_Dj$HF1MM!"(B
+$B$?$@$7!"(B Customize $B$G$N@_Dj$O(B `~/.emacs.d/init.el' $B$G$N@_Dj$HF1MM!"(B
 `~/.skk' $B$K$h$k@_Dj$G>e=q$-$5$l$F$7$^$$$^$9$N$GCm0U$7$F$/$@$5$$!#(B
 
 
@@ -2600,7 +2689,7 @@ File: skk.info, Node: $BJ8L.$K1~$8$?<+F0%b!<%I@Z$jBX$((B, Prev: $B%+%?%+%J$N8
  `context-skk.el' $B$O!"JT=8Cf$NJ8L.$K1~$8$F(B SKK $B$NF~NO%b!<%I$r<+F0E*$K%"(B
 $B%9%-!<%b!<%I$K@Z$jBX$($kEy$N5!G=$rDs6!$7$^$9!#(B
 
-`context-skk.el' $B$r%m!<%I$9$k$K$O!"(B`~/.emacs' $B$K(B
+`context-skk.el' $B$r%m!<%I$9$k$K$O!"(B`~/.emacs.d/init.el' $B$K(B
 
      (add-hook 'skk-load-hook
           (lambda ()
@@ -2721,6 +2810,15 @@ File: skk.info, Node: $BFI$_$NJd40(B, Next: $BJd40$7$J$,$iJQ49(B, Prev: $BJ
 $B$^$9!#>e$NNc$G$O(B `$B$5(B' $B$KBP$7!"(B`$B$5$H$&(B' $B$,Jd40$5$l$?;~$K(B `C-u TAB' $B$r2!$9(B
 $B$H!"0J8e$NJd40$O!"(B`$B$5$H$&(B' $B$r4^$`8l(B ($BNc$($P!"(B`$B$5$H$&$;$s$;$$(B'$B$J$I(B)$B$K$D$$(B
 $B$F9T$o$l$^$9!#(B
+
+ -- $B%f!<%6JQ?t(B: skk-completion-prog-list
+     $BJd404X?t!"Jd40BP>]$N<-=q$r7hDj$9$k$?$a$N%j%9%H!#%G%U%)%k%H$O0J2<$N(B
+     $B$H$*$j!#(B
+
+            '((skk-comp-by-history)
+              (skk-comp-from-jisyo skk-jisyo)
+              (skk-look-completion))
+
 
  -- $B%f!<%6JQ?t(B: skk-comp-circulate
      `.' $B!J%T%j%*%I!K$G<!$N8+=P$78l8uJd$r!"(B`,' $B!J%3%s%^!K$GA0$N8+=P$78l(B
@@ -3722,10 +3820,10 @@ File: skk.info, Node: $B:#F|$NF|IU$NF~NO(B, Next: $B%W%m%0%i%`<B9TJQ49(B, Pr
      `skk-date-ad' $B$NCM$,(B `nil' $B$G$"$l$P(B `$BJ?@.(B8$BG/(B' $B$N$h$&$K859f$GI=<($5(B
      $B$l$^$9!#(B
 
- L $B<-=q(B (1) $B$K$O!"8+=P$78l(B `today' $B$N8uJd$H$7$F!"(B`skk-date-ad' $B$H(B
-`skk-number-style' $B$NA4$F$NAH$_9g$o$;$,%W%m%0%i%`<B9TJQ495!G=(B (2) $B$rMQ$$(B
-$B$FEPO?$5$l$F$$$^$9!#=>$C$F!"(B`/ t o d a y SPC' $B$HF~NO$9$k$H!":#F|$NF|IU$,(B
-$B>e5-$N7A<0$G=g<!8uJd$H$7$FI=<($5$l$^$9!#(B
+ $B<-=q(B `SKK-JISYO.lisp' $B$K$O!"8+=P$78l(B `today' $B$N8uJd$H$7$F!"(B
+`skk-date-ad' $B$H(B `skk-number-style' $B$NA4$F$NAH$_9g$o$;$,%W%m%0%i%`<B9TJQ(B
+$B495!G=(B (1) $B$rMQ$$$FEPO?$5$l$F$$$^$9!#=>$C$F!"(B`/ t o d a y SPC' $B$HF~NO$9(B
+$B$k$H!":#F|$NF|IU$,>e5-$N7A<0$G=g<!8uJd$H$7$FI=<($5$l$^$9!#(B
 
  $B4X?t(B `skk-relative-date' $B$rMxMQ$9$k$H!":rF|!"0l:rF|!"L@8eF|$J$IG$0U$NF|(B
 $BIU$r5a$a$k$3$H$,$G$-$^$9!#>\:Y$O(B `skk-gadget.el' $B$N%3%a%s%H$r;2>H$7$F$/(B
@@ -3746,9 +3844,7 @@ File: skk.info, Node: $B:#F|$NF|IU$NF~NO(B, Next: $B%W%m%0%i%`<B9TJQ49(B, Pr
 
 --------- Footnotes ---------
 
-(1)  *Note L$B<-=q(B: $B<-=q$N<oN`(B.
-
-(2) *Note $B%W%m%0%i%`<B9TJQ49(B::.
+(1)  *Note $B%W%m%0%i%`<B9TJQ49(B::.
 
 
 
@@ -5472,11 +5568,11 @@ File: skk.info, Node: $B$I$N$h$&$KJQ49$5$l$k$+(B, Next: $B<-=qEPO?$N:]$KCm0U$
 $B$NItJ,$,$"$k$3$H$+$i!"Aw$j2>L>$H$7$F<h$k$Y$-$HH=CG$7$^$9!#(B
 
 $B$3$&$7$F!"Aw$j2>L>$,%^%C%A$9$k8uJd$,(B `$BN)$A>e(B'$B!"(B`$B7z(B'$B!"(B`$BCG(B'$B!"(B
-`$B7P(B'$B!"(B`$BN)(B' $B$N(B 5 $B$D$K9J$i$l$^$9!#$3$l$i$OJ8;zNs$ND9$5=g$K>:=g$K(B
+`$B7P(B'$B!"(B`$BN)(B' $B$N#5$D$K9J$i$l$^$9!#$3$l$i$OJ8;zNs$ND9$5=g$K>:=g$K(B
 $B%=!<%H$5$l(B (3) $B!"$=$l$>$l$N8uJd$H3:Ev$N8+=P$78l$+$i@Z$j<N$F$i(B
 $B$l$?J8;zNs$HO"7k$7$?$b$N(B (4) $B$r!"Aw$j2>L>$N<+F0=hM}$N:G=*8uJd$H$7$FJV$7$^$9!#>e(B
 $B5-$NNc$O!"(B`$BN)$A>e$2$k(B'$B!"(B`$B7z$A$"$2$k(B'$B!"(B`$BCG$A$"$2$k(B'$B!"(B
-`$B7P$A$"$2$k(B'$B!"(B`$BN)$A$"$2$k(B' $B$N(B 5 $B$D$,:G=*8uJd$K$J$j$^$9!#(B
+`$B7P$A$"$2$k(B'$B!"(B`$BN)$A$"$2$k(B' $B$N#5$D$,:G=*8uJd$K$J$j$^$9!#(B
 
  $B<+F0Aw$j5!G=$O!"8D?M<-=q$N$_$r8!:w$7$^$9!#(B
 
@@ -5738,7 +5834,7 @@ File: skk.info, Node: $BJQ49$N3X=,(B, Next: $B8uJd$N=g=x$N8GDj(B, Prev: $B8
 $B$HJQ49$5$l$^$9!#2?8N$J$i(B `$B$U(Br' $B$N4XO"8l$rC5$9:]!"(B
 `skk-study-search-times' (2)  $B$K(B
 $B;XDj$5$l$?2s?tJ,$@$1AL$C$F!"0JA0$K3NDj$7$?8l$NCf$K4XO"8l$,$J$$$+C5$9$N(B
-$B$G$9!#=>$C$F!"$3$N>l9g$@$H!"(B2 $B$DA0$N3NDj>pJs$rC5$7$?:]$K(B `$B1+(B'
+$B$G$9!#=>$C$F!"$3$N>l9g$@$H!"#2$DA0$N3NDj>pJs$rC5$7$?:]$K(B `$B1+(B'
 (`$B$"$a(B') $B8+$D$1!"$3$l$r4XO"8l$H$7$F!"(B`$B$U(Br' $B$NCM$r(B
 $B7h$a$h$&$H$9$k$N$G$9!#(B
 
@@ -5842,7 +5938,67 @@ File: skk.info, Node: $B%Y%$%:E}7W$rMQ$$$?3X=,(B, Prev: $B8uJd$N=g=x$N8GDj(B
 $B%Y%$%:E}7W$rMQ$$$?3X=,(B
 ----------------------
 
-$B%Y%$%:E}7W$rMQ$$$?3X=,$N%W%m%0%i%`(B `bayesian/skk-bayesian.el' $B$b$"$j$^$9!#(B(*Note $B%U%!%$%k9=@.(B::)
+ `skk-bayesian.el' $B$O!"D>A0$NMzNr$N$_;HMQ$9$k(B `skk-study.el' $B$KHf$Y$F!"(B
+$B99$K3HD%$5$l$?3X=,5!G=$G$9!#%Y%$%:E}7W$rMQ$$$FJ8L.$+$iJQ498uJd$,A*Br$5$l(B
+$B$k3NN($r7W;;$7$F8uJd=g$r%=!<%H$7$^$9!#$J$*!"5!G=$,=E$J$k$3$H$+$i(B
+`skk-study.el' $B$H$NJ;MQ$O$*4+$a$G$-$^$;$s!#(B
+
+ $BF0:n$NOHAH$_$O(B emacs lisp $B$N(B `skk-bayesian.el' $B$H(B ruby (1) $B%9%/%j%W%H$N(B
+`bskk' $B$,O"7H$9$k$3$H$G<B8=$7$F$$$^$9!#(B
+
+ `skk-bayesian.el' $B$N%$%s%9%H!<%k$K$D$$$F$O(B `bayesian/README.ja.md' $B$r;2(B
+$B>H$7$F$/$@$5$$!#(B
+
+
+ Ruby 2.4 $B0J9_$r;HMQ$9$k>l9g$O!"(BDDSKK 16.2 $B0J9_$KIUB0$9$k(B
+`bayesian/bskk' $B$r;HMQ$7$F$/$@$5$$!#(B
+
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-debug
+
+     `non-nil' $B$J$i$P!"0J2<$N$H$*$j%G%P%C%0MQ$N%a%C%;!<%8$rI=<($7$^$9!#(B
+
+
+        * `skk-bayesian.el' $B$,EG$-=P$9%a%C%;!<%8$r(B *Messages* $B%P%C%U%!$KI=<($7$^$9!#(B
+
+        * `bskk' $B%5%V%W%m%;%9$r(B `-d' $B%*%W%7%g%s$G5/F0$5$;$^$9!#(B`bskk' $B$O(B `$HOME/tmp/bskk.log' $B$K%a%C%;!<%8$rEG$-=P$7$^$9!#(B
+
+        * $BIaCJ$OHsI=<($G$"$k(B *skk-bayesian* $B%P%C%U%!$rI=<($9$k$h$&$K$7$^$9!#$3$N%P%C%U%!$K$O(B `bskk' $B$N=PNO$,I=<($5$l$^$9!#(B
+
+
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-prefer-server
+
+     `non-nil' $B$J$i$P(B `skk-bayesian-host' $B$N(B `skk-bayesian-port' $B$K@\(B
+     $BB3$7$^$9!#(B
+     `nil' $B$G$"$l$P(B `bskk' $B$r(B emacs $B$N%5%V%W%m%;%9$H$7$F5/F0$7$^$9!#(B
+
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-host
+
+     `bskk' $B%5!<%P$,2TF0$7$F$$$k%[%9%HL>(B
+
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-port
+
+     `bskk' $B%5!<%P$N%]!<%HHV9f(B
+
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-history-file
+     not documented
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-corpus-make
+     not documented
+
+ -- $B%f!<%6JQ?t(B: skk-bayesian-corpus-file
+     not documented
+
+ -- Function: $B%3%^%s%I(B SKK-BAYESIAN-KILL-PROCESS
+     not documented
+
+--------- Footnotes ---------
+
+(1)  `http://www.ruby-lang.org'
 
 
 
@@ -6124,7 +6280,7 @@ File: skk.info, Node: $B<-=q8!:w$N$?$a$N4X?t(B, Prev: $B<-=q8!:w$N@_Dj$N6qBNN
      $B!V3NDjJQ49!W$r9T$&8!:w%W%m%0%i%`!#8!:wBP>]$N<-=q%U%!%$%k$O(B Emacs $B$N(B
      $B%P%C%U%!$KFI$_9~$^$l$^$9!#8!:wBP>]$N%U%!%$%k$+$i8uJd$r8+$D$1$k$H!"(B
      $BFbItJQ?t(B `skk-kakutei-henkan-flag' $B$rN)$F$F!"$$$-$J$j3NDj$7$^$9!#$3(B
-     $B$N$?$a%f!<%6!<$,3NDjA`:n$r9T$&I,MW$O$"$j$^$;$s!#(B
+     $B$N$?$a%f!<%6$,3NDjA`:n$r9T$&I,MW$O$"$j$^$;$s!#(B
 
      $B0z?t$N0UL#$O$$$:$l$b(B `skk-search-jisyo-file' $B$N>l9g$HF1MM$G$9!#(B
 
@@ -6411,9 +6567,9 @@ File: skk.info, Node: $BAw$j$"$j%(%s%H%j$HAw$j$J$7%(%s%H%j(B, Next: $BAw$j$"$
 
  $BAw$j$"$j%(%s%H%j$O!"4pK\E*$K$O(B `$B$b(Bt /$B;}(B/' $B$N$h$&$K$J$C$F$$$^$9!#Aw$j2>(B
 $BL>ItJ,$O!"Aw$j2>L>$r%m!<%^;zI=8=$7$?$H$-$N(B 1 $BJ8;zL\(B (1) $B$GI=8=$5$l$F$$$^(B
-$B$9!#$3$N(B 1 $B%(%s%H%j$G(B `$B;}$?(B'$B!"(B`$B;}$A(B'$B!"(B`$B;}$D(B'$B!"(B`$B;}$F(B'$B!"(B`$B;}$H(B' $B$N(B 5 $B$D$N8u(B
-$BJd$KBP1~$7$^$9!#$=$N(B 5 $B$D$N8uJd$NAw$j2>L>$r%m!<%^;z%W%l%U%#%C%/%9$GI=8=(B
-$B$9$l$P!"$$$:$l$b(B `t' $B$K$J$j$^$9!#(B
+$B$9!#$3$N(B 1 $B%(%s%H%j$G(B `$B;}$?(B'$B!"(B`$B;}$A(B'$B!"(B`$B;}$D(B'$B!"(B`$B;}$F(B'$B!"(B`$B;}$H(B' $B$N#5$D$N8u(B
+$BJd$KBP1~$7$^$9!#$=$N#5$D$N8uJd$NAw$j2>L>$r%m!<%^;z%W%l%U%#%C%/%9$GI=8=$9(B
+$B$l$P!"$$$:$l$b(B `t' $B$K$J$j$^$9!#(B
 
 --------- Footnotes ---------
 
@@ -6436,7 +6592,7 @@ File: skk.info, Node: $BAw$j$"$j%(%s%H%j$N%V%m%C%/7A<0(B, Next: $B%(%s%H%j$NG
 
  $B$3$NNc$G8+$k$H!"8+=P$78l(B `$B$?$H(Be' $B$N>l9g$O(B `$B$((B' $B$rAw$j2>L>$H$9$k(B 1 $B$D$N(B
 $B%V%m%C%/$+$i9=@.$5$l$F$$$^$9!#8+=P$78l(B `$B$U$/(Bm' $B$N>l9g$O!"(B`$B$^(B'$B!"(B`$B$_(B'$B!"(B`$B$`(B'$B!"(B
-`$B$a(B'$B!"(B`$B$b(B' $B$rAw$j2>L>$H$9$k(B 5$B%V%m%C%/$KJ,$1$i$l$F$$$^$9!#(B
+`$B$a(B'$B!"(B`$B$b(B' $B$rAw$j2>L>$H$9$k#5%V%m%C%/$KJ,$1$i$l$F$$$^$9!#(B
 
  $B$3$NAw$j2>L>Kh$N%V%m%C%/ItJ,$O!"(B`skk-henkan-okuri-strictly' $B$"$k$$$O(B
 `skk-auto-okuri-process' $B$N$$$:$l$+$NJQ?t$,(B `non-nil' $B$G$"$k>l9g$K;HMQ$5(B
@@ -6595,8 +6751,8 @@ File: skk.info, Node: $B8D?M<-=q$NJ]B8F0:n(B, Next: $BJQ495Z$S8D?M<-=q$K4X$9$
   2. `M-x skk-save-jisyo' $B$HF~NO$7$?$+!"%a%K%e!<%P!<$N(B `Save Jisyo' $B$rA*(B
      $BBr$7$?>l9g!#(B
 
-  3. $B8D?M<-=q$,!VJQ?t(B `skk-jisyo-save-count' $B$G;XDj$5$l$?2s?t!W$N99?7$,(B
-     $B9T$o$l$?7k2L$H$7$F!"<+F0J]B8(B ($B%*!<%H%;!<%V(B) $B5!G=$,F/$/$H$-!#(B
+  3. $B8D?M<-=q$N99?72s?t$,!"JQ?t(B `skk-jisyo-save-count' $B$G;XDj$5$l$?CM$K(B
+     $BC#$7$?7k2L$H$7$F!"<+F0J]B8(B ($B%*!<%H%;!<%V(B) $B5!G=$,F/$/$H$-!#(B
 
   4. $BJQ?t(B `skk-save-jisyo-instantly' $B$,(B `non-nil' $B$G$"$l$P!"C18lEPO?!JC1(B
      $B8l:o=|!K$N$?$S$K8D?M<-=q$rJ]B8$9$k!#(B
@@ -6774,25 +6930,33 @@ File: skk.info, Node: $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B, Next: $B<-=q%P%C%U%
 
  -- $B%f!<%6JQ?t(B: skk-jisyo-code
 
-     $B$3$NJQ?t$NCM$O<-=q%U%!%$%k$NJ8;z%3!<%I$r7hDj$7$^$9!#$3$NJQ?t$O0J2<(B
-     $B$N$h$&$JCM$r<h$j$^$9!#(B
+     $B$3$NJQ?t$O!"<-=q%U%!%$%k$NJ8;z%3!<%I$r7hDj$7!"0J2<$N$h$&$JCM$r<h$j(B
+     $B$^$9!#(B
 
-        * `euc', `ujis', `sjis', `jis' $B$J$I$NJ8;zNs!#=g$K(B `euc-jisx0213', `euc-jisx0213', `shift_jisx0213', `iso-2022-jp-3-strict' $B$N3F%7%s%\%k$XJQ49$5$l$^$9(B (`skk-coding-system-alist')$B!#(B
-        * Emacs $B$N(B coding system ($B%3!<%I7O(B) (1)
+
         * `nil'
 
-     $B%G%U%)%k%H$O(B `nil' $B$G$9!#$3$N>l9g!"(BDDSKK $BB&$G<-=q$NJ8;z%3!<%I$r@_Dj(B
-     $B$9$k$3$H$O$;$:!"(BEmacs $B$KG$$;$^$9!#(B
+        * Emacs $B$N(B coding system ($B%3!<%I7O(B) (1)
+
+        * `euc', `ujis', `sjis', `jis' $B$NJ8;zNs!#(B`skk-coding-system-alist' $B$K=>$C$F!"=g$K(B `euc-jisx0213', `euc-jisx0213', `shift_jisx0213', `iso-2022-jp-3-strict' $B$N3F%7%s%\%k$XJQ49$5$l$^$9!#(B
+
+
+     $B%G%U%)%k%H$O(B `nil' $B$G$9!#$3$N>l9g!"%7%s%\%k(B `euc-jis-2004' $B$,;H$o$l(B
+     $B$^$9(B (2) $B!#(B
+
 
 --------- Footnotes ---------
 
 (1)  coding system $B$O(B GNU Emacs $B$N>l9g(B `euc-jp', `shift_jis',
-`junet' $B$J$I$N(B symbol $B$GI=$5$l!"(B`M-x describe-coding-system' $B$G(B
-$BD4$Y$k$3$H$,$G$-$^$9!#(BXEmacs $B$N>l9g(B symbol $B$O(B coding system $B$=$N$b$N$G$O(B
-$B$J$/(B coding system object $B$r;X<($9$k$?$a$N(B symbol $B$H$7$F07$o$l$^$9!#(B
+`junet' $B$J$I$N%7%s%\%k$GI=$5$l!"(B`M-x describe-coding-system' $B$d(B
+`M-x list-coding-systems' $B$GD4$Y$k$3$H$,$G$-$^$9!#(B
+XEmacs $B$N>l9g!"%7%s%\%k$O(B coding system $B$=$N$b$N$G$O(B
+$B$J$/(B coding system object $B$r;X<($9$k$?$a$N%7%s%\%k$H$7$F07$o$l$^$9!#(B
 $B6qBNE*$K$O(B GNU Emacs $B$G$O(B `(coding-system-p 'euc-jp)' $B$,(B `t' $B$r(B
-$BJV$9$N$KBP$7!"(B XEmacs $B$G$O(B `nil' $B$rJV$7$^$9$,!"Be$o$j$K(B symbol $B$,<((B
+$BJV$9$N$KBP$7!"(B XEmacs $B$G$O(B `nil' $B$rJV$7$^$9$,!"Be$o$j$K%7%s%\%k$,<((B
 $B$9(B coding system object $B$rJV$9(B `find-coding-system' $B4X?t$,B8:_$7$^$9!#(B
+
+(2) $B4X?t(B `skk-find-coding-system' $B$r;2>H$N$3$H!#(B
 
 
 
@@ -7192,8 +7356,7 @@ Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B
      ----------------------------- Echo Area ------------------------------
 
  $B%(%3!<%(%j%"$K2r@b$,I=<($5$l$F$$$k:GCf$K(B `C-o' $B$r2!$9$H!"4X?t(B
-`skk-annotation-browser-function' $B$G;XDj$5$l$?4X?t$rMQ$$$F!"$=$N2r@b$N85(B
-$B$H$J$C$?(B URL $B$r%V%i%&%:$7$^$9!#(B
+`browse-url' $B$rMQ$$$F!"$=$N2r@b$N85$H$J$C$?(B URL $B$r%V%i%&%:$7$^$9!#(B
 
  -- $B%f!<%6JQ?t(B: skk-annotation-wikipedia-key
 
@@ -7202,12 +7365,10 @@ Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B
 
  -- $B%f!<%6JQ?t(B: skk-annotation-browse-key
 
-     $B%G%U%)%k%H$O(B `C-o' $B$G$9!#(B
+     $B%G%U%)%k%H$O(B `C-o' $B$G$9!#(Beww $B$G1\Mw$7$?$$>l9g$O!"<!$N$H$*$j@_Dj$7$F(B
+     $B$/$@$5$$!#(B
 
-
- -- $B%f!<%6JQ?t(B: skk-annotation-browser-function
-
-     `browse-url' $BKt$O(B `eww-browse-url' $B$r%7%s%\%k$G;XDj$7$^$9!#(B
+          (setq browse-url-browser-function 'eww-browse-url)
 
 
  -- $B%f!<%6JQ?t(B: skk-annotation-other-sources
@@ -7302,7 +7463,7 @@ M-i') $B$H%W%l%U%#%C%/%9IU$G%3%^%s%I$r<B9T$7$F$_$F$/$@$5$$!#(B (1)
 
 (1)  `skk-annotation-other-sources' $B$NI8=`$NCM$O4D6-(B
 $B$K$h$C$F0[$J$j$^$9!#(B`lookup.el' $B$H(B `skk-lookup.el' $B$N@_Dj$,M-(B
-$B8z$K$J$C$F$$$k>l9g$O(B `en.wiktionary' $B$O(B 4 $BHVL\(B (Apple OS X $B$G$O(B 5 $BHV(B
+$B8z$K$J$C$F$$$k>l9g$O(B `en.wiktionary' $B$O(B 4 $BHVL\(B (Apple OS X $B$G$O#5HV(B
 $BL\(B) $B$K$J$j$^$9!#(B
 
 
@@ -7364,7 +7525,7 @@ File: skk.info, Node: $B%a%K%e!<$K$h$kJ8;zF~NO(B, Next: $BJ8;z%3!<%I0lMw(B, 
 $B%-!<$rF~NO$7$^$9!#$9$k$H%_%K%P%C%U%!$K0J2<$N$h$&$JI=<($,8=$l$^$9!#(B
 
      ---------------------------- Minibuffer -----------------------------
-     A:$B!!(B  S:$B!1(B  D:$B!A(B  F:$B!Q(B  G:$B!a(B  H:$B!q(B  Q:$B"!(B  W:$(Q"1(B  E:$B"A(B  R:$(Q"Q(B  T:$B"a(B  Y:$(Q"q(B
+     A:$B!!(B  S:$B!1(B  D:$B!A(B  F:$B!Q(B  G:$B!a(B  H:$B!q(B  Q:$B"!(B  W:$B!!(B  E:$B"A(B  R:$B!!(B  T:$B"a(B  Y:$B!!(B
      ---------------------------- Minibuffer -----------------------------
 
 $B$3$l$r!VBh#1CJ3,$N%a%K%e!<!W$H8F$S$^$9!#Bh#1CJ3,$N%a%K%e!<$G$O!"(BJIS $B4A;z$r(B
@@ -7504,7 +7665,8 @@ File: skk.info, Node: $BJ8;z%3!<%I0lMw(B, Next: $BJ8;z%3!<%I$rCN$kJ}K!(B, Pr
      $B%+!<%=%k0LCV$NJ8;z$NJ8;z%3!<%I$rI=<((B
 
 
- $B$[$+!"(BEmacs $B$N%3%^%s%I(B `M-x list-charset-chars' $B$bM-MQ$G$7$g$&!#(B
+ $B$[$+!"(BEmacs $B$N%3%^%s%I(B `M-x list-charset-chars' $B$d(B `C-x 8 RET' $B$bM-MQ$G(B
+ $B$7$g$&!#(B
 
  -- $B%f!<%6JQ?t(B: skk-list-chars-table-header-face
      $B%3!<%I0lMw$NOH@~$J$I$KE,MQ$9$k%U%'%$%9$G$9!#(B
@@ -7571,6 +7733,7 @@ DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B
 * skk-lookup::                  Lookup $B$rMQ$$$?<-=qJQ49(B
 * skk-look::                    look $B%3%^%s%I$rMQ$$$?<-=qJQ49(B
 * Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B::
+* Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B::
 
 
 
@@ -7779,7 +7942,7 @@ File: skk.info, Node: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$7$?8e!"99$K:F5"E*$J1QO
 
 
 
-File: skk.info, Node: Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B, Prev: skk-look, Up: DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B
+File: skk.info, Node: Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B, Next: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B, Prev: skk-look, Up: DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B
 
 Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B
 -----------------------------
@@ -7857,6 +8020,44 @@ Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B
 
 (1)  $B<B:]$K$O(B JIS X 0213 $B$N(B1$BLL(B9$B6h(B26$BE@$N(B1$BJ8;z$,EPO?$5$l$F$$$^$9!#(B
 $B$3$NJ8;z$r(B `skk.texi' $B$KD>@\5-:\$9$k$N$OHr$1$^$7$?!#(B
+
+
+
+File: skk.info, Node: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B, Prev: Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B, Up: DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B
+
+Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B
+--------------------------------------------------------
+
+ $B$+$J4A;zJQ49$K(B Google CGI API for Japanese Input $B$rMxMQ$9$k$3$H$,$G$-$^(B
+$B$9!#O"J8@aJQ49$b2DG=$H$J$j$^$9!#(B
+
+ Google CGI API for Japanese Input $B$K$D$$$F$O!"<!$N(B URL $B$r;2>H$7$F$/$@$5(B
+ $B$$!#(B
+
+`http://www.google.co.jp/ime/cgiapi.html'
+
+ $B$^$:!"(B`~/.skk' $B$K$F!"JQ?t(B `skk-use-search-web' $B$r(B `non-nil' $B$K@_Dj$7$^(B
+$B$9!#$3$l$K$h$j!"(Bskk-mode $B$r5/F0$7$?:]$K(B `skk-search-web.el' $B$r(B require
+$B$9$k$h$&$K$J$j$^$9!#(B
+
+ $BF1$8$/(B `~/.skk' $B$K$F!"%j%9%H(B `skk-search-prog-list' $B$N0lHV:G8e$NMWAG$H(B
+$B$7$F!"4X?t(B `skk-search-web' $B$rDI2C$7$^$9!#(B
+
+     (add-to-list 'skk-search-prog-list
+                  '(skk-search-web 'skk-google-cgi-api-for-japanese-input)
+                  t)
+
+ $B0J>e$N@_Dj$K$h$C$F!"DL>o$N$+$J4A;zJQ99$N8uJd$,?T$-$?$H$-$K4X?t(B
+`skk-search-web' $B$,<B9T$5$l!"(BGoogle CGI API for Japanese Input $B$K$h$kJQ(B
+$B497k2L$,I=<($5$l$^$9!#(B
+
+ $B$=$N$[$+!"JQ?t(B `skk-read-from-minibuffer-function' $B$r0J2<$N$h$&$K@_Dj$9(B
+$B$k$3$H$G!"<-=qEPO?%b!<%I$X$NFMF~;~$N=i4|CM$K(B Google $B%5%8%'%9%H$rI=<($9$k(B
+$B$3$H$b$G$-$^$9!#(B
+
+     (setq skk-read-from-minibuffer-function
+           (lambda ()
+              (car (skk-google-suggest skk-henkan-key))))
 
 
 
@@ -8136,6 +8337,10 @@ File: skk.info, Node: $BJQ498uJd0lMw$NI=<(J}K!(B, Next: $B"'%b!<%I$K$*$1$kJQ4
       -- $B%f!<%6JQ?t(B: skk-candidate-buffer-background-color-odd
            *$B8uJd(B*$B%P%C%U%!$NGX7J?'!J4q?t%i%$%s!K$r;XDj$7$^$9!#(B
 
+      -- $B%f!<%6JQ?t(B: skk-candidate-buffer-delete-other-windows
+           nil $B$G$"$l$P!"(B*$B8uJd(B*$B%P%C%U%!I=<($K:]$7$F(B window $BG[CV$rJQ99$7(B
+           $B$J$$!#(B
+
 
 $B%G%U%)%k%H$G$O#3$D$NJQ?t(B
 
@@ -8388,8 +8593,8 @@ File: skk.info, Node: $B%(%i!<$J$I$NF|K\8lI=<((B, Next: $B>iD9$J0FFb%a%C%;!<%
 
  -- $B%f!<%6JQ?t(B: skk-version-codename-ja
 
-     $B$3$NJQ?t$NCM$r(B `non-nil' $B$K@_Dj$9$k$H!"4X?t(B skk-version $B$rI>2A$7$?(B
-     $B$H$-$N%3!<%I%M!<%`$rF|K\8l$GI=<($7$^$9!#(B
+     $B$3$NJQ?t$NCM$r(B `non-nil' $B$K@_Dj$9$k$H!"4X?t(B `skk-version' $B$rI>2A$7(B
+     $B$?$H$-$N%3!<%I%M!<%`$rF|K\8l$GI=<($7$^$9!#(B
 
 
 
@@ -8602,7 +8807,7 @@ VIP/VIPER$B$H$NJ;MQ(B
 
 
 
-File: skk.info, Node: picture-mode$B$H$NJ;MQ(B, Next: Org-mode$B$H$NJ;MQ(B, Prev: VIP/VIPER$B$H$NJ;MQ(B, Up: $BJXMx$J1~MQ5!G=(B
+File: skk.info, Node: picture-mode$B$H$NJ;MQ(B, Prev: VIP/VIPER$B$H$NJ;MQ(B, Up: $BJXMx$J1~MQ5!G=(B
 
 picture-mode$B$H$NJ;MQ(B
 ====================
@@ -8621,22 +8826,6 @@ DDSKK $BB&$G$OBP=h$7$F$$$^$;$s!#(B
  $B4X?t(B `move-to-column-force' $B$NCf$G;HMQ$5$l$F$$$k4X?t(B`move-to-column' $B$N(B
 $B0z?t$H$7$F!"A43QJ8;z$rL5;k$7$?7e?t$,M?$($i$l$k$3$H$,$"$j!"$=$N$H$-%+!<%=(B
 $B%k0\F0$,$G$-$J$$$?$a!"$3$l$i$NLdBj$,@8$8$^$9!#(B
-
-
-
-File: skk.info, Node: Org-mode$B$H$NJ;MQ(B, Prev: picture-mode$B$H$NJ;MQ(B, Up: $BJXMx$J1~MQ5!G=(B
-
-Org-mode$B$H$NJ;MQ(B
-================
-
- SKK $B%b!<%I$r(B `Org-mode' $B$K$*$$$F;HMQ$7$?>l9g$O!"0J2<$N$h$&$JLdBjE@$,$"(B
-$B$j$^$9!#(B
-
-  1. org-mode $B$NI=Cf$G(B Enter $B%-!<$r2!2<$7$?$H$-$NF0:n$,Js9p$5$l$F$$$^$9(B
-     (`http://mail.ring.gr.jp/skk/201401/msg00001.html')$B!#(B
-
-     $BBP=hJ}K!$O(B `dot.skk' $B$K5-:\$7$F$"$j$^$9$9!#(B
-
 
 
 
@@ -8800,7 +8989,7 @@ File: skk.info, Node: $B$+$JF~NO$H?F;X%7%U%H(B, Prev: TUT-code, Up: $B%m!<%^;
 $B%9%H!<%k$9$kI,MW$,$"$j$^$9!#(BSKK $B%=!<%9%G%#%l%/%H%j$N(B `nicola' $B%G%#%l%/%H(B
 $B%j$K0\F0$7!"%I%-%e%a%s%H$K=>$C$F%$%s%9%H!<%k$7$F$/$@$5$$!#(B
 
-`http://openlab.jp/skk/skk/main/nicola/README.ja'
+`https://github.com/skk-dev/ddskk/blob/master/nicola/README.ja'
 
  $BB3$$$F@_Dj$r$7$^$9!#(B
 
@@ -8814,7 +9003,8 @@ File: skk.info, Node: $B$+$JF~NO$H?F;X%7%U%H(B, Prev: TUT-code, Up: $B%m!<%^;
 
  -- $B%f!<%6JQ?t(B: skk-kanagaki-keyboard-type
 
-     $B$3$NJQ?t$G!"$+$JF~NO%5%]!<%H$N<oN`$r@Z49$($^$9!#(B
+     $B$3$NJQ?t$G!"$+$JF~NO%5%]!<%H$N<oN`$r@Z49$($^$9!#E,@Z$J%7%s%\%k$r@_(B
+     $BDj$7$F$/$@$5$$!#(B
 
      `106-jis'
 
@@ -8829,11 +9019,26 @@ File: skk.info, Node: $B$+$JF~NO$H?F;X%7%U%H(B, Prev: TUT-code, Up: $B%m!<%^;
 
                (setq skk-kanagaki-keyboard-type 'nicola-jis)
 
+     `nicola-us'
+
+     `nicola-dvorak'
+
+     `nicola-colemak'
+
      `omelet-jis'
 
           `nicola-jis' $B$HF1MM$G$9$,!"$h$jF~NO$7$d$9$$G[Ns$,9MN8$5$l$F$$$^$9!#(B
 
                (setq skk-kanagaki-keyboard-type 'omelet-jis)
+
+     `omelet-us'
+
+     `omelet-dvorak'
+
+     `omelet-colemak'
+
+     `oasys'
+
 
 
  $B$+$JF~NOJ}<0;HMQ;~$N"#%b!<%I$G$O0J2<$N%3%^%s%I$J$I$,Lr$KN)$A$^$9!#(B
@@ -8867,11 +9072,10 @@ File: skk.info, Node: $B$=$N$[$+$N3HD%5!G=(B, Next: SKK$B$K4X$9$k>pJs(B, Pre
 * Menu:
 
 * $B8r$<=q$-JQ49(B::
-* Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B::
 
 
 
-File: skk.info, Node: $B8r$<=q$-JQ49(B, Next: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B, Prev: $B$=$N$[$+$N3HD%5!G=(B, Up: $B$=$N$[$+$N3HD%5!G=(B
+File: skk.info, Node: $B8r$<=q$-JQ49(B, Prev: $B$=$N$[$+$N3HD%5!G=(B, Up: $B$=$N$[$+$N3HD%5!G=(B
 
 $B8r$<=q$-JQ49(B
 ============
@@ -8885,20 +9089,6 @@ File: skk.info, Node: $B8r$<=q$-JQ49(B, Next: Google CGI API for Japanese Inpu
  $B%$%s%9%H!<%kJ}K!$J$I$O!"<!$NEj9F$r;29M$K$7$F$/$@$5$$!#(B
 
 `http://mail.ring.gr.jp/skk/201111/msg00037.html'
-
-
-
-File: skk.info, Node: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B, Prev: $B8r$<=q$-JQ49(B, Up: $B$=$N$[$+$N3HD%5!G=(B
-
-Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B
-========================================================
-
- `experimental/skk-search-web.el' $B$r%$%s%9%H!<%k$9$k$H!"(BGoogle CGI API
-for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49!JO"J8@aJQ49!K$,2DG=$H$J$j$^$9!#(B
-
- Google CGI API for Japanese Input $B$K$D$$$F$O<!$N(B URL $B$r;2>H$7$F$/$@$5$$!#(B
-
-`http://www.google.co.jp/ime/cgiapi.html'
 
 
 
@@ -8932,21 +9122,19 @@ File: skk.info, Node: $B:G?7>pJs(B, Next: SKK$B%a!<%j%s%0%j%9%H(B, Prev: SKK
 
 $B$+$iF@$k$3$H$,$G$-$^$9!#(B
 
- SKK $B$N3+H/$O!"(B CVS $B$K$h$C$F$J$5$l$F$$$^$9!#(BCVS $B$r;H$C$F:G?7$N(B SKK $B$r<h(B
-$BF@$9$k>l9g!"(BCVS account $B$r<hF@$7$F3+H/$K;22C$5$l$k>l9g$O!"0J2<$r;2>H$7$F(B
-$B$/$@$5$$!#(B
+ SKK $B$N3+H/$O!"(B GitHub $B$rMxMQ$7$F9T$o$l$F$$$^$9!#(B
 
-     `http://openlab.jp/skk/cvs-ja.html'
+     `https://github.com/skk-dev/ddskk'
 
  $B:G?7HG(B DDSKK $B$NJQ99FbMF$H99$K2a5n$NJQ99E@$K$D$$$F$O0J2<$N%j%=!<%9$r;2>H(B
 $B$7$F$/$@$5$$!#(B
 
-     `http://openlab.jp/skk/skk/main/READMEs/NEWS.ja'
+     `https://github.com/skk-dev/ddskk/blob/master/READMEs/NEWS.ja'
 
  $B$^$?!">-Mh$N%P!<%8%g%s$K$*$1$k3HD%%"%$%G%#%"$K$D$$$F$O!"(BTODO $B$H$7$F$^$H(B
 $B$a$i$l$F$$$^$9!#(B
 
-     `http://openlab.jp/skk/skk/main/READMEs/TODO.ja'
+     `https://github.com/skk-dev/ddskk/blob/master/READMEs/TODO.ja'
 
  SKK Openlab $B$G$O!"3+H/<T!"J8>O$N@0Hw$K$46(NO$$$?$@$1$kJ}!"%F%9%?!<!"$h(B
 $B$m$:$b$N$r8@$&?M$J$I$J$I!">o$KJg=8$7$F$$$^$9!#$^$?MWK>!"3HD%$N6qBNE*%"%$(B
@@ -9042,121 +9230,10 @@ SKK$B$N:n<T(B
 =========
 
  SKK $B$N86:n<T$O!"8=5~ETBg3XL>M@65<x$N:4F#2mI';a(B
-(http://www.sato.kuis.kyoto-u.ac.jp/~masahiko/masahiko-j.html)$B$G$9!#(B
+(http://www.ist.i.kyoto-u.ac.jp/organization/ex-professor.html#Sato)$B$G$9!#(B
 
- $B8=:_$N(B DDSKK $B$O!"Bg@*$N%\%i%s%F%#%"$N9W8%$K$h$j@.N)$7$F$$$^$9!#0J2<$O3N(B
-$BG'$5$l$F$$$k9W8%<TL>$G$9!#$3$3$KF~$C$F$$$J$$9W8%<T$,$*$i$l$k>l9g!"(Bemail
-address $B$,JQ99$K$J$j(B credit $B$r$3$l$K9g$o$;$?$$>l9g$K$O!"DI2C!"=$@5$$$?$7(B
-$B$^$9$N$G!"$41sN8$J$/(B SKK Openlab $B$N4IM}?M(B <skk-owner@ring.gr.jp> $B$^$G$4(B
-$B0lJs$/$@$5$$!#(B
-
-   - $BCfDE;3(B $B91(B <hisashi@rst.fujixerox.co.jp>
-   - $B>.4X(B $B5HB'(B <kose@emailizard.tamra.co.jp>
-   - $B>.Ln(B $B9'CK(B <takao@hirata.nuee.nagoya-u.ac.jp>
-   - $B>>0f9'M:(B/MATUI Takao <mat@nuis.ac.jp>
-   - $B?JF#M5;V(B <shindo@super.ees.saitama-u.ac.jp>
-   - $BD@;VM&(B <jshen@cas.org>
-   - $BDS?"(B $B@5Bg(B <ma-tsuge@kdd.co.jp>
-   - Akihiro Motoki <amotoki@dd.iij4u.or.jp>
-   - Chikanobu Toyofuku <unbound@papaya.juice.or.jp>
-   - Daiki Ueno <ueno@unixuser.org>
-   - EGUCHI Satoshi <eguchi@kyoto-wu.ac.jp>
-   - Eiji Obata <obata@suzuki.kuee.kyoto-u.ac.jp>
-   - FUKANO Masaaki <fukano-m@alp.cs.uec.ac.jp>
-   - Fukaya Shigeru <SFUKAYA@oracle.co.jp>
-   - Fumihiko MACHIDA <machida@users.sourceforge.jp>
-   - FURUE Hideyuki <furue@kke.co.jp>
-   - GUNJI Takao <gunji@sils.shoin.ac.jp>
-   - G. Yoshida <grothendieck@max.hi-ho.ne.jp>
-   - Haru Mizuno <mizu@cs3.cs.oki.co.jp>
-   - Haru'yasu Ueda <hal@sics.se>
-   - Hideki Sakurada <sakurada@kuis.kyoto-u.ac.jp>
-   - Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
-   - Hiroyuki KUROSAKI <noir@st.rim.or.jp>
-   - Hisao Kuroda <kuroda@msi.co.jp>
-   - IIDA Yosiaki <iida@ring.gr.jp>
-   - IRIE Tetsuya <irie@t.email.ne.jp>
-   - ISHIKAWA Naoya <ml@be.to>
-   - Jun-ichi Nakamura <nakamura@pluto.ai.kyutech.ac.jp>
-   - Katuya Tomioka <tomioka@culle.l.chiba-u.ac.jp>
-   - Kazuo Hirokawa <hirokawa@rics.co.jp>
-   - Kazushi Marukawa <kazushi@kubota.co.jp>
-   - Keisuke Nishida <kxn30@po.cwru.edu>
-   - Kenichi OKADA <okada@opaopa.org>
-   - Kenji Rikitake <kenji@reseau.toyonaka.osaka.jp>
-   - Kenji Yamashita <kenji@cs.titech.ac.jp>
-   - Kentaro Fukuchi <fukuchi@users.sourceforge.net>
-   - KIHARA Hideto <deton@m1.interq.or.jp>
-   - Kimura Chikahiro <kimura@oa1.kb.nec.co.jp>
-   - Kimura Fuyuki <fuyuki@hadaly.org>
-   - Kitamoto Tsuyoshi <tsuyoshi.kitamoto@gmail.com>
-   - Koichi MORI <kmori@onsei2.rilp.m.u-tokyo.ac.jp>
-   - KOIE Hidetaka ($B8q9>1QN4(B) <hide@koie.org>
-   - Koji Uchida <uchida@cfd.tytlabs.co.jp>
-   - KURIHARA Kenichi <kenichi_kurihara@nifty.com>
-   - Makoto MATSUSHITA <matusita@ics.es.osaka-u.ac.jp>
-   - Manabu Kawashima <kaw@lp.nm.fujitsu.co.jp>
-   - Martin Buchholz <martin@xemacs.org>
-   - Masahiko Suzuki <suzmasa@sm.sony.co.jp>
-   - Masahiro Doteguchi <xdote@rp.open.cs.fujitsu.co.jp>
-   - Masakazu Takahashi <masaka-t@ascii.co.jp>
-   - Masatake YAMATO <masata-y@is.aist-nara.ac.jp>
-   - NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
-   - MINOURA Itsushi <minoura@uni.zool.s.u-tokyo.ac.jp>
-   - MITA Yuusuke <clefs@mail.goo.ne.jp>
-   - MIYOSHI Tsutomu <minkov@fuzzy.or.jp>
-   - Motohiko Mouri <mouri@jaist.ac.jp>
-   - Murata Shuuichirou <mrt@notwork.org>
-   - Naoki HAMADA <nao@mimo.jaist-east.ac.jp>
-   - Naoki Wakamatsu <naoki-w@ht-net21.ne.jp>
-   - NEMOTO Takashi <tnemoto@mvi.biglobe.ne.jp>
-   - NISHIDA Keisuke <knishida@nn.iij4u.or.jp>
-   - Norio Maeda <nmaeda@dd.iij4u.or.jp>
-   - ONODA Arata <onoto@ma.nma.ne.jp>
-   - Rei FURUKAWA <furukawa@tcp-ip.or.jp>
-   - Ryoichi Hashimoto <gnu@ipri.go.jp>
-   - SAKAI Kiyotaka <ksakai@kso.netwk.ntt-at.co.jp>
-   - Satoshi Harauchi <satoshi@sys.sdl.melco.co.jp>
-   - Seiichi NAMBA <sn@asahi-net.email.ne.jp>
-   - Sekita Daigo <sekita@mri.co.jp>
-   - Shigeru OKUMURA <shigeru@okunet.gr.jp>
-   - Shuhei KOBAYASHI <shuhei@aqua.ocn.ne.jp>
-   - Shuji Ashizawa <ashizawa@zuken.co.jp>
-   - SIMOYAMA Takasi <simo@festa.or.jp>
-   - SL Baur <steve@altair.xemacs.org>
-   - sphere <sphere@pop12.odn.ne.jp>
-   - Stephen Turnbull <turnbull@sk.tsukuba.ac.jp>
-   - SUZUKI Hitoshi <sigh@kuzirabekon.econ.nagasaki-u.ac.jp>
-   - TAKAHASHI Kaoru <kaoru@kaisei.org>
-   - Takao KAWAMURA <kawamura@ike.tottori-u.ac.jp>
-   - Takeshi OHTANI <ohtani@iias.flab.fujitsu.co.jp>
-   - Tatsuya Kinoshita <tats@vega.ocn.ne.jp>
-   - Teika Kazura <teika@lavabit.com>
-   - Thierry Emery <Thierry.Emery@nmu.alcatel.fr>
-   - TOKUYA Junichi <tokuya@crab.fuji-ric.co.jp>
-   - Tomotaka SUWA <cooper@saitama.fujimic.fujisankei-g.co.jp>
-   - Tomoyuki Hiro <hiro@momo.it.okayama-u.ac.jp>
-   - Toru YANO <toru@maid.ne.jp>
-   - Toyonobu Yoshida <toyono-y@is.aist-nara.ac.jp>
-   - Tsugutomo Enami <enami@ptgd.sony.co.jp>
-   - Tsukamoto Tetsuo <czkmt@remus.dti.ne.jp>
-   - TSUMURA Tomoaki <tsumura@kuis.kyoto-u.ac.jp>
-   - Tsuyoshi AKIHO <akiho@sky.email.ne.jp>
-   - Wataru Matsui <matsui@atr-rd.atr.co.jp>
-   - Wataru Matsui <matsui@gf.hm.rd.sanyo.co.jp>
-   - YAGI Tatsuya <ynyaaa@ybb.ne.jp>
-   - YAMASHITA Junji <ysjj@unixuser.org>
-   - Yano Keisuke <yano@moon.email.ne.jp>
-   - Yoshida Toyonobu <toyono-y@is.aist-nara.ac.jp>
-   - Yukihiro Nakai <ynakai@redhat.com>
-   - Yoshiki Hayashi <yoshiki@xemacs.org>
-   - YOSHIZAWA Masahiro <manbou@ceres.dti.ne.jp>
-   - Yuh Ohmura <yutopia@giga.ocn.ne.jp>
-   - Yu-ji Hosokawa <yu-ji@hoso.net>
-   - Yukiyoshi Kameyama <kameyama@kuis.kyoto-u.ac.jp>
-   - Yusuke Shinyama <yusuke@example.com>
-   - Kiyoka Nishiyama. <kiyoka@sumibi.org>
-   - Yuichi Higashi <aaa707b@gmail.com>
+ $B8=:_$N(B DDSKK $B$O!"Bg@*$N%\%i%s%F%#%"$N9W8%$K$h$j@.N)$7$F$$$^$9!#%U%!%$%k(B
+`READMEs/Contributors' $B$K9W8%<TL>$N0lMw$,$"$j$^$9$N$G!"$4Mw$/$@$5$$!#(B
 
 
 
@@ -9313,7 +9390,7 @@ Q1-4 DDSKK $B$O$I$s$J%*%Z%l!<%F%#%s%0%7%9%F%`$G;H$($^$9$+(B?
 
  Apple OS X $BHG(B Emacs $B$KFC2=$7$?>pJs$K$D$$$F$O!"0J2<$N%U%!%$%k$r;2>H$7$F(B
  $B$/$@$5$$!#(B
-     `http://openlab.jp/skk/skk/main/READMEs/README.MacOSX.ja'
+     `https://github.com/skk-dev/ddskk/blob/master/READMEs/README.MacOSX.ja'
 
 
 
@@ -9354,7 +9431,7 @@ Q2-1 SKK $B$r;H$&$N$K2?$,I,MW$G$9$+(B?
  SKK $BK\BN$H(B SKK $B<-=q$,I,MW$G$9!#%*%W%7%g%s$G<-=q%5!<%P$rMQ0U$9$k$3$H$,$G(B
 $B$-$^$9!#(BXEmacs $B$G$O;vA0$K(B APEL $B$r%$%s%9%H!<%k$7$F$/$@$5$$!#(B
 
-     *Note APEL $B$N%$%s%9%H!<%k(B::.
+     *Note XEmacs $B$X$N%$%s%9%H!<%k(B::.
 
  SKK $BK\BN$O0J2<$+$iF~<j$G$-$^$9!#(B
 
@@ -9378,7 +9455,7 @@ File: skk.info, Node: Q2-3 SKK $B%5!<%P$O$I$3$K$"$j$^$9$+(B?, Prev: Q2-2 SKK 
 Q2-3 SKK $B%5!<%P$O$I$3$K$"$j$^$9$+(B?
 ----------------------------------
 
- DDSKK 15 $B$O<-=q%5!<%P$N<oN`!"%P!<%8%g%s$K$O0MB8$7$F$$$^$;$s!#(B
+ DDSKK $B$O<-=q%5!<%P$N<oN`!"%P!<%8%g%s$K$O0MB8$7$F$$$^$;$s!#(B
 
      `http://openlab.jp/skk/skkserv-ja.html'
 
@@ -9566,8 +9643,9 @@ SKK $B$rI8=`$N>uBV$G;H$C$F$$$k>l9g!"JQ49$N$?$a$K%7%U%H%-!<$rB?MQ$7$^$9$N(B
 
           muhenkan is undefined
 
-     $B$H$$$&Ez$($,JV$C$F$/$k$G$7$g$&!#<!$K!"$3$NL>A0$r;H$C$F(B `~/.emacs'$B$K(B
-     $B@_Dj$r=q$-$3$_$^$9!#0J2<$O(B $BL5JQ49(B = muhenkan $B$N>l9g$NNc$G$9!#(B
+     $B$H$$$&Ez$($,JV$C$F$/$k$G$7$g$&!#<!$K!"$3$NL>A0$r;H$C$F(B
+     `~/.emacs.d/init.el'$B$K@_Dj$r=q$-$3$_$^$9!#0J2<$O(B $BL5JQ49(B = muhenkan
+     $B$N>l9g$NNc$G$9!#(B
 
           (unless (keymapp key-translation-map)
             (setq key-translation-map (make-sparse-keymap)))
@@ -9688,7 +9766,7 @@ Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B
 
      `/usr/local/lib/xemacs/mule-packages/etc/skk'
 
-$B$J$I$r3NG'$7$^$9!#$=$N8e$G(B `~/.emacs' $B$K(B
+$B$J$I$r3NG'$7$^$9!#$=$N8e$G(B `~/.emacs.d/init.el' $B$K(B
 
      (setq skk-tut-file "/usr/local/share/skk/SKK.tut")
 
@@ -9901,7 +9979,7 @@ Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?
 `skk-lookup.el' $B$,%$%s%9%H!<%k$5$l$^$9!#(B
 
  $B%$%s%9%H!<%k$GCm0U$9$Y$-$O!"(B`make' $B$G8F$S=P$5$l$k(B Emacs $B$O(B
-`-q -no-site-file' $B%U%i%0IU$-$G8F$P$l$k$N$G!"(B`~/.emacs' $B$d(B
+`-q -no-site-file' $B%U%i%0IU$-$G8F$P$l$k$N$G!"(B`~/.emacs.d/init.el' $B$d(B
 `site-start.el' $B$J$I$OFI$_9~$^$l$J$$$3$H$G$9!#%G%U%)%k%H$G(B`load-path' $B$N(B
 $BDL$C$F$$$k%G%#%l%/%H%j$K(B lookup $B$r%$%s%9%H!<%k$9$k$+!"(B`SKK-CFG' $B$NCf$G(B
 VERSION_SPECIFIC_LISPDIR $B$J$I$K%G%#%l%/%H%j$rL@<($9$k$3$H$G2r7h$G$-$^$9!#(B
@@ -9954,7 +10032,7 @@ File: skk.info, Node: $B;v9`:w0z(B, Next: $BJQ?t:w0z(B, Prev: $B$h$/$"$k<AL
 * #8:                           $B?tCMJQ49(B.               (line   5)
 * #9:                           $B?tCMJQ49(B.               (line   5)
 * ACT:                          ACT.                    (line   5)
-* APEL:                         APEL $B$N%$%s%9%H!<%k(B.    (line   5)
+* APEL:                         XEmacs $B$X$N%$%s%9%H!<%k(B.  (line   5)
 * AZIK:                         AZIK.                   (line   5)
 * Auto Fill:                    SKK$B%*!<%H%U%#%k%b!<%I(B.  (line   5)
 * BS:                           picture-mode$B$H$NJ;MQ(B.   (line   5)
@@ -9963,6 +10041,7 @@ File: skk.info, Node: $B;v9`:w0z(B, Next: $BJQ?t:w0z(B, Prev: $B$h$/$"$k<AL
 * EUC$B%3!<%I(B:                    $BJ8;z%3!<%I$rCN$kJ}K!(B.   (line   5)
 * EUC$B%3!<%I(B:                    $BJ8;z%3!<%I$^$?$O%a%K%e!<$K$h$kJ8;zF~NO(B.  (line   6)
 * Extents:                      $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line  12)
+* Google CGI API for Japanese Input: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B.  (line   5)
 * I-search:                     I-search$B4XO"(B.           (line   5)
 * I-search:                     $B%$%s%/%j%a%s%?%k!&%5!<%A(B.  (line   5)
 * Incremental regexp search:    $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line   5)
@@ -9975,15 +10054,16 @@ File: skk.info, Node: $B;v9`:w0z(B, Next: $BJQ?t:w0z(B, Prev: $B$h$/$"$k<AL
 * Lookup:                       Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?.  (line   5)
 * Lookup:                       skk-lookup.             (line   5)
 * M $B<-=q(B:                       $B<-=q$N<oN`(B.             (line   8)
+* MELPA:                        MELPA $B$K$h$k%$%s%9%H!<%k(B.  (line   5)
 * Menu Bars:                    $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B.  (line  37)
 * Menu Bars:                    $BNN0h$NA`:n(B.             (line   8)
-* NICOLA:                       Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  73)
+* NICOLA:                       Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  74)
 * NICOLA:                       $B$+$JF~NO$H?F;X%7%U%H(B.   (line   5)
-* OASYS:                        Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  73)
+* OASYS:                        Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  74)
 * Overlays:                     $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line  12)
 * Overlays:                     $B"'%b!<%I(B.               (line   5)
-* $B?F;X%7%U%HF~NO(B:               Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  69)
-* $BF|K\8lF~NO%3%s%=!<%7%"%`(B:     Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  73)
+* $B?F;X%7%U%HF~NO(B:               Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  70)
+* $BF|K\8lF~NO%3%s%=!<%7%"%`(B:     Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  74)
 * $B%Q%C%1!<%8(B:                   Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B.  (line  13)
 * $B%A%e!<%H%j%"%k(B:               Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B.  (line   5)
 * $BIJ;l>pJs(B:                     Q4-2 SKK $B$N<-=q$K$O!"IJ;l>pJs$,$J$$$s$G$9$M!#(B.  (line   5)
@@ -10006,18 +10086,17 @@ File: skk.info, Node: $B;v9`:w0z(B, Next: $BJQ?t:w0z(B, Prev: $B$h$/$"$k<AL
 * Text Properties:              $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line  12)
 * VIP:                          VIP/VIPER$B$H$NJ;MQ(B.      (line   5)
 * VIPER:                        VIP/VIPER$B$H$NJ;MQ(B.      (line   5)
-* backtab:                      $BFI$_$NJd40(B.             (line  85)
-* `bayesian/skk-bayesian.el':   $B%U%!%$%k9=@.(B.           (line  72)
+* backtab:                      $BFI$_$NJd40(B.             (line  94)
+* `bayesian/skk-bayesian.el':   $B%U%!%$%k9=@.(B.           (line  82)
 * `canna.el':                   $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line   5)
 * `ccc.el':                     $B%U%!%$%k9=@.(B.           (line   5)
-* `context-skk.el':             $B%U%!%$%k9=@.(B.           (line  16)
+* `context-skk.el':             $B%U%!%$%k9=@.(B.           (line  23)
 * `context-skk.el':             $BJ8L.$K1~$8$?<+F0%b!<%I@Z$jBX$((B.  (line   5)
 * `dabbrev.el':                 $B<-=q%P%C%U%!(B.           (line   5)
 * edict:                        Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B.  (line   5)
 * edict:                        Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
 * `edict2skk.awk':              Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B.  (line   5)
 * `~/.emacs.d/init.el':         $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B.  (line   6)
-* `~/.emacs':                   $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B.  (line   6)
 * input method:                 DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B.  (line   5)
 * `isearch.el':                 $B%$%s%/%j%a%s%?%k!&%5!<%A(B.  (line   5)
 * `keyboard.c':                 1$B2s$N<h$j>C$7A`:n(B(undo)$B$NBP>](B.  (line   5)
@@ -10097,72 +10176,72 @@ File: skk.info, Node: $B;v9`:w0z(B, Next: $BJQ?t:w0z(B, Prev: $B$h$/$"$k<AL
 * move-to-column:               picture-mode$B$H$NJ;MQ(B.   (line   5)
 * ;; okuri-ari entries.:        $BAw$j$"$j%(%s%H%j$HAw$j$J$7%(%s%H%j(B.  (line   8)
 * ;; okuri-nasi entries.:       $BAw$j$"$j%(%s%H%j$HAw$j$J$7%(%s%H%j(B.  (line   8)
+* `package.el':                 MELPA $B$K$h$k%$%s%9%H!<%k(B.  (line   5)
 * `picture.el':                 picture-mode$B$H$NJ;MQ(B.   (line   5)
 * picture-mode:                 picture-mode$B$H$NJ;MQ(B.   (line   5)
-* `queue-m.el':                 $B%U%!%$%k9=@.(B.           (line 270)
 * `rgb.txt':                    $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line   5)
 * `~/.skk':                     I-search$B4XO"(B.           (line   5)
-* `skk-abbrev.el':              $B%U%!%$%k9=@.(B.           (line  24)
-* `skk-act.el':                 $B%U%!%$%k9=@.(B.           (line  31)
-* `skk-annotation.el':          $B%U%!%$%k9=@.(B.           (line  39)
-* `skk-auto.el':                $B%U%!%$%k9=@.(B.           (line  47)
-* `skk-autoloads.el':           $B%U%!%$%k9=@.(B.           (line  54)
-* `skk-azik.el':                $B%U%!%$%k9=@.(B.           (line  65)
-* `skk-cdb.el':                 $B%U%!%$%k9=@.(B.           (line  80)
-* `skk-comp.el':                $B%U%!%$%k9=@.(B.           (line  87)
-* `skk-cursor.el':              $B%U%!%$%k9=@.(B.           (line  94)
-* `skk-cus.el':                 $B%U%!%$%k9=@.(B.           (line 101)
-* `skk-dcomp.el':               $B%U%!%$%k9=@.(B.           (line 107)
+* `skk-abbrev.el':              $B%U%!%$%k9=@.(B.           (line  34)
+* `skk-act.el':                 $B%U%!%$%k9=@.(B.           (line  41)
+* `skk-annotation.el':          $B%U%!%$%k9=@.(B.           (line  49)
+* `skk-auto.el':                $B%U%!%$%k9=@.(B.           (line  57)
+* `skk-autoloads.el':           $B%U%!%$%k9=@.(B.           (line  64)
+* `skk-azik.el':                $B%U%!%$%k9=@.(B.           (line  75)
+* `skk-cdb.el':                 $B%U%!%$%k9=@.(B.           (line  90)
+* `skk-comp.el':                $B%U%!%$%k9=@.(B.           (line  97)
+* `skk-cursor.el':              $B%U%!%$%k9=@.(B.           (line 104)
+* `skk-cus.el':                 $B%U%!%$%k9=@.(B.           (line 111)
+* `skk-dcomp.el':               $B%U%!%$%k9=@.(B.           (line 117)
 * `skk-dcomp.el':               $BF0E*Jd40(B.               (line   5)
-* `skk-develop.el':             $B%U%!%$%k9=@.(B.           (line 114)
+* `skk-develop.el':             $B%U%!%$%k9=@.(B.           (line 124)
 * `skk.el':                     $B%U%!%$%k9=@.(B.           (line   5)
-* `skk-emacs.el':               $B%U%!%$%k9=@.(B.           (line 119)
-* `skk-gadget.el':              $B%U%!%$%k9=@.(B.           (line 127)
+* `skk-emacs.el':               $B%U%!%$%k9=@.(B.           (line 135)
+* `skk-gadget.el':              $B%U%!%$%k9=@.(B.           (line 143)
 * `skk-gadget.el':              $B%W%m%0%i%`<B9TJQ49(B.     (line   5)
-* `skk-hint.el':                $B%U%!%$%k9=@.(B.           (line 134)
+* `skk-hint.el':                $B%U%!%$%k9=@.(B.           (line 150)
 * `skk-hint.el':                $B8uJd$N9J$j9~$_(B.         (line   5)
 * `skk-icon':                   $B%"%$%3%s(B.               (line   5)
-* `skk-inline.el':              $B%U%!%$%k9=@.(B.           (line 141)
-* `skk-isearch.el':             $B%U%!%$%k9=@.(B.           (line 148)
-* `skk-jisx0201.el':            $B%U%!%$%k9=@.(B.           (line 155)
-* `skk-jisx0213.el':            $B%U%!%$%k9=@.(B.           (line 160)
-* `skk-jisyo-edit-mode.el':     $B%U%!%$%k9=@.(B.           (line 168)
-* `skk-kakasi.el':              $B%U%!%$%k9=@.(B.           (line 173)
-* `skk-kanagaki.el':            $B%U%!%$%k9=@.(B.           (line 180)
-* `skk-kcode.el':               $B%U%!%$%k9=@.(B.           (line 189)
+* `skk-inline.el':              $B%U%!%$%k9=@.(B.           (line 157)
+* `skk-isearch.el':             $B%U%!%$%k9=@.(B.           (line 164)
+* `skk-jisx0201.el':            $B%U%!%$%k9=@.(B.           (line 171)
+* `skk-jisx0213.el':            $B%U%!%$%k9=@.(B.           (line 176)
+* `skk-jisyo-edit-mode.el':     $B%U%!%$%k9=@.(B.           (line 181)
+* `skk-kakasi.el':              $B%U%!%$%k9=@.(B.           (line 186)
+* `skk-kanagaki.el':            $B%U%!%$%k9=@.(B.           (line 193)
+* `skk-kcode.el':               $B%U%!%$%k9=@.(B.           (line 202)
 * `skk-leim.el':                DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B.  (line   5)
-* `skk-leim.el':                $B%U%!%$%k9=@.(B.           (line 197)
+* `skk-leim.el':                $B%U%!%$%k9=@.(B.           (line 210)
 * `~/.skk':                     $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B.  (line   6)
 * `skk-look.el':                Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
-* `skk-look.el':                $B%U%!%$%k9=@.(B.           (line 205)
+* `skk-look.el':                $B%U%!%$%k9=@.(B.           (line 218)
 * `skk-look.el':                skk-look.               (line   5)
 * `skk-lookup.el':              Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?.  (line   5)
-* `skk-lookup.el':              $B%U%!%$%k9=@.(B.           (line 212)
+* `skk-lookup.el':              $B%U%!%$%k9=@.(B.           (line 225)
 * `skk-lookup.el':              skk-lookup.             (line   5)
-* `skk-macs.el':                $B%U%!%$%k9=@.(B.           (line 219)
-* `skk-num.el':                 $B%U%!%$%k9=@.(B.           (line 224)
-* `skk-server-completion.el':   $B%U%!%$%k9=@.(B.           (line 231)
-* `skk-server.el':              $B%U%!%$%k9=@.(B.           (line 238)
-* `skk-setup.el':               $B%U%!%$%k9=@.(B.           (line 245)
-* `skk-show-mode.el':           $B%U%!%$%k9=@.(B.           (line 252)
-* `skk-sticky.el':              $B%U%!%$%k9=@.(B.           (line 259)
+* `skk-macs.el':                $B%U%!%$%k9=@.(B.           (line 232)
+* `skk-num.el':                 $B%U%!%$%k9=@.(B.           (line 237)
+* `skk-server-completion.el':   $B%U%!%$%k9=@.(B.           (line 253)
+* `skk-server.el':              $B%U%!%$%k9=@.(B.           (line 260)
+* `skk-setup.el':               $B%U%!%$%k9=@.(B.           (line 267)
+* `skk-show-mode.el':           $B%U%!%$%k9=@.(B.           (line 274)
+* `skk-sticky.el':              $B%U%!%$%k9=@.(B.           (line 281)
 * `skk-sticky.el':              $BJQ490LCV$N;XDjJ}K!(B.     (line   5)
-* `skk-study.el':               $B%U%!%$%k9=@.(B.           (line 266)
+* `skk-study.el':               $B%U%!%$%k9=@.(B.           (line 288)
 * `skk-study.el':               $BJQ49$N3X=,(B.             (line   5)
-* `skk-tankan.el':              $B%U%!%$%k9=@.(B.           (line 274)
+* `skk-tankan.el':              $B%U%!%$%k9=@.(B.           (line 296)
 * `skk-tankan.el':              $BC14A;zJQ49(B.             (line   5)
-* `skk-tut.el':                 $B%U%!%$%k9=@.(B.           (line 281)
-* `skk-tutcode.el':             $B%U%!%$%k9=@.(B.           (line 288)
+* `skk-tut.el':                 $B%U%!%$%k9=@.(B.           (line 303)
+* `skk-tutcode.el':             $B%U%!%$%k9=@.(B.           (line 310)
 * `skk-vars.el':                $B%U%!%$%k9=@.(B.           (line  11)
-* `skk-version.el':             $B%U%!%$%k9=@.(B.           (line 295)
-* `skk-viper.el':               $B%U%!%$%k9=@.(B.           (line 300)
-* `skk-xemacs.el':              $B%U%!%$%k9=@.(B.           (line 307)
+* `skk-version.el':             $B%U%!%$%k9=@.(B.           (line 320)
+* `skk-viper.el':               $B%U%!%$%k9=@.(B.           (line 325)
+* `skk-xemacs.el':              $B%U%!%$%k9=@.(B.           (line 332)
 * `skkdic-expr':                Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B.  (line   5)
 * `skkdic-sort':                Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B.  (line   5)
 * `vip.el':                     VIP/VIPER$B$H$NJ;MQ(B.      (line   5)
 * `viper.el':                   VIP/VIPER$B$H$NJ;MQ(B.      (line   5)
 * `~/.xemacs/init.el':          $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B.  (line   6)
-* xmodmap:                      Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  56)
+* xmodmap:                      Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  57)
 
 
 
@@ -10180,18 +10259,18 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * default-input-method:         DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B.  (line  31)
 * isearch-mode-end-hook:        $B%$%s%/%j%a%s%H8!:w$N@_Dj(B.  (line   5)
 * isearch-mode-hook:            $B%$%s%/%j%a%s%H8!:w$N@_Dj(B.  (line   5)
-* key-translation-map:          Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  46)
+* key-translation-map:          Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B.  (line  47)
 * major-mode:                   $B<-=q%P%C%U%!(B.           (line   5)
 * minibuffer-exit-hook:         $BAw$j2>L>$N87L)$J%^%C%A(B.  (line   5)
 * minibuffer-setup-hook:        $BAw$j2>L>$N87L)$J%^%C%A(B.  (line   5)
 * mode-name:                    $B<-=q%P%C%U%!(B.           (line   5)
+* package-archives:             MELPA $B$K$h$k%$%s%9%H!<%k(B.  (line   5)
 * skk-abbrev-mode-string:       $BF~NO%b!<%I$r<($9%b!<%I%i%$%s$NJ8;zNs$NJQ99(B.  (line  23)
 * skk-act-load-hook:            $B%U%C%/(B.                 (line  43)
 * skk-allow-spaces-newlines-and-tabs: $B%]%$%s%H$rLa$7$F"&%b!<%I$X(B.  (line  36)
 * skk-allow-spaces-newlines-and-tabs: $B%]%$%s%H$rLa$7$F"&%b!<%I$X(B.  (line   5)
 * skk-allow-spaces-newlines-and-tabs: $B6uGr!&2~9T!&%?%V$r4^$s$@8+=P$78l$NJQ49(B.  (line  52)
-* skk-annotation-browse-key:    Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  46)
-* skk-annotation-browser-function: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  51)
+* skk-annotation-browse-key:    Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  45)
 * skk-annotation-copy-key:      $B%"%N%F!<%7%g%s$N;HMQ(B.   (line  44)
 * skk-annotation-delay:         $B%"%N%F!<%7%g%s$N;HMQ(B.   (line  38)
 * skk-annotation-dict-program-arguments: $B30It%3%^%s%I$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  21)
@@ -10200,11 +10279,11 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-annotation-lookup-DictionaryServices: Apple OS X $B!V<-=q!W%5!<%S%9$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  11)
 * skk-annotation-lookup-dict:   $B30It%3%^%s%I$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  10)
 * skk-annotation-lookup-lookup: $B%"%N%F!<%7%g%s$H$7$F(B EPWING $B<-=q$rI=<($9$k(B.  (line  61)
-* skk-annotation-other-sources: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  56)
+* skk-annotation-other-sources: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  53)
 * skk-annotation-python-program: Apple OS X $B!V<-=q!W%5!<%S%9$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  23)
 * skk-annotation-show-as-message: $B%"%N%F!<%7%g%s$N;HMQ(B.  (line  51)
 * skk-annotation-toggle-display-char: $B%"%N%F!<%7%g%s$N;HMQ(B.  (line  63)
-* skk-annotation-wikipedia-key: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  41)
+* skk-annotation-wikipedia-key: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  40)
 * skk-auto-fill-mode-hook:      $B%U%C%/(B.                 (line  14)
 * skk-auto-insert-paren:        $BJD$83g8L$N<+F0F~NO(B.     (line  10)
 * skk-auto-load-hook:           $B%U%C%/(B.                 (line  43)
@@ -10220,16 +10299,25 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-azik-load-hook:           $B%U%C%/(B.                 (line  43)
 * skk-backup-jisyo:             $B<-=q%U%!%$%k$N;XDj(B.     (line  33)
 * skk-backup-jisyo:             $B<-=q$NJ]B8(B.             (line   5)
+* skk-bayesian-corpus-file:     $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  60)
+* skk-bayesian-corpus-make:     $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  57)
+* skk-bayesian-debug:           $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  24)
+* skk-bayesian-history-file:    $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  54)
+* skk-bayesian-host:            $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  44)
+* skk-bayesian-port:            $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  49)
+* skk-bayesian-prefer-server:   $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  37)
 * skk-byte-compile-init-file:   skk-init-file$B$N<+F0%3%s%Q%$%k(B.  (line   8)
 * skk-candidate-buffer-background-color: $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 130)
 * skk-candidate-buffer-background-color-odd: $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 134)
+* skk-candidate-buffer-delete-other-windows: $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 137)
 * skk-cdb-large-jisyo:          $B<-=q%U%!%$%k$N;XDj(B.     (line  37)
 * skk-cdb-large-jisyo:          $B:G$b4pK\E*$J@_Dj(B.       (line   5)
 * skk-check-okurigana-on-touroku: $BAw$j2>L>$,M-$k>l9g$N<-=qEPO?(B.  (line  41)
 * skk-coding-system-alist:      $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
-* skk-comp-circulate:           $BFI$_$NJd40(B.             (line  69)
+* skk-comp-circulate:           $BFI$_$NJd40(B.             (line  78)
 * skk-comp-load-hook:           $B%U%C%/(B.                 (line  43)
 * skk-compare-jisyo-size-when-saving: $B8D?M<-=q$NJ]B8F0:n(B.  (line  50)
+* skk-completion-prog-list:     $BFI$_$NJd40(B.             (line  69)
 * skk-completion-search-char:   Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B.  (line  72)
 * skk-count-private-jisyo-candidates-exactly: $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B.  (line  31)
 * skk-cursor-abbrev-color:      $BF~NO%b!<%I$r<($9%+!<%=%k?'$K4X$9$k@_Dj(B.  (line  41)
@@ -10265,6 +10353,7 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-gadget-load-hook:         $B%U%C%/(B.                 (line  43)
 * skk-gyakubiki-jisyo-list:     $BNN0h$NA`:n(B.             (line  99)
 * skk-henkan-face:              $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B.  (line  16)
+* skk-henkan-number-to-display-candidates: $B<!8uJd!&A08uJd(B.  (line  64)
 * skk-henkan-okuri-strictly:    $BAw$j$"$j%(%s%H%j$N%V%m%C%/7A<0(B.  (line  17)
 * skk-henkan-okuri-strictly:    $BAw$j2>L>$N87L)$J%^%C%A(B.  (line  20)
 * skk-henkan-okuri-strictly:    $BAw$j2>L>$NM%@hE*$J%^%C%A(B.  (line  23)
@@ -10325,8 +10414,8 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-large-jisyo:              $B<-=q%U%!%$%k$N;XDj(B.     (line  43)
 * skk-large-jisyo:              $B<-=q%P%C%U%!(B.           (line   5)
 * skk-latin-mode-string:        $BF~NO%b!<%I$r<($9%b!<%I%i%$%s$NJ8;zNs$NJQ99(B.  (line  11)
-* skk-list-chars-face:          $BJ8;z%3!<%I0lMw(B.         (line  73)
-* skk-list-chars-table-header-face: $BJ8;z%3!<%I0lMw(B.     (line  70)
+* skk-list-chars-face:          $BJ8;z%3!<%I0lMw(B.         (line  74)
+* skk-list-chars-table-header-face: $BJ8;z%3!<%I0lMw(B.     (line  71)
 * skk-load-hook:                $B%U%C%/(B.                 (line  20)
 * skk-look-expanded-word-only:  Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
 * skk-look-expanded-word-only:  $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$7$?8e!"99$K:F5"E*$J1QOBJQ49$r9T$&(B.  (line  42)
@@ -10337,7 +10426,7 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-lookup-get-content-nth-dic: $B%"%N%F!<%7%g%s$H$7$F(B EPWING $B<-=q$rI=<($9$k(B.  (line  41)
 * skk-lookup-search-agents:     skk-lookup.             (line   5)
 * skk-mode-hook:                $B%U%C%/(B.                 (line   8)
-* skk-next-completion-char:     $BFI$_$NJd40(B.             (line  79)
+* skk-next-completion-char:     $BFI$_$NJd40(B.             (line  88)
 * skk-num-convert-float:        $B?tCMJQ49(B.               (line 111)
 * skk-num-grouping-places:      $B?tCMJQ49(B.               (line 132)
 * skk-num-grouping-separator:   $B?tCMJQ49(B.               (line 127)
@@ -10347,15 +10436,16 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-prefix-jisx0201-face:     $B2>L>J8;z$N%m!<%^;z%W%l%U%#%C%/%9$N%(%3!<(B.  (line  43)
 * skk-prefix-katakana-face:     $B2>L>J8;z$N%m!<%^;z%W%l%U%#%C%/%9$N%(%3!<(B.  (line  38)
 * skk-preload:                  $B5/F0$H=*N;(B.             (line  27)
-* skk-previous-candidate-keys:  $B<!8uJd!&A08uJd(B.         (line  48)
-* skk-previous-completion-backtab-key: $BFI$_$NJd40(B.      (line  92)
-* skk-previous-completion-char: $BFI$_$NJd40(B.             (line  83)
-* skk-previous-completion-use-backtab: $BFI$_$NJd40(B.      (line  87)
+* skk-previous-candidate-keys:  $B<!8uJd!&A08uJd(B.         (line  50)
+* skk-previous-completion-backtab-key: $BFI$_$NJd40(B.      (line 101)
+* skk-previous-completion-char: $BFI$_$NJd40(B.             (line  92)
+* skk-previous-completion-use-backtab: $BFI$_$NJd40(B.      (line  96)
 * skk-process-okuri-early:      $BAw$j2>L>$N87L)$J%^%C%A(B.  (line  20)
 * skk-process-okuri-early:      $BAw$j2>L>$NM%@hE*$J%^%C%A(B.  (line  23)
 * skk-process-okuri-early:      $BAw$j$"$j%(%s%H%j$N%V%m%C%/7A<0(B.  (line  27)
 * skk-process-okuri-early:      $B0EL[$N3NDj$N%?%$%_%s%0(B.  (line   5)
 * skk-process-okuri-early:      $BAw$j$"$jJQ49$NJQ493+;O$N%?%$%_%s%0(B.  (line   8)
+* skk-read-from-minibuffer-function: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B.  (line   5)
 * skk-read-from-minibuffer-function: $B<-=qEPO?%b!<%I(B.    (line  39)
 * skk-record-file:              $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B.  (line  18)
 * skk-rom-kana-base-rule-list:  $B%m!<%^;z$N%k!<%k$N@_Dj(B.  (line   8)
@@ -10365,8 +10455,9 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-save-jisyo-instantly:     $B8D?M<-=q$NJ]B8F0:n(B.     (line   5)
 * skk-save-jisyo-instantly:     $B8D?M<-=q$NJ]B8F0:n(B.     (line  63)
 * skk-search-excluding-word-pattern-function: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$9(B.  (line   5)
-* skk-search-excluding-word-pattern-function: $B<!8uJd!&A08uJd(B.  (line  55)
+* skk-search-excluding-word-pattern-function: $B<!8uJd!&A08uJd(B.  (line  57)
 * skk-search-katakana:          $B%+%?%+%JJQ49(B.           (line   8)
+* skk-search-prog-list:         Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B.  (line   5)
 * skk-search-prog-list:         Q3-3 $B8!:w$9$k<-=q$rA}$d$7$?$$$N$G$9$,!#(B.  (line   7)
 * skk-search-prog-list:         Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?.  (line   5)
 * skk-search-prog-list:         $B<-=q8!:w$N@_Dj$N6qBNNc(B.  (line   5)
@@ -10387,6 +10478,7 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-show-annotation:          $B>iD9$J0FFb%a%C%;!<%8$NI=<((B.  (line  38)
 * skk-show-annotation:          $B%"%N%F!<%7%g%s$N;HMQ(B.   (line   8)
 * skk-show-candidates-always-pop-to-buffer: $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 119)
+* skk-show-candidates-nth-henkan-char: $B<!8uJd!&A08uJd(B.  (line  60)
 * skk-show-candidates-toggle-display-place-char: $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 126)
 * skk-show-icon:                $B%"%$%3%s(B.               (line   8)
 * skk-show-inline:              $BJQ498uJd0lMw$NI=<(J}K!(B.  (line  17)
@@ -10416,7 +10508,7 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-tooltip-mouse-behavior:   $BJQ498uJd0lMw$NI=<(J}K!(B.  (line  67)
 * skk-tooltip-parameters:       $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 112)
 * skk-treat-candidate-appearance-function: $BJQ498uJd$N99$J$kAu>~(B.  (line  10)
-* skk-try-completion-char:      $BFI$_$NJd40(B.             (line  76)
+* skk-try-completion-char:      $BFI$_$NJd40(B.             (line  85)
 * skk-tut-file:                 Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B.  (line  19)
 * skk-tut-file:                 $B%A%e!<%H%j%"%k(B.         (line  12)
 * skk-tut-file:                 $B%A%e!<%H%j%"%k(B.         (line   6)
@@ -10434,8 +10526,9 @@ File: skk.info, Node: $BJQ?t:w0z(B, Next: $B4X?t:w0z(B, Prev: $B;v9`:w0z(B
 * skk-use-look:                 Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
 * skk-use-look:                 $B1QC18l$NJd40(B.           (line   5)
 * skk-use-numeric-conversion:   $B?tCMJQ49(B.               (line 138)
+* skk-use-search-web:           Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B.  (line   5)
 * skk-use-viper:                VIP/VIPER$B$H$NJ;MQ(B.      (line   8)
-* skk-user-directory:           $B@_Dj%U%!%$%k(B.           (line  27)
+* skk-user-directory:           $B@_Dj%U%!%$%k(B.           (line  26)
 * skk-verbose-intention-face:   $B>iD9$J0FFb%a%C%;!<%8$NI=<((B.  (line  72)
 * skk-verbose-kbd-face:         $B>iD9$J0FFb%a%C%;!<%8$NI=<((B.  (line  75)
 * skk-verbose:                  $B>iD9$J0FFb%a%C%;!<%8$NI=<((B.  (line   8)
@@ -10462,8 +10555,11 @@ File: skk.info, Node: $B4X?t:w0z(B, Next: $B%-!<:w0z(B, Prev: $BJQ?t:w0z(B
 * Menu:
 
 * $B%3%^%s%I(B:                     $B3F<o%"%N%F!<%7%g%s5!G=$r(B SKK $B$NOH$r$3$($F3hMQ$9$k(B.  (line  13)
-* convert-standard-filename:    $B@_Dj%U%!%$%k(B.           (line  24)
+* coding-system-p:              $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
+* convert-standard-filename:    $B@_Dj%U%!%$%k(B.           (line  22)
+* describe-coding-system:       $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
 * eval-after-load:              $B%U%C%/(B.                 (line  36)
+* find-coding-system:           $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
 * fundamental-mode:             $B<-=q%P%C%U%!(B.           (line   5)
 * isearch-backward-regexp:      $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line  29)
 * isearch-forward-regexp:       $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line  22)
@@ -10471,8 +10567,12 @@ File: skk.info, Node: $B4X?t:w0z(B, Next: $B%-!<:w0z(B, Prev: $BJQ?t:w0z(B
 * $B%3%^%s%I(B:                     $B%"%N%F!<%7%g%s$NEPO?(B.   (line  28)
 * $B%3%^%s%I(B:                     $B5/F0$H=*N;(B.             (line  40)
 * $B%3%^%s%I(B:                     $B5/F0$H=*N;(B.             (line  47)
+* $B%3%^%s%I(B:                     $B<-=q$NF~<j(B.             (line  58)
+* $B%3%^%s%I(B:                     $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  63)
 * $B%3%^%s%I(B:                     $B%5!<%P4XO"(B.             (line  77)
 * $B%3%^%s%I(B:                     $B%"%N%F!<%7%g%s$NEPO?(B.   (line   8)
+* list-coding-systems:          $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
+* package-initialize:           MELPA $B$K$h$k%$%s%9%H!<%k(B.  (line   5)
 * register-input-method:        $B$O$8$a$N@_Dj(B.           (line  26)
 * save-some-buffers:            $B<-=q%P%C%U%!$N(Bbuffer-file-name.  (line   5)
 * self-insert-command:          1$B2s$N<h$j>C$7A`:n(B(undo)$B$NBP>](B.  (line   5)
@@ -10484,10 +10584,11 @@ File: skk.info, Node: $B4X?t:w0z(B, Next: $B%-!<:w0z(B, Prev: $BJQ?t:w0z(B
 * skk-backward-and-set-henkan-point: $B%]%$%s%H$rLa$7$F"&%b!<%I$X(B.  (line   5)
 * skk-calc:                     $B%W%m%0%i%`<B9TJQ49(B.     (line  33)
 * skk-comp-by-server-completion: $B%5!<%P%3%s%W%j!<%8%g%s(B.  (line  11)
-* skk-comp-lisp-symbol:         $BFI$_$NJd40(B.             (line  96)
+* skk-comp-lisp-symbol:         $BFI$_$NJd40(B.             (line 105)
 * skk-count-jisyo-candidates:   $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B.  (line  37)
 * skk-find-coding-system:       $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B.  (line   5)
 * skk-gadget-units-conversion:  $B%W%m%0%i%`<B9TJQ49(B.     (line  60)
+* skk-get:                      $B<-=q$NF~<j(B.             (line  67)
 * skk-gyakubiki-and-henkan:     $BNN0h$NA`:n(B.             (line  53)
 * skk-gyakubiki-katakana-message: $BNN0h$NA`:n(B.           (line  95)
 * skk-gyakubiki-katakana-region: $BNN0h$NA`:n(B.            (line  59)
@@ -10522,6 +10623,7 @@ File: skk.info, Node: $B4X?t:w0z(B, Next: $B%-!<:w0z(B, Prev: $BJQ?t:w0z(B
 * skk-search-kakutei-jisyo-file: $B3NDj<-=q(B.              (line   5)
 * skk-search-lisp-symbol:       Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B.  (line  68)
 * skk-search-server:            $B<-=q8!:w$N$?$a$N4X?t(B.   (line  62)
+* skk-search-web:               Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B.  (line   5)
 * skk-server-completion-search: $B%5!<%P%3%s%W%j!<%8%g%s(B.  (line  19)
 * skk-set-henkan-point:         1$B2s$N<h$j>C$7A`:n(B(undo)$B$NBP>](B.  (line   5)
 * skk-tankan-search:            $B<-=q$N@_Dj(B.             (line   6)
@@ -10542,10 +10644,10 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 * C-f:                          $BJQ498uJd0lMw$NI=<(J}K!(B.  (line 126)
 * C-g:                          $BAw$j$"$jJQ49Cf$N(BC-g.    (line   5)
 * C-g:                          $B"&%b!<%I$rH4$1$kJ}K!(B.   (line   6)
-* C-i:                          Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  39)
+* C-i:                          Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  38)
 * C-j:                          $B3NDj$9$k%-!<(B.           (line   5)
 * C-j:                          $B"&%b!<%I$rH4$1$kJ}K!(B.   (line   6)
-* C-o:                          Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  44)
+* C-o:                          Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B.  (line  43)
 * C-q C-j:                      $B2~9TJ8;z$r4^$`<-=qEPO?(B.  (line   5)
 * C-q:                          $BA41QJ8;z$NF~NO(B.         (line   5)
 * C-r:                          skk-isearch$B$NA`:n@-(B.    (line  14)
@@ -10558,15 +10660,16 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 * `C-u TAB':                    $BFI$_$NJd40(B.             (line  62)
 * C-u \:                        $BJ8;z%3!<%I$^$?$O%a%K%e!<$K$h$kJ8;zF~NO(B.  (line   6)
 * C-w:                          $B%"%N%F!<%7%g%s$N;HMQ(B.   (line  42)
+* C-x 8 RET:                    $BJ8;z%3!<%I0lMw(B.         (line   5)
 * C-x C-c:                      $B8D?M<-=q$NJ]B8F0:n(B.     (line   5)
 * C-x C-j:                      $BAw$j$"$jJQ49$NJQ493+;O$N%?%$%_%s%0(B.  (line   5)
 * C-x C-j:                      $B5/F0$H=*N;(B.             (line   5)
 * C-x j:                        SKK$B%*!<%H%U%#%k%b!<%I(B.  (line   5)
 * C-x j:                        $BAw$j$"$jJQ49$NJQ493+;O$N%?%$%_%s%0(B.  (line   5)
 * C-x j:                        $B5/F0$H=*N;(B.             (line   5)
-* F1 1:                         $B$+$JF~NO$H?F;X%7%U%H(B.   (line  56)
-* F1 2:                         $B$+$JF~NO$H?F;X%7%U%H(B.   (line  61)
-* F12:                          $B$+$JF~NO$H?F;X%7%U%H(B.   (line  68)
+* F1 1:                         $B$+$JF~NO$H?F;X%7%U%H(B.   (line  72)
+* F1 2:                         $B$+$JF~NO$H?F;X%7%U%H(B.   (line  77)
+* F12:                          $B$+$JF~NO$H?F;X%7%U%H(B.   (line  84)
 * M-1 C-x j:                    SKK$B%*!<%H%U%#%k%b!<%I(B.  (line  12)
 * M-C-r:                        $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line  29)
 * M-C-r:                        skk-isearch$B$NA`:n@-(B.    (line  14)
@@ -10580,16 +10683,19 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 * M-x customize-group:          Customize $B$K$h$k@_DjJQ99(B.  (line  10)
 * M-x isearch-backward-regexp:  $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line  29)
 * M-x isearch-forward-regexp:   $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B.  (line  22)
+* M-x list-charset-chars:       $BJ8;z%3!<%I0lMw(B.         (line   5)
 * M-x list-input-methods:       DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B.  (line   5)
 * M-x set-input-method:         DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B.  (line   5)
 * M-x skk-annotation-add:       $B%"%N%F!<%7%g%s$NEPO?(B.   (line   5)
 * M-x skk-annotation-kill:      $B%"%N%F!<%7%g%s$NEPO?(B.   (line   5)
 * M-x skk-annotation-remove:    $B%"%N%F!<%7%g%s$NEPO?(B.   (line   5)
+* M-x skk-bayesian-kill-process: $B%Y%$%:E}7W$rMQ$$$?3X=,(B.  (line  61)
 * M-x skk-count-jisyo-candidates: $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B.  (line  37)
 * M-x skk-customize:            skk-customize $B$K$h$k@_DjJQ99(B.  (line   6)
 * M-x skk-display-code-for-char-at-point: $BJ8;z%3!<%I$rCN$kJ}K!(B.  (line   5)
 * M-x skk-edit-private-jisyo:   $B8D?M<-=q%U%!%$%k$NJT=8(B.  (line   5)
 * M-x skk-emacs-customize:      Customize $B$K$h$k@_DjJQ99(B.  (line  10)
+* M-x skk-get:                  $B<-=q$NF~<j(B.             (line  56)
 * M-x skk-gyakubiki-and-henkan: $BNN0h$NA`:n(B.             (line  53)
 * M-x skk-gyakubiki-katakana-message: $BNN0h$NA`:n(B.       (line  95)
 * M-x skk-gyakubiki-katakana-region: $BNN0h$NA`:n(B.        (line  59)
@@ -10602,7 +10708,7 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 * M-x skk-hurigana-region:      $BNN0h$NA`:n(B.             (line  67)
 * M-x skk-hurigana-region:      $BNN0h$NA`:n(B.             (line  85)
 * M-x skk-jisx0208-latin-region: $BNN0h$NA`:n(B.            (line  26)
-* M-x skk-kanagaki-toggle-rom-kana: $B$+$JF~NO$H?F;X%7%U%H(B.  (line  68)
+* M-x skk-kanagaki-toggle-rom-kana: $B$+$JF~NO$H?F;X%7%U%H(B.  (line  84)
 * M-x skk-katakana-region:      $BNN0h$NA`:n(B.             (line  16)
 * M-x skk-kill-emacs-without-saving-jisyo: $B<-=q$NJ]B8(B.  (line  13)
 * M-x skk-kill-emacs-without-saving-jisyo: $B8D?M<-=q$NJ]B8F0:n(B.  (line  42)
@@ -10624,7 +10730,7 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 * .:                            Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
 * ,:                            Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?.  (line   5)
 * SHIFT TAB:                    $BF0E*Jd40(B.               (line 129)
-* SHIFT TAB:                    $BFI$_$NJd40(B.             (line  85)
+* SHIFT TAB:                    $BFI$_$NJd40(B.             (line  94)
 * TAB:                          $BF0E*Jd40(B.               (line 129)
 * TAB:                          $BFI$_$NJd40(B.             (line   6)
 * X:                            $B8m$C$?EPO?$N:o=|(B.       (line   5)
@@ -10647,230 +10753,229 @@ File: skk.info, Node: $B%-!<:w0z(B, Prev: $B4X?t:w0z(B, Up: Top
 
 Tag table:
 Node: Top958
-Node: $B$O$8$a$K(B2828
-Node: $B$3$N%P!<%8%g%s$N(BSKK$B$K$D$$$F(B2951
-Node: SKK$B$H$O$J$K$+(B5148
-Node: $B%$%s%9%H!<%k(B6365
-Node: APEL $B$N%$%s%9%H!<%k(B6560
-Node: DDSKK $B$N%$%s%9%H!<%k(B6954
-Node: GNU Emacs $B$X$N%$%s%9%H!<%k(B7737
-Node: XEmacs $B$X$N%$%s%9%H!<%k(B8992
-Node: $BBPOCE*$J%$%s%9%H!<%k(B10110
-Node: $B<-=q$K$D$$$F(B10826
-Node: $B<-=q$NF~<j(B11368
-Node: $B<-=q$r(B DDSKK $B$HF1;~$K%$%s%9%H!<%k$9$k(B12299
-Node: $B<-=q%5!<%P$NF~<j(B12653
-Node: $B$O$8$a$N@_Dj(B13049
-Node: $B:G$b4pK\E*$J@_Dj(B13787
-Node: $B%$%s%/%j%a%s%H8!:w$N@_Dj(B15014
-Node: $B<-=q%5!<%P$r;H$$$?$$$H$-$N@_Dj(B15932
-Node: DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B17413
-Node: $B4pK\E*$J;H$$J}(B18395
-Node: $B5/F0$H=*N;(B18805
-Node: SKK$B%*!<%H%U%#%k%b!<%I(B20411
-Node: $B<-=q$NJ]B8(B20982
-Node: $BF~NO%b!<%I(B21417
-Node: $BF~NO%b!<%I$N@bL@(B21610
-Node: $BF~NO%b!<%I$r@Z$jBX$($k%-!<(B22237
-Node: $BJQ49%b!<%I(B23024
-Node: $B"#%b!<%I(B23630
-Node: $B"&%b!<%I(B24241
-Node: $B8e$+$i"&%b!<%I$KF~$kJ}K!(B24718
-Node: $B"&%b!<%I$rH4$1$kJ}K!(B25554
-Node: $B"'%b!<%I(B26107
-Node: $BAw$j2>L>$,L5$$>l9g(B26419
-Node: $B<!8uJd!&A08uJd(B27269
-Node: $BAw$j2>L>$,M-$k>l9g(B28714
-Node: $B<-=qEPO?%b!<%I(B29686
-Node: $BAw$j2>L>$,L5$$>l9g$N<-=qEPO?(B30797
-Node: $BAw$j2>L>$,M-$k>l9g$N<-=qEPO?(B31493
-Node: $B%5JQF0;l$N<-=qEPO?$K4X$9$kCm0U(B32467
-Node: $B:F5"E*<-=qEPO?(B33044
-Node: $B2~9TJ8;z$r4^$`<-=qEPO?(B34107
-Node: $B%$%s%/%j%a%s%?%k!&%5!<%A(B34435
-Node: skk-isearch$B$NA`:n@-(B34724
-Node: skk-isearch$B$HF~NO%b!<%I(B35376
-Node: $B%A%e!<%H%j%"%k(B35910
-Node: $BJXMx$J1~MQ5!G=(B36658
-Node: $B%U%!%$%k9=@.(B37512
-Node: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B41730
-Node: $B@_Dj%U%!%$%k(B42301
-Node: skk-init-file$B$N<+F0%3%s%Q%$%k(B43990
-Node: $B%U%C%/(B44688
-Node: Customize $B$K$h$k@_DjJQ99(B45672
-Node: skk-customize $B$K$h$k@_DjJQ99(B46481
-Node: $B%+%?%+%J!"1Q;zF~NO$NJXK!(B46892
-Node: $B$+$J%b!<%I$+$i%+%?%+%J$rF~NO(B47226
-Node: $BA41QJ8;z$NF~NO(B48319
-Node: $BNN0h$NA`:n(B49178
-Node: $B%+%?%+%J$N8+=P$78l(B51948
-Node: $BJ8L.$K1~$8$?<+F0%b!<%I@Z$jBX$((B52233
-Node: $BJd40(B53367
-Node: $BFI$_$NJd40(B53747
-Node: $BJd40$7$J$,$iJQ49(B56178
-Node: $BF0E*Jd40(B56984
-Node: $BJXMx$JJQ49!"$=$NB>$NJQ49(B60229
-Node: $BC14A;zJQ49(B60789
-Node: $B8!:w%-!<$N@_Dj(B62118
-Node: $B<-=q$N@_Dj(B62495
-Node: $BAm2h?t$K$h$kC14A;zJQ49(B63656
-Node: $BIt<s$K$h$kC14A;zJQ49(B64195
-Node: $BIt<s$NFI$_$K$h$kC14A;zJQ49(B65471
-Node: $B8uJd$N9J$j9~$_(B66150
-Node: $B@\F,<-!&@\Hx<-(B67494
-Node: $B?tCMJQ49(B69321
-Node: $B%"%9%-!<J8;z$r8+=P$78l$H$7$?JQ49(B71971
-Node: $B:#F|$NF|IU$NF~NO(B72894
-Node: $B%W%m%0%i%`<B9TJQ49(B74242
-Node: $B6uGr!&2~9T!&%?%V$r4^$s$@8+=P$78l$NJQ49(B77309
-Node: $B%+%?%+%JJQ49(B78611
-Node: $B%5JQF0;lJQ49(B79450
-Node: $B0[BN;z$XJQ49$9$k(B80491
-Node: $B%U%!%s%/%7%g%s%-!<$N;H$$J}(B81178
-Node: $B%-!<@_Dj(B81877
-Node: $B$+$J%b!<%I(B/$B%+%J%b!<%I$N%-!<@_Dj(B82334
-Node: $B%m!<%^;z$N%k!<%k$N@_Dj(B82564
-Node: $B%m!<%^;z%k!<%k$NJQ99Nc(B83826
-Node: $B"#%b!<%I$K4XO"$9$k$=$NB>$NJQ?t(B84720
-Node: $B?t;z$d5-9fJ8;z$NF~NO(B86343
-Node: $BA41Q%b!<%I$N%-!<@_Dj(B87213
-Node: $BJD$83g8L$N<+F0F~NO(B88344
-Node: $B%j!<%8%g%s$r3g8L$G0O$`(B91254
-Node: $B3NDj$9$k%-!<(B91790
-Node: $B8uJd$NA*Br$KMQ$$$k%-!<(B92010
-Node: $B"'%b!<%I$G$N(BRET92965
-Node: $B"'%b!<%I$G$N(BBS93756
-Node: $BAw$j$"$jJQ49Cf$N(BC-g94958
-Node: $BJQ490LCV$N;XDjJ}K!(B95676
-Node: 1$B2s$N<h$j>C$7A`:n(B(undo)$B$NBP>](B97329
-Node: $BJQ49!"3NDj$NA08e(B99311
-Node: $B%]%$%s%H$rLa$7$F"&%b!<%I$X(B99733
-Node: $BD>A0$N3NDj$r:FJQ49(B100787
-Node: $B<+F0JQ493+;O(B101938
-Node: $B0EL[$N3NDj$N%?%$%_%s%0(B103101
-Node: $B@Q6KE*$J3NDj(B104575
-Node: $B3NDj<-=q(B105367
-Node: $BAw$j2>L>4XO"(B106466
-Node: $BAw$j2>L>$N87L)$J%^%C%A(B106750
-Node: $BAw$j2>L>$NM%@hE*$J%^%C%A(B108648
-Node: $BAw$j2>L>$N<+F0=hM}(B109532
-Node: $B$I$N$h$&$KJQ49$5$l$k$+(B109751
-Node: $B<-=qEPO?$N:]$KCm0U$9$Y$-$3$H(B111596
-Node: $BAw$j$"$jJQ49$NJQ493+;O$N%?%$%_%s%0(B114536
-Node: $B8uJd$N=g=x(B115661
-Node: $BJQ49$N3X=,(B115974
-Node: $B8uJd$N=g=x$N8GDj(B118794
-Node: $B%Y%$%:E}7W$rMQ$$$?3X=,(B119397
-Node: $B<-=q4XO"(B119567
-Node: $B<-=q$N<oN`(B120065
-Node: $B<-=q%U%!%$%k$N;XDj(B120974
-Node: $B<-=q$N8!:wJ}K!$N@_Dj(B123381
-Node: $B<-=q8!:w$N@_Dj$N6qBNNc(B123607
-Node: $B<-=q8!:w$N$?$a$N4X?t(B125113
-Node: Emacs $BIUB0$N<-=q(B127096
-Node: $B%5!<%P4XO"(B128135
-Node: $B%5!<%P%3%s%W%j!<%8%g%s(B130405
-Node: $B<-=q$N=q<0(B131490
-Node: $BAw$j$"$j%(%s%H%j$HAw$j$J$7%(%s%H%j(B131655
-Node: $BAw$j$"$j%(%s%H%j$N%V%m%C%/7A<0(B133342
-Node: $B%(%s%H%j$NG[Ns(B134514
-Node: $B6/@)E*$K<-=qEPO?%b!<%I$XF~$k(B135396
-Node: $B8m$C$?EPO?$N:o=|(B135689
-Node: $B8D?M<-=q%U%!%$%k$NJT=8(B136391
-Node: $B8D?M<-=q$NJ]B8F0:n(B136879
-Node: $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B139066
-Node: $B<-=q%P%C%U%!(B140521
-Node: $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B141299
-Node: $B<-=q%P%C%U%!$N(Bbuffer-file-name142232
-Node: $BCm<a(B ($B%"%N%F!<%7%g%s(B)142711
-Node: $B%"%N%F!<%7%g%s$N4pAC(B143110
-Node: $B%"%N%F!<%7%g%s$N;HMQ(B143892
-Node: $B%"%N%F!<%7%g%s$NEPO?(B146438
-Node: $B%"%N%F!<%7%g%s$H$7$F(B EPWING $B<-=q$rI=<($9$k(B147256
-Node: Apple OS X $B!V<-=q!W%5!<%S%9$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B149548
-Node: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B150908
-Node: $B30It%3%^%s%I$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B152362
-Node: $B3F<o%"%N%F!<%7%g%s5!G=$r(B SKK $B$NOH$r$3$($F3hMQ$9$k(B152885
-Node: $BJ8;z%3!<%I4XO"(B154811
-Node: $BJ8;z%3!<%I$^$?$O%a%K%e!<$K$h$kJ8;zF~NO(B155038
-Node: $B%a%K%e!<$K$h$kJ8;zF~NO(B155990
-Node: $BJ8;z%3!<%I0lMw(B158377
-Node: $BJ8;z%3!<%I$rCN$kJ}K!(B159662
-Node: DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B160913
-Node: skk-lookup161187
-Node: skk-look162410
-Node: $B1QC18l$NJd40(B162761
-Node: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$9(B163418
-Node: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$7$?8e!"99$K:F5"E*$J1QOBJQ49$r9T$&(B164394
-Node: Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B165379
-Node: $B>~$j$D$1(B167194
-Node: $B2>L>J8;z$N%m!<%^;z%W%l%U%#%C%/%9$N%(%3!<(B167454
-Node: $BF~NO%b!<%I$r<($9%b!<%I%i%$%s$NJ8;zNs$NJQ99(B168421
-Node: $BF~NO%b!<%I$r<($9%+!<%=%k?'$K4X$9$k@_Dj(B169057
-Node: $BJQ498uJd0lMw$NI=<(J}K!(B170141
-Node: $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B173961
-Node: $BJQ498uJd$N99$J$kAu>~(B175497
-Node: $B%b!<%I%i%$%s$NAu>~(B176708
-Node: $B%$%s%8%1!<%?(B176872
-Node: $B%"%$%3%s(B177810
-Node: $B%f!<%6%,%$%@%s%94XO"(B178219
-Node: $B%(%i!<$J$I$NF|K\8lI=<((B178376
-Node: $B>iD9$J0FFb%a%C%;!<%8$NI=<((B178885
-Node: I-search$B4XO"(B181063
-Node: $B5/F0;~$NF~NO%b!<%I$N;XDj(B181223
-Node: $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B181905
-Node: VIP/VIPER$B$H$NJ;MQ(B183008
-Node: picture-mode$B$H$NJ;MQ(B183508
-Node: Org-mode$B$H$NJ;MQ(B184094
-Node: $B%m!<%^;zF~NO0J30$NF~NOJ}<0(B184393
-Node: AZIK184637
-Node: ACT186441
-Node: TUT-code186792
-Node: $B$+$JF~NO$H?F;X%7%U%H(B187222
-Node: $B$=$N$[$+$N3HD%5!G=(B188477
-Node: $B8r$<=q$-JQ49(B188709
-Node: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B189021
-Node: SKK$B$K4X$9$k>pJs(B189436
-Node: $B:G?7>pJs(B189669
-Node: SKK$B%a!<%j%s%0%j%9%H(B190321
-Node: SKK$B4XO"%=%U%H%&%'%"(B191119
-Node: SKK$B<-=q$K$D$$$F(B191384
-Node: $B<-=q%D!<%k(B191718
-Node: SKK$B$N:n<T(B192056
-Node: SKK$B$NNr;K(B197234
-Node: $B$3$N%^%K%e%"%k$K$D$$$F(B197590
-Node: $B<U<-(B197755
-Node: $B$h$/$"$k<ALd$H$=$N2sEz(B(FAQ)198445
-Node: Introduction198851
-Node: Q1-1 Daredevil SKK $B$C$F(B SKK $B$H$O0c$&$N$G$9$+(B?199161
-Node: Q1-2 SKK $B$O%7%s%W%k$J$N$,D9=j$@$C$?$N$G$O(B?199733
-Node: Q1-3 DDSKK $B$O$I$N(B Emacs $B$G;H$($^$9$+(B?200267
-Node: Q1-4 DDSKK $B$O$I$s$J%*%Z%l!<%F%#%s%0%7%9%F%`$G;H$($^$9$+(B?200595
-Node: Q1-5 APEL $B$C$F2?(B? $BI,MW$G$9$+(B?201163
-Node: Installation201534
-Node: Q2-1 SKK $B$r;H$&$N$K2?$,I,MW$G$9$+(B?201764
-Node: Q2-2 SKK $B<-=q$O$I$3$K$"$j$^$9$+(B?202108
-Node: Q2-3 SKK $B%5!<%P$O$I$3$K$"$j$^$9$+(B?202330
-Node: Customization202591
-Node: Q3-1 $B!V!%!W!"!V!$!W(B $B$,F~NO$G$-$k$h$&$K%+%9%?%^%$%:$7$?$$$N$G$9$,!#(B203000
-Node: Q3-2 $B!V$p!W$d!V%p!W(B $B$,F~NO$G$-$k$h$&$K%+%9%?%^%$%:$7$?$$$N$G$9$,!#(B204234
-Node: Q3-3 $B8!:w$9$k<-=q$rA}$d$7$?$$$N$G$9$,!#(B204828
-Node: Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B206621
-Node: Q3-5 $BA4$/4A;z$,=P$F$-$^$;$s!#(B209025
-Node: Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B209673
-Node: Q3-7 C-x C-j $B$G(B dired $B$,5/F0$7$F$7$^$$$^$9!#(B210152
-Node: Dictionaries210534
-Node: Q4-1 SKK $B$K$OM9JXHV9f<-=q$,$"$j$^$9$+(B?210793
-Node: Q4-2 SKK $B$N<-=q$K$O!"IJ;l>pJs$,$J$$$s$G$9$M!#(B211153
-Node: Q4-3 $BJ#?t$N(B SKK $B<-=q$r7k9g$G$-$^$9$+(B?211614
-Node: Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B211903
-Node: Miscellaneous212923
-Node: Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?213178
-Node: Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?214878
-Node: Q5-3 $BB>$N(B FEP $B$r;HMQCf$K$b(B SHIFT $B$r2!$7$F$7$^$$$^$9!#(B215881
-Node: $B;v9`:w0z(B216203
-Node: $BJQ?t:w0z(B229580
-Node: $B4X?t:w0z(B247042
-Node: $B%-!<:w0z(B251123
+Node: $B$O$8$a$K(B2762
+Node: $B$3$N%P!<%8%g%s$N(BSKK$B$K$D$$$F(B2885
+Node: SKK$B$H$O$J$K$+(B5340
+Node: $B%$%s%9%H!<%k(B6581
+Node: DDSKK $B$N%$%s%9%H!<%k(B6759
+Node: GNU Emacs $B$X$N%$%s%9%H!<%k(B7588
+Node: XEmacs $B$X$N%$%s%9%H!<%k(B8831
+Node: $BBPOCE*$J%$%s%9%H!<%k(B10086
+Node: MELPA $B$K$h$k%$%s%9%H!<%k(B10939
+Node: $B<-=q$K$D$$$F(B11459
+Node: $B<-=q$NF~<j(B12001
+Node: $B<-=q$r(B DDSKK $B$HF1;~$K%$%s%9%H!<%k$9$k(B13425
+Node: $B<-=q%5!<%P$NF~<j(B14150
+Node: $B$O$8$a$N@_Dj(B14546
+Node: $B:G$b4pK\E*$J@_Dj(B15284
+Node: $B%$%s%/%j%a%s%H8!:w$N@_Dj(B16521
+Node: $B<-=q%5!<%P$r;H$$$?$$$H$-$N@_Dj(B17450
+Node: DDSKK $B$r(B Emacs $B$N(B Input Method $B$H$9$k(B18931
+Node: $B4pK\E*$J;H$$J}(B19929
+Node: $B5/F0$H=*N;(B20339
+Node: SKK$B%*!<%H%U%#%k%b!<%I(B21964
+Node: $B<-=q$NJ]B8(B22535
+Node: $BF~NO%b!<%I(B22970
+Node: $BF~NO%b!<%I$N@bL@(B23163
+Node: $BF~NO%b!<%I$r@Z$jBX$($k%-!<(B23790
+Node: $BJQ49%b!<%I(B24577
+Node: $B"#%b!<%I(B25183
+Node: $B"&%b!<%I(B25794
+Node: $B8e$+$i"&%b!<%I$KF~$kJ}K!(B26271
+Node: $B"&%b!<%I$rH4$1$kJ}K!(B27107
+Node: $B"'%b!<%I(B27660
+Node: $BAw$j2>L>$,L5$$>l9g(B27972
+Node: $B<!8uJd!&A08uJd(B28822
+Node: $BAw$j2>L>$,M-$k>l9g(B30593
+Node: $B<-=qEPO?%b!<%I(B31565
+Node: $BAw$j2>L>$,L5$$>l9g$N<-=qEPO?(B32676
+Node: $BAw$j2>L>$,M-$k>l9g$N<-=qEPO?(B33372
+Node: $B%5JQF0;l$N<-=qEPO?$K4X$9$kCm0U(B34346
+Node: $B:F5"E*<-=qEPO?(B34923
+Node: $B2~9TJ8;z$r4^$`<-=qEPO?(B35986
+Node: $B%$%s%/%j%a%s%?%k!&%5!<%A(B36314
+Node: skk-isearch$B$NA`:n@-(B36603
+Node: skk-isearch$B$HF~NO%b!<%I(B37255
+Node: $B%A%e!<%H%j%"%k(B37789
+Node: $BJXMx$J1~MQ5!G=(B38547
+Node: $B%U%!%$%k9=@.(B39352
+Node: $B%f!<%6%*%W%7%g%s$N@_DjJ}K!(B43682
+Node: $B@_Dj%U%!%$%k(B44047
+Node: skk-init-file$B$N<+F0%3%s%Q%$%k(B45833
+Node: $B%U%C%/(B46541
+Node: Customize $B$K$h$k@_DjJQ99(B47525
+Node: skk-customize $B$K$h$k@_DjJQ99(B48344
+Node: $B%+%?%+%J!"1Q;zF~NO$NJXK!(B48755
+Node: $B$+$J%b!<%I$+$i%+%?%+%J$rF~NO(B49089
+Node: $BA41QJ8;z$NF~NO(B50182
+Node: $BNN0h$NA`:n(B51041
+Node: $B%+%?%+%J$N8+=P$78l(B53811
+Node: $BJ8L.$K1~$8$?<+F0%b!<%I@Z$jBX$((B54096
+Node: $BJd40(B55240
+Node: $BFI$_$NJd40(B55620
+Node: $BJd40$7$J$,$iJQ49(B58258
+Node: $BF0E*Jd40(B59064
+Node: $BJXMx$JJQ49!"$=$NB>$NJQ49(B62309
+Node: $BC14A;zJQ49(B62869
+Node: $B8!:w%-!<$N@_Dj(B64198
+Node: $B<-=q$N@_Dj(B64575
+Node: $BAm2h?t$K$h$kC14A;zJQ49(B65736
+Node: $BIt<s$K$h$kC14A;zJQ49(B66275
+Node: $BIt<s$NFI$_$K$h$kC14A;zJQ49(B67551
+Node: $B8uJd$N9J$j9~$_(B68230
+Node: $B@\F,<-!&@\Hx<-(B69574
+Node: $B?tCMJQ49(B71401
+Node: $B%"%9%-!<J8;z$r8+=P$78l$H$7$?JQ49(B74051
+Node: $B:#F|$NF|IU$NF~NO(B74974
+Node: $B%W%m%0%i%`<B9TJQ49(B76311
+Node: $B6uGr!&2~9T!&%?%V$r4^$s$@8+=P$78l$NJQ49(B79378
+Node: $B%+%?%+%JJQ49(B80680
+Node: $B%5JQF0;lJQ49(B81519
+Node: $B0[BN;z$XJQ49$9$k(B82560
+Node: $B%U%!%s%/%7%g%s%-!<$N;H$$J}(B83247
+Node: $B%-!<@_Dj(B83946
+Node: $B$+$J%b!<%I(B/$B%+%J%b!<%I$N%-!<@_Dj(B84403
+Node: $B%m!<%^;z$N%k!<%k$N@_Dj(B84633
+Node: $B%m!<%^;z%k!<%k$NJQ99Nc(B85895
+Node: $B"#%b!<%I$K4XO"$9$k$=$NB>$NJQ?t(B86789
+Node: $B?t;z$d5-9fJ8;z$NF~NO(B88412
+Node: $BA41Q%b!<%I$N%-!<@_Dj(B89282
+Node: $BJD$83g8L$N<+F0F~NO(B90413
+Node: $B%j!<%8%g%s$r3g8L$G0O$`(B93323
+Node: $B3NDj$9$k%-!<(B93859
+Node: $B8uJd$NA*Br$KMQ$$$k%-!<(B94079
+Node: $B"'%b!<%I$G$N(BRET95034
+Node: $B"'%b!<%I$G$N(BBS95825
+Node: $BAw$j$"$jJQ49Cf$N(BC-g97027
+Node: $BJQ490LCV$N;XDjJ}K!(B97745
+Node: 1$B2s$N<h$j>C$7A`:n(B(undo)$B$NBP>](B99398
+Node: $BJQ49!"3NDj$NA08e(B101380
+Node: $B%]%$%s%H$rLa$7$F"&%b!<%I$X(B101802
+Node: $BD>A0$N3NDj$r:FJQ49(B102856
+Node: $B<+F0JQ493+;O(B104007
+Node: $B0EL[$N3NDj$N%?%$%_%s%0(B105170
+Node: $B@Q6KE*$J3NDj(B106644
+Node: $B3NDj<-=q(B107436
+Node: $BAw$j2>L>4XO"(B108535
+Node: $BAw$j2>L>$N87L)$J%^%C%A(B108819
+Node: $BAw$j2>L>$NM%@hE*$J%^%C%A(B110717
+Node: $BAw$j2>L>$N<+F0=hM}(B111601
+Node: $B$I$N$h$&$KJQ49$5$l$k$+(B111820
+Node: $B<-=qEPO?$N:]$KCm0U$9$Y$-$3$H(B113661
+Node: $BAw$j$"$jJQ49$NJQ493+;O$N%?%$%_%s%0(B116601
+Node: $B8uJd$N=g=x(B117726
+Node: $BJQ49$N3X=,(B118039
+Node: $B8uJd$N=g=x$N8GDj(B120858
+Node: $B%Y%$%:E}7W$rMQ$$$?3X=,(B121461
+Node: $B<-=q4XO"(B122830
+Node: $B<-=q$N<oN`(B123328
+Node: $B<-=q%U%!%$%k$N;XDj(B124237
+Node: $B<-=q$N8!:wJ}K!$N@_Dj(B126644
+Node: $B<-=q8!:w$N@_Dj$N6qBNNc(B126870
+Node: $B<-=q8!:w$N$?$a$N4X?t(B128376
+Node: Emacs $BIUB0$N<-=q(B130358
+Node: $B%5!<%P4XO"(B131397
+Node: $B%5!<%P%3%s%W%j!<%8%g%s(B133667
+Node: $B<-=q$N=q<0(B134752
+Node: $BAw$j$"$j%(%s%H%j$HAw$j$J$7%(%s%H%j(B134917
+Node: $BAw$j$"$j%(%s%H%j$N%V%m%C%/7A<0(B136600
+Node: $B%(%s%H%j$NG[Ns(B137771
+Node: $B6/@)E*$K<-=qEPO?%b!<%I$XF~$k(B138653
+Node: $B8m$C$?EPO?$N:o=|(B138946
+Node: $B8D?M<-=q%U%!%$%k$NJT=8(B139648
+Node: $B8D?M<-=q$NJ]B8F0:n(B140136
+Node: $BJQ495Z$S8D?M<-=q$K4X$9$kE}7W(B142322
+Node: $B<-=q%P%C%U%!(B143777
+Node: $B<-=q%P%C%U%!$NJ8;z%3!<%I$N@_Dj(B144555
+Node: $B<-=q%P%C%U%!$N(Bbuffer-file-name145533
+Node: $BCm<a(B ($B%"%N%F!<%7%g%s(B)146012
+Node: $B%"%N%F!<%7%g%s$N4pAC(B146411
+Node: $B%"%N%F!<%7%g%s$N;HMQ(B147193
+Node: $B%"%N%F!<%7%g%s$NEPO?(B149739
+Node: $B%"%N%F!<%7%g%s$H$7$F(B EPWING $B<-=q$rI=<($9$k(B150557
+Node: Apple OS X $B!V<-=q!W%5!<%S%9$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B152849
+Node: Wikipedia/Wiktionary $B$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B154209
+Node: $B30It%3%^%s%I$+$i%"%N%F!<%7%g%s$r<hF@$9$k(B155632
+Node: $B3F<o%"%N%F!<%7%g%s5!G=$r(B SKK $B$NOH$r$3$($F3hMQ$9$k(B156155
+Node: $BJ8;z%3!<%I4XO"(B158079
+Node: $BJ8;z%3!<%I$^$?$O%a%K%e!<$K$h$kJ8;zF~NO(B158306
+Node: $B%a%K%e!<$K$h$kJ8;zF~NO(B159258
+Node: $BJ8;z%3!<%I0lMw(B161645
+Node: $BJ8;z%3!<%I$rCN$kJ}K!(B162946
+Node: DDSKK $B0J30$N%D!<%k$rMQ$$$?<-=qJQ49(B164197
+Node: skk-lookup164521
+Node: skk-look165744
+Node: $B1QC18l$NJd40(B166095
+Node: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$9(B166752
+Node: $B1QC18l$r$"$$$^$$$KJQ49$7$F<h$j=P$7$?8e!"99$K:F5"E*$J1QOBJQ49$r9T$&(B167728
+Node: Lisp $B%7%s%\%kL>$NJd408!:wJQ49(B168713
+Node: Google CGI API for Japanese Input $B$rMxMQ$7$?$+$J4A;zJQ49(B170581
+Node: $B>~$j$D$1(B171675
+Node: $B2>L>J8;z$N%m!<%^;z%W%l%U%#%C%/%9$N%(%3!<(B171935
+Node: $BF~NO%b!<%I$r<($9%b!<%I%i%$%s$NJ8;zNs$NJQ99(B172902
+Node: $BF~NO%b!<%I$r<($9%+!<%=%k?'$K4X$9$k@_Dj(B173538
+Node: $BJQ498uJd0lMw$NI=<(J}K!(B174622
+Node: $B"'%b!<%I$K$*$1$kJQ498uJd$N%O%$%i%$%HI=<((B178565
+Node: $BJQ498uJd$N99$J$kAu>~(B180101
+Node: $B%b!<%I%i%$%s$NAu>~(B181312
+Node: $B%$%s%8%1!<%?(B181476
+Node: $B%"%$%3%s(B182414
+Node: $B%f!<%6%,%$%@%s%94XO"(B182823
+Node: $B%(%i!<$J$I$NF|K\8lI=<((B182980
+Node: $B>iD9$J0FFb%a%C%;!<%8$NI=<((B183491
+Node: I-search$B4XO"(B185669
+Node: $B5/F0;~$NF~NO%b!<%I$N;XDj(B185829
+Node: $B4V$K6uGrEy$r4^$`J8;zNs$N8!:w(B186511
+Node: VIP/VIPER$B$H$NJ;MQ(B187614
+Node: picture-mode$B$H$NJ;MQ(B188114
+Node: $B%m!<%^;zF~NO0J30$NF~NOJ}<0(B188680
+Node: AZIK188924
+Node: ACT190728
+Node: TUT-code191079
+Node: $B$+$JF~NO$H?F;X%7%U%H(B191509
+Node: $B$=$N$[$+$N3HD%5!G=(B192942
+Node: $B8r$<=q$-JQ49(B193124
+Node: SKK$B$K4X$9$k>pJs(B193383
+Node: $B:G?7>pJs(B193616
+Node: SKK$B%a!<%j%s%0%j%9%H(B194232
+Node: SKK$B4XO"%=%U%H%&%'%"(B195030
+Node: SKK$B<-=q$K$D$$$F(B195295
+Node: $B<-=q%D!<%k(B195629
+Node: SKK$B$N:n<T(B195967
+Node: SKK$B$NNr;K(B196249
+Node: $B$3$N%^%K%e%"%k$K$D$$$F(B196605
+Node: $B<U<-(B196770
+Node: $B$h$/$"$k<ALd$H$=$N2sEz(B(FAQ)197460
+Node: Introduction197866
+Node: Q1-1 Daredevil SKK $B$C$F(B SKK $B$H$O0c$&$N$G$9$+(B?198176
+Node: Q1-2 SKK $B$O%7%s%W%k$J$N$,D9=j$@$C$?$N$G$O(B?198748
+Node: Q1-3 DDSKK $B$O$I$N(B Emacs $B$G;H$($^$9$+(B?199282
+Node: Q1-4 DDSKK $B$O$I$s$J%*%Z%l!<%F%#%s%0%7%9%F%`$G;H$($^$9$+(B?199610
+Node: Q1-5 APEL $B$C$F2?(B? $BI,MW$G$9$+(B?200192
+Node: Installation200563
+Node: Q2-1 SKK $B$r;H$&$N$K2?$,I,MW$G$9$+(B?200793
+Node: Q2-2 SKK $B<-=q$O$I$3$K$"$j$^$9$+(B?201140
+Node: Q2-3 SKK $B%5!<%P$O$I$3$K$"$j$^$9$+(B?201362
+Node: Customization201620
+Node: Q3-1 $B!V!%!W!"!V!$!W(B $B$,F~NO$G$-$k$h$&$K%+%9%?%^%$%:$7$?$$$N$G$9$,!#(B202029
+Node: Q3-2 $B!V$p!W$d!V%p!W(B $B$,F~NO$G$-$k$h$&$K%+%9%?%^%$%:$7$?$$$N$G$9$,!#(B203263
+Node: Q3-3 $B8!:w$9$k<-=q$rA}$d$7$?$$$N$G$9$,!#(B203857
+Node: Q3-4 $B:8<j$N>.;X$r(B SHIFT $B$G9s;H$7$?$/$"$j$^$;$s!#(B205650
+Node: Q3-5 $BA4$/4A;z$,=P$F$-$^$;$s!#(B208068
+Node: Q3-6 $B%A%e!<%H%j%"%k$,5/F0$G$-$^$;$s!#(B208716
+Node: Q3-7 C-x C-j $B$G(B dired $B$,5/F0$7$F$7$^$$$^$9!#(B209205
+Node: Dictionaries209587
+Node: Q4-1 SKK $B$K$OM9JXHV9f<-=q$,$"$j$^$9$+(B?209846
+Node: Q4-2 SKK $B$N<-=q$K$O!"IJ;l>pJs$,$J$$$s$G$9$M!#(B210206
+Node: Q4-3 $BJ#?t$N(B SKK $B<-=q$r7k9g$G$-$^$9$+(B?210667
+Node: Q4-4 SKK $B7A<0$N1QOB<-=q$,$"$k$HJ9$$$?$N$G$9$,!#(B210956
+Node: Miscellaneous211976
+Node: Q5-1 SKK abbrev $B%b!<%I$G$b$C$H1QC18l$rMxMQ$7$?JQ49$,$G$-$^$;$s$+(B?212231
+Node: Q5-2 $B;THN$N(B CD-ROM $B<-=q$d%M%C%H%o!<%/$N<-=q%5!<%P$,MxMQ$G$-$^$9$+(B?213931
+Node: Q5-3 $BB>$N(B FEP $B$r;HMQCf$K$b(B SHIFT $B$r2!$7$F$7$^$$$^$9!#(B214944
+Node: $B;v9`:w0z(B215266
+Node: $BJQ?t:w0z(B228742
+Node: $B4X?t:w0z(B247114
+Node: $B%-!<:w0z(B251764
 
 End tag table
