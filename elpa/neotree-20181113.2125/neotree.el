@@ -198,6 +198,11 @@ window."
   :type 'boolean
   :group 'neotree)
 
+(defcustom neo-reset-size-on-open nil
+  "*If non-nil, the width of the noetree window will be reseted every time a file is open."
+  :type 'boolean
+  :group 'neotree)
+
 (defcustom neo-theme 'classic
   "*The tree style to display.
 `classic' use icon to display, it only it suitable for GUI mode.
@@ -809,8 +814,9 @@ The description of ARG is in `neotree-enter'."
   (when (eq (safe-length (window-list)) 1)
     (neo-buffer--with-resizable-window
      (split-window-horizontally)))
-  (neo-global--when-window
-    (neo-window--zoom 'minimize))
+  (when neo-reset-size-on-open
+    (neo-global--when-window
+      (neo-window--zoom 'minimize)))
   ;; select target window
   (cond
    ;; select window with winum
@@ -1256,8 +1262,8 @@ Optional NODE-NAME is used for the `icons' theme"
       (unless (require 'all-the-icons nil 'noerror)
         (error "Package `all-the-icons' isn't installed"))
       (setq-local tab-width 1)
-      (or (and (equal name 'open)  (insert (all-the-icons-icon-for-dir node-name "down")))
-          (and (equal name 'close) (insert (all-the-icons-icon-for-dir node-name "right")))
+      (or (and (equal name 'open)  (insert (all-the-icons-icon-for-dir (directory-file-name node-name) "down")))
+          (and (equal name 'close) (insert (all-the-icons-icon-for-dir (directory-file-name node-name) "right")))
           (and (equal name 'leaf)  (insert (format "\t\t\t%s\t" (all-the-icons-icon-for-file node-name))))))
      (t
       (or (and (equal name 'open)  (funcall n-insert-symbol "- "))
@@ -2111,14 +2117,14 @@ automatically."
   "Show the NeoTree window."
   (interactive)
   (let ((cw (selected-window))
-         (path (buffer-file-name)))  ;; save current window and buffer
+        (path (buffer-file-name)))  ;; save current window and buffer
     (if neo-smart-open
-      (progn
-        (when (and (fboundp 'projectile-project-p)
-              (projectile-project-p)
-              (fboundp 'projectile-project-root))
-          (neotree-dir (projectile-project-root)))
-        (neotree-find path))
+        (progn
+          (when (and (fboundp 'projectile-project-p)
+                     (projectile-project-p)
+                     (fboundp 'projectile-project-root))
+            (neotree-dir (projectile-project-root)))
+          (neotree-find path))
       (neo-global--open))
     (neo-global--select-window)
     (when neo-toggle-window-keep-p
