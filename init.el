@@ -141,15 +141,13 @@
 ;; slime
 (load "~/.emacs.d/init-slime")
 
+;; ediff
+(load "~/.emacs.d/init-ediff")
+
 
 (require 'rvm)
 (rvm-use-default) ;; use rvm's default ruby for the current Emacs session
 
-;; ediff
-;; コントロール用のバッファを同一フレーム内に表示
-(setq ediff-window-setup-function 'ediff-setup-windows-plain)
-;; diffのバッファを上下ではなく左右に並べる
-(setq ediff-split-window-function 'split-window-horizontally)
 
 ;; 同名ファイルのバッファ名の識別文字列を変更
 (require 'uniquify)
