@@ -1,3 +1,5 @@
+;; smart mode line
+;;
 (defvar sml/no-confirm-load-theme t)
 
 ;; (defvar sml/theme 'dark)
@@ -16,6 +18,17 @@
 ;; (add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/" ":DBox:"))
 
 (sml/setup)
+
+
+;; diminish
+;; Hide or replace minor mode name.
+(when (require 'diminish nil t)
+  ;; (diminish 'company-mode)
+  (diminish 'company-mode "Comp")
+  (diminish 'projectile-mode "Ptile")
+  (diminish 'undo-tree-mode "UndoT")
+  (diminish 'editorconfig-mode "EdCnf"))
+
 
 
 ;; モードラインに時間を表示する
