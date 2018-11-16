@@ -121,6 +121,9 @@
 ;; 編集行のハイライト設定の読み込み
 (load "~/.emacs.d/init-hilight-line")
 
+;; mode line
+(load "~/.emacs.d/init-mode-line")
+
 ;; backup file
 (load "~/.emacs.d/init-backup-file")
 
@@ -213,21 +216,6 @@
 ;; (set-cursor-color "Gray")
 
 
-;; モードライン設定
-;; モードラインに時間を表示する
-(setq display-time-day-and-date t)
-(setq display-time-24hr-format t)
-(display-time)
-
-;; モードラインに行数とカラムを表示
-(line-number-mode 1)
-(column-number-mode 1)
-
-;; モードラインの色
-;; (set-face-foreground 'mode-line "light blue")
-;; (set-face-background 'mode-line "grey19")
-;; ;;(set-face-background 'modeline "black")
-
 ;; モードラインにバッテリ残量表示
 ;(display-battery-mode t)
 
@@ -313,6 +301,6 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (slime-theme challenger-deep-theme indent-guide dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons telephone-line company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php ubuntu-theme tronesque-theme paganini-theme metalheart-theme kooten-theme heroku-theme gotham-theme cyberpunk-theme clues-theme bubbleberry-theme bliss-theme badwolf-theme ample-theme material-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (smart-mode-line slime-theme challenger-deep-theme indent-guide dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons telephone-line company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php ubuntu-theme tronesque-theme paganini-theme metalheart-theme kooten-theme heroku-theme gotham-theme cyberpunk-theme clues-theme bubbleberry-theme bliss-theme badwolf-theme ample-theme material-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(robe-completing-read-func (quote helm-robe-completing-read))
  '(rspec-use-rake-when-possible nil))
