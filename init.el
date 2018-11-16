@@ -11,7 +11,13 @@
 (load "~/.emacs.d/init-load-path")
 
 
-;; 全体的な環境設定
+;; 全体的な環境設定 ;;
+
+;; メニューバーを消す
+(menu-bar-mode -1)
+;; スタートアップメッセージを非表示
+(setq inhibit-startup-message t)
+
 ;; Unicodeをメインにする場合の設定
 ;使用する言語環境
 (set-language-environment 'Japanese)
@@ -36,62 +42,17 @@
  (t (load "~/.emacs.d/init-console")))
 
 
-;; DDSKK
-(load "~/.emacs.d/init-skk")
+;; frame
+(load "~/.emacs.d/init-frame")
 
-;; undo-tree
-(when (require 'undo-tree nil t)
-  (global-undo-tree-mode))
-
-;; window-sysytemが有効の時のみ初期化
-(when (window-system)
-  ;; 編集行のハイライト設定の読み込み
-  (load "~/.emacs.d/init-hilight-line")
-
-  ;; color-theme
-  ;; (load-theme 'deeper-blue t)
-  ;; (load-theme 'manoj-dark t)
-  ;; (load-theme 'misterioso t)
-  ;; (load-theme 'tango-dark t)
-  ;; (load-theme 'wheatgrass t)
-  ;; (load-theme 'wombat t)
-  ;; (load-theme 'material t)
-  ;; (load-theme 'ample t)
-  ;; (load-theme 'ample-flat t)
-  ;; (load-theme 'badwolf t)
-  ;; (load-theme 'bliss t)
-  ;; (load-theme 'bubbleberry t)
-  ;; (load-theme 'clues t)
-  ;; (load-theme 'cyberpunk t)
-  ;; (load-theme 'gotham t)
-  ;; (load-theme 'heroku t)
-  ;; (load-theme 'kooten t)
-  ;; (load-theme 'metalheart t)
-  ;; (load-theme 'paganini t)
-  (load-theme 'tronesque t)
-  ;; (load-theme 'challenger-deep t)
-  ;; (load-theme 'slime t)
-  ;; (load-theme 'ubuntu t)
-
-  ;; comment line
-  ;; (set-face-foreground 'font-lock-comment-face "DodgerBlue")
-  ;; (set-face-foreground 'font-lock-comment-delimiter-face "DodgerBlue")
- )
-  ;; (enable-theme 'ample)
-
-(require 'all-ext)
-
+;; theme
+(load "~/.emacs.d/init-theme")
 
 ;; projectile
-(when (require 'projectile nil t)
-  (projectile-mode +1)
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  )
+(load "~/.emacs.d/init-projectile")
 
 ;; helm
 (load "~/.emacs.d/init-helm")
-
 
 ;; オートコンプリート設定の読み込み
 ;; 今現在はautoload無効
@@ -133,18 +94,43 @@
 ;; main-lineの読み込み
 ;; (load "~/.emacs.d/init-mainline")
 
-;; google-translateの読み込み
-(load "~/.emacs.d/init-google-translate")
-
 ;; telephone line
 (load "~/.emacs.d/init-telephone-line")
-
 
 ;; slime
 (load "~/.emacs.d/init-slime")
 
 ;; ediff
 (load "~/.emacs.d/init-ediff")
+
+;; DDSKK
+(load "~/.emacs.d/init-skk")
+
+;; eww
+(load "~/.emacs.d/init-eww")
+
+;; google-translateの読み込み
+(load "~/.emacs.d/init-google-translate")
+
+;; recentf
+(load "~/.emacs.d/init-recentf")
+
+;; neotree
+(load "~/.emacs.d/init-neotree")
+
+;; 編集行のハイライト設定の読み込み
+(load "~/.emacs.d/init-hilight-line")
+
+;; backup file
+(load "~/.emacs.d/init-backup-file")
+
+
+(require 'all-ext)
+
+
+;; undo-tree
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))
 
 
 (require 'rvm)
@@ -155,30 +141,77 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-;; ウィンドウフレームの設定
-;; ウィンドウ設定
-(when window-system
-  (progn
-    (set-frame-size
-     (selected-frame)
-     (- (/ (round (* (/ (x-display-pixel-width) 2) 1.4)) (frame-char-width)) 1)
-     (- (/ (- (x-display-pixel-height) 180) (frame-char-height)) 1))
-    )
-  (set-frame-position
-   (selected-frame)
-   20
-   30
-   )
-  )
-(setq initial-frame-alist default-frame-alist)
+
+;; anzu
+;; anzu-query-replace
+;; anzu-query-replace-regexp
+(require 'anzu)
+(global-anzu-mode +1)
+;; (global-set-key (kbd "C-c r") 'anzu-query-replace)
+;; (global-set-key (kbd "C-c R") 'anzu-query-replace-regexp)
+
+
+;; proofreading
+(require 'yspel)
+
+;; M-x dirtree
+(require 'dirtree)
+
+;; M-x ep-dirtree
+(require 'eproject)
+(defun ep-dirtree ()
+  (interactive)
+  (dirtree eproject-root t))
+
+;; all-the-icons
+;; Install fonts file after install package.
+;; M-x all-the-icons-install-fonts
+(require 'all-the-icons)
+;;(insert (all-the-icons-icon-for-file "foo.js"))
+;; Inserts a javascript icon
+;; #("js-icon" 0 1 (display (raise -0.24) face (:family "alltheicon" :height 1.08 :foreground "#FFD446")))
+
+
+;; vlf
+;;Automatically lanches for large file.
+(require 'vlf-setup)
+
+
+;; EditorConfigを有効化する
+;; プロジェクトルートに.editorconfigを置く
+(editorconfig-mode 1)
+
+;; 環境変数を見えるようにする
+;; pyenvでインストールしたpythonとかがちゃんと見える
+;; (when (memq window-system '(mac ns))
+;;   (exec-path-from-shell-initialize))
+
+
+;; ファイルを訪問時のフックからvc-find-file-hookを削除
+;; こいつが有効だと、gitとかcvsとかのディレクトリがある場合に
+;; 再帰的にいろいろ調査しようとして、動きがすごく重たい
+;; ネットワークディレクトリ上のファイルを開くと顕著
+;; gitとかcvsとかの便利機能をemacsで使わないならオフ
+;; ちなみにgitはmagitというlispがある。でもWindowsでは動かないかも
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
+;;(eval-after-load "vc" '(remove-hook 'find-file-hooks 'vc-find-file-hook))
+
+
+;;
+;; 上記までで設定したものの上書きやキーバインドなど
+;;
+
+;; comment line
+;; (set-face-foreground 'font-lock-comment-face "DodgerBlue")
+;; (set-face-foreground 'font-lock-comment-delimiter-face "DodgerBlue")
+;; (set-face-foreground 'font-lock-comment-face "Yellow")
+;; (set-face-foreground 'font-lock-comment-delimiter-face "Red")
+
+;; frame color
 ;; (set-background-color "Black")
 ;; (set-foreground-color "White")
 ;; (set-cursor-color "Gray")
 
-;; メニューバーを消す
-(menu-bar-mode -1)
-;; スタートアップメッセージを非表示
-(setq inhibit-startup-message t)
 
 ;; モードライン設定
 ;; モードラインに時間を表示する
@@ -197,20 +230,6 @@
 
 ;; モードラインにバッテリ残量表示
 ;(display-battery-mode t)
-
-;; タイトルバー設定
-;; タイトルバーにファイル名を表示
-;(setq frame-title-format "%b")
-;; ウィンドウタイトルをファイルパスに
-(setq frame-title-format (format "%%f - Emacs @%s" (system-name)))
-
-;; ショートカットキー設定
-;; M-g で指定行へ移動
-(global-set-key "\M-g" 'goto-line)
-
-;; 複数行コメントブロック
-(global-set-key "\C-c>" 'comment-region)
-(global-set-key "\C-c<" 'uncomment-region)
 
 ;; ファイル編集回り設定
 ;; 前回編集していた場所を記憶
@@ -243,6 +262,17 @@
 ;; リージョンに色を付ける
 (setq transient-mark-mode t)
 
+
+
+;; ショートカットキー設定
+;; M-g で指定行へ移動
+(global-set-key "\M-g" 'goto-line)
+
+;; 複数行コメントブロック
+(global-set-key "\C-c>" 'comment-region)
+(global-set-key "\C-c<" 'uncomment-region)
+
+
 ;; regionを拡張
 (global-set-key (kbd "C-@") 'er/expand-region)
 (global-set-key (kbd "C-M-@") 'er/contract-region) ;; リージョンを狭める
@@ -257,124 +287,6 @@
 
 ;; C-h でbackspace
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
-
-;; *.~ とかのバックアップファイルを作らない
-;;(setq make-backup-files nil)
-;; .#* とかのバックアップファイルを作らない
-;(setq auto-save-default nil)
-
-;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
-(add-to-list 'backup-directory-alist
-	     (cons "." "~/.emacs.d/backups/"))
-(setq auto-save-file-name-transforms
-      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
-
-;; anzu
-;; anzu-query-replace
-;; anzu-query-replace-regexp
-(require 'anzu)
-(global-anzu-mode +1)
-;; (global-set-key (kbd "C-c r") 'anzu-query-replace)
-;; (global-set-key (kbd "C-c R") 'anzu-query-replace-regexp)
-
-;; ファイルを訪問時のフックからvc-find-file-hookを削除
-;; こいつが有効だと、gitとかcvsとかのディレクトリがある場合に
-;; 再帰的にいろいろ調査しようとして、動きがすごく重たい
-;; ネットワークディレクトリ上のファイルを開くと顕著
-;; gitとかcvsとかの便利機能をemacsで使わないならオフ
-;; ちなみにgitはmagitというlispがある。でもWindowsでは動かないかも
-(remove-hook 'find-file-hooks 'vc-find-file-hook)
-;;(eval-after-load "vc" '(remove-hook 'find-file-hooks 'vc-find-file-hook))
-
-;; proofreading
-(require 'yspel)
-
-;; M-x dirtree
-(require 'dirtree)
-
-;; M-x ep-dirtree
-(require 'eproject)
-(defun ep-dirtree ()
-  (interactive)
-  (dirtree eproject-root t))
-
-;; eww(emacs web wowser)
-;;デフォルトの検索エンジンはduckduckgoのままだが地域を日本として検索するように設定
-;;(setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&q=")
-;;広告なし
-;; (setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&k1=-1&q=")
-;; (setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&k1=-1&kc=-1&kf=-1&q=")
-
-;; eww for google
-(defvar eww-disable-colorize t)
-(defun shr-colorize-region--disable (orig start end fg &optional bg &rest _)
-  (unless eww-disable-colorize
-    (funcall orig start end fg)))
-(advice-add 'shr-colorize-region :around 'shr-colorize-region--disable)
-(advice-add 'eww-colorize-region :around 'shr-colorize-region--disable)
-(defun eww-disable-color ()
-  "eww で文字色を反映させない"
-  (interactive)
-  (setq-local eww-disable-colorize t)
-  (eww-reload))
-(defun eww-enable-color ()
-  "eww で文字色を反映させる"
-  (interactive)
-  (setq-local eww-disable-colorize nil)
-  (eww-reload))
-(setq eww-search-prefix "http://www.google.co.jp/search?q=")
-
-
-;; 環境変数を見えるようにする
-;; pyenvでインストールしたpythonとかがちゃんと見える
-;; (when (memq window-system '(mac ns))
-;;   (exec-path-from-shell-initialize))
-
-;; recentf
-(when (require 'recentf nil t)
-  (setq recentf-max-saved-items 2000)
-  (setq recentf-exclude '(".recentf"))
-  (setq recentf-auto-cleanup 10)
-  (setq recentf-auto-save-timer
-        (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1))
-;;(setq recentf-save-file "~/.emacs.d/.recentf")
-;;(setq recentf-max-saved-items 100)            ;; recentf に保存するファイルの数
-;;(setq recentf-exclude '(".recentf"))           ;; .recentf自体は含まない
-;;(setq recentf-auto-cleanup 10)                 ;; 保存する内容を整理
-;;(run-with-idle-timer 30 t 'recentf-save-list)  ;; 30秒ごとに .recentf を保存
-
-
-;; EditorConfigを有効化する
-;; プロジェクトルートに.editorconfigを置く
-(editorconfig-mode 1)
-
-
-;; all-the-icons
-;; Install fonts file after install package.
-;; M-x all-the-icons-install-fonts
-(require 'all-the-icons)
-;;(insert (all-the-icons-icon-for-file "foo.js"))
-;; Inserts a javascript icon
-;; #("js-icon" 0 1 (display (raise -0.24) face (:family "alltheicon" :height 1.08 :foreground "#FFD446")))
-
-(when (require 'neotree nil t)
-  ;; Press '?' for neotree help.
-  ;; 隠しファイルをデフォルトで表示
-  (setq neo-show-hidden-files t)
-;; キーバインドをシンプルにする
-  (setq neo-keymap-style 'concise)
-  ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
-  (setq neo-smart-open t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-  (setq neo-window-fixed-size nil)
-;; (global-set-key "\C-q" 'neotree-toggle)
-  (global-set-key [f8] 'neotree-toggle))
-
-
-;; vlf
-;;Automatically lanches for large file.
-(require 'vlf-setup)
 
 
 ;; --------
