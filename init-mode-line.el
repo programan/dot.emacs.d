@@ -30,11 +30,13 @@
   (diminish 'editorconfig-mode "EdCnf"))
 
 
-
 ;; モードラインに時間を表示する
+(setq display-time-interval 1)
+(setq display-time-string-forms
+  '((format "%s-%s-%s(%s) %s:%s:%s" year month day dayname 24-hours minutes seconds)))
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
-(display-time)
+(display-time-mode t)
 
 ;; モードラインに行数とカラムを表示
 (line-number-mode 1)
