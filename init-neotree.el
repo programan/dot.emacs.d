@@ -6,7 +6,18 @@
   (setq neo-keymap-style 'concise)
   ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
   (setq neo-smart-open t)
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+
+  ;; all-the-icons
+  ;; Install fonts file after install package.
+  ;; M-x all-the-icons-install-fonts
+  (when (require 'all-the-icons nil t)
+    ;;(insert (all-the-icons-icon-for-file "foo.js"))
+    ;; Inserts a javascript icon
+    ;; #("js-icon" 0 1 (display (raise -0.24) face (:family "alltheicon" :height 1.08 :foreground "#FFD446")))
+    (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+
   (setq neo-window-fixed-size nil)
+
   ;; (global-set-key "\C-q" 'neotree-toggle)
   (global-set-key [f8] 'neotree-toggle))
