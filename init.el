@@ -4,6 +4,10 @@
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
 
+;; 同名で拡張子がelcとelのファイルがあった場合、新しい方を読む
+;; load時に拡張子まで指定されていた場合はこの限りではない
+(setq load-prefer-newer t)
+
 ;; Emacs24から標準搭載されたパッケージマネージャの設定
 (load "~/.emacs.d/init-package")
 
