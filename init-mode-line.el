@@ -17,6 +17,9 @@
 ;; abbreviate path
 ;; (add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/" ":DBox:"))
 
+;; はみ出ないように調整する
+(setq sml/extra-filler -3)
+
 (sml/setup)
 
 
