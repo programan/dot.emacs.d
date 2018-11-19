@@ -12,7 +12,8 @@
 ;; mark of modified buffer
 (setq sml/modified-char "*")
 ;; mark of read only buffer
-(setq sml/read-only-char "%%")
+;; (setq sml/read-only-char "%%")
+(setq sml/read-only-char "R")
 
 ;; abbreviate path
 ;; (add-to-list 'sml/replacer-regexp-list '("^~/Dropbox/" ":DBox:"))
@@ -45,8 +46,17 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+;; モードラインに改行コードを表示
+(setq eol-mnemonic-dos "(CRLF)")
+(setq eol-mnemonic-mac "(CR)")
+(setq eol-mnemonic-unix "(LF)")
+
 ;; モードラインの色
-(set-face-foreground 'mode-line "light blue")
-(set-face-background 'mode-line "grey19")
+(set-face-foreground 'mode-line "DeepSkyBlue")
+(set-face-background 'mode-line "gray19")
+(set-face-background 'mode-line-inactive "gray10")
+;; (set-face-foreground 'mode-line "light blue")
+;; (set-face-background 'mode-line "gray19")
+;; (set-face-background 'mode-line-inactive "gray10")
 ;; ;;(set-face-background 'modeline "black")
 
