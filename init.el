@@ -46,7 +46,7 @@
  (t (load "~/.emacs.d/init-console")))
 
 
-(require 'all-ext)
+;; (require 'all-ext)
 
 
 ;; frame
