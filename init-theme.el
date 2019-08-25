@@ -1,5 +1,5 @@
 ;; window-sysytemが有効の時のみ初期化
-(when (window-system)
+(when window-system
   ;; color-theme
   ;; (load-theme 'deeper-blue t)
   ;; (load-theme 'manoj-dark t)
