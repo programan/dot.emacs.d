@@ -38,14 +38,14 @@
 (add-to-list 'default-frame-alist '(font . "HackGen-11"))
 
 
+;; 半透明化
+;; 透明度の設定(active . inactive)
+(add-to-list 'default-frame-alist '(alpha . (90 . 80)))
+
+
 ;; ツールバーの非表示
 (when window-system
   (tool-bar-mode 0))
-
-
-;; 半透明化
-;; 透明度の設定(active . inactive)
-(add-to-list 'default-frame-alist '(alpha . (90 . 60)))
 
 
 ;; ctags.elの設定
