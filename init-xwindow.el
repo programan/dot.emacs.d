@@ -10,15 +10,16 @@
 
 
 ;クリップボードの文字コード
-;; コピーした内容を PRIMARY,CLIPBOARD セクションにもコピーする
-;;(set-clipboard-coding-system 'compound-text)
 (set-clipboard-coding-system 'utf-8)
-(when window-system
-  (setq select-enable-clipboard t))
+;;(set-clipboard-coding-system 'compound-text)
 
-;; C-yでクリップボードの内容をペースト(ヤンク)する
 (when window-system
-  (global-set-key "\C-y" 'x-clipboard-yank))
+  ;; コピーした内容を PRIMARY,CLIPBOARD セクションにもコピーする
+  (setq select-enable-clipboard t)
+  ;; C-yでクリップボードの内容をペースト(ヤンク)する
+  (global-set-key "\C-y" 'x-clipboard-yank)
+  ;; ツールバーの非表示
+  (tool-bar-mode 0))
 
 
 ;; シフト + 矢印で範囲選択
@@ -42,12 +43,6 @@
 ;; 透明度の設定(active . inactive)
 (add-to-list 'default-frame-alist '(alpha . (90 . 80)))
 
-
-;; ツールバーの非表示
-(when window-system
-  (tool-bar-mode 0))
-
-
 ;; ctags.elの設定
 (setq ctags-update-command (expand-file-name  "/usr/bin/ctags-exuberant"))
 
@@ -66,10 +61,13 @@
 (exec-path-from-shell-initialize)
 
 ;; migmo
-(require 'migemo)
-(setq migemo-dictionary "/usr/share/cmigemo/utf-8/migemo-dict")
-(setq migemo-command "cmigemo")
-(setq migemo-options '("-q" "--emacs" "-i" "\a")) (setq migemo-user-dictionary nil) (setq migemo-regex-dictionary nil)
-(setq migemo-coding-system 'utf-8-unix)
-(load-library "migemo")
-(migemo-init)
+(when (and (executable-find "cmigemo")
+	   (require 'migemo nil t))
+  (setq migemo-command "cmigemo")
+  (setq migemo-options '("-q" "--emacs"))
+  (setq migemo-dictionary "/usr/share/cmigemo/utf-8/migemo-dict")
+  (setq migemo-user-dictionary nil)
+  (setq migemo-regex-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix)
+  (load-library "migemo")
+  (migemo-init))
