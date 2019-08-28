@@ -1,7 +1,8 @@
 ;;; init-macos.el --- emacs settings for macos.
 
 ;; キーボードから入力される文字コード
-(set-keyboard-coding-system 'sjis-mac)
+;; (set-keyboard-coding-system 'sjis-mac)
+(set-keyboard-coding-system 'utf-8-mac)
 
 ;; ターミナルの文字コード
 (set-terminal-coding-system 'utf-8)
@@ -35,34 +36,8 @@
 
 
 ;; フォント設定
-;(if (eq window-system 'mac) (require 'carbon-font))
-;(fixed-width-set-fontset "hirakaku_w3" 12)
-;(setq fixed-width-rescale nil)
-
-;(if (eq window-system 'mac) (progn 
-;							  (require 'carbon-font)
-;							  (fixed-width-set-fontset "hirakaku_w3" 12)
-;							  (setq fixed-width-rescale nil)
-;;							  (set-default-font "fontset-hiraginomaru12")
-;;							  (setq default-frame-alist (append '((font . "fontset-hiraginomaru12"))))
-;))
-
-;; Ricty
-;; (let* ((size 13)
-;;        (asciifont "Ricty") ; ASCII fonts
-;;        (jpfont "Ricty") ; Japanese fonts
-;;        (h (* size 10))
-;;        (fontspec (font-spec :family asciifont))
-;;        (jp-fontspec (font-spec :family jpfont)))
-;;   (set-face-attribute 'default nil :family asciifont :height h)
-;;   (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
-;;   (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
-;;   (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
-;;   (set-fontset-font nil '(#x0080 . #x024F) fontspec) 
-;;   (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
-
-
-(add-to-list 'default-frame-alist '(font . "ricty-13.5"))
+;; (add-to-list 'default-frame-alist '(font . "ricty-13.5"))
+(add-to-list 'default-frame-alist '(font . "HackGen-14"))
 
 
 
@@ -74,14 +49,16 @@
 ;(add-hook 'after-save-hook 'growlnotify-after-save-hook)
 
 ;; 半透明化
-;; 透明度の設定
-(add-to-list 'default-frame-alist '(alpha . 90))
+;; 透明度の設定(active . inactive)
+(add-to-list 'default-frame-alist '(alpha . (90 . 80)))
 
-;; ツールバーの非表示
-(if window-system (progn
-		    (tool-bar-mode 0)))
 
-; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する
+(when window-system
+  ;; ツールバーの非表示
+  (tool-bar-mode 0))
+
+
+					; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する
 ;; ¥の代わりにバックスラッシュを入力する
 ;; (define-key global-map [?¥] [?\\])
 ;; mini bufferでも
@@ -138,4 +115,13 @@
 
 
 ;; migmo
-(load "~/.emacs.d/init-migemo")
+(when (and (executable-find "cmigemo")
+	   (require 'migemo nil t))
+  (setq migemo-command "cmigemo")
+  (setq migemo-options '("-q" "--emacs"))
+  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+  (setq migemo-user-dictionary nil)
+  (setq migemo-regex-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix)
+  (load-library "migemo")
+  (migemo-init))
