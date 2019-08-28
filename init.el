@@ -234,8 +234,16 @@
 (when (version<= "26.0.50" emacs-version )
   ;;(display-line-numbers-mode 1)
   (global-display-line-numbers-mode 1)
-  )
+  ;; 行番号エリアの色
+  (set-face-attribute 'line-number nil
+                      :foreground "ivory4"
+                      :background "gray1")
+  (set-face-attribute 'line-number-current-line nil
+                      :foreground "turquoise3"))
 
+;; ファイルの終端をフリンジを使い判り易くする
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries 'left)
 
 ;; 対応する括弧を光らせる。
 (show-paren-mode 1)
