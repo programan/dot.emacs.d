@@ -83,11 +83,11 @@
 (load "~/.emacs.d/init-flycheck")
 
 ;; 全角空白、タブ、改行表示モード設定の読み込み
-(load "~/.emacs.d/init-jaspace")
+;; (load "~/.emacs.d/init-jaspace")
 
 ;; whitespace-modeを使用した全角空白、タブ、改行の表示
 ;; タブ幅4だとして丁度4文字目にタブを挿入すると空白1つではなく4つ分ずれるバグが直るまで使うのは止める
-;; (load "~/.emacs.d/init-whitespace")
+(load "~/.emacs.d/init-whitespace")
 
 ;; バッファ2分割時の縦横トグル設定の読み込み
 (load "~/.emacs.d/init-window-toggle-division")
