@@ -1,4 +1,7 @@
-;;; init-macos.el --- emacs settings for macos.
+;;; init-macos.el --- init-macos.el
+;;; Commentary:
+;; Settings for macOS.
+;;; Code:
 
 ;; キーボードから入力される文字コード
 ;; (set-keyboard-coding-system 'sjis-mac)
@@ -57,8 +60,7 @@
   ;; ツールバーの非表示
   (tool-bar-mode 0))
 
-
-					; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する
+;; Macでは¥とバックスラッシュが違う文字列として扱われるため制御する
 ;; ¥の代わりにバックスラッシュを入力する
 ;; (define-key global-map [?¥] [?\\])
 ;; mini bufferでも
@@ -116,7 +118,7 @@
 
 ;; migmo
 (when (and (executable-find "cmigemo")
-	   (require 'migemo nil t))
+           (require 'migemo nil t))
   (setq migemo-command "cmigemo")
   (setq migemo-options '("-q" "--emacs"))
   (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
@@ -125,3 +127,5 @@
   (setq migemo-coding-system 'utf-8-unix)
   (load-library "migemo")
   (migemo-init))
+
+;;; init-macos.el ends here

@@ -1,3 +1,8 @@
+;;; init-truncate-lines.el --- init-truncate-lines.el
+;;; Commentary:
+;; Settings for truncate line automatically.
+;;; Code:
+
 ;; 右端で折り返さない
 ;(setq truncate-lines t)
 ;(setq truncate-lines t)
@@ -20,3 +25,4 @@
 (global-set-key "\C-ctr" 'toggle-truncate-lines) ; 折り返し表示ON/OFF
 
 
+;;; init-truncate-lines.el ends here

@@ -1,3 +1,9 @@
+;;; init-whitespace.el --- init-whitespace.el
+;;; Commentary:
+;; Settings for whitespace mode.
+;;; Code:
+
+
 ;; タブ・行末・空行表示
 (require 'whitespace)
 ;; (setq whitespace-style '(face           ; faceで可視化
@@ -78,3 +84,6 @@
 
 
 (global-whitespace-mode 1)
+
+
+;;; init-whitespace.el ends here

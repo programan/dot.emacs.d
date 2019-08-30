@@ -1,3 +1,8 @@
+;;; init-package.el --- init-package.el
+;;; Commentary:
+;; Settings for package manager.
+;;; Code:
+
 ;; Emacs24から標準搭載されたパッケージマネージャの設定
 ;; package.elの設定
 (when (require 'package nil t)
@@ -14,3 +19,6 @@
   
   ;;インストールしたパッケージにロードパスを通して読み込む
   (package-initialize))
+
+;;(provide 'init-package)
+;;; init-package.el ends here

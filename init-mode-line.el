@@ -1,3 +1,8 @@
+;;; init-mode-line.el --- init-mode-line.el
+;;; Commentary:
+;; Settings for mode line.
+;;; Code:
+
 ;; smart mode line
 ;;
 (defvar sml/no-confirm-load-theme t)
@@ -60,3 +65,5 @@
 ;; (set-face-background 'mode-line-inactive "gray10")
 ;; ;;(set-face-background 'modeline "black")
 
+
+;;; init-mode-line.el ends here

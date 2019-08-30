@@ -1,3 +1,8 @@
+;;; init-symbol-overlay.el --- init-symbol-overlay.el
+;;; Commentary:
+;; Settings for symbol overlay.
+;;; Code:
+
 (when (require 'symbol-overlay nil t)
   (global-set-key (kbd "M-i") 'symbol-overlay-put)
   (global-set-key (kbd "M-n") 'symbol-overlay-switch-forward)
@@ -21,3 +26,4 @@
   ;; (define-key symbol-overlay-map (kbd "M-r") 'symbol-overlay-remove-all))
   (define-key symbol-overlay-map (kbd "C-g") 'symbol-overlay-remove-all))
 
+;;; init-symbol-overlay.el ends here

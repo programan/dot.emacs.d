@@ -1,3 +1,8 @@
+;;; init-frame.el --- init-frame.el
+;;; Commentary:
+;; Settings for frame of Emacs.
+;;; Code:
+
 ;; フレームの設定
 ;; ある程度の大きさと位置を最初から指定しておく
 ;; (when window-system
@@ -37,3 +42,4 @@
 
 (setq initial-frame-alist default-frame-alist)
 
+;;; init-frame.el ends here

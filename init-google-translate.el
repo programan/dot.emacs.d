@@ -1,3 +1,9 @@
+;;; init-google-translate.el --- init-google-translate.el
+;;; Commentary:
+;; Settings for translate.
+;;; Code:
+
+
 ;; (require 'popwin)
 
 ;; (setq display-buffer-function 'popwin:display-buffer)
@@ -43,3 +49,5 @@
 (defun google-translate--get-b-d1 ()
   ;; TKK='427110.1469889687'
   (list 427110 1469889687))
+
+;;; init-google-translate.el ends here

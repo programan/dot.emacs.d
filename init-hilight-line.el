@@ -1,3 +1,8 @@
+;;; init-hilight-line.el --- init-hilight-line.el
+;;; Commentary:
+;; Settings for hilight line.
+;;; Code:
+
 ;; 編集行のハイライト
 ;(global-hl-line-mode)
 ;(set-face-background 'hl-line "gray34")
@@ -29,3 +34,5 @@
 (global-hl-line-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;;; init-hilight-line.el ends here

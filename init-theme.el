@@ -1,3 +1,9 @@
+;;; init-theme.el --- init-theme.el
+;;; Commentary:
+;; Settings for theme.
+;;; Code:
+
+
 ;; window-sysytemが有効の時のみ初期化
 (when window-system
   ;; color-theme
@@ -26,3 +32,6 @@
   ;; (load-theme 'ubuntu t)
   )
 ;; (enable-theme 'ample)
+
+
+;;; init-theme.el ends here
