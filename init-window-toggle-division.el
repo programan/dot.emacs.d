@@ -1,3 +1,8 @@
+;;; init-window-toggle-division.el --- init-window-toggle-division.el
+;;; Commentary:
+;; Settings for split window.
+;;; Code:
+
 ;; バッファが2分割されているときに縦横をトグル
 (defun window-toggle-division ()
   "ウィンドウ 2 分割時に、縦分割<->横分割"
@@ -19,3 +24,4 @@
 ; C-i-> tab
 (global-set-key "\C-c\C-i" 'window-toggle-division)
 
+;;; init-window-toggle-division.el ends here

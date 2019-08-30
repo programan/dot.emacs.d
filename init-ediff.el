@@ -1,3 +1,8 @@
+;;; init-ediff.el --- init-ediff.el
+;;; Commentary:
+;; Settings for ediff.
+;;; Code:
+
 ;; コントロール用のバッファを同一フレーム内に表示
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 ;; diffのバッファを上下ではなく左右に並べる
@@ -38,3 +43,5 @@
 ;;              ediff-current-diff-face-B "red")
 ;;             (make-face-italic
 ;;              ediff-current-diff-face-B)))
+
+;;; init-ediff.el ends here

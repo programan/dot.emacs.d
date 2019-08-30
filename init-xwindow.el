@@ -1,3 +1,8 @@
+;;; init-xwindow.el --- init-xwindow.el
+;;; Commentary:
+;; Settings for xwindow.
+;;; Code:
+
 ;キーボードから入力される文字コード
 (set-keyboard-coding-system 'utf-8)
 
@@ -62,7 +67,7 @@
 
 ;; migmo
 (when (and (executable-find "cmigemo")
-	   (require 'migemo nil t))
+           (require 'migemo nil t))
   (setq migemo-command "cmigemo")
   (setq migemo-options '("-q" "--emacs"))
   (setq migemo-dictionary "/usr/share/cmigemo/utf-8/migemo-dict")
@@ -71,3 +76,5 @@
   (setq migemo-coding-system 'utf-8-unix)
   (load-library "migemo")
   (migemo-init))
+
+;;; init-xwindow.el ends here

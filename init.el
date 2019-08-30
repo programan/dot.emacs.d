@@ -1,3 +1,9 @@
+;;; init.el --- init.el
+;;; Commentary:
+;; Settings for Emacs.
+;;; Code:
+
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -312,3 +318,6 @@
     (symbol-overlay recentf-ext diminish smart-mode-line slime-theme challenger-deep-theme indent-guide dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php ubuntu-theme tronesque-theme paganini-theme metalheart-theme kooten-theme heroku-theme gotham-theme cyberpunk-theme clues-theme bubbleberry-theme bliss-theme badwolf-theme ample-theme material-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(robe-completing-read-func (quote helm-robe-completing-read))
  '(rspec-use-rake-when-possible nil))
+
+
+;;; init.el ends here

@@ -1,3 +1,8 @@
+;;; init-neotree.el --- init-neotree.el
+;;; Commentary:
+;; Settings for neotree.
+;;; Code:
+
 (when (require 'neotree nil t)
   ;; Press '?' for neotree help.
   ;; 隠しファイルをデフォルトで表示
@@ -21,3 +26,5 @@
 
   ;; (global-set-key "\C-q" 'neotree-toggle)
   (global-set-key [f8] 'neotree-toggle))
+
+;;; init-neotree.el ends here

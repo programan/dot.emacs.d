@@ -1,3 +1,8 @@
+;;; init-modes.el --- init-modes.el
+;;; Commentary:
+;; Settings for Emacs mode.
+;;; Code:
+
 ;; モード設定
 
 ;; Emacs24から標準になったelectric系の機能を有効にする
@@ -43,7 +48,7 @@
              (setq indent-tabs-mode t)
              ;;; インデント幅
              (setq c-basic-offset 4)
-	     (setq tab-width 4)
+             (setq tab-width 4)
              ))
 
 ;; C++ style
@@ -92,74 +97,74 @@
 ;;       (auto-complete-mode t))))
 
 (add-hook 'php-mode-hook
-	  '(lambda ()
-	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)
-	     ;; 補完
-	     ;; php-cliとcscopeが必要
-	     (when (require 'company-php nil t)
-	       (company-mode t)
-	       (add-to-list 'company-backends 'company-ac-php-backend )
-	       (yas-global-mode 1)
-	       (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
-	       (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
-	       )
-	     ;; 配列の整形
-	     (defun ywb-php-lineup-arglist-intro (langelem)
-	       (save-excursion
-		 (goto-char (cdr langelem))
-		 (vector (+ (current-column) c-basic-offset))))
-	     (defun ywb-php-lineup-arglist-close (langelem)
-	       (save-excursion
-		 (goto-char (cdr langelem))
-		 (vector (current-column))))
-;;	     (c-set-style "stroustrup")
-	     (c-set-style "symfony2")
-	     (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
-	     (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)
-	     (c-set-offset 'arglist-cont-nonempty' 4)
-	     (c-set-offset 'case-label' 4)
-	     (setq tab-width 4)
-	     (setq c-basic-offset 4)
-;;	     (setq indent-tabs-mode nil)
-;;	     (setq indent-tabs-mode t)
-	     ;;C-cC-fで関数helpにジャンプ
-	     (setq php-search-url "http://www.php.net/ja/")
-	     (setq php-manual-url "http://www.php.net/manual/ja/")
+          '(lambda ()
+             ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+             ;; auto-revert-modeを有効にする
+             (auto-revert-mode t)
+             ;; 補完
+             ;; php-cliとcscopeが必要
+             (when (require 'company-php nil t)
+               (company-mode t)
+               (add-to-list 'company-backends 'company-ac-php-backend )
+               (yas-global-mode 1)
+               (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
+               (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
+               )
+             ;; 配列の整形
+             (defun ywb-php-lineup-arglist-intro (langelem)
+               (save-excursion
+                 (goto-char (cdr langelem))
+                 (vector (+ (current-column) c-basic-offset))))
+             (defun ywb-php-lineup-arglist-close (langelem)
+               (save-excursion
+                 (goto-char (cdr langelem))
+                 (vector (current-column))))
+;;           (c-set-style "stroustrup")
+             (c-set-style "symfony2")
+             (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
+             (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)
+             (c-set-offset 'arglist-cont-nonempty' 4)
+             (c-set-offset 'case-label' 4)
+             (setq tab-width 4)
+             (setq c-basic-offset 4)
+;;           (setq indent-tabs-mode nil)
+;;           (setq indent-tabs-mode t)
+             ;;C-cC-fで関数helpにジャンプ
+             (setq php-search-url "http://www.php.net/ja/")
+             (setq php-manual-url "http://www.php.net/manual/ja/")
              ;;複数行コメント
-	     (setq comment-start "// ")
-	     (setq comment-end "")
-	     ;; RET キーで自動改行+インデント
-	     (define-key c-mode-base-map "\C-m" 'newline-and-indent)
-	     ;; カッコ強調表示
-	     (show-paren-mode t)
-	     ;; auto-complete
-	     ;; ('php-completion-hook)
-	     ;; 勝手に改行モード (必要なければコメントアウトする)
-	     (c-toggle-auto-hungry-state t)
-	     (setq c-hanging-braces-alist
-		   '(
-;		     (class-open nil)
-;		     (class-close nil)
-		     (defun-open after)
-		     (defun-close before)
-;		     (inline-open nil)
-;		     (inline-close nil)
-;		     (brace-list-open nil)
-;		     (brace-list-close nil)
-;		     (block-open nil)
-;		     (block-close nil)
-;		     (substatement-open before after)
-		     (substatement-open after)
-		     (substatement-close before)
-;		     (statement-case-open before after)
-;		     (extern-lang-open nil)
-;		     (extern-lang-close nil)
-		     ))
-	     ;; (setq php-mode-force-pear t)
-	     (electric-pair-mode t)
-	     ))
+             (setq comment-start "// ")
+             (setq comment-end "")
+             ;; RET キーで自動改行+インデント
+             (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+             ;; カッコ強調表示
+             (show-paren-mode t)
+             ;; auto-complete
+             ;; ('php-completion-hook)
+             ;; 勝手に改行モード (必要なければコメントアウトする)
+             (c-toggle-auto-hungry-state t)
+             (setq c-hanging-braces-alist
+                   '(
+;                    (class-open nil)
+;                    (class-close nil)
+                     (defun-open after)
+                     (defun-close before)
+;                    (inline-open nil)
+;                    (inline-close nil)
+;                    (brace-list-open nil)
+;                    (brace-list-close nil)
+;                    (block-open nil)
+;                    (block-close nil)
+;                    (substatement-open before after)
+                     (substatement-open after)
+                     (substatement-close before)
+;                    (statement-case-open before after)
+;                    (extern-lang-open nil)
+;                    (extern-lang-close nil)
+                     ))
+             ;; (setq php-mode-force-pear t)
+             (electric-pair-mode t)
+             ))
 ;; (add-hook 'php-mode-hook #'rainbow-delimiters-mode)
 
 
@@ -177,7 +182,7 @@
   (setq tab-width 4)
   (setq indent-tabs-mode nil)
   (setq interpreter-mode-alist (cons '("python" . python-mode)
-				     interpreter-mode-alist))
+                                     interpreter-mode-alist))
 
   ;; jedi
   (when (require 'jedi-core nil t)
@@ -191,8 +196,8 @@
 
   ;; (setq jedi:environment-root "jedi")  ; or any other name you like
   ;; (setq jedi:environment-virtualenv
-  ;; 	(append python-environment-virtualenv
-  ;; 		'("--python" "~/.pyenv/python")))
+  ;;    (append python-environment-virtualenv
+  ;;            '("--python" "~/.pyenv/python")))
   
   )
 (require 'virtualenvwrapper)
@@ -201,9 +206,9 @@
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (add-hook 'python-mode-hook
-	  '(lambda()
-	     (electric-pair-mode t)
-	     ))
+          '(lambda()
+             (electric-pair-mode t)
+             ))
 
 ;(add-hook 'python-mode-hook
 ;          '(lambda()
@@ -228,8 +233,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;(require 'flymake)
 ;(add-hook 'csharp-mode-hook
-;	  '(lambda ()
-;	     (flymake-mode t)))
+;         '(lambda ()
+;            (flymake-mode t)))
 
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
 ;; (setq auto-mode-alist (cons '("\\.cs$" . csharp-mode) auto-mode-alist))
@@ -280,25 +285,25 @@
 ;; (add-to-list 'auto-mode-alist '("\\.tag\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook
           '(lambda ()
-	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)
+             ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+             ;; auto-revert-modeを有効にする
+             (auto-revert-mode t)
              (setq indent-tabs-mode nil)
              (setq js2-basic-offset 2)
              (setq js2-enter-indents-newline t)
              (setq comment-start "// ")
              (setq comment-end "")
-	     (define-key js2-mode-map (kbd "M-.") 'helm-etags-select)
-	     (electric-pair-mode t)
-	     ;; (electric-pair-mode t)
-	     ;; (electric-indent-mode t)
-	     ;; (electric-layout-mode t)
-	     ;; (define-key js2-mode-map "\"" 'electric-pair)
-	     ;; (define-key js2-mode-map "\'" 'electric-pair)
-	     ;; (define-key js2-mode-map "(" 'electric-pair)
-	     ;; (define-key js2-mode-map "[" 'electric-pair)
-	     ;; (define-key js2-mode-map "{" 'electric-pair)
-	     ;; (set (make-local-variable 'indent-line-function) 'js2-indent-line)
+             (define-key js2-mode-map (kbd "M-.") 'helm-etags-select)
+             (electric-pair-mode t)
+             ;; (electric-pair-mode t)
+             ;; (electric-indent-mode t)
+             ;; (electric-layout-mode t)
+             ;; (define-key js2-mode-map "\"" 'electric-pair)
+             ;; (define-key js2-mode-map "\'" 'electric-pair)
+             ;; (define-key js2-mode-map "(" 'electric-pair)
+             ;; (define-key js2-mode-map "[" 'electric-pair)
+             ;; (define-key js2-mode-map "{" 'electric-pair)
+             ;; (set (make-local-variable 'indent-line-function) 'js2-indent-line)
              ))
 
 ; js2mode(fork)でadd-hook時にパラメータを変えても反映されないものをここで変更
@@ -330,17 +335,17 @@
 
 
 ;(add-hook 'js2-mode-hook
-;	  '(lambda()
-;	     (setq tab-width 4)
-;	     (setq indent-level 4)
-;	     (setq js2-basic-offset 4)
-;	     (setq indent-tabs-mode nil)
-;;	     (setq indent-tabs-mode t)
+;         '(lambda()
+;            (setq tab-width 4)
+;            (setq indent-level 4)
+;            (setq js2-basic-offset 4)
+;            (setq indent-tabs-mode nil)
+;;           (setq indent-tabs-mode t)
 ;        複数行コメント
-;	     (setq comment-start "// ")
-;	     (setq comment-end "")
-;	     )
-;	  )
+;            (setq comment-start "// ")
+;            (setq comment-end "")
+;            )
+;         )
 ;(add-hook 'js2-mode-hook #'rainbow-delimiters-mode)
 
 ;; nodeのnpmでternをグローバルにインストールしておく
@@ -387,73 +392,73 @@
 (setq inf-ruby-eval-binding "Pry.toplevel_binding")
 
 (add-hook 'ruby-mode-hook
-	  '(lambda ()
-	     (when (require 'rspec-mode nil t)
-	       ;; C-c , v RSpec実行
-	       ;; C-c , s カ-ソルが当たっているサンプルを実行
-	       ;; C-c , t Specとソースを切り替える 
-	       (eval-after-load 'rspec-mode
-		 '(rspec-install-snippets))
-	       ;; Railsプロジェクト以外でrspec-modeを使うとエラーが出るので対処
-	       ;; http://d.hatena.ne.jp/nbahide/20100721/1279676604
-	       (custom-set-variables '(rspec-use-rake-flag nil))
-	       (custom-set-faces )
-	       )
-	     (when (require 'ruby-electric nil t)
-	       ;; ruby-electric.el --- electric editing commands for ruby files
-	       ;; if に対するendとか入れてくれる
-	       ;; emacs24標準のelectricとバッティングするので、ruby-mode時は
-	       ;; electric系はオフにする
-	       (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
-		 (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
-	       (setq ruby-electric-expand-delimiters-list nil)
-	       )
-	     (when (require 'ruby-block nil t)
-	       ;; end に対応する行をハイライト
-	       (defun ruby-mode-hook-ruby-block()
-		 (ruby-block-mode t))
-	       (add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
-	       ;; ミニバッファに表示し, かつ, オーバレイする.
-	       (setq ruby-block-highlight-toggle t)
-	       ;; 何もしない
-	       ;;(setq ruby-block-highlight-toggle 'noghing)
-	       ;; ミニバッファに表示
-	       ;;(setq ruby-block-highlight-toggle 'minibuffer)
-	       ;; オーバレイする
-	       ;;(setq ruby-block-highlight-toggle 'overlay)
-	       )
-	     (when (require 'rhtml-mode nil t)
-	       (add-hook 'rhtml-mode-hook
-			 (lambda ()
-			   ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-			   ;; auto-revert-modeを有効にする
-			   (auto-revert-mode t)))
-	       )
-	     ;; (when (require 'projectile-rails nil t)
-	     ;;   (add-hook 'projectile-mode-hook 'projectile-rails-on)
-	     ;;   (add-hook 'ruby-mode-hook 'projectile-mode)
-	     ;;   (add-hook 'rhtml-mode-hook 'projectile-mode)
-	     ;;   (add-hook 'haml-mode-hook 'projectile-mode)
-	     ;;   (add-hook 'slim-mode-hook 'projectile-mode)
-	     ;;   (add-hook 'sass-mode-hook 'projectile-mode)
-	     ;;   )
-	     ;; (when (require 'robe-mode nil t)
-	     ;;   (robe-mode 1)
-	     ;;   )
-	     ;; ruby-modeのインデント
-	     (setq ruby-indent-level 2)
-	     (setq ruby-indent-tabs-mode nil)
-	     ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	     ;; auto-revert-modeを有効にする
-	     (auto-revert-mode t)
-	     (ruby-electric-mode t)
-	     ;; RET キーで自動改行+インデント
-	     (define-key ruby-mode-map [return] 'reindent-then-newline-and-indent)
-	     (when (>= emacs-major-version 24)
-	       (set (make-local-variable 'electric-pair-mode) nil)
-	       (set (make-local-variable 'electric-indent-mode) nil)
-	       (set (make-local-variable 'electric-layout-mode) nil)))
-	  )
+          '(lambda ()
+             (when (require 'rspec-mode nil t)
+               ;; C-c , v RSpec実行
+               ;; C-c , s カ-ソルが当たっているサンプルを実行
+               ;; C-c , t Specとソースを切り替える 
+               (eval-after-load 'rspec-mode
+                 '(rspec-install-snippets))
+               ;; Railsプロジェクト以外でrspec-modeを使うとエラーが出るので対処
+               ;; http://d.hatena.ne.jp/nbahide/20100721/1279676604
+               (custom-set-variables '(rspec-use-rake-flag nil))
+               (custom-set-faces )
+               )
+             (when (require 'ruby-electric nil t)
+               ;; ruby-electric.el --- electric editing commands for ruby files
+               ;; if に対するendとか入れてくれる
+               ;; emacs24標準のelectricとバッティングするので、ruby-mode時は
+               ;; electric系はオフにする
+               (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
+                 (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
+               (setq ruby-electric-expand-delimiters-list nil)
+               )
+             (when (require 'ruby-block nil t)
+               ;; end に対応する行をハイライト
+               (defun ruby-mode-hook-ruby-block()
+                 (ruby-block-mode t))
+               (add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
+               ;; ミニバッファに表示し, かつ, オーバレイする.
+               (setq ruby-block-highlight-toggle t)
+               ;; 何もしない
+               ;;(setq ruby-block-highlight-toggle 'noghing)
+               ;; ミニバッファに表示
+               ;;(setq ruby-block-highlight-toggle 'minibuffer)
+               ;; オーバレイする
+               ;;(setq ruby-block-highlight-toggle 'overlay)
+               )
+             (when (require 'rhtml-mode nil t)
+               (add-hook 'rhtml-mode-hook
+                         (lambda ()
+                           ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+                           ;; auto-revert-modeを有効にする
+                           (auto-revert-mode t)))
+               )
+             ;; (when (require 'projectile-rails nil t)
+             ;;   (add-hook 'projectile-mode-hook 'projectile-rails-on)
+             ;;   (add-hook 'ruby-mode-hook 'projectile-mode)
+             ;;   (add-hook 'rhtml-mode-hook 'projectile-mode)
+             ;;   (add-hook 'haml-mode-hook 'projectile-mode)
+             ;;   (add-hook 'slim-mode-hook 'projectile-mode)
+             ;;   (add-hook 'sass-mode-hook 'projectile-mode)
+             ;;   )
+             ;; (when (require 'robe-mode nil t)
+             ;;   (robe-mode 1)
+             ;;   )
+             ;; ruby-modeのインデント
+             (setq ruby-indent-level 2)
+             (setq ruby-indent-tabs-mode nil)
+             ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+             ;; auto-revert-modeを有効にする
+             (auto-revert-mode t)
+             (ruby-electric-mode t)
+             ;; RET キーで自動改行+インデント
+             (define-key ruby-mode-map [return] 'reindent-then-newline-and-indent)
+             (when (>= emacs-major-version 24)
+               (set (make-local-variable 'electric-pair-mode) nil)
+               (set (make-local-variable 'electric-indent-mode) nil)
+               (set (make-local-variable 'electric-layout-mode) nil)))
+          )
 
 
 
@@ -559,12 +564,12 @@
 ;;(require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-hook 'haml-mode-hook
-	  (lambda ()
-	    ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-	    ;; auto-revert-modeを有効にする
-	    (auto-revert-mode t)
-	    (setq indent-tabs-mode nil)
-	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+          (lambda ()
+            ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
+            ;; auto-revert-modeを有効にする
+            (auto-revert-mode t)
+            (setq indent-tabs-mode nil)
+            (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MarkDown
@@ -585,9 +590,9 @@
 ;; C-c C-c e で変換して保存。basename.mdwn だったら basename.html として保存
 ;; Windowsの場合Markdown.plを実行できるように以下の設定を追記
 (if (eq window-system 'w32) (progn
-;			      (setq markdown-command "c:/cygwin/bin/perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
-			      (setq markdown-command "perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
-			      )
+;                             (setq markdown-command "c:/cygwin/bin/perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
+                              (setq markdown-command "perl.exe ~/.emacs.d/site-lisp/Markdown.pl")
+                              )
   (progn
     ;; (setq markdown-command "perl ~/.emacs.d/site-lisp/Markdown.pl"))
     ;; nodeのpackageでgithub flavoredに対応したパーザであるmarkedをインストールしてある前提
@@ -622,7 +627,7 @@
   )
 
 (add-hook 'coffee-mode-hook
-	  '(lambda() (coffee-custom)))
+          '(lambda() (coffee-custom)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -786,12 +791,12 @@
              (setq indent-tabs-mode t)
              ;;; インデント幅
              (setq c-basic-offset 4)
-	     (setq tab-width 4)
+             (setq tab-width 4)
             ;; (local-set-key (kbd "M-.") 'godef-jump)
             ;; (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
             ;; (local-set-key (kbd "C-c i") 'go-goto-imports)
             ;; (local-set-key (kbd "C-c d") 'godoc)
-	    ))
+            ))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -801,9 +806,9 @@
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 (add-hook 'lua-mode-hook
-	  '(lambda()
-	     (setq lua-indent-level 2)
-	     ))
+          '(lambda()
+             (setq lua-indent-level 2)
+             ))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -812,24 +817,24 @@
 ;; (require 'swift-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.swift" . swift-mode))
 ;; (add-hook 'swift-mode-hook
-;; 	  '(lambda()
-;; 	     (setq swift-indent-offset 4)
-;; 	     (setq swift-indent-switch-case-offset 0)
-;; 	     (setq swift-indent-multiline-statement-offset 2)
-;; 	     (local-set-key "\C-c\C-c" 'quickrun)
-;; 	     (local-set-key "\C-c\C-a" 'quickrun-with-arg)
-;; 	     ))
+;;        '(lambda()
+;;           (setq swift-indent-offset 4)
+;;           (setq swift-indent-switch-case-offset 0)
+;;           (setq swift-indent-multiline-statement-offset 2)
+;;           (local-set-key "\C-c\C-c" 'quickrun)
+;;           (local-set-key "\C-c\C-a" 'quickrun-with-arg)
+;;           ))
 
 (when (require 'swift3-mode)
   (add-to-list 'auto-mode-alist '("\\.swift" . swift3-mode))
   (add-hook 'swift3-mode-hook
-	    '(lambda()
-	       (setq swift3-indent-offset 4)
-	       (setq swift3-indent-switch-case-offset 0)
-	       (setq swift3-indent-multiline-statement-offset 2)
-	       (local-set-key "\C-c\C-c" 'quickrun)
-	       (local-set-key "\C-c\C-a" 'quickrun-with-arg)
-	       ))
+            '(lambda()
+               (setq swift3-indent-offset 4)
+               (setq swift3-indent-switch-case-offset 0)
+               (setq swift3-indent-multiline-statement-offset 2)
+               (local-set-key "\C-c\C-c" 'quickrun)
+               (local-set-key "\C-c\C-a" 'quickrun-with-arg)
+               ))
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -837,3 +842,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (autoload 'dockerfile-mode "dockerfile-mode" nil t)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+
+;;; init-modes.el ends here

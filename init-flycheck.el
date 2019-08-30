@@ -1,3 +1,9 @@
+;;; init-flycheck.el --- init-flycheck.el
+;;; Commentary:
+;; Settings for flycheck.
+;;; Code:
+
+
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (define-key global-map (kbd "\C-cn") 'flycheck-next-error)
@@ -11,3 +17,5 @@
 ;; (eval-after-load 'flycheck
 ;;   '(custom-set-variables
 ;;     '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
+
+;;; init-flycheck.el ends here

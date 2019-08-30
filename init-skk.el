@@ -1,3 +1,9 @@
+;;; init-skk.el --- init-skk.el
+;;; Commentary:
+;; Settings for skk.
+;;; Code:
+
+
 ;; DDSKK
 
 ;; NTEmacs
@@ -35,27 +41,27 @@
 ;; lisp-interaction-mode
 (add-hook 'lisp-interaction-mode-hook
           '(lambda()
-	     (eval-expression (skk-mode) nil)
-	     ))
+             (eval-expression (skk-mode) nil)
+             ))
 
 ;; find-file(C-xC-f)
 ;; バッファを開くとskk-mode
 (add-hook 'find-file-hooks
           '(lambda()
-	     (eval-expression (skk-mode) nil)
-	     ))
+             (eval-expression (skk-mode) nil)
+             ))
 
 (add-hook 'isearch-mode-hook
           '(lambda ()
-	     (when (and (boundp 'skk-mode)
-			skk-mode
-			skk-isearch-mode-enable)
-	       (skk-isearch-mode-setup))))
+             (when (and (boundp 'skk-mode)
+                        skk-mode
+                        skk-isearch-mode-enable)
+               (skk-isearch-mode-setup))))
 (add-hook 'isearch-mode-end-hook
           '(lambda ()
-	     (when (and (featurep 'skk-isearch)
-			skk-isearch-mode-enable)
-	       (skk-isearch-mode-cleanup))))
+             (when (and (featurep 'skk-isearch)
+                        skk-isearch-mode-enable)
+               (skk-isearch-mode-cleanup))))
 
 ;; ミニバッファ上でも skk-mode にする
 ;; skk-latin-mode でアルファベット入力にしておく
@@ -69,3 +75,5 @@
                )))
 
 ;;(setq default-input-method "japanese-skk")
+
+;;; init-skk.el ends here

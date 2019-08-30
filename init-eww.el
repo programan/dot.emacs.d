@@ -1,3 +1,9 @@
+;;; init-eww.el --- init-eww.el
+;;; Commentary:
+;; Settings for eww.
+;;; Code:
+
+
 ;; eww(emacs web wowser)
 ;;デフォルトの検索エンジンはduckduckgoのままだが地域を日本として検索するように設定
 ;;(setq eww-search-prefix "https://duckduckgo.com/html/?kl=jp-jp&q=")
@@ -23,3 +29,5 @@
   (setq-local eww-disable-colorize nil)
   (eww-reload))
 (setq eww-search-prefix "http://www.google.co.jp/search?q=")
+
+;;; init-eww.el ends here

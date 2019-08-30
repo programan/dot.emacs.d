@@ -1,3 +1,8 @@
+;;; init-windows.el --- init-windows.el
+;;; Commentary:
+;; Settings for windows.
+;;; Code:
+
 ;キーボードから入力される文字コード
 (set-keyboard-coding-system 'sjis)
 
@@ -144,3 +149,5 @@
 (setq migemo-coding-system 'cp932-unix)
 (load-library "migemo")
 (migemo-init)
+
+;;; init-windows.el ends here

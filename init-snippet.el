@@ -1,9 +1,15 @@
+;;; init-snippet.el --- init-snippet.el
+;;; Commentary:
+;; Settings for snippet.
+;;; Code:
+
+
 ;; yasnippet
 ;; snippet(部品)を内部に持っていてコード補完をしてくれる
 ;; Emacsのメニューを表示している場合項目が追加されている
 (when (require 'yasnippet nil t) ;; not yasnippet-bundle
 
-  (setq yas/snippet-dirs 
+  (setq yas/snippet-dirs
 ;;      '("~/.emacs.d/site-lisp/yasnippets" "~/.emacs.d/site-lisp/myyasnippets")
         '("~/.emacs.d/site-lisp/yasnippets")
         )
@@ -26,3 +32,5 @@
   (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
   )
 (require 'angular-snippets)
+
+;;; init-snippet.el ends here

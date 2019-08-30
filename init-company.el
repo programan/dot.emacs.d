@@ -1,9 +1,14 @@
+;;; init-company.el --- init-company.el
+;;; Commentary:
+;; Settings for company.
+;;; Code:
+
 ;; company
 
 (when (require 'company nil t)
   ;; 全バッファで有効にする
   (global-company-mode +1)
-  ;; (global-company-mode) 
+  ;; (global-company-mode)
 
   ;; 自動補完を offにしたい場合は, company-idle-delayを nilに設定する
   ;; auto-completeでいうところの ac-auto-start にあたる.
@@ -66,3 +71,5 @@
 
 ;; companyでrobeの補完を表示
 ;; (push 'company-robe company-backends)
+
+;;; init-company.el ends here

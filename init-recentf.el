@@ -1,3 +1,8 @@
+;;; init-recentf.el --- init-recentf.el
+;;; Commentary:
+;; Settings for recentf.
+;;; Code:
+
 ;; recentf
 (when (require 'recentf nil t)
   (setq recentf-max-saved-items 2000)
@@ -9,3 +14,6 @@
         (run-with-idle-timer 30 t 'recentf-save-list))
   ;; (recentf-mode 1)
   (require 'recentf-ext))
+
+
+;;; init-recentf.el ends here
