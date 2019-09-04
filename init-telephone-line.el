@@ -32,6 +32,7 @@
 (when (require 'diminish nil t)
   ;; (diminish 'company-mode)
   (diminish 'company-mode "Comp")
+  (diminish 'company-box-mode "CpBox")
   (diminish 'projectile-mode "Ptile")
   (diminish 'undo-tree-mode "UndoT")
   (diminish 'editorconfig-mode "EdCnf"))
