@@ -23,10 +23,10 @@
                          ;; empty          ; 空行
                          ;; spaces
                          tabs
-                         newline
+                         ;; newline
                          ;; space-mark     ; マークを表示
                          ;; tab-mark
-                         newline-mark
+                         ;; newline-mark
                          ))
 
 
@@ -52,8 +52,9 @@
 ;;       '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])
 ;;         (newline-mark ?\n    [?\x2193 ?\n] [?$ ?\n])))
 
-(setq whitespace-display-mappings
-      '((newline-mark ?\n    [?\x2193 ?\n] [?$ ?\n])))
+
+;; (setq whitespace-display-mappings
+;;       '((newline-mark ?\n    [?\x2193 ?\n] [?$ ?\n])))
 
 
 ;; 可視化する際の色などを指定
@@ -77,10 +78,10 @@
                     :foreground "LightSkyBlue"
                     :underline nil)
 
-(set-face-attribute 'whitespace-newline nil
-                    :background nil
-                    :foreground "DimGray"
-                    :underline nil)
+;; (set-face-attribute 'whitespace-newline nil
+;;                     :background nil
+;;                     :foreground "DimGray"
+;;                     :underline nil)
 
 
 (global-whitespace-mode 1)
