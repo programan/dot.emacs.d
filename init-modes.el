@@ -764,20 +764,45 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; indent-guide
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(when (require 'indent-guide nil t)
-  ;; (when (eq system-type 'darwin)
-  (unless (eq system-type 'win32)
-    ;; (setq indent-guide-delay 0.1)
-    (setq indent-guide-recursive t)
-    ;; (set-face-foreground 'indent-guide-face "#3C6")
-    (set-face-foreground 'indent-guide-face "gray34")
-    ;; (set-face-background 'indent-guide-face "dimgray")
-    ;; (setq indent-guide-char ":")
-    (setq indent-guide-char "|")
-    ;; (indent-guide-global-mode)
-    (add-hook 'prog-mode-hook 'indent-guide-mode)
-    (add-hook 'yaml-mode-hook 'indent-guide-mode)
-    )
+;; (when (require 'indent-guide nil t)
+;;   ;; (when (eq system-type 'darwin)
+;;   (unless (eq system-type 'win32)
+;;     ;; (setq indent-guide-delay 0.1)
+;;     (setq indent-guide-recursive t)
+;;     ;; (set-face-foreground 'indent-guide-face "#3C6")
+;;     (set-face-foreground 'indent-guide-face "gray34")
+;;     ;; (set-face-background 'indent-guide-face "dimgray")
+;;     ;; (setq indent-guide-char ":")
+;;     (setq indent-guide-char "|")
+;;     ;; (indent-guide-global-mode)
+;;     (add-hook 'prog-mode-hook 'indent-guide-mode)
+;;     (add-hook 'yaml-mode-hook 'indent-guide-mode)
+;;     )
+;;   )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; highlight-indent-guides
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(when (require 'highlight-indent-guides nil t)
+  ;; (setq highlight-indent-guides-method 'fill)
+  ;; (setq highlight-indent-guides-method 'column)
+  (setq highlight-indent-guides-method 'character)
+  (setq highlight-indent-guides-character ?\|)
+
+  ;; (setq highlight-indent-guides-auto-enabled t)
+  ;; (setq highlight-indent-guides-auto-odd-face-perc 15)
+  ;; (setq highlight-indent-guides-auto-even-face-perc 15)
+  ;; (setq highlight-indent-guides-auto-character-face-perc 20)
+
+  ;; (setq highlight-indent-guides-auto-enabled nil)
+  ;; (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+  ;; (set-face-background 'highlight-indent-guides-even-face "dimgray")
+  ;; (set-face-foreground 'highlight-indent-guides-character-face "dimgray")
+
+  (setq highlight-indent-guides-delay 0.3)  
+
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
   )
 
 
