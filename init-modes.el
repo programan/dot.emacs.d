@@ -1,4 +1,4 @@
-;;; init-modes.el --- init-modes.el
+;;; init-mode.el --- init-mode.el
 ;;; Commentary:
 ;; Settings for Emacs mode.
 ;;; Code:
@@ -850,4 +850,4 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 
-;;; init-modes.el ends here
+;;;init-mode.el ends here

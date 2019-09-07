@@ -13,16 +13,16 @@
 ;;====================================
 ;;; 折り返し表示ON/OFF
 ;;====================================
-(defun toggle-truncate-lines ()
+(defun my-toggle-truncate-lines ()
   "折り返し表示をトグル動作します."
   (interactive)
   (if truncate-lines
       (setq truncate-lines nil)
     (setq truncate-lines t))
   (recenter))
-;;(global-set-key "\C-c\C-l" 'toggle-truncate-lines) ; 折り返し表示ON/OFF
+;;(global-set-key "\C-c\C-l" 'my-toggle-truncate-lines) ; 折り返し表示ON/OFF
 ;;Ctrの後にtr
-(global-set-key "\C-ctr" 'toggle-truncate-lines) ; 折り返し表示ON/OFF
+(global-set-key "\C-ctr" 'my-toggle-truncate-lines) ; 折り返し表示ON/OFF
 
 
 ;;; init-truncate-lines.el ends here
