@@ -80,7 +80,7 @@
 (load "~/.emacs.d/init-symbol-overlay")
 
 ;; モード設定の読み込み
-(load "~/.emacs.d/init-modes")
+(load "~/.emacs.d/init-mode")
 
 ;; flymake設定の読み込み
 ;; (load "~/.emacs.d/init-flymake")
