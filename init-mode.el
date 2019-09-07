@@ -850,4 +850,4 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 
-;;;init-mode.el ends here
+;;; init-mode.el ends here
