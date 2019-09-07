@@ -26,10 +26,12 @@
 
   ;; M-x
   (define-key global-map (kbd "M-x") 'helm-M-x)
+  (setq helm-M-x-fuzzy-match t)
+
   ;; C-x C-f
   (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 
-  
+
   ;; helm-occurの起動
   (global-set-key (kbd "C-M-o") 'helm-occur)
   ;; isearchからhelm-occurを起動
@@ -37,7 +39,7 @@
   ;; helm-occurからall-extに受け渡し
   (define-key helm-map (kbd "C-c C-a") 'all-from-helm-occur)
 
-  
+
   (setq helm-idle-delay             0.3
         helm-input-idle-delay       0.3
         helm-candidate-number-limit 200)

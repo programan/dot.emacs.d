@@ -93,8 +93,10 @@
 
   (setq company-box-show-single-candidate t)
   (setq company-box-max-candidates 50)
-  ;; (setq company-box-icons-alist 'company-box-icons-all-the-icons)
   ;; (setq company-box-doc-enable nil)
+  (when (require 'all-the-icons nil t)
+    (setq company-box-icons-alist 'company-box-icons-all-the-icons))
+
   (add-hook 'company-mode-hook 'company-box-mode))
 
 ;;; init-company.el ends here
