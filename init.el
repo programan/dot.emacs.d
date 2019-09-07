@@ -178,6 +178,9 @@
 
 ;; which-key
 (when (require 'which-key nil t)
+  (define-key which-key-mode-map (kbd "C-x <f6>") 'which-key-C-h-dispatch)
+  ;; (setq which-key-paging-prefixes '("C-x"))
+  ;; (setq which-key-paging-key "<f6>")
   (which-key-mode))
 
 
