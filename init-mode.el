@@ -522,16 +522,20 @@
 ;; Gemfileが無い場合はM-x inf-rubyの後にM-x robe-start
 ;; companyでrobeの補完を表示するようにしてある
 ;; C-c C-dでリファレンスを表示
-(add-hook 'ruby-mode-hook 'robe-mode)
 (autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
+(add-hook 'ruby-mode-hook 'robe-mode)
+
 ;; rvmを利用してrubyのバージョンを管理している場合はこの設定で.rvmrcなどで選択されているrubyを使う
 (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
   (rvm-activate-corresponding-ruby))
+
 ;; helm-robe
 (custom-set-variables
  '(robe-completing-read-func 'helm-robe-completing-read))
+
 ;; companyでrobeの補完を表示
-(push 'company-robe company-backends)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
 
 ;; robe-jumpとrobe-popのkey-bindを無効にする
 ;; tagジャンプはhelm-etag-selectを使う
