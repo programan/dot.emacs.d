@@ -854,4 +854,19 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; dumb-jump-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(when (require 'dumb-jump nil t)
+  (add-hook 'prog-mode-hook 'dumb-jump-mode)
+  (setq dumb-jump-selector 'helm)
+  (setq dumb-jump-use-visible-window nil)
+  ;; (define-key global-map [(super .)] 'dumb-jump-go)
+  ;; (define-key global-map [(super shift .)] 'dumb-jump-back)
+  ;; (define-key global-map (kbd "S-.") 'dumb-jump-go)
+  ;; (define-key global-map (kbd "S-,") 'dumb-jump-back)
+  ;; (global-set-key (kbd "S-.") 'dumb-jump-go)
+  ;; (global-set-key (kbd "S-,") 'dumb-jump-back)
+  )
+
 ;;; init-mode.el ends here
