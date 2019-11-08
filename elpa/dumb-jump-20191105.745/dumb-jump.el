@@ -2,7 +2,7 @@
 ;; Copyright (C) 2015-2019 jack angers
 ;; Author: jack angers and contributors
 ;; Version: 0.5.3
-;; Package-Version: 20190920.1531
+;; Package-Version: 20191105.745
 ;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.11.0") (dash "2.9.0") (popup "0.5.3"))
 ;; Keywords: programming
 
@@ -276,6 +276,46 @@ or most optimal searcher."
            :regex "\\\(defparameter\\b\\s*JJJ\\j"
            :tests ("(defparameter test " "(defparameter test\n")
            :not ("(defparameter tester" "(defparameter test?" "(defparameter test-"))
+
+    ;; racket
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(define\\s+\\(\\s*JJJ\\j"
+           :tests ("(define (test blah)" "(define (test\n")
+           :not ("(define test blah" "(define (test-asdf blah)" "(define test (lambda (blah"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(define\\s+JJJ\\s*\\\(\\s*lambda"
+           :tests ("(define test (lambda (blah" "(define test (lambda\n")
+           :not ("(define test blah" "(define test-asdf (lambda (blah)" "(define (test)" "(define (test blah) (lambda (foo"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(let\\s+JJJ\\s*(\\\(|\\\[)*"
+           :tests ("(let test ((blah foo) (bar bas))" "(let test\n" "(let test [(foo")
+           :not ("(let ((test blah"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(define\\s+JJJ\\j"
+           :tests ("(define test " "(define test\n")
+           :not ("(define (test"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "(\\\(|\\\[)\\s*JJJ\\s+"
+           :tests ("(let ((test 'foo" "(let [(test 'foo" "(let [(test 'foo" "(let [[test 'foo" "(let ((blah 'foo) (test 'bar)")
+           :not ("{test foo"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(lambda\\s+\\\(?[^\(\)]*\\s*JJJ\\j\\s*\\\)?"
+           :tests ("(lambda (test)" "(lambda (foo test)" "(lambda test (foo)")
+           :not ("(lambda () test"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\\(define\\s+\\\([^\(\)]+\\s*JJJ\\j\\s*\\\)?"
+           :tests ("(define (foo test)" "(define (foo test bar)")
+           :not ("(define foo test" "(define (test foo" "(define (test)"))
+
+    (:type "type" :supports ("ag" "grep" "rg" "git-grep") :language "racket"
+           :regex "\\(struct\\s+JJJ\\j"
+           :tests ("(struct test (a b)"))
 
     ;; scheme
     (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "scheme"
@@ -855,6 +895,49 @@ or most optimal searcher."
            :regex "\\bJJJ\\s*=\\s*function\\s*\\\("
            :tests ("test = function()"))
 
+    ;; typescript
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "(service|factory)\\\(['\"]JJJ['\"]" :tags ("angular")
+           :tests ("module.factory('test', [\"$rootScope\", function($rootScope) {"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\bJJJ\\s*[=:]\\s*\\\([^\\\)]*\\\)\\s+=>"
+           :tests ("const test = (foo) => " "test: (foo) => {" "  test: (foo) => {"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\bJJJ\\s*\\([^()]*\\)\\s*[{]"
+           :tests ("test(foo) {" "test (foo){" "test(foo){")
+           :not ("test = blah.then(function(){"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "class\\s*JJJ\\s*[\\\(\\\{]"
+           :tests ("class test{"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "class\\s*JJJ\\s+extends"
+           :tests ("class test extends Component{"))
+    
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "function\\s*JJJ\\s*\\\("
+           :tests ("function test()" "function test ()"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\bJJJ\\s*:\\s*function\\s*\\\("
+           :tests ("test: function()"))
+
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\bJJJ\\s*=\\s*function\\s*\\\("
+           :tests ("test = function()"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\s*\\bJJJ\\s*=[^=\\n]+" :tests ("test = 1234" "const test = props =>") :not ("if (test === 1234)"))
+
+    (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "typescript"
+           :regex "\\bfunction\\b[^\\(]*\\\(\\s*[^\\)]*\\bJJJ\\b\\s*,?\\s*\\\)?"
+           :tests ("function (test)" "function (test, blah)" "function somefunc(test, blah) {" "function(blah, test)")
+           :not ("function (testLen)" "function (test1, blah)" "function somefunc(testFirst, blah) {" "function(blah, testLast)"
+                 "function (Lentest)" "function (blahtest, blah)" "function somefunc(Firsttest, blah) {" "function(blah, Lasttest)"))
+    
     ;; julia
     (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "julia"
            :regex "(@noinline|@inline)?\\s*function\\s*JJJ(\\{[^\\}]*\\})?\\("
@@ -1326,7 +1409,11 @@ or most optimal searcher."
     ;; protobuf
     (:type "message" :supports ("ag" "grep" "rg" "git-grep") :language "protobuf"
            :regex "message\\s+JJJ\\s*\\\{"
-           :tests ("message test{" "message test {")))
+           :tests ("message test{" "message test {"))
+
+    (:type "enum" :supports ("ag" "grep" "rg" "git-grep") :language "protobuf"
+           :regex "enum\\s+JJJ\\s*\\\{"
+           :tests ("enum test{" "enum test {")))
 
 
   "List of regex patttern templates organized by language and type to use for generating the grep command."
@@ -1401,6 +1488,9 @@ or most optimal searcher."
     (:language "javascript" :ext "vue" :agtype "js" :rgtype "js")
     (:language "javascript" :ext "html" :agtype "html" :rgtype "html")
     (:language "javascript" :ext "css" :agtype "css" :rgtype "css")
+    (:language "typescript" :ext "ts" :agtype "ts" :rgtype "ts")
+    (:language "typescript" :ext "tsx" :agtype "ts" :rgtype "ts")
+    (:language "typescript" :ext "vue" :agtype "ts" :rgtype "ts")
     (:language "dart" :ext "dart" :agtype nil :rgtype "dart")
     (:language "lua" :ext "lua" :agtype "lua" :rgtype "lua")
     ;; the extension "m" is also used by obj-c so must use matlab-mode
@@ -1430,6 +1520,7 @@ or most optimal searcher."
     (:language "r" :ext "Rnw" :agtype "r" :rgtype "r")
     (:language "r" :ext "Rtex" :agtype "r" :rgtype nil)
     (:language "r" :ext "Rrst" :agtype "r" :rgtype nil)
+    (:language "racket" :ext "rkt" :agtype "racket" :rgtype "lisp")
     (:language "crystal" :ext "cr" :agtype "crystal" :rgtype "crystal")
     (:language "crystal" :ext "ecr" :agtype "crystal" :rgtype nil)
     (:language "ruby" :ext "rb" :agtype "ruby" :rgtype "ruby")
@@ -1488,6 +1579,7 @@ or most optimal searcher."
     (:language "javascript" :type "variable" :right "^)" :left "($")
     (:language "javascript" :type "variable" :right "^\\." :left nil)
     (:language "javascript" :type "variable" :right "^;" :left nil)
+    (:language "typescript" :type "function" :right "^(" :left nil)
     (:language "perl" :type "function" :right "^(" :left nil)
     (:language "elisp" :type "function" :right nil :left "($")
     (:language "elisp" :type "variable" :right "^)" :left nil)
@@ -2062,6 +2154,7 @@ current file."
     (:comment ";" :language "elisp")
     (:comment ";" :language "commonlisp")
     (:comment "//" :language "javascript")
+    (:comment "//" :language "typescript")
     (:comment "//" :language "dart")
     (:comment "--" :language "haskell")
     (:comment "--" :language "lua")
@@ -2080,6 +2173,7 @@ current file."
     (:comment "#" :language "python")
     (:comment "%" :language "matlab")
     (:comment "#" :language "r")
+    (:comment ";" :language "racket")
     (:comment "#" :language "ruby")
     (:comment "#" :language "crystal")
     (:comment "#" :language "nim")
@@ -2565,6 +2659,7 @@ searcher symbol."
   "Generate the ag response based on the needle LOOK-FOR in the directory PROJ."
   (let* ((filled-regexes (dumb-jump-populate-regexes look-for regexes 'ag))
          (agtypes (dumb-jump-get-ag-type-by-language lang))
+         (lang-exts (dumb-jump-get-file-exts-by-language lang))
          (proj-dir (file-name-as-directory proj))
          ;; TODO: --search-zip always? in case the include is the in gz area like emacs lisp code.
          (cmd (concat dumb-jump-ag-cmd
@@ -2574,7 +2669,9 @@ searcher symbol."
                         "")
                       (when (not (s-blank? dumb-jump-ag-search-args))
                         (concat " " dumb-jump-ag-search-args))
-                      (s-join "" (--map (format " --%s" it) agtypes))))
+                      (if agtypes
+                          (s-join "" (--map (format " --%s" it) agtypes))
+                        (s-join "" (--map (format " -G '\\.%s$'" it) lang-exts)))))
          (exclude-args (dumb-jump-arg-joiner
                         "--ignore-dir" (--map (shell-quote-argument (s-replace proj-dir "" it)) exclude-paths)))
          (regex-args (shell-quote-argument (s-join "|" filled-regexes))))
