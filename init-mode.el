@@ -600,8 +600,33 @@
   (progn
     ;; (setq markdown-command "perl ~/.emacs.d/site-lisp/Markdown.pl"))
     ;; nodeのpackageでgithub flavoredに対応したパーザであるmarkedをインストールしてある前提
-    (setq markdown-command "marked"))
-)
+    (setq
+     markdown-command "marked"
+     markdown-content-type "application/xhtml+xml"
+     markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css")
+     markdown-xhtml-header-content "
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github.min.css'>
+<style>
+body {
+  box-sizing: border-box;
+  max-width: 740px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+</style>
+<script src='http://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('markdown-body');
+});
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+"
+)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Asciidoc
