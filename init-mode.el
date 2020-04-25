@@ -602,7 +602,9 @@
     ;; nodeのpackageでgithub flavoredに対応したパーザであるmarkedをインストールしてある前提
     (setq
      markdown-command "marked"
+     markdown-fontify-code-blocks-natively t
      markdown-content-type "application/xhtml+xml"
+;;     markdown-content-type "application/html"
      markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css")
      markdown-xhtml-header-content "
 <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
