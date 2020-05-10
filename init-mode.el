@@ -612,10 +612,41 @@
 <style>
 body {
   box-sizing: border-box;
-  max-width: 740px;
+  max-width: 768px;
   width: 100%;
   margin: 40px auto;
   padding: 0 10px;
+}
+/*印刷時の改行コード*/
+body>h1:not(:first-of-type) {
+  page-break-before: always;
+}
+h2 {
+  page-break-before: always;
+}
+hr {
+  page-break-before: always;
+}
+/*印刷時のスタイル*/
+@media print {
+  @page {
+    size: A4 landscape;
+    margin-top: 0;
+    margin-bottom: 6mm;
+  }
+  h1 {
+    padding-top: 50mm;
+  }
+  h2 {
+    padding-top: 10mm;
+  }
+  /*hrの直後にh1, h2があった場合は改行コードを付けない*/
+  hr+h1 {
+    page-break-before: auto;
+  }
+  hr+h2 {
+    page-break-before: auto;
+  }
 }
 </style>
 <script src='http://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'></script>
