@@ -50,4 +50,17 @@
   ;; TKK='427110.1469889687'
   (list 427110 1469889687))
 
+
+;; 2020-05-12
+;; args-out-of-range [] 1
+(defun google-translate-json-suggestion (json)
+  "Retrieve from JSON (which returns by the
+`google-translate-request' function) suggestion. This function
+does matter when translating misspelled word. So instead of
+translation it is possible to get suggestion."
+  (let ((info (aref json 7)))
+    (if (and info (> (length info) 0))
+        (aref info 1)
+      nil)))
+
 ;;; init-google-translate.el ends here
