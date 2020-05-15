@@ -22,7 +22,8 @@
   ;; ディレクトリも再起的に検索するには、C-uを最初に打つ
   ;; (global-set-key (kbd "C-c g") 'helm-do-grep)
   ;; (global-set-key (kbd "C-c g") 'helm-do-grep-ag)
-  (global-set-key (kbd "C-c g") 'helm-ag)
+  ;; (global-set-key (kbd "C-c g") 'helm-ag)
+  (global-set-key (kbd "C-c g") 'helm-do-ag)
 
   ;; M-x
   (define-key global-map (kbd "M-x") 'helm-M-x)
