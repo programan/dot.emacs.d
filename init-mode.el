@@ -665,7 +665,7 @@ hljs.initHighlightingOnLoad();
 ;; Asciidoc
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (autoload 'adoc-mode "adoc-mode" nil t)
-;; (add-to-list 'auto-mode-alist '("\\.adoc$" . adoc-mode))
+(add-to-list 'auto-mode-alist '("\\.adoc$" . adoc-mode))
 (add-to-list 'auto-mode-alist '("\\.asciidoc$" . adoc-mode))
 
 
