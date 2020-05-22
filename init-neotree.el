@@ -23,6 +23,8 @@
     (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
   (setq neo-window-fixed-size nil)
+  (setq neo-window-width 40)
+  (setq neo-autorefresh t)
 
   ;; (global-set-key "\C-q" 'neotree-toggle)
   (global-set-key [f8] 'neotree-toggle))
