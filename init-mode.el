@@ -509,7 +509,13 @@
 (add-hook 'slim-mode-hook 'projectile-mode)
 (add-hook 'sass-mode-hook 'projectile-mode)
 (when (require 'projectile-rails nil t)
-  (add-hook 'projectile-mode-hook 'projectile-rails-on)
+  ;; (add-hook 'projectile-mode-hook 'projectile-rails-on)
+  (add-hook 'projectile-mode-hook 'projectile-rails-mode)
+  (define-key projectile-rails-mode-map (kbd "C-c r") 'projectile-rails-command-map)
+
+  ;; (setq projectile-rails-vanilla-command "bin/rails"
+  ;;       projectile-rails-spring-command "bin/spring"
+  ;;       projectile-rails-zeus-command "bin/zeus")
   )
 
 ;; --------------------------------------------------
