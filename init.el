@@ -302,6 +302,22 @@
 ;; C-h でbackspace
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
+(with-eval-after-load "calendar"
+  (require 'japanese-holidays)
+  (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
+        (append japanese-holidays holiday-local-holidays holiday-other-holidays))
+  (setq calendar-mark-holidays-flag t)    ; 祝日をカレンダーに表示
+  ;; 土曜日・日曜日を祝日として表示する場合、以下の設定を追加します。
+  ;; 変数はデフォルトで設定済み
+  (setq japanese-holiday-weekend '(0 6)    ; 土日を祝日として表示
+        japanese-holiday-weekend-marker    ; 土曜日を水色で表示
+        '(holiday nil nil nil nil nil japanese-holiday-saturday))
+  (add-hook 'calendar-today-visible-hook 'japanese-holiday-mark-weekend)
+  (add-hook 'calendar-today-invisible-hook 'japanese-holiday-mark-weekend)
+  ;; “きょう”をマークするには以下の設定を追加します。
+  (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
+  ;; org-agendaで祝日を表示する
+  (setq org-agenda-include-diary t))
 
 ;; --------
 ;; 新設された変数 package-selected-packages にインストールしたパッケージ名を保持するようになった影響でinit.elにEmacsが記述するらしい
@@ -327,7 +343,7 @@
     ("--max-line-length=99" "--ignore=E124" "--ignore=E126" "--ignore=E128")))
  '(package-selected-packages
    (quote
-    (markdown-toc async dumb-jump company-quickhelp highlight-indent-guides which-key company-box volatile-highlights telephone-line symbol-overlay recentf-ext diminish dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php tronesque-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (japanese-holidays markdown-toc async dumb-jump company-quickhelp highlight-indent-guides which-key company-box volatile-highlights telephone-line symbol-overlay recentf-ext diminish dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php tronesque-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(robe-completing-read-func (quote helm-robe-completing-read))
  '(rspec-use-rake-when-possible nil))
 
