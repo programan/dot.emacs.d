@@ -134,6 +134,9 @@
 ;; backup file
 (load "~/.emacs.d/init-backup-file")
 
+;; imenu-list
+(load "~/.emacs.d/init-imenu-list")
+
 
 ;; undo-tree
 (when (require 'undo-tree nil t)
@@ -350,7 +353,7 @@
  '(git-gutter:modified-sign "  ")
  '(package-selected-packages
    (quote
-    (helm-swoop git-gutter japanese-holidays markdown-toc async dumb-jump company-quickhelp highlight-indent-guides which-key company-box volatile-highlights telephone-line symbol-overlay recentf-ext diminish dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php tronesque-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
+    (imenu-list helm-swoop git-gutter japanese-holidays markdown-toc async dumb-jump company-quickhelp highlight-indent-guides which-key company-box volatile-highlights telephone-line symbol-overlay recentf-ext diminish dockerfile-mode csharp-mode flycheck-pos-tip image-dired+ slime auto-virtualenvwrapper virtualenvwrapper adoc-mode migemo vlf neotree all-the-icons company-tern editorconfig google-translate helm-descbinds undo-tree flycheck-swift swift3-mode company-jedi company-php ac-php tronesque-theme helm-robe robe projectile-rails helm-ag fuzzy company dirtree eproject php-mode anzu yaml-mode web-mode slim-mode ruby-electric ruby-block rspec-mode rhtml-mode rainbow-mode rainbow-delimiters quickrun python-mode multiple-cursors multi-term moccur-edit main-line magit-popup lua-mode less-css-mode js2-mode jade-mode htmlize go-mode git-commit flymake-python-pyflakes flycheck expand-region exec-path-from-shell direx-grep ctags-update csv-mode coffee-mode angular-snippets all-ext)))
  '(robe-completing-read-func (quote helm-robe-completing-read))
  '(rspec-use-rake-when-possible nil))
 
