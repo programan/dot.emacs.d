@@ -77,7 +77,7 @@
 (load "~/.emacs.d/init-snippet")
 
 ;; symbol overlay
-(load "~/.emacs.d/init-symbol-overlay")
+;; (load "~/.emacs.d/init-symbol-overlay")
 
 ;; モード設定の読み込み
 (load "~/.emacs.d/init-mode")
@@ -304,6 +304,7 @@
 ;; C-h でbackspace
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
+;; Japanese holidays
 (with-eval-after-load "calendar"
   (require 'japanese-holidays)
   (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
