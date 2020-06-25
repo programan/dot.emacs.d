@@ -425,13 +425,6 @@ If you are using Mogrify or Jpegtran mandatory option is
   :group 'helm-files
   :type '(repeat string))
 
-(defcustom helm-ff-use-dir-locals nil
-  "Whether to obey dir locals var in helm-find-files.
-This allows using for example different values for boring files/dirs
-in different directories."
-  :group 'helm-files
-  :type 'boolean)
-
 (defcustom helm-ff-preferred-shell-mode 'eshell-mode
   "Shell to use to switch to a shell buffer from `helm-find-files'.
 Possible values are `shell-mode', `eshell-mode' and `term-mode'.
@@ -2951,7 +2944,8 @@ debugging purpose."
                invalid-basedir
                (and (not (file-exists-p path)) (string-match "/$" path))
                (and helm--url-regexp (string-match helm--url-regexp path)))
-           (list (helm-ff-filter-candidate-one-by-one path)))
+           ;; Do NOT filter boring files here (issue #2330).
+           (list (helm-ff-filter-candidate-one-by-one path nil t)))
           ((string= path "") (helm-ff-directory-files "/"))
           ;; Check here if directory is accessible (not working on Windows).
           ((and (file-directory-p path) (not (file-readable-p path)))
@@ -2981,7 +2975,8 @@ debugging purpose."
                                  ;; disabled, whe don't want PATH to be added on top
                                  ;; if it is a directory.
                                  dir-p)
-                       (list (helm-ff-filter-candidate-one-by-one path)))
+                       ;; Do NOT filter boring files here (issue #2330).
+                       (list (helm-ff-filter-candidate-one-by-one path nil t)))
                      (helm-ff-directory-files basedir))))))
 
 (defun helm-list-directory (directory)
@@ -3085,7 +3080,9 @@ later in the transformer."
 Argument FULL mean absolute path.
 It is same as `directory-files' but always returns the dotted
 filename '.' and '..' even on root directories in Windows
-systems."
+systems.
+When FORCE-UPDATE is non nil recompute candidates even if DIRECTORY is
+in cache."
   (setq directory (file-name-as-directory
                    (expand-file-name directory)))
   (or (and (not force-update)
@@ -3108,8 +3105,6 @@ systems."
              (dot  (concat directory "."))
              (dot2 (concat directory ".."))
              (candidates (append (and (not file-error) (list dot dot2)) ls)))
-        (when helm-ff-use-dir-locals
-          (helm-ff--hack-dir-locals))
         (puthash directory (+ (length ls) 2) helm-ff--directory-files-hash)
         (puthash directory
                  (cl-loop for f in candidates
@@ -3197,7 +3192,7 @@ When Emacs is idle, refresh the cache all the
            ;; helm-ff-cache-mode-max-idle-time.
            (time-less-p (current-idle-time)
                         (seconds-to-time helm-ff-cache-mode-max-idle-time)))
-      (with-local-quit
+      (progn
         (setq helm-ff--cache-mode-lighter-face 'helm-ff-cache-updating)
         (while-no-input
           (helm-ff-refresh-cache)))
@@ -3464,23 +3459,17 @@ existing filename or valid symlink and there is no need to test
 it.
 NEW-FILE when non-nil means FNAME is a non existing file and
 return FNAME with display property prefixed with [?]."
-  (cond (file-or-symlinkp fname)
-        ((and helm--url-regexp
-              (string-match helm--url-regexp fname))
-         (propertize
-          fname 'display
-          (format "%s %s"
-                  (propertize
-                   "[@]" 'face 'helm-ff-prefix)
-                  fname)))
-        (new-file (propertize
-                   fname 'display
-                   (format "%s %s"
-                           (propertize
-                            "[?]" 'face 'helm-ff-prefix)
-                           (if helm-ff-transformer-show-only-basename
-                               (helm-basename fname) fname))))
-        (t fname)))
+  (let* ((prefix-new (propertize
+                      " " 'display
+                      (propertize "[?]" 'face 'helm-ff-prefix)))
+         (prefix-url (propertize
+                      " " 'display
+                      (propertize "[@]" 'face 'helm-ff-prefix))))
+    (cond (file-or-symlinkp fname)
+          ((or (string-match helm-ff-url-regexp fname)
+               (and helm--url-regexp (string-match helm--url-regexp fname)))
+           (concat prefix-url " " fname))
+          (new-file (concat prefix-new " " fname)))))
 
 (defun helm-ff-score-candidate-for-pattern (real disp pattern)
   (if (or (member real '("." ".."))
@@ -3527,46 +3516,12 @@ Return candidates prefixed with basename of INPUT first."
 Return candidates prefixed with basename of `helm-input' first."
   (helm-ff-sort-candidates-1 candidates helm-input))
 
-(defvar helm-ff--dir-locals nil)
-(make-local-variable 'helm-ff--dir-locals)
-
-(defun helm-ff--reset-dir-locals ()
-  "Reset directory local variables to their default-value."
-  (with-helm-buffer
-    (cl-loop for (k . _v) in helm-ff--dir-locals
-             when (default-boundp k)
-             do (set (make-local-variable k) (default-value k)))))
-
-(defun helm-ff--apply-dir-locals (locals)
-  "Apply directory variables LOCALS (an alist) in helm-buffer."
-  (with-helm-buffer
-    ;; Reset all local vars that have been added by
-    ;; `hack-local-variables-apply' to their default value.
-    (helm-ff--reset-dir-locals)
-    ;; Store possible dir local vars for further reset.
-    (cl-loop for (k . v) in locals
-             unless (assq k helm-ff--dir-locals)
-             do (push (cons k v) helm-ff--dir-locals))
-    ;; Now apply dir locals.
-    (hack-local-variables-apply)))
-
-(defun helm-ff--hack-dir-locals ()
-  "Maybe apply directory local variables in helm-buffer."
-  (with-helm-default-directory helm-ff-default-directory
-    ;; Reset previous dir local vars in helm-buffer.
-    (with-helm-buffer (setq dir-local-variables-alist nil))
-    (hack-dir-local-variables)
-    (helm-aif dir-local-variables-alist
-        (helm-ff--apply-dir-locals it)
-      (helm-ff--reset-dir-locals))))
-
 (defun helm-ff-boring-file-p (file)
   "Returns non nil when FILE is matching boring regexps."
   ;; Prevent user doing silly thing like
   ;; adding the dotted files to boring regexps (#924).
   (and helm-ff-skip-boring-files
        (not (string-match "\\.$" file))
-       (not (string= file "~"))
        (string-match  helm-ff--boring-regexp file)))
 
 (defvar helm-ff--git-found-p nil)
@@ -3589,10 +3544,11 @@ return directly CANDIDATES."
                when fc collect fc)
     candidates))
 
-(defun helm-ff-filter-candidate-one-by-one (file &optional reverse)
+(defun helm-ff-filter-candidate-one-by-one (file &optional reverse skip-boring-check)
   "Transform file in a cons cell like (DISPLAY . REAL).
 DISPLAY is shown as basename of FILE and REAL as full path of FILE.
-If REVERSE is non nil DISPLAY is shown as full path."
+If REVERSE is non nil DISPLAY is shown as full path.
+If SKIP-BORING-CHECK is non nil don't filter boring files."
   (let* ((basename (helm-basename file))
          (dot (helm-ff-dot-file-p file))
          ;; Filename with cntrl chars e.g. foo^J
@@ -3600,8 +3556,12 @@ If REVERSE is non nil DISPLAY is shown as full path."
                    (replace-regexp-in-string
                     "[[:cntrl:]]" "?"
                     (if reverse file basename)))))
-    (unless (or (helm-ff-boring-file-p basename)
-                (helm-ff-git-ignored-p file))
+    ;; We don't want to filter boring files only on the files coming
+    ;; from the output of helm-ff-directory-files not on single
+    ;; candidate (issue #2330).
+    (unless (and (not skip-boring-check)
+                 (or (helm-ff-boring-file-p basename)
+                     (helm-ff-git-ignored-p file)))
 
       ;; Handle tramp files with minimal highlighting.
       (if (and (or (string-match-p helm-tramp-file-name-regexp helm-pattern)
