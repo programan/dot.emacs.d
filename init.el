@@ -181,7 +181,7 @@
   (define-key which-key-mode-map (kbd "C-x <f6>") 'which-key-C-h-dispatch)
   ;; (setq which-key-paging-prefixes '("C-x"))
   ;; (setq which-key-paging-key "<f6>")
-  (which-key-mode))
+  (add-hook 'after-init-hook #'which-key-mode))
 
 
 ;; EditorConfigを有効化する
