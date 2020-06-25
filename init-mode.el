@@ -377,6 +377,10 @@
 ;; ruby-mode
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("[Rr]akefile$" . ruby-mode))
+
 ;; #!/usr/bin/env ruby といった行で始まる、拡張子のないコマンドファイルを適切なモードで開く
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 ;; マジックコメントを自動挿入しない
@@ -404,63 +408,54 @@
                (custom-set-variables '(rspec-use-rake-flag nil))
                (custom-set-faces )
                )
-             (when (require 'ruby-electric nil t)
-               ;; ruby-electric.el --- electric editing commands for ruby files
-               ;; if に対するendとか入れてくれる
-               ;; emacs24標準のelectricとバッティングするので、ruby-mode時は
-               ;; electric系はオフにする
-               (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
-                 (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
-               (setq ruby-electric-expand-delimiters-list nil)
-               )
-             (when (require 'ruby-block nil t)
-               ;; end に対応する行をハイライト
-               (defun ruby-mode-hook-ruby-block()
-                 (ruby-block-mode t))
-               (add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
-               ;; ミニバッファに表示し, かつ, オーバレイする.
-               (setq ruby-block-highlight-toggle t)
-               ;; 何もしない
-               ;;(setq ruby-block-highlight-toggle 'noghing)
-               ;; ミニバッファに表示
-               ;;(setq ruby-block-highlight-toggle 'minibuffer)
-               ;; オーバレイする
-               ;;(setq ruby-block-highlight-toggle 'overlay)
-               )
-             (when (require 'rhtml-mode nil t)
-               (add-hook 'rhtml-mode-hook
-                         (lambda ()
-                           ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-                           ;; auto-revert-modeを有効にする
-                           (auto-revert-mode t)))
-               )
-             ;; (when (require 'projectile-rails nil t)
-             ;;   (add-hook 'projectile-mode-hook 'projectile-rails-on)
-             ;;   (add-hook 'ruby-mode-hook 'projectile-mode)
-             ;;   (add-hook 'rhtml-mode-hook 'projectile-mode)
-             ;;   (add-hook 'haml-mode-hook 'projectile-mode)
-             ;;   (add-hook 'slim-mode-hook 'projectile-mode)
-             ;;   (add-hook 'sass-mode-hook 'projectile-mode)
-             ;;   )
-             ;; (when (require 'robe-mode nil t)
-             ;;   (robe-mode 1)
-             ;;   )
              ;; ruby-modeのインデント
              (setq ruby-indent-level 2)
              (setq ruby-indent-tabs-mode nil)
-             ;; 他のエディタなどがファイルを書き換えたらすぐにそれを反映する
-             ;; auto-revert-modeを有効にする
-             (auto-revert-mode t)
-             (ruby-electric-mode t)
              ;; RET キーで自動改行+インデント
              (define-key ruby-mode-map [return] 'reindent-then-newline-and-indent)
              (when (>= emacs-major-version 24)
                (set (make-local-variable 'electric-pair-mode) nil)
                (set (make-local-variable 'electric-indent-mode) nil)
-               (set (make-local-variable 'electric-layout-mode) nil)))
-          )
+               (set (make-local-variable 'electric-layout-mode) nil))
+             ;; (setq flycheck-checker 'ruby-rubocop)
+             (setq flycheck-check-syntax-automatically '(idle-change mode-enabled new-line save))
+             (flycheck-mode t)
+             ))
 
 
+(when (require 'ruby-electric nil t)
+  (add-hook 'ruby-mode-hook '(lambda ()
+                               (ruby-electric-mode t)))
+  ;; ruby-electric.el --- electric editing commands for ruby files
+  ;; if に対するendとか入れてくれる
+  ;; emacs24標準のelectricとバッティングするので、ruby-mode時は
+  ;; electric系はオフにする
+  ;; (let ((rel (assq 'ruby-electric-mode minor-mode-map-alist)))
+  ;;   (setq minor-mode-map-alist (append (delete rel minor-mode-map-alist) (list rel))))
+  ;; (setq ruby-electric-expand-delimiters-list nil)
+  )
+
+
+(when (require 'ruby-block nil t)
+  ;; end に対応する行をハイライト
+  (defun ruby-mode-hook-ruby-block()
+    (ruby-block-mode t))
+  (add-hook 'ruby-mode-hook 'ruby-mode-hook-ruby-block)
+  ;; ミニバッファに表示し, かつ, オーバレイする.
+  (setq ruby-block-highlight-toggle t)
+  ;; 何もしない
+  ;;(setq ruby-block-highlight-toggle 'noghing)
+  ;; ミニバッファに表示
+  ;;(setq ruby-block-highlight-toggle 'minibuffer)
+  ;; オーバレイする
+  ;;(setq ruby-block-highlight-toggle 'overlay)
+  )
+
+
+;; (when (require 'rhtml-mode nil t)
+;;   (add-hook 'ruby-mode-hook '(lambda ()
+;;                                (rhtml-mode t)))
+;;   )
 
 ;; projectile-rails
 ;; C-c r m                 : app/models 配下のファイルを選択して開く
